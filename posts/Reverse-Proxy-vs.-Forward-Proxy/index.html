@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Reverse Proxy vs. Forward Proxy" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는" />
-<meta property="og:description" content="포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는" />
+<meta name="description" content="포워드 프록시(Forward Proxy)" />
+<meta property="og:description" content="포워드 프록시(Forward Proxy)" />
 <link rel="canonical" href="/posts/Reverse-Proxy-vs.-Forward-Proxy/" />
 <meta property="og:url" content="/posts/Reverse-Proxy-vs.-Forward-Proxy/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Reverse Proxy vs. Forward Proxy" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-16T03:50:44+09:00","datePublished":"2025-01-16T03:50:44+09:00","description":"포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는","headline":"Reverse Proxy vs. Forward Proxy","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Reverse-Proxy-vs.-Forward-Proxy/"},"url":"/posts/Reverse-Proxy-vs.-Forward-Proxy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-16T03:50:44+09:00","datePublished":"2025-01-16T03:50:44+09:00","description":"포워드 프록시(Forward Proxy)","headline":"Reverse Proxy vs. Forward Proxy","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Reverse-Proxy-vs.-Forward-Proxy/"},"url":"/posts/Reverse-Proxy-vs.-Forward-Proxy/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -599,8 +599,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Reverse Proxy vs. Forward Proxy</h1>
-    
-      <p class="post-desc fw-light mb-4">포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는 </p>
     
 
     <div class="post-meta text-muted">
@@ -6877,6 +6875,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -7142,7 +7152,7 @@
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -7170,7 +7180,7 @@
 
               <h4 class="pt-0 my-2">프로세스보다 쓰레드의 컨텍스트 스위칭이 빠른 이유</h4>
               <div class="text-muted">
-                <p>컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의</p>
+                <p>### Context Switching 컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.  ### Context 컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의 레지스터 상태(프로그...</p>
               </div>
             </div>
           </a>
@@ -7198,7 +7208,7 @@
 
               <h4 class="pt-0 my-2">Scale-Up vs Scale-Out</h4>
               <div class="text-muted">
-                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 Scale-Up (스케일 업) 혹은 Scale-Out (스케일 아웃) 을 고려한다.스케일 업은 기존의 서버를 더 높은 사양으로 업그레이드하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드</p>
+                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 **Scale-Up (스케일 업)** 혹은 **Scale-Out (스케일 아웃)** 을 고려한다.  ### Scale-Up 스케일 업은 기존의 **서버를 더 높은 사양으로 업그레이드**하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드 하는 방식이다.  스케일 업은 상대...</p>
               </div>
             </div>
           </a>

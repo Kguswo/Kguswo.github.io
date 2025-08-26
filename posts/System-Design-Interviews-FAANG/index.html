@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="System Design Interviews @ FAANG" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="FAANG 회사에 입사하는 것은 많은 기술 전문가들의 꿈입니다. 이러한 회사들은 시스템 설계를 포함하여 엔지니어링의 모든 측면에서 우수성을 요구합니다. FAANG 회사의 시스템 설계 면접은 대규모로 복잡한 문제를 해결하는 후보자의 능력을 평가합니다. 이들은 기술적 스킬" />
-<meta property="og:description" content="FAANG 회사에 입사하는 것은 많은 기술 전문가들의 꿈입니다. 이러한 회사들은 시스템 설계를 포함하여 엔지니어링의 모든 측면에서 우수성을 요구합니다. FAANG 회사의 시스템 설계 면접은 대규모로 복잡한 문제를 해결하는 후보자의 능력을 평가합니다. 이들은 기술적 스킬" />
+<meta name="description" content="FAANG 시스템 설계 면접 완전 가이드" />
+<meta property="og:description" content="FAANG 시스템 설계 면접 완전 가이드" />
 <link rel="canonical" href="/posts/System-Design-Interviews-FAANG/" />
 <meta property="og:url" content="/posts/System-Design-Interviews-FAANG/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="System Design Interviews @ FAANG" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T04:40:27+09:00","datePublished":"2025-08-06T04:40:27+09:00","description":"FAANG 회사에 입사하는 것은 많은 기술 전문가들의 꿈입니다. 이러한 회사들은 시스템 설계를 포함하여 엔지니어링의 모든 측면에서 우수성을 요구합니다. FAANG 회사의 시스템 설계 면접은 대규모로 복잡한 문제를 해결하는 후보자의 능력을 평가합니다. 이들은 기술적 스킬","headline":"System Design Interviews @ FAANG","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/System-Design-Interviews-FAANG/"},"url":"/posts/System-Design-Interviews-FAANG/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-06T04:40:27+09:00","datePublished":"2025-08-06T04:40:27+09:00","description":"FAANG 시스템 설계 면접 완전 가이드","headline":"System Design Interviews @ FAANG","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/System-Design-Interviews-FAANG/"},"url":"/posts/System-Design-Interviews-FAANG/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1225,8 +1225,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>System Design Interviews @ FAANG</h1>
-    
-      <p class="post-desc fw-light mb-4">FAANG 회사에 입사하는 것은 많은 기술 전문가들의 꿈입니다. 이러한 회사들은 시스템 설계를 포함하여 엔지니어링의 모든 측면에서 우수성을 요구합니다. FAANG 회사의 시스템 설계 면접은 대규모로 복잡한 문제를 해결하는 후보자의 능력을 평가합니다. 이들은 기술적 스킬</p>
     
 
     <div class="post-meta text-muted">
@@ -4425,7 +4423,7 @@
 
               <h4 class="pt-0 my-2">System Design Interview</h4>
               <div class="text-muted">
-                <p>위치 기반 서비스는 Yelp나 Google Places와 같은 앱에서 주변의 식당이나 가장 가까운 주유소 등을 찾는 데 사용되는 백엔드 구성 요소이며, 사용자 위치와 검색 반경을 입력받아 해당 반경 내의 모든 비즈니스를 반환하고, 비즈니스 소유자가 비즈니스를 추가, 삭</p>
+                <p>위치 기반 서비스(Proximity Service)는 무엇이며, 어떤 기능을 제공하나요?     위치 기반 서비스는 Yelp나 Google Places와 같은 앱에서 주변의 식당이나 가장 가까운 주유소 등을 찾는 데 사용되는 백엔드 구성 요소이며, 사용자 위치와 검색 반경을 입력받아 해당 반경 내의 모든 비즈니스를 반환하고, 비즈니스 소유자가 비즈니스...</p>
               </div>
             </div>
           </a>
@@ -4453,7 +4451,7 @@
 
               <h4 class="pt-0 my-2">System Design Interview - 분산 시스템을 위한 유일 ID 생성기 설계</h4>
               <div class="text-muted">
-                <p>이번은 책 7장인 분산 시스템을 위한 유일 ID 생성기를 설계해보겠다.간단한 팀/개인 프로젝트에서 ID를 설계할 때는 auto_increment 속성으로 설정된 기본 키를 사용하곤 했었다.하지만 대규모 분산 환경에서는 auto_increment를 사용할 수 없다.데이터</p>
+                <p>### 들어가며  이번은 책 7장인 분산 시스템을 위한 유일 ID 생성기를 설계해보겠다.  간단한 팀/개인 프로젝트에서 ID를 설계할 때는 `auto_increment` 속성으로 설정된 기본 키를 사용하곤 했었다.  하지만 대규모 분산 환경에서는 `auto_increment`를 사용할 수 없다.  데이터베이스 서버 한 대로는 요구를 충족할 수 없고, ...</p>
               </div>
             </div>
           </a>
@@ -4481,7 +4479,7 @@
 
               <h4 class="pt-0 my-2">System Design Interview - (1)</h4>
               <div class="text-muted">
-                <p>웹 - 앱 - 데이터베이스 - 캐시 등이 한 서버에서 실행된다.DNS 서버의 Domain address 에 대한 Ip address 를 요청한다.DNS 에서 Ip address 를 반환 받는다.해당 Ip address 를 통해서 웹서버에 HTTP 요청 보낸다.웹 페이지</p>
+                <p># 사용자 수에 따른 규모 확장성    ## 단일 서버  웹 - 앱 - 데이터베이스 - 캐시 등이 한 서버에서 실행된다.  ![](/assets/posts/9790488a0b6af1da52f4ea55cb3856ec0346ed94f0ba3bffafb8f1bbe18bd421.png)  #### 사용자 요청 처리 흐름  1. DNS 서버의 `Domain a...</p>
               </div>
             </div>
           </a>

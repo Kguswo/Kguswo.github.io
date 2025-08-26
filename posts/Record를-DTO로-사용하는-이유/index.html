@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Record를 DTO로 사용하는 이유" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.기존의 클래스와 달리 모든 필드가 final 키워드로 선언되며, 객체 생성 후 변경할 수 없다. 또한 필드 선언만으로 자동으로 생성자, getter , equ" />
-<meta property="og:description" content="Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.기존의 클래스와 달리 모든 필드가 final 키워드로 선언되며, 객체 생성 후 변경할 수 없다. 또한 필드 선언만으로 자동으로 생성자, getter , equ" />
+<meta name="description" content="Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다." />
+<meta property="og:description" content="Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다." />
 <link rel="canonical" href="/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/" />
 <meta property="og:url" content="/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Record를 DTO로 사용하는 이유" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-22T00:50:04+09:00","datePublished":"2025-01-22T00:50:04+09:00","description":"Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.기존의 클래스와 달리 모든 필드가 final 키워드로 선언되며, 객체 생성 후 변경할 수 없다. 또한 필드 선언만으로 자동으로 생성자, getter , equ","headline":"Record를 DTO로 사용하는 이유","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/"},"url":"/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-22T00:50:04+09:00","datePublished":"2025-01-22T00:50:04+09:00","description":"Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.","headline":"Record를 DTO로 사용하는 이유","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/"},"url":"/posts/Record%EB%A5%BC-DTO%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -642,8 +642,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Record를 DTO로 사용하는 이유</h1>
-    
-      <p class="post-desc fw-light mb-4">Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.기존의 클래스와 달리 모든 필드가 final 키워드로 선언되며, 객체 생성 후 변경할 수 없다. 또한 필드 선언만으로 자동으로 생성자, getter , equ</p>
     
 
     <div class="post-meta text-muted">
@@ -7054,6 +7052,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -7247,7 +7257,7 @@
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -7275,7 +7285,7 @@
 
               <h4 class="pt-0 my-2">프로세스보다 쓰레드의 컨텍스트 스위칭이 빠른 이유</h4>
               <div class="text-muted">
-                <p>컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의</p>
+                <p>### Context Switching 컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.  ### Context 컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의 레지스터 상태(프로그...</p>
               </div>
             </div>
           </a>
@@ -7303,7 +7313,7 @@
 
               <h4 class="pt-0 my-2">Scale-Up vs Scale-Out</h4>
               <div class="text-muted">
-                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 Scale-Up (스케일 업) 혹은 Scale-Out (스케일 아웃) 을 고려한다.스케일 업은 기존의 서버를 더 높은 사양으로 업그레이드하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드</p>
+                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 **Scale-Up (스케일 업)** 혹은 **Scale-Out (스케일 아웃)** 을 고려한다.  ### Scale-Up 스케일 업은 기존의 **서버를 더 높은 사양으로 업그레이드**하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드 하는 방식이다.  스케일 업은 상대...</p>
               </div>
             </div>
           </a>

@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="PGMS_가격이 제일 비싼 식품의 정보 출력하기 (SQL)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="문제 링크 메모리: 0.0 MB, 시간: 0.00 ms 코딩테스트 연습 &gt; SUM， MAX， MIN Empty 2025년 03월 28일 16:48:47다른 방법으로 price로 내림차순한 뒤 LIMIT으로 1개 출력하는 방법도 있다." />
-<meta property="og:description" content="문제 링크 메모리: 0.0 MB, 시간: 0.00 ms 코딩테스트 연습 &gt; SUM， MAX， MIN Empty 2025년 03월 28일 16:48:47다른 방법으로 price로 내림차순한 뒤 LIMIT으로 1개 출력하는 방법도 있다." />
+<meta name="description" content="[level 2] 가격이 제일 비싼 식품의 정보 출력하기 - 131115 문제 링크 ### 성능 요약 메모리: 0.0 MB, 시간: 0.00 ms ### 구분 코딩테스트 연습 &gt; SUM， MAX， MIN ### 채점결과 Empty ### 제출 일자 2025년 03월 28일 16:48:47 ### 문제 설명 다음은 식품의 정보를 담은 FOOD_PRODUCT 테이블입니다. FOOD_PRODUCT 테이블은 다음과 같으며 PRODUCT_ID, PRODUCT_NAME, PRODUCT_CD, CATEGORY, PRICE는 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 의미합니다. Column name Type Nullable PRODUCT_ID VARCHAR(10) FALSE PRODUCT_NAME VARCHAR(50) FALSE PRODUCT_CD VARCHAR(10) TRUE CATEGORY VARCHAR(10) TRUE PRICE NUMBER TRUE 문제 FOOD_PRODUCT 테이블에서 가격이 제일 비싼 식품의 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 조회하는 SQL문을 작성해주세요. 예시 FOOD_PRODUCT 테이블이 다음과 같을 때 PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0018 맛있는고추기름 CD_OL00008 식용유 6100 P0019 맛있는카놀라유 CD_OL00009 식용유 5100 P0020 맛있는산초유 CD_OL00010 식용유 6500 P0021 맛있는케첩 CD_OL00001 소스 4500 P0022 맛있는마요네즈 CD_OL00002 소스 4700 SQL을 실행하면 다음과 같이 출력되어야 합니다. PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0020 맛있는산초유 CD_OL00010 식용유 6500 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges 문제 풀이" />
+<meta property="og:description" content="[level 2] 가격이 제일 비싼 식품의 정보 출력하기 - 131115 문제 링크 ### 성능 요약 메모리: 0.0 MB, 시간: 0.00 ms ### 구분 코딩테스트 연습 &gt; SUM， MAX， MIN ### 채점결과 Empty ### 제출 일자 2025년 03월 28일 16:48:47 ### 문제 설명 다음은 식품의 정보를 담은 FOOD_PRODUCT 테이블입니다. FOOD_PRODUCT 테이블은 다음과 같으며 PRODUCT_ID, PRODUCT_NAME, PRODUCT_CD, CATEGORY, PRICE는 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 의미합니다. Column name Type Nullable PRODUCT_ID VARCHAR(10) FALSE PRODUCT_NAME VARCHAR(50) FALSE PRODUCT_CD VARCHAR(10) TRUE CATEGORY VARCHAR(10) TRUE PRICE NUMBER TRUE 문제 FOOD_PRODUCT 테이블에서 가격이 제일 비싼 식품의 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 조회하는 SQL문을 작성해주세요. 예시 FOOD_PRODUCT 테이블이 다음과 같을 때 PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0018 맛있는고추기름 CD_OL00008 식용유 6100 P0019 맛있는카놀라유 CD_OL00009 식용유 5100 P0020 맛있는산초유 CD_OL00010 식용유 6500 P0021 맛있는케첩 CD_OL00001 소스 4500 P0022 맛있는마요네즈 CD_OL00002 소스 4700 SQL을 실행하면 다음과 같이 출력되어야 합니다. PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0020 맛있는산초유 CD_OL00010 식용유 6500 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges 문제 풀이" />
 <link rel="canonical" href="/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/" />
 <meta property="og:url" content="/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="PGMS_가격이 제일 비싼 식품의 정보 출력하기 (SQL)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-28T16:51:46+09:00","datePublished":"2025-03-28T16:51:46+09:00","description":"문제 링크 메모리: 0.0 MB, 시간: 0.00 ms 코딩테스트 연습 &gt; SUM， MAX， MIN Empty 2025년 03월 28일 16:48:47다른 방법으로 price로 내림차순한 뒤 LIMIT으로 1개 출력하는 방법도 있다.","headline":"PGMS_가격이 제일 비싼 식품의 정보 출력하기 (SQL)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/"},"url":"/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-28T16:51:46+09:00","datePublished":"2025-03-28T16:51:46+09:00","description":"[level 2] 가격이 제일 비싼 식품의 정보 출력하기 - 131115 문제 링크 ### 성능 요약 메모리: 0.0 MB, 시간: 0.00 ms ### 구분 코딩테스트 연습 &gt; SUM， MAX， MIN ### 채점결과 Empty ### 제출 일자 2025년 03월 28일 16:48:47 ### 문제 설명 다음은 식품의 정보를 담은 FOOD_PRODUCT 테이블입니다. FOOD_PRODUCT 테이블은 다음과 같으며 PRODUCT_ID, PRODUCT_NAME, PRODUCT_CD, CATEGORY, PRICE는 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 의미합니다. Column name Type Nullable PRODUCT_ID VARCHAR(10) FALSE PRODUCT_NAME VARCHAR(50) FALSE PRODUCT_CD VARCHAR(10) TRUE CATEGORY VARCHAR(10) TRUE PRICE NUMBER TRUE 문제 FOOD_PRODUCT 테이블에서 가격이 제일 비싼 식품의 식품 ID, 식품 이름, 식품 코드, 식품분류, 식품 가격을 조회하는 SQL문을 작성해주세요. 예시 FOOD_PRODUCT 테이블이 다음과 같을 때 PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0018 맛있는고추기름 CD_OL00008 식용유 6100 P0019 맛있는카놀라유 CD_OL00009 식용유 5100 P0020 맛있는산초유 CD_OL00010 식용유 6500 P0021 맛있는케첩 CD_OL00001 소스 4500 P0022 맛있는마요네즈 CD_OL00002 소스 4700 SQL을 실행하면 다음과 같이 출력되어야 합니다. PRODUCT_ID PRODUCT_NAME PRODUCT_CD CATEGORY PRICE P0020 맛있는산초유 CD_OL00010 식용유 6500 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges 문제 풀이","headline":"PGMS_가격이 제일 비싼 식품의 정보 출력하기 (SQL)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/"},"url":"/posts/PGMS%EA%B0%80%EA%B2%A9%EC%9D%B4-%EC%A0%9C%EC%9D%BC-%EB%B9%84%EC%8B%BC-%EC%8B%9D%ED%92%88%EC%9D%98-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -663,8 +663,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>PGMS_가격이 제일 비싼 식품의 정보 출력하기 (SQL)</h1>
-    
-      <p class="post-desc fw-light mb-4">  문제 링크  메모리: 0.0 MB, 시간: 0.00 ms 코딩테스트 연습 > SUM， MAX， MIN Empty 2025년 03월 28일 16:48:47다른 방법으로 price로 내림차순한 뒤 LIMIT으로 1개 출력하는 방법도 있다.</p>
     
 
     <div class="post-meta text-muted">
@@ -4268,7 +4266,7 @@
 
               <h4 class="pt-0 my-2">BOJ_7579_앱 (Java)</h4>
               <div class="text-muted">
-                <p>[Gold III] 앱 - 7579  문제 링크  성능 요약  메모리: 24228 KB, 시간: 184 ms  분류  다이나믹 프로그래밍, 배낭 문제  제출 일자  2025년 8월 6일 01:51:06  문제 설명  우리는 스마트폰을 사용하면서 여러 가지 앱(App)을</p>
+                <p># [Gold III] 앱 - 7579   [문제 링크](https://www.acmicpc.net/problem/7579)   ### 성능 요약  메모리: 24228 KB, 시간: 184 ms  ### 분류  다이나믹 프로그래밍, 배낭 문제  ### 제출 일자  2025년 8월 6일 01:51:06  ### 문제 설명  우리는 스마트폰을 사용하면서 ...</p>
               </div>
             </div>
           </a>
@@ -4296,7 +4294,7 @@
 
               <h4 class="pt-0 my-2">PGMS_연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기</h4>
               <div class="text-muted">
-                <p>문제 링크 메모리: undefined, 시간: 코딩테스트 연습 > GROUP BY합계: 100.0 / 100.02025년 08월 06일 02:30:06출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.programmers.co.kr/learn/</p>
+                <p># [level 4] 연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기 - 284528   [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/284528)   ### 성능 요약  메모리: undefined, 시간:   ### 구분  코딩테스트 연습 > GROUP BY  ### 채...</p>
               </div>
             </div>
           </a>
@@ -4324,7 +4322,7 @@
 
               <h4 class="pt-0 my-2">PGMS_멸종위기의 대장균 찾기</h4>
               <div class="text-muted">
-                <p>문제 링크 메모리: undefined, 시간: 코딩테스트 연습 > SELECT합계: 100.0 / 100.02025년 07월 30일 09:50:50출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.programmers.co.kr/learn/ch</p>
+                <p># [level 5] 멸종위기의 대장균 찾기 - 301651   [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/301651)   ### 성능 요약  메모리: undefined, 시간:   ### 구분  코딩테스트 연습 > SELECT  ### 채점결과  합계: 100.0 / 100...</p>
               </div>
             </div>
           </a>

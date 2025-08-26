@@ -522,6 +522,61 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
+      <a href="/posts/Checked-Exception%EA%B3%BC-Unchecked-Exception/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Checked Exception과 Unchecked Exception</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>Checked Exception 은 컴파일 시점에 확인되며, 반드시 처리해야하는 예외다. Java에서는 IOException , SQLException 등이 이에 속한다. Check Exception을 유발하는 메서드를 호출하는 경우, 메서드 시그니처에 throw 를 사용하여 호출자에게 예외를 위임하거나 메서드 내에서 try-catch를 사용하여 해당...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1735923968"
+  data-df="ll"
+  
+>
+  Jan  4, 2025
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      공부
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -532,7 +587,7 @@
             <h1 class="card-title my-2 mt-md-0">N+1문제 (Spring JPA)</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한</p>
+              <p>JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하는 현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한다면 N+1 문제가 발생한 것이다. 댓글 10개가 달린 게시글 1개를 조회하는데 총 1...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -587,7 +642,7 @@
             <h1 class="card-title my-2 mt-md-0">엔티티 매니저란?</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+              <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -642,7 +697,7 @@
             <h1 class="card-title my-2 mt-md-0">JPA의 ddl-auto 옵션은 각각 어떤 동작을 하고 어떤 상황에서 사용해야 할까?</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>ddl-auto 옵션은 스프링 부트 애플리케이션에서 Hibernate와 같은 JPA 구현체를 사용할 때 데이터베이스 스키마 관리를 제어하는 설정이다. 이 옵션은 application.properties 또는 application.yml 파일에서 설정할 수 있으며, 다양</p>
+              <p>ddl-auto 옵션은 스프링 부트 애플리케이션에서 Hibernate와 같은 JPA 구현체를 사용할 때 데이터베이스 스키마 관리를 제어하는 설정이다. 이 옵션은 application.properties 또는 application.yml 파일에서 설정할 수 있으며, 다양한 값에 따라 데이터베이스 스키마에 대해 다른 동작을 수행한다. ddl-auto 옵션...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -697,7 +752,7 @@
             <h1 class="card-title my-2 mt-md-0">Spring Data JPA에서 새로운 Entity인지 판단하는 방법</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>새로운 엔티티인지 여부는 JpaEntityInformation의 isNew(T entity) 에 의해 판단된다. 다른 설정이 없다면 JpaMetaModelEntityInformation 클래스가 동작한다. @Version 이 사용된 필드가 없거나 Version 이 사용</p>
+              <p>@Override public boolean isNew(T entity) {      if(versionAttribute.isEmpty())            || versionAttribute.map(Attribute::getJavaType).map(Class::isPrimitive).orElse(false)) {         return sup...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -752,7 +807,7 @@
             <h1 class="card-title my-2 mt-md-0">BOJ_17611_직각다각형 (Java)</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>문제 링크 메모리: 46140 KB, 시간: 276 ms누적 합, 정렬, 스위핑2025년 1월 3일 12:25:29public class Main {	static BufferedReader br;	static BufferedWriter bw;	static StringT</p>
+              <p>[Gold II] 직각다각형 - 17611  문제 링크  성능 요약  메모리: 46140 KB, 시간: 276 ms  분류  누적 합, 정렬, 스위핑  제출 일자  2025년 1월 3일 12:25:29  문제 설명  다각형의 두 선분이 연속하는 선분의 꼭짓점을 제외하고는 만나지 않는 다각형을 단순다각형이라고 부른다. 다각형의 각 변이 x축과 y축에 평...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -807,7 +862,7 @@
             <h1 class="card-title my-2 mt-md-0">Spring @Transactional 어노테이션은 private 메서드에서 동작할까?</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는</p>
+              <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는 것)가 제공하는 JDK Dynamic Proxy, CGLIB 방식 모두 타겟이 구현...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -862,7 +917,7 @@
             <h1 class="card-title my-2 mt-md-0">BOJ_2629_양팔 저울 (Java)</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>문제 링크 메모리: 15584 KB, 시간: 112 ms다이나믹 프로그래밍, 배낭 문제2025년 1월 2일 17:15:20양팔 저울과 몇 개의 추가 주어졌을 때, 이를 이용하여 입력으로 주어진 구슬의 무게를 확인할 수 있는지를 결정하려고 한다.무게가 각각 1g과 4g인</p>
+              <p>[Gold III] 양팔저울 - 2629  문제 링크  성능 요약  메모리: 15584 KB, 시간: 112 ms  분류  다이나믹 프로그래밍, 배낭 문제  제출 일자  2025년 1월 2일 17:15:20  문제 설명  양팔 저울과 몇 개의 추가 주어졌을 때, 이를 이용하여 입력으로 주어진 구슬의 무게를 확인할 수 있는지를 결정하려고 한다.  무게가...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -917,7 +972,7 @@
             <h1 class="card-title my-2 mt-md-0">BOJ_14497_주난의 난(難) (Java)</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>문제 링크 메모리: 23860 KB, 시간: 232 ms0-1 너비 우선 탐색, 너비 우선 탐색, 데이크스트라, 그래프 이론, 그래프 탐색, 최단 경로2025년 1월 2일 14:02:32간단한 BFS 문제다. time을 우선순위큐에 넣어 진행했다. 생각해보니 다익스트라</p>
+              <p>[Gold IV] 주난의 난(難) - 14497  문제 링크  성능 요약  메모리: 23860 KB, 시간: 232 ms  분류  0-1 너비 우선 탐색, 너비 우선 탐색, 데이크스트라, 그래프 이론, 그래프 탐색, 최단 경로  제출 일자  2025년 1월 2일 14:02:32  문제 설명  주난이는 크게 화가 났다. 책상 서랍 안에 몰래 먹으려고 숨...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -972,7 +1027,7 @@
             <h1 class="card-title my-2 mt-md-0">PGMS_2020 카카오 인턴_보석 쇼핑 (Java)</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>문제 링크 메모리: 83.2 MB, 시간: 51.36 ms코딩테스트 연습 > 2020 카카오 인턴십정확성: 33.3효율성: 66.7합계: 100.0 / 100.02025년 01월 01일 21:57:58출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//sch</p>
+              <p>[level 3] [카카오 인턴] 보석 쇼핑 - 67258  문제 링크  성능 요약  메모리: 83.2 MB, 시간: 51.36 ms  구분  코딩테스트 연습 &gt; 2020 카카오 인턴십  채점결과  정확성: 33.3효율성: 66.7합계: 100.0 / 100.0  제출 일자  2025년 01월 01일 21:57:58  문제 설명  [본 문제는 정...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -994,61 +1049,6 @@
   
 >
   Jan  2, 2025
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      알고리즘
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/LeetCode11Container-With-Most-Water-Java-C/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">LeetCode_11_Container With Most Water (Java, C++)</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>범위를 좁혀나가면서 최대 넓이 갱신, 투포인터 문제인 것 같다고 생각했다.class Solution {    public int maxArea(int\[] height) {        int n = height.length;        int left = 0;</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1735706535"
-  data-df="ll"
-  
->
-  Jan  1, 2025
 </time>
 
 

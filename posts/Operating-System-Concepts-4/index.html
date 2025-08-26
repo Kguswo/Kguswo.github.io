@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Operating System Concepts - (4)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="데이터의 접근Race Condition중복 접근이 발생하는 경우 결과 값에 문제가 발생해 원치 않은 결과를 얻게 될 수 있다Kernel 수행 중 인터럽트 발생 (interrupt handler vs kernel)interrupt handler vs kernel중요한 변" />
-<meta property="og:description" content="데이터의 접근Race Condition중복 접근이 발생하는 경우 결과 값에 문제가 발생해 원치 않은 결과를 얻게 될 수 있다Kernel 수행 중 인터럽트 발생 (interrupt handler vs kernel)interrupt handler vs kernel중요한 변" />
+<meta name="description" content="병행제어 데이터의 접근" />
+<meta property="og:description" content="병행제어 데이터의 접근" />
 <link rel="canonical" href="/posts/Operating-System-Concepts-4/" />
 <meta property="og:url" content="/posts/Operating-System-Concepts-4/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Operating System Concepts - (4)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-29T03:10:52+09:00","datePublished":"2024-07-29T03:10:52+09:00","description":"데이터의 접근Race Condition중복 접근이 발생하는 경우 결과 값에 문제가 발생해 원치 않은 결과를 얻게 될 수 있다Kernel 수행 중 인터럽트 발생 (interrupt handler vs kernel)interrupt handler vs kernel중요한 변","headline":"Operating System Concepts - (4)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-4/"},"url":"/posts/Operating-System-Concepts-4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-29T03:10:52+09:00","datePublished":"2024-07-29T03:10:52+09:00","description":"병행제어 데이터의 접근","headline":"Operating System Concepts - (4)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-4/"},"url":"/posts/Operating-System-Concepts-4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1272,8 +1272,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Operating System Concepts - (4)</h1>
-    
-      <p class="post-desc fw-light mb-4">데이터의 접근Race Condition중복 접근이 발생하는 경우 결과 값에 문제가 발생해 원치 않은 결과를 얻게 될 수 있다Kernel 수행 중 인터럽트 발생 (interrupt handler vs kernel)interrupt handler vs kernel중요한 변</p>
     
 
     <div class="post-meta text-muted">
@@ -4561,7 +4559,7 @@ critical section에 들어가게 해 주어야 한다.</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (10)</h4>
               <div class="text-muted">
-                <p>Virtual Memory (2)  다양한 캐싱 환경 캐싱 기법   한정된 빠른 공간(캐시)에 요청된 데이터를 저장해 두었다가 또 똑같은 요청이 들어오면 느린 저장장치에 접근하지 않고 빠른 캐시로부터 직접 서비스하는 방식   가상 메모리 페이징 시스템에서는 한정된 빠른</p>
+                <p>> # Virtual Memory (2)  ### 다양한 캐싱 환경 - 캐싱 기법   - 한정된 빠른 공간(캐시)에 요청된 데이터를 저장해 두었다가 또 똑같은 요청이 들어오면 느린 저장장치에 접근하지 않고 빠른 캐시로부터 직접 서비스하는 방식   - 가상 메모리 페이징 시스템에서는 한정된 빠른공간(= 물리메모리, RAM), 느린 저장장치(= 하드디스크...</p>
               </div>
             </div>
           </a>
@@ -4589,7 +4587,7 @@ critical section에 들어가게 해 주어야 한다.</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (9)</h4>
               <div class="text-muted">
-                <p>가상 메모리는 운영체제가 관리한다.실제로 필요할 때 page를 메모리에 올리는 것. (요청이 있으면 페이지를 메모리에 올리겠다는 의미)실제로 대부분의 시스템들은 Paging 기법 사용 중요구 페이징의 장점I/O양의 감소 (프로그램 중에 빈번하게 사용되는 부분은 지극히</p>
+                <p>![](/assets/posts/f6cd1af4d9a8bea5c2c7f4b6011195aff86d6e02d339c74f5f699ddd9fb1993a.png)  > # Virtual Memory (1) 가상 메모리는 운영체제가 관리한다.  ### Demand Paging (요구 페이징) - 실제로 필요할 때 **page를** 메모리에 올리는 것. (요청...</p>
               </div>
             </div>
           </a>
@@ -4617,7 +4615,7 @@ critical section에 들어가게 해 주어야 한다.</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (8)</h4>
               <div class="text-muted">
-                <p>Memory Management - (3)</p>
+                <p>![](/assets/posts/8508eb7574af38b56c9c79b704aae1f6081c22569b38496acc2594ae91c46145.png)  > # Memory Management - (3)  ![](/assets/posts/97656e60b2be997715c199276b27c7c48454b33b2e3fd0d75bd52f41f2dcc...</p>
               </div>
             </div>
           </a>

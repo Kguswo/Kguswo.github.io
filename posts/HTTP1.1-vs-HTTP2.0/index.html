@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="HTTP/1.1 vs HTTP/2.0" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션" />
-<meta property="og:description" content="HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션" />
+<meta name="description" content="HTTP/1.1 HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션 (Persistent Connection) 이라는 지정한 타임아웃만큼 커넥션을 종료하지 않는 방식으로 해결한다." />
+<meta property="og:description" content="HTTP/1.1 HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션 (Persistent Connection) 이라는 지정한 타임아웃만큼 커넥션을 종료하지 않는 방식으로 해결한다." />
 <link rel="canonical" href="/posts/HTTP1.1-vs-HTTP2.0/" />
 <meta property="og:url" content="/posts/HTTP1.1-vs-HTTP2.0/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="HTTP/1.1 vs HTTP/2.0" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-10T03:13:59+09:00","datePublished":"2025-03-10T03:13:59+09:00","description":"HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션","headline":"HTTP/1.1 vs HTTP/2.0","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/HTTP1.1-vs-HTTP2.0/"},"url":"/posts/HTTP1.1-vs-HTTP2.0/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-10T03:13:59+09:00","datePublished":"2025-03-10T03:13:59+09:00","description":"HTTP/1.1 HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션 (Persistent Connection) 이라는 지정한 타임아웃만큼 커넥션을 종료하지 않는 방식으로 해결한다.","headline":"HTTP/1.1 vs HTTP/2.0","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/HTTP1.1-vs-HTTP2.0/"},"url":"/posts/HTTP1.1-vs-HTTP2.0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -674,8 +674,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>HTTP/1.1 vs HTTP/2.0</h1>
-    
-      <p class="post-desc fw-light mb-4">HTTP는 웹상에서 클라이언트와 서버간의 통신을 위한 프로토콜이다. HTTP/1.0의 경우 한개의 요청과 응답마다 TCP 커넥션을 생성하여 사용되었다. 하지만 이러한 요청은 매 요청마다 연결을 생성하는 오버헤드가 발생한다. HTTP/1.1은 이러한 문제를 지속 커넥션 </p>
     
 
     <div class="post-meta text-muted">
@@ -3977,7 +3975,7 @@
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -4005,7 +4003,7 @@
 
               <h4 class="pt-0 my-2">Spring Data JPA에서 새로운 Entity인지 판단하는 방법</h4>
               <div class="text-muted">
-                <p>새로운 엔티티인지 여부는 JpaEntityInformation의 isNew(T entity) 에 의해 판단된다. 다른 설정이 없다면 JpaMetaModelEntityInformation 클래스가 동작한다. @Version 이 사용된 필드가 없거나 Version 이 사용</p>
+                <p>@Override public boolean isNew(T entity) {      if(versionAttribute.isEmpty())            || versionAttribute.map(Attribute::getJavaType).map(Class::isPrimitive).orElse(false)) {         return sup...</p>
               </div>
             </div>
           </a>
@@ -4033,7 +4031,7 @@
 
               <h4 class="pt-0 my-2">Spring @Transactional 어노테이션은 private 메서드에서 동작할까?</h4>
               <div class="text-muted">
-                <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는</p>
+                <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는 것)가 제공하는 JDK Dynamic Proxy, CGLIB 방식 모두 타겟이 구현...</p>
               </div>
             </div>
           </a>

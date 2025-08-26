@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Computer Networking: a Top Down Approach - (4)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Multiplexing : 보내는 측의 Application Layer으로부터 여러 소켓에서 오는 메시지들이 아래로 Transport Layer으로 내려올 것이다. 이 메시지들이 어디서 오든지 간에 Transport Layer은 메시지들을 segment(Header +" />
-<meta property="og:description" content="Multiplexing : 보내는 측의 Application Layer으로부터 여러 소켓에서 오는 메시지들이 아래로 Transport Layer으로 내려올 것이다. 이 메시지들이 어디서 오든지 간에 Transport Layer은 메시지들을 segment(Header +" />
+<meta name="description" content="Transport Layer - (1)" />
+<meta property="og:description" content="Transport Layer - (1)" />
 <link rel="canonical" href="/posts/Computer-Networking-a-Top-Down-Approach-4/" />
 <meta property="og:url" content="/posts/Computer-Networking-a-Top-Down-Approach-4/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Computer Networking: a Top Down Approach - (4)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-21T16:11:58+09:00","datePublished":"2025-01-21T16:11:58+09:00","description":"Multiplexing : 보내는 측의 Application Layer으로부터 여러 소켓에서 오는 메시지들이 아래로 Transport Layer으로 내려올 것이다. 이 메시지들이 어디서 오든지 간에 Transport Layer은 메시지들을 segment(Header +","headline":"Computer Networking: a Top Down Approach - (4)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Computer-Networking-a-Top-Down-Approach-4/"},"url":"/posts/Computer-Networking-a-Top-Down-Approach-4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-21T16:11:58+09:00","datePublished":"2025-01-21T16:11:58+09:00","description":"Transport Layer - (1)","headline":"Computer Networking: a Top Down Approach - (4)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Computer-Networking-a-Top-Down-Approach-4/"},"url":"/posts/Computer-Networking-a-Top-Down-Approach-4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1237,8 +1237,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Computer Networking: a Top Down Approach - (4)</h1>
-    
-      <p class="post-desc fw-light mb-4">Multiplexing : 보내는 측의 Application Layer으로부터 여러 소켓에서 오는 메시지들이 아래로 Transport Layer으로 내려올 것이다. 이 메시지들이 어디서 오든지 간에 Transport Layer은 메시지들을 segment(Header +</p>
     
 
     <div class="post-meta text-muted">
@@ -4143,7 +4141,7 @@
 
               <h4 class="pt-0 my-2">Computer Science Note - Network</h4>
               <div class="text-muted">
-                <p>좋은 네트워크많은 처리량을 처리 가능지연시간이 짧음장애 빈도가 적음좋은 보안많은 트래픽 처리 = 많은 처리량을 가진다처리량 단위 : BPS (Bits Per Second)처리량에 영향을 주는 것들사용자들이 많이 접속할때마다 커지는 트래픽네트워크 장치 간의 대역폭네트워크</p>
+                <p>> 본 게시글의 그림들은 참고 레퍼런스들을 토대로 직접 그렸음을 미리 밝힙니다.  # NETWORK  > ## 1. 네트워크 기초  #### 네트워크 : 노트 (Node) + 링크 (Link) 가 연결되어 리소스를 공유하는 집합![](/assets/posts/86fc0e7a71b179c7b877045b4e27622f59e87b1017cfe3b3ddbf...</p>
               </div>
             </div>
           </a>
@@ -4171,7 +4169,7 @@
 
               <h4 class="pt-0 my-2">Computer Networking: a Top Down Approach - (9)</h4>
               <div class="text-muted">
-                <p>보내는 TCP에서 받는 양을 조절한다. 파이프마다 굵기가 다 다른데 가장 얇은 파이프에서 병목현상이 발생할 확률이 높기 때문에 그 부분이 critical point이다. 하지만 그 부분을 우리가 알 순 없다. 처음에 1방울, 2방울 이렇게 천천히 늘려가본다. 그러다가</p>
+                <p>> # Transport Layer - (6)  ## TCP Intuition  ![](/assets/posts/325e9d3ca1c3ae439a94f85dd84723ae981e422a1eacc41649eea67e82144e46.png)  보내는 TCP에서 받는 양을 조절한다. 파이프마다 굵기가 다 다른데 가장 얇은 파이프에서 병목현상이 발생할 확률이...</p>
               </div>
             </div>
           </a>
@@ -4199,7 +4197,7 @@
 
               <h4 class="pt-0 my-2">Computer Networking: a Top Down Approach - (8)</h4>
               <div class="text-muted">
-                <p>데이터를 보낼때 상대가 받을 수 있는 만큼 보내야한다. 받을 수 있는 공간이 얼마 없는데 많이 보내선 안된다. 이걸 어떻게 알 수 있는가? 상대의 Receive Buffer을 보면 된다. Receive Buffer의 상태를 보고 데이터를 받을 수 있는 공간이 N만큼 남</p>
+                <p>> # Transport Layer - (5)  ## TCP Flow Control  데이터를 보낼때 상대가 받을 수 있는 만큼 보내야한다. 받을 수 있는 공간이 얼마 없는데 많이 보내선 안된다. 이걸 어떻게 알 수 있는가? 상대의 Receive Buffer을 보면 된다. ![](/assets/posts/9aea6c88eed7d706cdf44828a4...</p>
               </div>
             </div>
           </a>

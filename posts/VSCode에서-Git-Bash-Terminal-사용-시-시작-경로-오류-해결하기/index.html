@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft V" />
-<meta property="og:description" content="VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft V" />
+<meta name="description" content="문제 상황 VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft VS Code에서 시작되는 현상이 발생했다. 이 문제는 Git Bash에만 해당되며, PowerShell이나 cmd 같은 다른 터미널에서는 발생하지 않았다. 또한 HOME 환경변수가 제대로 설정되지 않는 관련 문제도 함께 발생했다." />
+<meta property="og:description" content="문제 상황 VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft VS Code에서 시작되는 현상이 발생했다. 이 문제는 Git Bash에만 해당되며, PowerShell이나 cmd 같은 다른 터미널에서는 발생하지 않았다. 또한 HOME 환경변수가 제대로 설정되지 않는 관련 문제도 함께 발생했다." />
 <link rel="canonical" href="/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/" />
 <meta property="og:url" content="/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-25T03:43:23+09:00","datePublished":"2025-02-25T03:43:23+09:00","description":"VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft V","headline":"VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"},"url":"/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-25T03:43:23+09:00","datePublished":"2025-02-25T03:43:23+09:00","description":"문제 상황 VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft VS Code에서 시작되는 현상이 발생했다. 이 문제는 Git Bash에만 해당되며, PowerShell이나 cmd 같은 다른 터미널에서는 발생하지 않았다. 또한 HOME 환경변수가 제대로 설정되지 않는 관련 문제도 함께 발생했다.","headline":"VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"},"url":"/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -847,8 +847,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기</h1>
-    
-      <p class="post-desc fw-light mb-4">VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/\[User]/AppData/Local/Programs/Microsoft V</p>
     
 
     <div class="post-meta text-muted">
@@ -3657,7 +3655,7 @@ owal/.config/git/config': Invalid argument</code> 오류 발생</li>
 
               <h4 class="pt-0 my-2">vscode CPH Judge C++20 컴파일 오류</h4>
               <div class="text-muted">
-                <p>vscode에서 Competitive Companion과 CPH Judge를 사용해 알고리즘을 푸는데 C++의 map 문법 중 C++20버전부터 사용 가능한 contains를 사용했는데 컴파일이 안되었다. 기존 C++17로 설정되어있었다. 이를 고치기 위한 여러 트러블</p>
+                <p>vscode에서 Competitive Companion과 CPH Judge를 사용해 알고리즘을 푸는데 C++의 map 문법 중 C++20버전부터 사용 가능한 contains를 사용했는데 컴파일이 안되었다. 기존 C++17로 설정되어있었다. 이를 고치기 위한 여러 트러블슈팅   .vscode에서 c+cpp_properies.json수정 {     "co...</p>
               </div>
             </div>
           </a>
@@ -3685,7 +3683,7 @@ owal/.config/git/config': Invalid argument</code> 오류 발생</li>
 
               <h4 class="pt-0 my-2">Windows에서 클론 시 'Filename too long' 오류 해결하기</h4>
               <div class="text-muted">
-                <p>spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제</p>
+                <p>> ## 문제 상황  spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.  ![](/assets/posts/8faa2aff8f48372c60ed36bc859d75d7f3826c7e6c8ab6028ce5ecbd309cf2d2.png)  클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.  > ## 원...</p>
               </div>
             </div>
           </a>
@@ -3713,7 +3711,7 @@ owal/.config/git/config': Invalid argument</code> 오류 발생</li>
 
               <h4 class="pt-0 my-2">iCloud 동기화 해제 및 iCloud에서 폴더로 다운받기 오류 (Mac) (데스크탑, 문서 옮기기)</h4>
               <div class="text-muted">
-                <p>맥북 사용 중 iCloud 용량때문에 동기화를 해제할 일이 생겼고, 이에 로컬에 있는 데스크톱 파일들과 로컬 파일들이 전부 사라지는 현상을 겪었다. 이를 많은 구글링을 해보아도 마땅한 해결책이 없어 나름 대안을 혼자 하루종일 시간을 갈아넣으며 찾았다.iCloud와 맥북</p>
+                <p>맥북 사용 중 iCloud 용량때문에 동기화를 해제할 일이 생겼고, 이에 로컬에 있는 데스크톱 파일들과 로컬 파일들이 전부 사라지는 현상을 겪었다. 이를 많은 구글링을 해보아도 마땅한 해결책이 없어 나름 대안을 혼자 하루종일 시간을 갈아넣으며 찾았다.   문제 상황    iCloud와 맥북 동기화를 해제   동기화 해제 시 Desktop과 Docume...</p>
               </div>
             </div>
           </a>

@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Java String.format vs 문자열 연결: 성능 차이를 알아보기" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Java 개발을 하다 보면 문자열을 조합해야 하는 상황이 자주 발생한다. 이때 두 가지 주요한 방법이 있는데이 두 가지를 사용한다.둘 다 같은 결과를 만들어내지만, 내부적으로는 어떤 차이가 있을까? 성능상 차이도 있지 않을까?이런 궁금증에서 시작해 실제 Spring B" />
-<meta property="og:description" content="Java 개발을 하다 보면 문자열을 조합해야 하는 상황이 자주 발생한다. 이때 두 가지 주요한 방법이 있는데이 두 가지를 사용한다.둘 다 같은 결과를 만들어내지만, 내부적으로는 어떤 차이가 있을까? 성능상 차이도 있지 않을까?이런 궁금증에서 시작해 실제 Spring B" />
+<meta name="description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
+<meta property="og:description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
 <link rel="canonical" href="/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/" />
 <meta property="og:url" content="/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Java String.format vs 문자열 연결: 성능 차이를 알아보기" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-19T02:03:05+09:00","datePublished":"2025-07-19T02:03:05+09:00","description":"Java 개발을 하다 보면 문자열을 조합해야 하는 상황이 자주 발생한다. 이때 두 가지 주요한 방법이 있는데이 두 가지를 사용한다.둘 다 같은 결과를 만들어내지만, 내부적으로는 어떤 차이가 있을까? 성능상 차이도 있지 않을까?이런 궁금증에서 시작해 실제 Spring B","headline":"Java String.format vs 문자열 연결: 성능 차이를 알아보기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/"},"url":"/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-19T02:03:05+09:00","datePublished":"2025-07-19T02:03:05+09:00","description":"프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.","headline":"Java String.format vs 문자열 연결: 성능 차이를 알아보기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/"},"url":"/posts/Java-String.format-vs-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%84%B1%EB%8A%A5-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -815,8 +815,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Java String.format vs 문자열 연결: 성능 차이를 알아보기</h1>
-    
-      <p class="post-desc fw-light mb-4">Java 개발을 하다 보면 문자열을 조합해야 하는 상황이 자주 발생한다. 이때 두 가지 주요한 방법이 있는데이 두 가지를 사용한다.둘 다 같은 결과를 만들어내지만, 내부적으로는 어떤 차이가 있을까? 성능상 차이도 있지 않을까?이런 궁금증에서 시작해 실제 Spring B</p>
     
 
     <div class="post-meta text-muted">
@@ -4407,7 +4405,7 @@ public final class String implements Serializable, Comparable&lt;String&gt;, Cha
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -4435,7 +4433,7 @@ public final class String implements Serializable, Comparable&lt;String&gt;, Cha
 
               <h4 class="pt-0 my-2">Spring Data JPA에서 새로운 Entity인지 판단하는 방법</h4>
               <div class="text-muted">
-                <p>새로운 엔티티인지 여부는 JpaEntityInformation의 isNew(T entity) 에 의해 판단된다. 다른 설정이 없다면 JpaMetaModelEntityInformation 클래스가 동작한다. @Version 이 사용된 필드가 없거나 Version 이 사용</p>
+                <p>@Override public boolean isNew(T entity) {      if(versionAttribute.isEmpty())            || versionAttribute.map(Attribute::getJavaType).map(Class::isPrimitive).orElse(false)) {         return sup...</p>
               </div>
             </div>
           </a>
@@ -4463,7 +4461,7 @@ public final class String implements Serializable, Comparable&lt;String&gt;, Cha
 
               <h4 class="pt-0 my-2">Spring @Transactional 어노테이션은 private 메서드에서 동작할까?</h4>
               <div class="text-muted">
-                <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는</p>
+                <p>Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는 것)가 제공하는 JDK Dynamic Proxy, CGLIB 방식 모두 타겟이 구현...</p>
               </div>
             </div>
           </a>

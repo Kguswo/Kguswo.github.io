@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="N+1문제 (Spring JPA)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한" />
-<meta property="og:description" content="JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한" />
+<meta name="description" content="JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하는 현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한다면 N+1 문제가 발생한 것이다. 댓글 10개가 달린 게시글 1개를 조회하는데 총 11개의 쿼리 (게시글 1개 조회 + 각 게시글의 댓글 조회 10개)가 실행된다." />
+<meta property="og:description" content="JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하는 현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한다면 N+1 문제가 발생한 것이다. 댓글 10개가 달린 게시글 1개를 조회하는데 총 11개의 쿼리 (게시글 1개 조회 + 각 게시글의 댓글 조회 10개)가 실행된다." />
 <link rel="canonical" href="/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/" />
 <meta property="og:url" content="/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="N+1문제 (Spring JPA)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-04T01:35:43+09:00","datePublished":"2025-01-04T01:35:43+09:00","description":"JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한","headline":"N+1문제 (Spring JPA)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"},"url":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-04T01:35:43+09:00","datePublished":"2025-01-04T01:35:43+09:00","description":"JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하는 현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한다면 N+1 문제가 발생한 것이다. 댓글 10개가 달린 게시글 1개를 조회하는데 총 11개의 쿼리 (게시글 1개 조회 + 각 게시글의 댓글 조회 10개)가 실행된다.","headline":"N+1문제 (Spring JPA)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"},"url":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -599,8 +599,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>N+1문제 (Spring JPA)</h1>
-    
-      <p class="post-desc fw-light mb-4">JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한</p>
     
 
     <div class="post-meta text-muted">
@@ -6655,6 +6653,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -7148,7 +7158,7 @@
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -7176,7 +7186,7 @@
 
               <h4 class="pt-0 my-2">프로세스보다 쓰레드의 컨텍스트 스위칭이 빠른 이유</h4>
               <div class="text-muted">
-                <p>컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의</p>
+                <p>### Context Switching 컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.  ### Context 컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의 레지스터 상태(프로그...</p>
               </div>
             </div>
           </a>
@@ -7204,7 +7214,7 @@
 
               <h4 class="pt-0 my-2">Scale-Up vs Scale-Out</h4>
               <div class="text-muted">
-                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 Scale-Up (스케일 업) 혹은 Scale-Out (스케일 아웃) 을 고려한다.스케일 업은 기존의 서버를 더 높은 사양으로 업그레이드하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드</p>
+                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 **Scale-Up (스케일 업)** 혹은 **Scale-Out (스케일 아웃)** 을 고려한다.  ### Scale-Up 스케일 업은 기존의 **서버를 더 높은 사양으로 업그레이드**하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드 하는 방식이다.  스케일 업은 상대...</p>
               </div>
             </div>
           </a>

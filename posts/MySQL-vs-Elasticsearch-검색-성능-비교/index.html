@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="MySQL vs Elasticsearch 검색 성능 비교" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1. 구분자(Stopword) 방식MySQL 5" />
-<meta property="og:description" content="이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1. 구분자(Stopword) 방식MySQL 5" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
 <link rel="canonical" href="/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/" />
 <meta property="og:url" content="/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="MySQL vs Elasticsearch 검색 성능 비교" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-21T20:17:38+09:00","datePublished":"2025-05-21T20:17:38+09:00","description":"이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1. 구분자(Stopword) 방식MySQL 5","headline":"MySQL vs Elasticsearch 검색 성능 비교","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/"},"url":"/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-21T20:17:38+09:00","datePublished":"2025-05-21T20:17:38+09:00","description":"Introduction","headline":"MySQL vs Elasticsearch 검색 성능 비교","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/"},"url":"/posts/MySQL-vs-Elasticsearch-%EA%B2%80%EC%83%89-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -2573,8 +2573,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>MySQL vs Elasticsearch 검색 성능 비교 </h1>
-    
-      <p class="post-desc fw-light mb-4">이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1\. 구분자(Stopword) 방식MySQL 5</p>
     
 
     <div class="post-meta text-muted">
@@ -5679,7 +5677,7 @@
 
               <h4 class="pt-0 my-2">Subquery vs Join</h4>
               <div class="text-muted">
-                <p>개발을 하며 쿼리를 작성할 때 여러 테이블에서 데이터를 가져오기 위해 서브쿼리나 조인을 사용한 경험이 있을 것이다. 이때 어떤 방법을 선택하는것이 더 나은지에 대한 고찰을 해 보았다.쿼리 안에 또 다른 쿼리가 들어간 것상황에 따라 메인 쿼리의 WHERE, FROM, S</p>
+                <p>> 개발을 하며 쿼리를 작성할 때 여러 테이블에서 데이터를 가져오기 위해 서브쿼리나 조인을 사용한 경험이 있을 것이다. 이때 어떤 방법을 선택하는것이 더 나은지에 대한 고찰을 해 보았다.    ## Subquery와 종류 > 쿼리 안에 또 다른 쿼리가 들어간 것 > 상황에 따라 메인 쿼리의 WHERE, FROM, SELECT 절에 새로운 쿼리를 넣을 ...</p>
               </div>
             </div>
           </a>
@@ -5707,7 +5705,7 @@
 
               <h4 class="pt-0 my-2">MySQL 옵티마이저 에러</h4>
               <div class="text-muted">
-                <p>옵티마이저는 제한된 정보를 이용해서 최적의 실행계획을 최대한 짧은 시간안에 수립해야한다. 따라서 빠르고 정확하게 실행되어야한다.실제 실무에서 RDBMS사용할 때 옵티마이저 관련 오류가 많이 발생하고 이런 문제를 최대한 회피하고자 옵티마이저 힌트를 사용하고, 많은 힌트</p>
+                <p>## 옵티마이저 에러 & 힌트  옵티마이저는 제한된 정보를 이용해서 최적의 실행계획을 최대한 짧은 시간안에 수립해야한다. 따라서 빠르고 정확하게 실행되어야한다.  실제 실무에서 RDBMS사용할 때 옵티마이저 관련 오류가 많이 발생하고 이런 문제를 최대한 회피하고자 옵티마이저 힌트를 사용하고, 많은 힌트 기능들이 제공된다.   **SQL문장에서 옵티마이...</p>
               </div>
             </div>
           </a>
@@ -5735,7 +5733,7 @@
 
               <h4 class="pt-0 my-2">InnoDB 인덱스 잠금 실습해보기 (MySQL)</h4>
               <div class="text-muted">
-                <p>MySQL의 InnoDB 스토리지 엔진은 레코드 기반의 잠금 방식을 사용하지만, 흥미로운 점은 레코드 자체를 잠그는 것이 아니라 인덱스를 잠근다는 것입니다. 이 특성이 실제로 어떻게 동작하는지, 그리고 데이터베이스 설계와 성능에 어떤 영향을 미치는지 직접 테스트해보았습</p>
+                <p>MySQL InnoDB의 인덱스 잠금 메커니즘 테스트 및 분석      들어가며   MySQL의 InnoDB 스토리지 엔진은 레코드 기반의 잠금 방식을 사용하지만, 흥미로운 점은 레코드 자체를 잠그는 것이 아니라 인덱스를 잠근다는 것입니다. 이 특성이 실제로 어떻게 동작하는지, 그리고 데이터베이스 설계와 성능에 어떤 영향을 미치는지 직접 테스트해보았습...</p>
               </div>
             </div>
           </a>

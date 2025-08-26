@@ -30,24 +30,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="BOJ_2437_저울" />
+<meta property="og:title" content="BOJ_9251_LCS (Java, C++)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="[Gold II] 저울 - 2437" />
-<meta property="og:description" content="[Gold II] 저울 - 2437" />
-<link rel="canonical" href="/posts/BOJ2437%EC%A0%80%EC%9A%B8/" />
-<meta property="og:url" content="/posts/BOJ2437%EC%A0%80%EC%9A%B8/" />
+<meta name="description" content="[Gold V] LCS - 9251" />
+<meta property="og:description" content="[Gold V] LCS - 9251" />
+<link rel="canonical" href="/posts/BOJ9251LCS-Java-C/" />
+<meta property="og:url" content="/posts/BOJ9251LCS-Java-C/" />
 <meta property="og:site_name" content="Now’s Log" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-10-31T02:03:11+09:00" />
+<meta property="article:published_time" content="2025-01-05T23:00:09+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="BOJ_2437_저울" />
+<meta property="twitter:title" content="BOJ_9251_LCS (Java, C++)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-31T02:03:11+09:00","datePublished":"2024-10-31T02:03:11+09:00","description":"[Gold II] 저울 - 2437","headline":"BOJ_2437_저울","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/BOJ2437%EC%A0%80%EC%9A%B8/"},"url":"/posts/BOJ2437%EC%A0%80%EC%9A%B8/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-05T23:00:09+09:00","datePublished":"2025-01-05T23:00:09+09:00","description":"[Gold V] LCS - 9251","headline":"BOJ_9251_LCS (Java, C++)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/BOJ9251LCS-Java-C/"},"url":"/posts/BOJ9251LCS-Java-C/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>BOJ_2437_저울 | Now's Log
+  <title>BOJ_9251_LCS (Java, C++) | Now's Log
   </title>
 
   <!--
@@ -440,7 +440,7 @@
         
           
             
-              <span>BOJ_2437_저울</span>
+              <span>BOJ_9251_LCS (Java, C++)</span>
             
 
           
@@ -546,14 +546,6 @@
 
       
     
-      
-
-      
-      
-      
-
-      
-    
 
     <!-- take out classes -->
     
@@ -606,6 +598,38 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -684,6 +708,65 @@
 
       
     
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -697,11 +780,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -725,7 +803,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>BOJ_2437_저울</h1>
+    <h1 data-toc-skip>BOJ_9251_LCS (Java, C++)</h1>
     
 
     <div class="post-meta text-muted">
@@ -742,13 +820,13 @@
 
 <time
   
-  data-ts="1730307791"
+  data-ts="1736085609"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Oct 31, 2024
+  Jan  5, 2025
 </time>
 
       </span>
@@ -797,9 +875,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="548 words"
+  title="911 words"
 >
-  <em>3 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -808,7 +886,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">BOJ_2437_저울</span>
+      <span class="label text-truncate">BOJ_9251_LCS (Java, C++)</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -821,7 +899,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">BOJ_2437_저울</div>
+        <div class="label text-truncate py-2 ms-4">BOJ_9251_LCS (Java, C++)</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -831,41 +909,153 @@
   
 
   <div class="content">
-    <h1 id="gold-ii-저울---2437">[Gold II] 저울 - 2437</h1>
+    <h1 id="gold-v-lcs---9251">[Gold V] LCS - 9251</h1>
 
-<p><a href="https://www.acmicpc.net/problem/2437">문제 링크</a></p>
+<p><a href="https://www.acmicpc.net/problem/9251">문제 링크</a></p>
 
 <h3 id="성능-요약"><span class="me-2">성능 요약</span><a href="#성능-요약" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>메모리: 14788 KB, 시간: 112 ms</p>
+<p>메모리: 6004 KB, 시간: 4 ms</p>
 
 <h3 id="분류"><span class="me-2">분류</span><a href="#분류" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>그리디 알고리즘, 정렬</p>
+<p>다이나믹 프로그래밍, 문자열</p>
 
 <h3 id="제출-일자"><span class="me-2">제출 일자</span><a href="#제출-일자" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>2024년 10월 31일 01:59:38</p>
+<p>2025년 1월 5일 22:52:41</p>
 
 <h3 id="문제-설명"><span class="me-2">문제 설명</span><a href="#문제-설명" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>하나의 양팔 저울을 이용하여 물건의 무게를 측정하려고 한다. 이 저울의 양 팔의 끝에는 물건이나 추를 올려놓는 접시가 달려 있고, 양팔의 길이는 같다. 또한, 저울의 한쪽에는 저울추들만 놓을 수 있고, 다른 쪽에는 무게를 측정하려는 물건만 올려놓을 수 있다.</p>
+<p>LCS(Longest Common Subsequence, 최장 공통 부분 수열)문제는 두 수열이 주어졌을 때, 모두의 부분 수열이 되는 수열 중 가장 긴 것을 찾는 문제이다.</p>
 
-<p style="text-align: center;"><a href="https://upload.acmicpc.net/7d2a2428-a1b0-47f5-9f53-fecd714d1b1b/-/preview/" class="popup img-link shimmer"><img alt="" src="https://upload.acmicpc.net/7d2a2428-a1b0-47f5-9f53-fecd714d1b1b/-/preview/" style="width: 221px; height: 141px;" loading="lazy"></a></p>
-
-<p>무게가 양의 정수인 N개의 저울추가 주어질 때, 이 추들을 사용하여 측정할 수 없는 양의 정수 무게 중 최솟값을 구하는 프로그램을 작성하시오.</p>
-
-<p>예를 들어, 무게가 각각 3, 1, 6, 2, 7, 30, 1인 7개의 저울추가 주어졌을 때, 이 추들로 측정할 수 없는 양의 정수 무게 중 최솟값은 21이다. </p>
+<p>예를 들어, ACAYKP와 CAPCAK의 LCS는 ACAK가 된다.</p>
 
 <h3 id="입력"><span class="me-2">입력</span><a href="#입력" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>첫 째 줄에는 저울추의 개수를 나타내는 양의 정수 N이 주어진다. N은 1 이상 1,000 이하이다. 둘째 줄에는 저울추의 무게를 나타내는 N개의 양의 정수가 빈칸을 사이에 두고 주어진다. 각 추의 무게는 1이상 1,000,000 이하이다.</p>
+<p>첫째 줄과 둘째 줄에 두 문자열이 주어진다. 문자열은 알파벳 대문자로만 이루어져 있으며, 최대 1000글자로 이루어져 있다.</p>
 
 <h3 id="출력"><span class="me-2">출력</span><a href="#출력" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>첫째 줄에 주어진 추들로 측정할 수 없는 양의 정수 무게 중 최솟값을 출력한다.</p>
+<p>첫째 줄에 입력으로 주어진 두 문자열의 LCS의 길이를 출력한다.</p>
 
-<h3 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<blockquote>
+  <h2 id="문제-풀이"><span class="me-2">문제 풀이</span><a href="#문제-풀이" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+</blockquote>
+
+<p><a href="/assets/posts/6b727bce37dedeb705607fe83de27648121d94d3a2ceaa16ec52ca6159305250.png" class="popup img-link shimmer"><img src="/assets/posts/6b727bce37dedeb705607fe83de27648121d94d3a2ceaa16ec52ca6159305250.png" alt="" loading="lazy"></a></p>
+
+<h4 id="상세-로직-설명"><span class="me-2">상세 로직 설명</span><a href="#상세-로직-설명" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ol>
+  <li>문자가 같은 경우 (str1[i-1] == str2[j-1])</li>
+</ol>
+
+<ul>
+  <li>현재 문자를 LCS에 포함</li>
+  <li>이전 상태(dp[i-1][j-1])에 1을 더함</li>
+  <li>예: “AB”와 “AC”에서 ‘A’ 매칭 시 dp[1][1] = dp[0][0] + 1</li>
+</ul>
+
+<ol>
+  <li>문자가 다른 경우</li>
+</ol>
+
+<ul>
+  <li>이전 상태들 중 최대값 선택</li>
+  <li>위쪽(dp[i-1][j])과 왼쪽(dp[i][j-1]) 중 큰 값</li>
+  <li>현재 문자를 포함하지 않는 최적해 유지</li>
+</ul>
+
+<h4 id="예시로-보는-알고리즘-진행-과정"><span class="me-2">예시로 보는 알고리즘 진행 과정</span><a href="#예시로-보는-알고리즘-진행-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">str1</span> <span class="o">=</span> <span class="s">"ABCD"</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s">"AEBD"</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>단계별 DP 테이블 변화</p>
+
+<ol>
+  <li>초기 상태
+    <div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="err">''</span> <span class="n">A</span>  <span class="n">E</span>  <span class="n">B</span>  <span class="n">D</span>
+<span class="err">''</span> <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">A</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">B</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">C</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">D</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>첫 번째 행 처리 (A)
+    <div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="err">''</span> <span class="n">A</span>  <span class="n">E</span>  <span class="n">B</span>  <span class="n">D</span>
+<span class="err">''</span> <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">A</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>
+<span class="n">B</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">C</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">D</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>최종 DP 테이블
+    <div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="err">''</span> <span class="n">A</span>  <span class="n">E</span>  <span class="n">B</span>  <span class="n">D</span>
+<span class="err">''</span> <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="n">A</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span>
+<span class="n">B</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">2</span>
+<span class="n">C</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">2</span>
+<span class="n">D</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h4 id="시간-복잡도-분석"><span class="me-2">시간 복잡도 분석</span><a href="#시간-복잡도-분석" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ul>
+  <li>
+    <p>시간 복잡도: O(N × M)</p>
+
+    <ul>
+      <li>N: 첫 번째 문자열의 길이</li>
+      <li>M: 두 번째 문자열의 길이</li>
+    </ul>
+  </li>
+  <li>
+    <p>공간 복잡도: O(N × M)</p>
+
+    <ul>
+      <li>2차원 DP 테이블 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+  <h4 id="java-코드"><span class="me-2">Java 코드</span><a href="#java-코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+</blockquote>
+
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -925,31 +1115,131 @@
 	<span class="o">}</span>
 
 	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-<span class="c1">//		br = new BufferedReader(new InputStreamReader(System.in));</span>
-		<span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"input.txt"</span><span class="o">)));</span>
+		<span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//		br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));</span>
 		<span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+		<span class="nc">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+		<span class="nc">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
 		
-		<span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
-		<span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
-		
-		<span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
-		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-			<span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+		<span class="kt">int</span><span class="o">[][]</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">str1</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">][</span><span class="n">str2</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">str1</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">str2</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">str1</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">)==</span><span class="n">str2</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">))</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+				<span class="k">else</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">],</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]);</span>
+			<span class="o">}</span>
 		<span class="o">}</span>
-		<span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
-		
-		<span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-			<span class="k">if</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">res</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
-			<span class="n">res</span> <span class="o">+=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-		<span class="o">}</span>
-
-		<span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">res</span><span class="o">));</span>
+<span class="c1">//		for(int i=0; i&lt;=str1.length(); i++) {</span>
+<span class="c1">//			for(int j=0; j&lt;=str2.length(); j++) {</span>
+<span class="c1">//				System.out.print(dp[i][j] + " ");</span>
+<span class="c1">//			}</span>
+<span class="c1">//			System.out.println();</span>
+<span class="c1">//		}</span>
+		<span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">str1</span><span class="o">.</span><span class="na">length</span><span class="o">()][</span><span class="n">str2</span><span class="o">.</span><span class="na">length</span><span class="o">()]));</span>
 		<span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
 		<span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 		<span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 	<span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+<hr />
+<h4 id="c-코드"><span class="me-2">C++ 코드</span><a href="#c-코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
+<span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// #define int long long</span>
+<span class="cp">#define MOD 1000000007
+#define INF LLONG_MAX
+#define ALL(v) v.begin(), v.end()
+</span>
+<span class="cp">#ifdef LOCAL
+#include</span> <span class="cpf">"algo/debug.h"</span><span class="cp">
+#else
+#define debug(...) 42
+#endif
+</span>
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">str1</span> <span class="o">&gt;&gt;</span> <span class="n">str2</span><span class="p">;</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">str1</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                           <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">str2</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">str1</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">str2</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">str1</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">str2</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">str1</span><span class="p">.</span><span class="n">length</span><span class="p">()][</span><span class="n">str2</span><span class="p">.</span><span class="n">length</span><span class="p">()]</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="n">nullptr</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">tt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 기본적으로 1번의 테스트 케이스를 처리</span>
+    <span class="c1">// cin &gt;&gt; tt;    // 테스트 케이스 수 입력 (필요 시)</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">tt</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">solve</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>
@@ -968,6 +1258,11 @@
     
       <div class="post-tags">
         <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/c/"
+            class="post-tag no-text-decoration"
+          >C++</a>
         
           <a
             href="/tags/java/"
@@ -1018,21 +1313,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=BOJ_2437_%EC%A0%80%EC%9A%B8%20-%20Now's%20Log&url=%2Fposts%2FBOJ2437%25EC%25A0%2580%25EC%259A%25B8%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=BOJ_9251_LCS%20(Java,%20C++)%20-%20Now's%20Log&url=%2Fposts%2FBOJ9251LCS-Java-C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_2437_%EC%A0%80%EC%9A%B8%20-%20Now's%20Log&u=%2Fposts%2FBOJ2437%25EC%25A0%2580%25EC%259A%25B8%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_9251_LCS%20(Java,%20C++)%20-%20Now's%20Log&u=%2Fposts%2FBOJ9251LCS-Java-C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fposts%2FBOJ2437%25EC%25A0%2580%25EC%259A%25B8%2F&text=BOJ_2437_%EC%A0%80%EC%9A%B8%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fposts%2FBOJ9251LCS-Java-C%2F&text=BOJ_9251_LCS%20(Java,%20C++)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -4785,883 +5080,907 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -7441,7 +7760,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/BOJ9655%EB%8F%8C%EA%B2%8C%EC%9E%84-Java/" class="post-preview card h-100">
+          <a href="/posts/%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4-%EC%84%B8%ED%8C%85-%ED%85%9C%ED%94%8C%EB%A6%BF/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -7453,23 +7772,23 @@
 
 <time
   
-  data-ts="1727829307"
+  data-ts="1726879898"
   data-df="ll"
   
 >
-  Oct  2, 2024
+  Sep 21, 2024
 </time>
 
-              <h4 class="pt-0 my-2">BOJ_9655_돌게임 (Java)</h4>
+              <h4 class="pt-0 my-2">백준 문제 풀이 세팅 템플릿</h4>
               <div class="text-muted">
-                <p>[Silver V] 돌 게임 - 9655  문제 링크  성능 요약  메모리: 14304 KB, 시간: 104 ms  분류  다이나믹 프로그래밍, 게임 이론, 수학  제출 일자  2024년 10월 2일 09:28:31  문제 설명  돌 게임은 두 명이서 즐기는 재밌는 게임이다.  탁자 위에 돌 N개가 있다. 상근이와 창영이는 턴을 번갈아가면서 돌을 가져...</p>
+                <p>백준 문제를 풀 때 매번 Main함수부터 입출력까지 입력하는 부분이 귀찮아서 자동화했습니다.   Eclipse   1. 먼저 이클립스에서 Window를 켜 Preferences로 들어갑니다  2. Java &gt; Editor &gt; Templates를 찾습니다 이 안에 자주 사용하는 main 도 볼 수 있을것입니다.  3. New를 눌러 원하는 템...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/BOJ11054%EA%B0%80%EC%9E%A5-%EA%B8%B4-%EB%B0%94%EC%9D%B4%ED%86%A0%EB%8B%89-%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4-Java/" class="post-preview card h-100">
+          <a href="/posts/BOJ10431%EC%A4%84-%EC%84%B8%EC%9A%B0%EA%B8%B0-Java-C-Python/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -7481,23 +7800,23 @@
 
 <time
   
-  data-ts="1727822807"
+  data-ts="1743073821"
   data-df="ll"
   
 >
-  Oct  2, 2024
+  Mar 27, 2025
 </time>
 
-              <h4 class="pt-0 my-2">BOJ_11054_가장 긴 바이토닉 부분수열 (Java)</h4>
+              <h4 class="pt-0 my-2">BOJ_10431_줄 세우기 (Java, C++, Python)</h4>
               <div class="text-muted">
-                <p>[Gold IV] 가장 긴 바이토닉 부분 수열 - 11054 문제 링크 성능 요약 메모리: 15564 KB, 시간: 132 ms 분류 다이나믹 프로그래밍 제출 일자 2024년 10월 2일 07:44:13 문제 설명 수열 S가 어떤 수 Sk를 기준으로 S1 &lt; S2 &lt; ... Sk-1 &lt; Sk &gt; Sk+1 &gt; ... SN-1 ...</p>
+                <p># [Silver V] 줄세우기 - 10431   [문제 링크](https://www.acmicpc.net/problem/10431)   ### 성능 요약  메모리: 32412 KB, 시간: 116 ms  ### 분류  구현, 시뮬레이션, 정렬  ### 제출 일자  2025년 3월 27일 20:06:08  ### 문제 설명  초등학교 선생님 강산이는 ...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/BOJ6549%ED%9E%88%EC%8A%A4%ED%86%A0%EA%B7%B8%EB%9E%A8%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%ED%81%B0-%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95Java/" class="post-preview card h-100">
+          <a href="/posts/BOJ15576%ED%81%B0-%EC%88%98-%EA%B3%B1%EC%85%89-2-BOJ22289%ED%81%B0-%EC%88%98-%EA%B3%B1%EC%85%88-3-C-Java/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -7509,16 +7828,16 @@
 
 <time
   
-  data-ts="1727633382"
+  data-ts="1738497896"
   data-df="ll"
   
 >
-  Sep 30, 2024
+  Feb  2, 2025
 </time>
 
-              <h4 class="pt-0 my-2">BOJ_6549_히스토그램에서 가장 큰 직사각형(Java)</h4>
+              <h4 class="pt-0 my-2">BOJ_15576_큰 수 곱셉 (2), BOJ_22289_큰 수 곱셈 (3) (C++, Java)</h4>
               <div class="text-muted">
-                <p>[Platinum V] 히스토그램에서 가장 큰 직사각형 - 6549  문제 링크  성능 요약  메모리: 56948 KB, 시간: 968 ms  분류  자료 구조, 분할 정복, 세그먼트 트리, 스택  제출 일자  2024년 9월 30일 02:59:54  문제 설명  히스토그램은 직사각형 여러 개가 아래쪽으로 정렬되어 있는 도형이다. 각 직사각형은 같은 ...</p>
+                <p># [Platinum I] 큰 수 곱셈 (2) - 15576   [문제 링크](https://www.acmicpc.net/problem/15576)   ### 성능 요약  메모리: 48496 KB, 시간: 332 ms  ### 분류  고속 푸리에 변환, 수학  ### 제출 일자  2025년 2월 2일 20:08:33  ### 문제 설명  두 정수 A와...</p>
               </div>
             </div>
           </a>
@@ -7539,21 +7858,21 @@
 
   
     <a
-      href="/posts/BOJ2580%EC%8A%A4%EB%8F%84%EC%BF%A0/"
+      href="/posts/BOJ15971%EB%91%90-%EB%A1%9C%EB%B4%87-Java-C/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>BOJ_2580_스도쿠</p>
+      <p>BOJ_15971_두 로봇 (Java, C++)</p>
     </a>
   
 
   
     <a
-      href="/posts/PGMS%EC%82%B0-%EB%AA%A8%EC%96%91-%ED%83%80%EC%9D%BC%EB%A7%81/"
+      href="/posts/PGMS%EC%A6%90%EA%B2%A8%EC%B0%BE%EA%B8%B0%EA%B0%80-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%80-%EC%8B%9D%EB%8B%B9-%EC%A0%95%EB%B3%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0-SQL/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>PGMS_산 모양 타일링</p>
+      <p>PGMS_즐겨찾기가 가장 많은 식당 정보 출력하기 (SQL)</p>
     </a>
   
 </nav>

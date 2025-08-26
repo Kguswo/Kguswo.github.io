@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="PGMS_부모의 형질을 모두 가지는 대장균 찾기 (SQL)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="문제 링크 메모리: undefined, 시간: 코딩테스트 연습 &gt; SELECT 합계: 100.0 / 100.0 2025년 04월 15일 21:49:02출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/le" />
-<meta property="og:description" content="문제 링크 메모리: undefined, 시간: 코딩테스트 연습 &gt; SELECT 합계: 100.0 / 100.0 2025년 04월 15일 21:49:02출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/le" />
+<meta name="description" content="[level 2] 부모의 형질을 모두 가지는 대장균 찾기 - 301647 문제 링크 ### 성능 요약 메모리: undefined, 시간: ### 구분 코딩테스트 연습 &gt; SELECT ### 채점결과 합계: 100.0 / 100.0 ### 제출 일자 2025년 04월 15일 21:49:02 ### 문제 설명 대장균들은 일정 주기로 분화하며, 분화를 시작한 개체를 부모 개체, 분화가 되어 나온 개체를 자식 개체라고 합니다. 다음은 실험실에서 배양한 대장균들의 정보를 담은 ECOLI_DATA 테이블입니다. ECOLI_DATA 테이블의 구조는 다음과 같으며, ID, PARENT_ID, SIZE_OF_COLONY, DIFFERENTIATION_DATE, GENOTYPE 은 각각 대장균 개체의 ID, 부모 개체의 ID, 개체의 크기, 분화되어 나온 날짜, 개체의 형질을 나타냅니다. Column name Type Nullable ID INTEGER FALSE PARENT_ID INTEGER TRUE SIZE_OF_COLONY INTEGER FALSE DIFFERENTIATION_DATE DATE FALSE GENOTYPE INTEGER FALSE 최초의 대장균 개체의 PARENT_ID 는 NULL 값입니다. 문제 부모의 형질을 모두 보유한 대장균의 ID(ID), 대장균의 형질(GENOTYPE), 부모 대장균의 형질(PARENT_GENOTYPE)을 출력하는 SQL 문을 작성해주세요. 이때 결과는 ID에 대해 오름차순 정렬해주세요. 예시 예를 들어 ECOLI_DATA 테이블이 다음과 같다면 ID PARENT_ID SIZE_OF_COLONY DIFFERENTIATION_DATE GENOTYPE 1 NULL 10 2019/01/01 1 2 1 2 2019/01/01 1 3 1 100 2020/01/01 3 4 2 16 2020/01/01 2 5 4 17 2020/01/01 8 6 3 101 2021/01/01 5 7 2 101 2022/01/01 5 8 6 1 2022/01/01 13 각 대장균 별 형질을 2진수로 나타내면 다음과 같습니다. ID 1 : 1₍₂₎ ID 2 : 1₍₂₎ ID 3 : 11₍₂₎ ID 4 : 10₍₂₎ ID 5 : 1000₍₂₎ ID 6 : 101₍₂₎ ID 7 : 101₍₂₎ ID 8 : 1101₍₂₎ 각 대장균 별 보유한 형질을 다음과 같습니다. ID 1 : 1 ID 2 : 1 ID 3 : 1, 2 ID 4 : 2 ID 5 : 4 ID 6 : 1, 3 ID 7 : 1, 3 ID 8 : 1, 3, 4 각 개체별로 살펴보면 다음과 같습니다. ID 1 : 최초의 대장균 개체이므로 부모가 없습니다. ID 2 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 3 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 4 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있지 않습니다. ID 5 : 부모는 ID 4 이며 부모의 형질인 2번 형질을 보유하고 있지 않습니다. ID 6 : 부모는 ID 3 이며 부모의 형질 1, 2번 중 2 번 형질을 보유하고 있지 않습니다. ID 7 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 8 : 부모는 ID 6 이며 부모의 형질 1, 3번을 모두 보유하고 있습니다. 따라서 부모의 형질을 모두 보유한 개체는 ID 2, ID 3, ID 7, ID 8 이며 결과를 ID 에 대해 오름차순 정렬하면 다음과 같아야 합니다. ID GENOTYPE PARENT_GENOTYPE 2 1 1 3 3 1 7 5 1 8 13 5" />
+<meta property="og:description" content="[level 2] 부모의 형질을 모두 가지는 대장균 찾기 - 301647 문제 링크 ### 성능 요약 메모리: undefined, 시간: ### 구분 코딩테스트 연습 &gt; SELECT ### 채점결과 합계: 100.0 / 100.0 ### 제출 일자 2025년 04월 15일 21:49:02 ### 문제 설명 대장균들은 일정 주기로 분화하며, 분화를 시작한 개체를 부모 개체, 분화가 되어 나온 개체를 자식 개체라고 합니다. 다음은 실험실에서 배양한 대장균들의 정보를 담은 ECOLI_DATA 테이블입니다. ECOLI_DATA 테이블의 구조는 다음과 같으며, ID, PARENT_ID, SIZE_OF_COLONY, DIFFERENTIATION_DATE, GENOTYPE 은 각각 대장균 개체의 ID, 부모 개체의 ID, 개체의 크기, 분화되어 나온 날짜, 개체의 형질을 나타냅니다. Column name Type Nullable ID INTEGER FALSE PARENT_ID INTEGER TRUE SIZE_OF_COLONY INTEGER FALSE DIFFERENTIATION_DATE DATE FALSE GENOTYPE INTEGER FALSE 최초의 대장균 개체의 PARENT_ID 는 NULL 값입니다. 문제 부모의 형질을 모두 보유한 대장균의 ID(ID), 대장균의 형질(GENOTYPE), 부모 대장균의 형질(PARENT_GENOTYPE)을 출력하는 SQL 문을 작성해주세요. 이때 결과는 ID에 대해 오름차순 정렬해주세요. 예시 예를 들어 ECOLI_DATA 테이블이 다음과 같다면 ID PARENT_ID SIZE_OF_COLONY DIFFERENTIATION_DATE GENOTYPE 1 NULL 10 2019/01/01 1 2 1 2 2019/01/01 1 3 1 100 2020/01/01 3 4 2 16 2020/01/01 2 5 4 17 2020/01/01 8 6 3 101 2021/01/01 5 7 2 101 2022/01/01 5 8 6 1 2022/01/01 13 각 대장균 별 형질을 2진수로 나타내면 다음과 같습니다. ID 1 : 1₍₂₎ ID 2 : 1₍₂₎ ID 3 : 11₍₂₎ ID 4 : 10₍₂₎ ID 5 : 1000₍₂₎ ID 6 : 101₍₂₎ ID 7 : 101₍₂₎ ID 8 : 1101₍₂₎ 각 대장균 별 보유한 형질을 다음과 같습니다. ID 1 : 1 ID 2 : 1 ID 3 : 1, 2 ID 4 : 2 ID 5 : 4 ID 6 : 1, 3 ID 7 : 1, 3 ID 8 : 1, 3, 4 각 개체별로 살펴보면 다음과 같습니다. ID 1 : 최초의 대장균 개체이므로 부모가 없습니다. ID 2 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 3 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 4 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있지 않습니다. ID 5 : 부모는 ID 4 이며 부모의 형질인 2번 형질을 보유하고 있지 않습니다. ID 6 : 부모는 ID 3 이며 부모의 형질 1, 2번 중 2 번 형질을 보유하고 있지 않습니다. ID 7 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 8 : 부모는 ID 6 이며 부모의 형질 1, 3번을 모두 보유하고 있습니다. 따라서 부모의 형질을 모두 보유한 개체는 ID 2, ID 3, ID 7, ID 8 이며 결과를 ID 에 대해 오름차순 정렬하면 다음과 같아야 합니다. ID GENOTYPE PARENT_GENOTYPE 2 1 1 3 3 1 7 5 1 8 13 5" />
 <link rel="canonical" href="/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/" />
 <meta property="og:url" content="/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="PGMS_부모의 형질을 모두 가지는 대장균 찾기 (SQL)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-15T21:53:44+09:00","datePublished":"2025-04-15T21:53:44+09:00","description":"문제 링크 메모리: undefined, 시간: 코딩테스트 연습 &gt; SELECT 합계: 100.0 / 100.0 2025년 04월 15일 21:49:02출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/le","headline":"PGMS_부모의 형질을 모두 가지는 대장균 찾기 (SQL)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/"},"url":"/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-15T21:53:44+09:00","datePublished":"2025-04-15T21:53:44+09:00","description":"[level 2] 부모의 형질을 모두 가지는 대장균 찾기 - 301647 문제 링크 ### 성능 요약 메모리: undefined, 시간: ### 구분 코딩테스트 연습 &gt; SELECT ### 채점결과 합계: 100.0 / 100.0 ### 제출 일자 2025년 04월 15일 21:49:02 ### 문제 설명 대장균들은 일정 주기로 분화하며, 분화를 시작한 개체를 부모 개체, 분화가 되어 나온 개체를 자식 개체라고 합니다. 다음은 실험실에서 배양한 대장균들의 정보를 담은 ECOLI_DATA 테이블입니다. ECOLI_DATA 테이블의 구조는 다음과 같으며, ID, PARENT_ID, SIZE_OF_COLONY, DIFFERENTIATION_DATE, GENOTYPE 은 각각 대장균 개체의 ID, 부모 개체의 ID, 개체의 크기, 분화되어 나온 날짜, 개체의 형질을 나타냅니다. Column name Type Nullable ID INTEGER FALSE PARENT_ID INTEGER TRUE SIZE_OF_COLONY INTEGER FALSE DIFFERENTIATION_DATE DATE FALSE GENOTYPE INTEGER FALSE 최초의 대장균 개체의 PARENT_ID 는 NULL 값입니다. 문제 부모의 형질을 모두 보유한 대장균의 ID(ID), 대장균의 형질(GENOTYPE), 부모 대장균의 형질(PARENT_GENOTYPE)을 출력하는 SQL 문을 작성해주세요. 이때 결과는 ID에 대해 오름차순 정렬해주세요. 예시 예를 들어 ECOLI_DATA 테이블이 다음과 같다면 ID PARENT_ID SIZE_OF_COLONY DIFFERENTIATION_DATE GENOTYPE 1 NULL 10 2019/01/01 1 2 1 2 2019/01/01 1 3 1 100 2020/01/01 3 4 2 16 2020/01/01 2 5 4 17 2020/01/01 8 6 3 101 2021/01/01 5 7 2 101 2022/01/01 5 8 6 1 2022/01/01 13 각 대장균 별 형질을 2진수로 나타내면 다음과 같습니다. ID 1 : 1₍₂₎ ID 2 : 1₍₂₎ ID 3 : 11₍₂₎ ID 4 : 10₍₂₎ ID 5 : 1000₍₂₎ ID 6 : 101₍₂₎ ID 7 : 101₍₂₎ ID 8 : 1101₍₂₎ 각 대장균 별 보유한 형질을 다음과 같습니다. ID 1 : 1 ID 2 : 1 ID 3 : 1, 2 ID 4 : 2 ID 5 : 4 ID 6 : 1, 3 ID 7 : 1, 3 ID 8 : 1, 3, 4 각 개체별로 살펴보면 다음과 같습니다. ID 1 : 최초의 대장균 개체이므로 부모가 없습니다. ID 2 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 3 : 부모는 ID 1 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 4 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있지 않습니다. ID 5 : 부모는 ID 4 이며 부모의 형질인 2번 형질을 보유하고 있지 않습니다. ID 6 : 부모는 ID 3 이며 부모의 형질 1, 2번 중 2 번 형질을 보유하고 있지 않습니다. ID 7 : 부모는 ID 2 이며 부모의 형질인 1번 형질을 보유하고 있습니다. ID 8 : 부모는 ID 6 이며 부모의 형질 1, 3번을 모두 보유하고 있습니다. 따라서 부모의 형질을 모두 보유한 개체는 ID 2, ID 3, ID 7, ID 8 이며 결과를 ID 에 대해 오름차순 정렬하면 다음과 같아야 합니다. ID GENOTYPE PARENT_GENOTYPE 2 1 1 3 3 1 7 5 1 8 13 5","headline":"PGMS_부모의 형질을 모두 가지는 대장균 찾기 (SQL)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/"},"url":"/posts/PGMS%EB%B6%80%EB%AA%A8%EC%9D%98-%ED%98%95%EC%A7%88%EC%9D%84-%EB%AA%A8%EB%91%90-%EA%B0%80%EC%A7%80%EB%8A%94-%EB%8C%80%EC%9E%A5%EA%B7%A0-%EC%B0%BE%EA%B8%B0-SQL/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -588,8 +588,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>PGMS_부모의 형질을 모두 가지는 대장균 찾기 (SQL)</h1>
-    
-      <p class="post-desc fw-light mb-4">  문제 링크  메모리: undefined, 시간:  코딩테스트 연습 > SELECT 합계: 100.0 / 100.0 2025년 04월 15일 21:49:02출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.programmers.co.kr/le</p>
     
 
     <div class="post-meta text-muted">
@@ -4264,7 +4262,7 @@
 
               <h4 class="pt-0 my-2">BOJ_7579_앱 (Java)</h4>
               <div class="text-muted">
-                <p>[Gold III] 앱 - 7579  문제 링크  성능 요약  메모리: 24228 KB, 시간: 184 ms  분류  다이나믹 프로그래밍, 배낭 문제  제출 일자  2025년 8월 6일 01:51:06  문제 설명  우리는 스마트폰을 사용하면서 여러 가지 앱(App)을</p>
+                <p># [Gold III] 앱 - 7579   [문제 링크](https://www.acmicpc.net/problem/7579)   ### 성능 요약  메모리: 24228 KB, 시간: 184 ms  ### 분류  다이나믹 프로그래밍, 배낭 문제  ### 제출 일자  2025년 8월 6일 01:51:06  ### 문제 설명  우리는 스마트폰을 사용하면서 ...</p>
               </div>
             </div>
           </a>
@@ -4292,7 +4290,7 @@
 
               <h4 class="pt-0 my-2">PGMS_연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기</h4>
               <div class="text-muted">
-                <p>문제 링크 메모리: undefined, 시간: 코딩테스트 연습 > GROUP BY합계: 100.0 / 100.02025년 08월 06일 02:30:06출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.programmers.co.kr/learn/</p>
+                <p># [level 4] 연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기 - 284528   [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/284528)   ### 성능 요약  메모리: undefined, 시간:   ### 구분  코딩테스트 연습 > GROUP BY  ### 채...</p>
               </div>
             </div>
           </a>
@@ -4320,7 +4318,7 @@
 
               <h4 class="pt-0 my-2">PGMS_멸종위기의 대장균 찾기</h4>
               <div class="text-muted">
-                <p>문제 링크 메모리: undefined, 시간: 코딩테스트 연습 > SELECT합계: 100.0 / 100.02025년 07월 30일 09:50:50출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.programmers.co.kr/learn/ch</p>
+                <p># [level 5] 멸종위기의 대장균 찾기 - 301651   [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/301651)   ### 성능 요약  메모리: undefined, 시간:   ### 구분  코딩테스트 연습 > SELECT  ### 채점결과  합계: 100.0 / 100...</p>
               </div>
             </div>
           </a>

@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Operating System Concepts - (7)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="주소 변환을 페이징 별로 해야하기 때문에 바인딩이 어려워짐.Paging (페이징 기법)Process의 Virtual Memory를 동일한 사이즈의 Page 단위로 나눔Virtual Memory의 내용이 page 단위로 noncontiguous하게 저장됨.일부는 back" />
-<meta property="og:description" content="주소 변환을 페이징 별로 해야하기 때문에 바인딩이 어려워짐.Paging (페이징 기법)Process의 Virtual Memory를 동일한 사이즈의 Page 단위로 나눔Virtual Memory의 내용이 page 단위로 noncontiguous하게 저장됨.일부는 back" />
+<meta name="description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
+<meta property="og:description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
 <link rel="canonical" href="/posts/Operating-System-Concepts-7/" />
 <meta property="og:url" content="/posts/Operating-System-Concepts-7/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Operating System Concepts - (7)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-05T04:12:59+09:00","datePublished":"2025-01-05T04:12:59+09:00","description":"주소 변환을 페이징 별로 해야하기 때문에 바인딩이 어려워짐.Paging (페이징 기법)Process의 Virtual Memory를 동일한 사이즈의 Page 단위로 나눔Virtual Memory의 내용이 page 단위로 noncontiguous하게 저장됨.일부는 back","headline":"Operating System Concepts - (7)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-7/"},"url":"/posts/Operating-System-Concepts-7/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-05T04:12:59+09:00","datePublished":"2025-01-05T04:12:59+09:00","description":"프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.","headline":"Operating System Concepts - (7)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-7/"},"url":"/posts/Operating-System-Concepts-7/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1151,8 +1151,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Operating System Concepts - (7)</h1>
-    
-      <p class="post-desc fw-light mb-4">주소 변환을 페이징 별로 해야하기 때문에 바인딩이 어려워짐.Paging (페이징 기법)Process의 Virtual Memory를 동일한 사이즈의 Page 단위로 나눔Virtual Memory의 내용이 page 단위로 noncontiguous하게 저장됨.일부는 back</p>
     
 
     <div class="post-meta text-muted">
@@ -4185,7 +4183,7 @@ effective memory access time = 0.98 x 120 + 0.02 x 520 = 128ns</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (10)</h4>
               <div class="text-muted">
-                <p>Virtual Memory (2)  다양한 캐싱 환경 캐싱 기법   한정된 빠른 공간(캐시)에 요청된 데이터를 저장해 두었다가 또 똑같은 요청이 들어오면 느린 저장장치에 접근하지 않고 빠른 캐시로부터 직접 서비스하는 방식   가상 메모리 페이징 시스템에서는 한정된 빠른</p>
+                <p>> # Virtual Memory (2)  ### 다양한 캐싱 환경 - 캐싱 기법   - 한정된 빠른 공간(캐시)에 요청된 데이터를 저장해 두었다가 또 똑같은 요청이 들어오면 느린 저장장치에 접근하지 않고 빠른 캐시로부터 직접 서비스하는 방식   - 가상 메모리 페이징 시스템에서는 한정된 빠른공간(= 물리메모리, RAM), 느린 저장장치(= 하드디스크...</p>
               </div>
             </div>
           </a>
@@ -4213,7 +4211,7 @@ effective memory access time = 0.98 x 120 + 0.02 x 520 = 128ns</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (9)</h4>
               <div class="text-muted">
-                <p>가상 메모리는 운영체제가 관리한다.실제로 필요할 때 page를 메모리에 올리는 것. (요청이 있으면 페이지를 메모리에 올리겠다는 의미)실제로 대부분의 시스템들은 Paging 기법 사용 중요구 페이징의 장점I/O양의 감소 (프로그램 중에 빈번하게 사용되는 부분은 지극히</p>
+                <p>![](/assets/posts/f6cd1af4d9a8bea5c2c7f4b6011195aff86d6e02d339c74f5f699ddd9fb1993a.png)  > # Virtual Memory (1) 가상 메모리는 운영체제가 관리한다.  ### Demand Paging (요구 페이징) - 실제로 필요할 때 **page를** 메모리에 올리는 것. (요청...</p>
               </div>
             </div>
           </a>
@@ -4241,7 +4239,7 @@ effective memory access time = 0.98 x 120 + 0.02 x 520 = 128ns</li>
 
               <h4 class="pt-0 my-2">Operating System Concepts - (8)</h4>
               <div class="text-muted">
-                <p>Memory Management - (3)</p>
+                <p>![](/assets/posts/8508eb7574af38b56c9c79b704aae1f6081c22569b38496acc2594ae91c46145.png)  > # Memory Management - (3)  ![](/assets/posts/97656e60b2be997715c199276b27c7c48454b33b2e3fd0d75bd52f41f2dcc...</p>
               </div>
             </div>
           </a>

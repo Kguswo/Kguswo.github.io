@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="HTTP 메서드의 멱등성" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서" />
-<meta property="og:description" content="연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서" />
+<meta name="description" content="멱등성이란? 연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서드는 GET , HEAD , PUT , DELETE , TRACE , OPTIONS 가 있다." />
+<meta property="og:description" content="멱등성이란? 연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서드는 GET , HEAD , PUT , DELETE , TRACE , OPTIONS 가 있다." />
 <link rel="canonical" href="/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/" />
 <meta property="og:url" content="/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="HTTP 메서드의 멱등성" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-09T20:43:58+09:00","datePublished":"2025-01-09T20:43:58+09:00","description":"연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서","headline":"HTTP 메서드의 멱등성","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/"},"url":"/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-09T20:43:58+09:00","datePublished":"2025-01-09T20:43:58+09:00","description":"멱등성이란? 연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서드는 GET , HEAD , PUT , DELETE , TRACE , OPTIONS 가 있다.","headline":"HTTP 메서드의 멱등성","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/"},"url":"/posts/HTTP-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%EB%A9%B1%EB%93%B1%EC%84%B1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -599,8 +599,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>HTTP 메서드의 멱등성</h1>
-    
-      <p class="post-desc fw-light mb-4">연산을 여러번 적용하더라도 결과가 달라지지 않는 성질을 멱등성이라고 한다. HTTP 메서드의 멱등성은 동일한 요청을 한 번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 말할 수 있다. 대표적으로 멱등한 메서</p>
     
 
     <div class="post-meta text-muted">
@@ -6798,6 +6796,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -7123,7 +7133,7 @@
 
               <h4 class="pt-0 my-2">엔티티 매니저란?</h4>
               <div class="text-muted">
-                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨</p>
+                <p>엔티티 매니저에 대해 알기 위해선 영속성 컨텍스트에 대해 알아야 한다. 영속성 컨텍스트는 엔티티를 영구 저장하는 환경으로 1차 캐싱, 쓰기 지연, 변경 감지를 통해 영속 로직을 효율적으로 할 수 있게 해준다. 이러한 효율적인 영속 로직 수행을 위해서 엔티티는 영속성 컨텍스트에 관리되어야 한다. 이런 작업을 도와주는 것이 바로 엔티티 매니저다. 엔티티 ...</p>
               </div>
             </div>
           </a>
@@ -7151,7 +7161,7 @@
 
               <h4 class="pt-0 my-2">프로세스보다 쓰레드의 컨텍스트 스위칭이 빠른 이유</h4>
               <div class="text-muted">
-                <p>컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의</p>
+                <p>### Context Switching 컨텍스트 스위칭은 CPU나 코어에서 실행중이던 프로세스나 쓰레드가 다른 프로세스나 쓰레드로 교체되는 과정이다. 이는 멀티태스킹 시스템에서 여러 작업을 효율적으로 관리하기 위해 필수적인 메커니즘이다.  ### Context 컨텍스트는 프로세스나 쓰레드의 현재 상태를 의미한다. 여기에는 CPU의 레지스터 상태(프로그...</p>
               </div>
             </div>
           </a>
@@ -7179,7 +7189,7 @@
 
               <h4 class="pt-0 my-2">Scale-Up vs Scale-Out</h4>
               <div class="text-muted">
-                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 Scale-Up (스케일 업) 혹은 Scale-Out (스케일 아웃) 을 고려한다.스케일 업은 기존의 서버를 더 높은 사양으로 업그레이드하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드</p>
+                <p>기존 개발하던 서비스의 서버가 한계에 다다랐을 때 **Scale-Up (스케일 업)** 혹은 **Scale-Out (스케일 아웃)** 을 고려한다.  ### Scale-Up 스케일 업은 기존의 **서버를 더 높은 사양으로 업그레이드**하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드 하는 방식이다.  스케일 업은 상대...</p>
               </div>
             </div>
           </a>

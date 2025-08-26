@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Operating System Concepts - 운영체제부터 프로그램이 실행되기까지" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="컴퓨터에서 프로그램이 실행되기까지 과정을 정리해보고자 한다. 개발자 입장에서 직접 작성한 고급언어 코드 프로그램이 어떻게 작동하게 되는지 알아보자. 운영체제별 차이점까지 깊게 다루진 않았다.C/C++ 실행 과정Java 실행 과정개발자는 C, C++, Java, Pyth" />
-<meta property="og:description" content="컴퓨터에서 프로그램이 실행되기까지 과정을 정리해보고자 한다. 개발자 입장에서 직접 작성한 고급언어 코드 프로그램이 어떻게 작동하게 되는지 알아보자. 운영체제별 차이점까지 깊게 다루진 않았다.C/C++ 실행 과정Java 실행 과정개발자는 C, C++, Java, Pyth" />
+<meta name="description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
+<meta property="og:description" content="프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다." />
 <link rel="canonical" href="/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/" />
 <meta property="og:url" content="/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Operating System Concepts - 운영체제부터 프로그램이 실행되기까지" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-24T20:19:43+09:00","datePublished":"2025-06-24T20:19:43+09:00","description":"컴퓨터에서 프로그램이 실행되기까지 과정을 정리해보고자 한다. 개발자 입장에서 직접 작성한 고급언어 코드 프로그램이 어떻게 작동하게 되는지 알아보자. 운영체제별 차이점까지 깊게 다루진 않았다.C/C++ 실행 과정Java 실행 과정개발자는 C, C++, Java, Pyth","headline":"Operating System Concepts - 운영체제부터 프로그램이 실행되기까지","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/"},"url":"/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-24T20:19:43+09:00","datePublished":"2025-06-24T20:19:43+09:00","description":"프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.","headline":"Operating System Concepts - 운영체제부터 프로그램이 실행되기까지","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/"},"url":"/posts/Operating-System-Concepts-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%B6%80%ED%84%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%9D%B4-%EC%8B%A4%ED%96%89%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -837,8 +837,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Operating System Concepts - 운영체제부터 프로그램이 실행되기까지</h1>
-    
-      <p class="post-desc fw-light mb-4">컴퓨터에서 프로그램이 실행되기까지 과정을 정리해보고자 한다. 개발자 입장에서 직접 작성한 고급언어 코드 프로그램이 어떻게 작동하게 되는지 알아보자. 운영체제별 차이점까지 깊게 다루진 않았다.C/C++ 실행 과정Java 실행 과정개발자는 C, C++, Java, Pyth</p>
     
 
     <div class="post-meta text-muted">
@@ -4030,7 +4028,7 @@ JVM 자체는 C/C++로 만들어진 네이티브 프로그램이므로 일반적
 
               <h4 class="pt-0 my-2">Operating System Concepts - Page Replacement</h4>
               <div class="text-muted">
-                <p>전체 10 페이지 중 실제로는 5페이지만을 사용하는 프로세스가 있다면, 요구 페이징을 통해 사용되지 않는 나머지 5페이지를 로드하는 I/O를 피할 수 있다.ex) 40 프레임을 사용할 수 있는 시스템이 있다고 할 때, 10페이지를 모두 로드해야 하는 상황이였다면 4개의</p>
+                <p>> # 가상 메모리  ---  # 10.4 페이지 교체    ### Over Allocating (메모리 과할당)  전체 10 페이지 중 실제로는 5페이지만을 사용하는 프로세스가 있다면, 요구 페이징을 통해 사용되지 않는 나머지 5페이지를 로드하는 I/O를 피할 수 있다.    ex) 40 프레임을 사용할 수 있는 시스템이 있다고 할 때, 10페이지를...</p>
               </div>
             </div>
           </a>
@@ -4058,7 +4056,7 @@ JVM 자체는 C/C++로 만들어진 네이티브 프로그램이므로 일반적
 
               <h4 class="pt-0 my-2">Operating System Concepts - Mutex, Semaphore 그리고 Java의 동기화 기법</h4>
               <div class="text-muted">
-                <p>여러 개의 프로세스가 공유 자원에 동시 접근할 때 실행 순서에 따라 결과값이 달라질 수 있는 현상공유 자원에 여러 프로세스/쓰레드가 동시에 접근 -> 의도치 않은 동작 발생 가능따라서 프로세스나 쓰레드를 공유자원에 동시에 접근하지 못하도록 접근 순서를 제어하는 방법 (</p>
+                <p>![](/assets/posts/b42a0efb03a275bbdac54b3efbf63540b79917df67c1c0aa47444f966e494865.png)  ## Mutex와 Semaphore 이전의 배경  ### Race Condition (경쟁 상태) > 여러 개의 프로세스가 공유 자원에 동시 접근할 때 실행 순서에 따라 결과값이 달라질 수 있는...</p>
               </div>
             </div>
           </a>
@@ -4086,7 +4084,7 @@ JVM 자체는 C/C++로 만들어진 네이티브 프로그램이므로 일반적
 
               <h4 class="pt-0 my-2">Operating System Concepts - 실시간 CPU 스케줄링</h4>
               <div class="text-muted">
-                <p>Operating System 공룡책 5.6절의 실시간 CPU 스케줄링에 대해 정리해보았다실시간 CPU 스케줄링은 연성(soft) 실시간 시스템과 경성(hard) 실시간으로 구분연성 실시간 시스템중요한 실시간 프로세스가 스케줄 되는 시점에 관해 아무런 보장을 하지 않는</p>
+                <p>> Operating System 공룡책 5.6절의 실시간 CPU 스케줄링에 대해 정리해보았다      ## 실시간 CPU 스케줄링 >실시간 CPU 스케줄링은 연성(soft) 실시간 시스템과 경성(hard) 실시간으로 구분  - 연성 실시간 시스템 중요한 실시간 프로세스가 스케줄 되는 시점에 관해 아무런 보장을 하지 않는다. 오직 중요 프로세스가 그렇...</p>
               </div>
             </div>
           </a>

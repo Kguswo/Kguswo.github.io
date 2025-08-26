@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Windows에서 클론 시 ‘Filename too long’ 오류 해결하기" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제" />
-<meta property="og:description" content="spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제" />
+<meta name="description" content="문제 상황" />
+<meta property="og:description" content="문제 상황" />
 <link rel="canonical" href="/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/" />
 <meta property="og:url" content="/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/" />
 <meta property="og:site_name" content="Now’s Log" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="Windows에서 클론 시 ‘Filename too long’ 오류 해결하기" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-18T23:42:44+09:00","datePublished":"2025-07-18T23:42:44+09:00","description":"spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제","headline":"Windows에서 클론 시 ‘Filename too long’ 오류 해결하기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"},"url":"/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-18T23:42:44+09:00","datePublished":"2025-07-18T23:42:44+09:00","description":"문제 상황","headline":"Windows에서 클론 시 ‘Filename too long’ 오류 해결하기","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"},"url":"/posts/Windows%EC%97%90%EC%84%9C-%ED%81%B4%EB%A1%A0-%EC%8B%9C-Filename-too-long-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -706,8 +706,6 @@
 <article class="px-1" data-toc="true">
   <header>
     <h1 data-toc-skip>Windows에서 클론 시 'Filename too long' 오류 해결하기</h1>
-    
-      <p class="post-desc fw-light mb-4">spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제</p>
     
 
     <div class="post-meta text-muted">
@@ -3522,7 +3520,7 @@
 
               <h4 class="pt-0 my-2">Gitlab 작업을 Github으로 옮기기 ( 커밋 내역 포함 미러링)</h4>
               <div class="text-muted">
-                <p>이번 프로젝트는 큰 파일이 없는 경우였기 때문에 간단한 미러링으로 옮길 수 있었다. 용량이 큰 파일은 다른 방법을 사용해야한다. 매우 귀찮고 복잡하기 때문에 최대한 git에 커밋할 땐 용량이 큰 파일은 지양하자.(경험담)ps. 파일을 지운다고 해서 다시 옮길 수 있는</p>
+                <p>Gitlab에서 작업한 프로젝트를 Github으로 옮겨야 할 상황이 생겼다.   이번 프로젝트는 큰 파일이 없는 경우였기 때문에 간단한 미러링으로 옮길 수 있었다. 용량이 큰 파일은 다른 방법을 사용해야한다. 매우 귀찮고 복잡하기 때문에 최대한 git에 커밋할 땐 용량이 큰 파일은 지양하자.(경험담)      ps. 파일을 지운다고 해서 다시 옮길 수...</p>
               </div>
             </div>
           </a>
@@ -3550,7 +3548,7 @@
 
               <h4 class="pt-0 my-2">VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기</h4>
               <div class="text-muted">
-                <p>VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/\[User]/AppData/Local/Programs/Microsoft V</p>
+                <p>문제 상황 VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/[User]/AppData/Local/Programs/Microsoft VS Code에서 시작되는 현상이 발생했다. 이 문제는 Git Bash에만 해...</p>
               </div>
             </div>
           </a>
@@ -3578,7 +3576,7 @@
 
               <h4 class="pt-0 my-2">iCloud 동기화 해제 및 iCloud에서 폴더로 다운받기 오류 (Mac) (데스크탑, 문서 옮기기)</h4>
               <div class="text-muted">
-                <p>맥북 사용 중 iCloud 용량때문에 동기화를 해제할 일이 생겼고, 이에 로컬에 있는 데스크톱 파일들과 로컬 파일들이 전부 사라지는 현상을 겪었다. 이를 많은 구글링을 해보아도 마땅한 해결책이 없어 나름 대안을 혼자 하루종일 시간을 갈아넣으며 찾았다.iCloud와 맥북</p>
+                <p>맥북 사용 중 iCloud 용량때문에 동기화를 해제할 일이 생겼고, 이에 로컬에 있는 데스크톱 파일들과 로컬 파일들이 전부 사라지는 현상을 겪었다. 이를 많은 구글링을 해보아도 마땅한 해결책이 없어 나름 대안을 혼자 하루종일 시간을 갈아넣으며 찾았다.   문제 상황    iCloud와 맥북 동기화를 해제   동기화 해제 시 Desktop과 Docume...</p>
               </div>
             </div>
           </a>
