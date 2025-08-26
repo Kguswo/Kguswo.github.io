@@ -1,0 +1,86 @@
+# main 브랜치에 push가 발생하면 워크플로우 실행
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 최신 우분투 환경에서 job 실행
+    permissions:
+      contents: write # Pages 배포나 quarantine 커밋을 위해 푸시 권한 필요
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # 저장소 코드 체크아웃
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1 # Ruby 환경 세팅 (ver 3.3.0)
+        with:
+          ruby-version: "3.3"
+
+      - name: Install Dependencies
+        run: |
+          gem install bundler # 번들 프로그램 설치
+          bundle install # Gemfile에 명시된 모든 gem(의존성) 설치
+
+      # 빌드 실패 시 문제 파일(_posts/*.md)만 _quarantine/로 이동 후 재시도
+      - name: Build Jekyll Site (auto-quarantine)
+        run: |
+          set -eo pipefail
+          mkdir -p _quarantine
+
+          git config user.name "github-actions[bot]" # quarantine 커밋용 임시 유저 세팅
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          success=0
+          quarantined=0
+          max_attempts=10   # 빌드 최대 재시도 횟수 조절 (필요시 6~10으로 여유있게 조정)
+
+          for i in $(seq 1 $max_attempts); do
+            echo "==> Jekyll build attempt #$i"
+            if bundle exec jekyll build --trace 2>build.err; then
+              success=1
+              break
+            fi
+
+            offender=$(grep -oE "$GITHUB_WORKSPACE/_posts/[^:]+\.md" build.err | head -n1 || true)
+            if [ -z "$offender" ]; then
+              echo "No offending post detected. Full error follows:"
+              cat build.err
+              exit 1
+            fi
+
+            reason=$(grep -m1 "Error" build.err || true)
+            echo "Error reason: $reason" # 에러 원인 출력
+            
+            base=$(basename "$offender")
+            echo "⚠️ 문제있는 포스트를 _quarantine 폴더로 이동 : $base"
+            git mv "$offender" "_quarantine/$base" || mv "$offender" "_quarantine/$base"
+            git commit -m "ci: quarantine failing post $base" || true
+            git push origin HEAD:main || true
+
+            quarantined=1
+            # 에러 파일 격리 후 바로 다음 루프로 넘어가 재빌드
+          done
+
+          # 루프가 끝났는데 마지막이 격리로 종료되었을 수 있으니 한 번 더 시도
+          if [ $success -ne 1 ] && [ $quarantined -eq 1 ]; then
+            echo "==> Final build after last quarantine"
+            if bundle exec jekyll build --trace 2>build.err; then
+              success=1
+            fi
+          fi
+
+          if [ $success -ne 1 ]; then
+            echo "Build failed after quarantine attempts."
+            cat build.err
+            exit 1
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # _site 폴더를 Pages로 배포하는 액션 사용
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site # 배포 대상 디렉토리
