@@ -34,8 +34,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="[Gold IV] 2로 몇 번 나누어질까 - 1407 문제 링크 성능 요약 메모리: 14312 KB, 시간: 100 ms 분류 수학 제출 일자 2024년 10월 22일 05:09:50 문제 설명 자연수 N이 주어지면, 자연수를 유지하면서 N을 2로 몇 번까지 나눌 수 있는지를 생각해 볼 수 있다. 즉, N의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수를 생각하는 것이다. 예를 들어 15의 경우는 2로 한 번도 나눌 수 없으므로 2^0 = 1이 해당되고, 40의 경우는 2로 세 번까지 나눌 수 있으므로 2^3 = 8이 해당된다. 이러한 약수를 함수값으로 가지는 함수 f(x)를 정의하자. 즉, f(15) = 1이고, f(40) = 8이다. 두 자연수 A, B(A≤B)가 주어지면, A 이상 B 이하의 모든 자연수에 대해서, 그 자연수의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수들의 총 합을 구하는 프로그램을 작성하시오. 즉 아래와 같은 수식의 값을 구해야 한다. f(A) + f(A+1) + ... + f(B-1) + f(B) 입력 첫째 줄에 자연수 A와 B가 빈 칸을 사이에 두고 주어진다. (1≤A≤B≤10^15) 출력 첫째 줄에 구하고자 하는 수를 출력한다." />
 <meta property="og:description" content="[Gold IV] 2로 몇 번 나누어질까 - 1407 문제 링크 성능 요약 메모리: 14312 KB, 시간: 100 ms 분류 수학 제출 일자 2024년 10월 22일 05:09:50 문제 설명 자연수 N이 주어지면, 자연수를 유지하면서 N을 2로 몇 번까지 나눌 수 있는지를 생각해 볼 수 있다. 즉, N의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수를 생각하는 것이다. 예를 들어 15의 경우는 2로 한 번도 나눌 수 없으므로 2^0 = 1이 해당되고, 40의 경우는 2로 세 번까지 나눌 수 있으므로 2^3 = 8이 해당된다. 이러한 약수를 함수값으로 가지는 함수 f(x)를 정의하자. 즉, f(15) = 1이고, f(40) = 8이다. 두 자연수 A, B(A≤B)가 주어지면, A 이상 B 이하의 모든 자연수에 대해서, 그 자연수의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수들의 총 합을 구하는 프로그램을 작성하시오. 즉 아래와 같은 수식의 값을 구해야 한다. f(A) + f(A+1) + ... + f(B-1) + f(B) 입력 첫째 줄에 자연수 A와 B가 빈 칸을 사이에 두고 주어진다. (1≤A≤B≤10^15) 출력 첫째 줄에 구하고자 하는 수를 출력한다." />
-<link rel="canonical" href="/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/" />
-<meta property="og:url" content="/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/" />
+<link rel="canonical" href="https://kguswo.github.io/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/" />
+<meta property="og:url" content="https://kguswo.github.io/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/" />
 <meta property="og:site_name" content="Now’s Log" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-10-22T05:11:50+09:00" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="BOJ_1407_2로 몇 번 나누어질까" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-22T05:11:50+09:00","datePublished":"2024-10-22T05:11:50+09:00","description":"[Gold IV] 2로 몇 번 나누어질까 - 1407 문제 링크 성능 요약 메모리: 14312 KB, 시간: 100 ms 분류 수학 제출 일자 2024년 10월 22일 05:09:50 문제 설명 자연수 N이 주어지면, 자연수를 유지하면서 N을 2로 몇 번까지 나눌 수 있는지를 생각해 볼 수 있다. 즉, N의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수를 생각하는 것이다. 예를 들어 15의 경우는 2로 한 번도 나눌 수 없으므로 2^0 = 1이 해당되고, 40의 경우는 2로 세 번까지 나눌 수 있으므로 2^3 = 8이 해당된다. 이러한 약수를 함수값으로 가지는 함수 f(x)를 정의하자. 즉, f(15) = 1이고, f(40) = 8이다. 두 자연수 A, B(A≤B)가 주어지면, A 이상 B 이하의 모든 자연수에 대해서, 그 자연수의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수들의 총 합을 구하는 프로그램을 작성하시오. 즉 아래와 같은 수식의 값을 구해야 한다. f(A) + f(A+1) + ... + f(B-1) + f(B) 입력 첫째 줄에 자연수 A와 B가 빈 칸을 사이에 두고 주어진다. (1≤A≤B≤10^15) 출력 첫째 줄에 구하고자 하는 수를 출력한다.","headline":"BOJ_1407_2로 몇 번 나누어질까","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/"},"url":"/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-22T05:11:50+09:00","datePublished":"2024-10-22T05:11:50+09:00","description":"[Gold IV] 2로 몇 번 나누어질까 - 1407 문제 링크 성능 요약 메모리: 14312 KB, 시간: 100 ms 분류 수학 제출 일자 2024년 10월 22일 05:09:50 문제 설명 자연수 N이 주어지면, 자연수를 유지하면서 N을 2로 몇 번까지 나눌 수 있는지를 생각해 볼 수 있다. 즉, N의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수를 생각하는 것이다. 예를 들어 15의 경우는 2로 한 번도 나눌 수 없으므로 2^0 = 1이 해당되고, 40의 경우는 2로 세 번까지 나눌 수 있으므로 2^3 = 8이 해당된다. 이러한 약수를 함수값으로 가지는 함수 f(x)를 정의하자. 즉, f(15) = 1이고, f(40) = 8이다. 두 자연수 A, B(A≤B)가 주어지면, A 이상 B 이하의 모든 자연수에 대해서, 그 자연수의 모든 약수 중 2의 거듭제곱 꼴이면서 가장 큰 약수들의 총 합을 구하는 프로그램을 작성하시오. 즉 아래와 같은 수식의 값을 구해야 한다. f(A) + f(A+1) + ... + f(B-1) + f(B) 입력 첫째 줄에 자연수 A와 B가 빈 칸을 사이에 두고 주어진다. (1≤A≤B≤10^15) 출력 첫째 줄에 구하고자 하는 수를 출력한다.","headline":"BOJ_1407_2로 몇 번 나누어질까","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/"},"url":"https://kguswo.github.io/posts/BOJ14072%EB%A1%9C-%EB%AA%87-%EB%B2%88-%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -931,21 +931,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log&url=%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log&u=%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F&text=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ14072%25EB%25A1%259C-%25EB%25AA%2587-%25EB%25B2%2588-%25EB%2582%2598%25EB%2588%2584%25EC%2596%25B4%25EC%25A7%2588%25EA%25B9%258C%2F&text=BOJ_1407_2%EB%A1%9C%20%EB%AA%87%20%EB%B2%88%20%EB%82%98%EB%88%84%EC%96%B4%EC%A7%88%EA%B9%8C%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
