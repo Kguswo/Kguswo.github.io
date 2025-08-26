@@ -37,13 +37,15 @@
 <link rel="canonical" href="/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/" />
 <meta property="og:url" content="/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/" />
 <meta property="og:site_name" content="Now’s Log" />
+<meta property="og:image" content="/../assets/posts/f25aa6c4813c2ce2d17191395db15629352fa68bd73127d87d909002f6b8a512.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-04-15T22:45:32+09:00" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/../assets/posts/f25aa6c4813c2ce2d17191395db15629352fa68bd73127d87d909002f6b8a512.png" />
 <meta property="twitter:title" content="BOJ_1520_내리막 길 (Java)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-15T22:45:32+09:00","datePublished":"2025-04-15T22:45:32+09:00","description":"[Gold III] 내리막 길 - 1520 문제 링크 ### 성능 요약 메모리: 48580 KB, 시간: 488 ms ### 분류 깊이 우선 탐색, 다이나믹 프로그래밍, 그래프 이론, 그래프 탐색 ### 제출 일자 2025년 4월 15일 22:39:47 ### 문제 설명 여행을 떠난 세준이는 지도를 하나 구하였다. 이 지도는 아래 그림과 같이 직사각형 모양이며 여러 칸으로 나뉘어져 있다. 한 칸은 한 지점을 나타내는데 각 칸에는 그 지점의 높이가 쓰여 있으며, 각 지점 사이의 이동은 지도에서 상하좌우 이웃한 곳끼리만 가능하다. 현재 제일 왼쪽 위 칸이 나타내는 지점에 있는 세준이는 제일 오른쪽 아래 칸이 나타내는 지점으로 가려고 한다. 그런데 가능한 힘을 적게 들이고 싶어 항상 높이가 더 낮은 지점으로만 이동하여 목표 지점까지 가고자 한다. 위와 같은 지도에서는 다음과 같은 세 가지 경로가 가능하다. 지도가 주어질 때 이와 같이 제일 왼쪽 위 지점에서 출발하여 제일 오른쪽 아래 지점까지 항상 내리막길로만 이동하는 경로의 개수를 구하는 프로그램을 작성하시오.","headline":"BOJ_1520_내리막 길 (Java)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/"},"url":"/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-15T22:45:32+09:00","datePublished":"2025-04-15T22:45:32+09:00","description":"[Gold III] 내리막 길 - 1520 문제 링크 ### 성능 요약 메모리: 48580 KB, 시간: 488 ms ### 분류 깊이 우선 탐색, 다이나믹 프로그래밍, 그래프 이론, 그래프 탐색 ### 제출 일자 2025년 4월 15일 22:39:47 ### 문제 설명 여행을 떠난 세준이는 지도를 하나 구하였다. 이 지도는 아래 그림과 같이 직사각형 모양이며 여러 칸으로 나뉘어져 있다. 한 칸은 한 지점을 나타내는데 각 칸에는 그 지점의 높이가 쓰여 있으며, 각 지점 사이의 이동은 지도에서 상하좌우 이웃한 곳끼리만 가능하다. 현재 제일 왼쪽 위 칸이 나타내는 지점에 있는 세준이는 제일 오른쪽 아래 칸이 나타내는 지점으로 가려고 한다. 그런데 가능한 힘을 적게 들이고 싶어 항상 높이가 더 낮은 지점으로만 이동하여 목표 지점까지 가고자 한다. 위와 같은 지도에서는 다음과 같은 세 가지 경로가 가능하다. 지도가 주어질 때 이와 같이 제일 왼쪽 위 지점에서 출발하여 제일 오른쪽 아래 지점까지 항상 내리막길로만 이동하는 경로의 개수를 구하는 프로그램을 작성하시오.","headline":"BOJ_1520_내리막 길 (Java)","image":"/../assets/posts/f25aa6c4813c2ce2d17191395db15629352fa68bd73127d87d909002f6b8a512.png","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/"},"url":"/posts/BOJ1520%EB%82%B4%EB%A6%AC%EB%A7%89-%EA%B8%B8-Java/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -554,6 +556,95 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -985,6 +1076,15 @@
       <!-- lastmod date -->
       
 
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/../assets/posts/f25aa6c4813c2ce2d17191395db15629352fa68bd73127d87d909002f6b8a512.png" class="popup img-link preview-img shimmer"><img src="/../assets/posts/f25aa6c4813c2ce2d17191395db15629352fa68bd73127d87d909002f6b8a512.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -7917,7 +8017,7 @@
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
-      >Some rights reserved.</span>
+      >All rights reserved.</span>
     
   </p>
 

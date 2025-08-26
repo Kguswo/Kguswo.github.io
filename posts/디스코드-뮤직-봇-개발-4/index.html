@@ -37,13 +37,15 @@
 <link rel="canonical" href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/" />
 <meta property="og:url" content="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/" />
 <meta property="og:site_name" content="Now’s Log" />
+<meta property="og:image" content="/../assets/posts/b3ebfc8f58f4f26757b0863107e78cec8db6c7e5a7356d3d2c81117f9543a080.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-02-26T05:41:42+09:00" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/../assets/posts/b3ebfc8f58f4f26757b0863107e78cec8db6c7e5a7356d3d2c81117f9543a080.png" />
 <meta property="twitter:title" content="디스코드 뮤직 봇 개발 (4)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-26T05:41:42+09:00","datePublished":"2025-02-26T05:41:42+09:00","description":"오늘은 문제가 많았던 출석관련 기능을 수정했다. 기존에 사용하던 SQLite 데이터베이스의 한계와 불편함을 느꼈다. 그럼 이번 수정사항과 여러 시행착오를 아래에서 자세히 설명해보겠다.","headline":"디스코드 뮤직 봇 개발 (4)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/"},"url":"/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-26T05:41:42+09:00","datePublished":"2025-02-26T05:41:42+09:00","description":"오늘은 문제가 많았던 출석관련 기능을 수정했다. 기존에 사용하던 SQLite 데이터베이스의 한계와 불편함을 느꼈다. 그럼 이번 수정사항과 여러 시행착오를 아래에서 자세히 설명해보겠다.","headline":"디스코드 뮤직 봇 개발 (4)","image":"/../assets/posts/b3ebfc8f58f4f26757b0863107e78cec8db6c7e5a7356d3d2c81117f9543a080.png","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/"},"url":"/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -546,6 +548,95 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -1008,6 +1099,15 @@
       <!-- lastmod date -->
       
 
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/../assets/posts/b3ebfc8f58f4f26757b0863107e78cec8db6c7e5a7356d3d2c81117f9543a080.png" class="popup img-link preview-img shimmer"><img src="/../assets/posts/b3ebfc8f58f4f26757b0863107e78cec8db6c7e5a7356d3d2c81117f9543a080.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -4160,18 +4260,6 @@ pytz==2023.3
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
   
 
@@ -4228,34 +4316,6 @@ pytz==2023.3
         </article>
       
         <article class="col">
-          <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-1/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1740190250"
-  data-df="ll"
-  
->
-  Feb 22, 2025
-</time>
-
-              <h4 class="pt-0 my-2">디스코드 뮤직 봇 개발 (1)</h4>
-              <div class="text-muted">
-                <p>디스코드를 애용하는 1인으로서 다양한 봇들은  너무 유용하고 편한 기능이다. 그중에서도 뮤직봇은 대부분의 사용자들이 애용하는 봇이라고 생각한다. 음성채널에서 간단하게 원하는 음악을 스트리밍할 수 있기 때문이다. 그런데 요즘 youtube링크를 붙여넣어도 뮤직봇이 먹통인 경우가 많아 이상함을 느꼈고, 대부분의 봇들이 망가지는 현상을 겪어 직접 봇을 만들...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4278,6 +4338,34 @@ pytz==2023.3
               <h4 class="pt-0 my-2">디스코드 뮤직 봇 개발 (3)</h4>
               <div class="text-muted">
                 <p>출석체크 기능을 사용하다 보니 자정인데도 출석했다고 인식하는 것을 보고 직감적으로 한국 표준 시간대가 설정되지 않았다고 생각했다. 이를 적용하고자 코드를 변경하려고 했고, 그 전에 CI/CD  및 임시배포방법인 tmux 대신 systemd 로 바꾸고자 생각했다.  이에 먼저 다시 기존 설정을 확인해봤는데 이상한 점을 하나 찾았다.  가상환경 디렉토리 ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-1/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1740190250"
+  data-df="ll"
+  
+>
+  Feb 22, 2025
+</time>
+
+              <h4 class="pt-0 my-2">디스코드 뮤직 봇 개발 (1)</h4>
+              <div class="text-muted">
+                <p>디스코드를 애용하는 1인으로서 다양한 봇들은  너무 유용하고 편한 기능이다. 그중에서도 뮤직봇은 대부분의 사용자들이 애용하는 봇이라고 생각한다. 음성채널에서 간단하게 원하는 음악을 스트리밍할 수 있기 때문이다. 그런데 요즘 youtube링크를 붙여넣어도 뮤직봇이 먹통인 경우가 많아 이상함을 느꼈고, 대부분의 봇들이 망가지는 현상을 겪어 직접 봇을 만들...</p>
               </div>
             </div>
           </a>
@@ -4340,7 +4428,7 @@ pytz==2023.3
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
-      >Some rights reserved.</span>
+      >All rights reserved.</span>
     
   </p>
 

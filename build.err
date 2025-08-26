@@ -1,4 +1,0 @@
-[33m    Liquid Warning: Liquid syntax error (line 43): Unexpected character $ in "{{ $randomNumber(1,1000) }}" in /home/runner/work/Kguswo.github.io/Kguswo.github.io/_posts/2024-10-14-artillery----.md[0m
-[33m    Liquid Warning: Liquid syntax error (line 48): Unexpected character $ in "{{ $randomNumber(1,1000) }}" in /home/runner/work/Kguswo.github.io/Kguswo.github.io/_posts/2024-10-14-artillery----.md[0m
-[33m    Liquid Warning: Liquid syntax error (line 48): Unexpected character $ in "{{ $randomNumber(0,100) }}" in /home/runner/work/Kguswo.github.io/Kguswo.github.io/_posts/2024-10-14-artillery----.md[0m
-[33m    Liquid Warning: Liquid syntax error (line 48): Unexpected character $ in "{{ $randomNumber(0,100) }}" in /home/runner/work/Kguswo.github.io/Kguswo.github.io/_posts/2024-10-14-artillery----.md[0m
