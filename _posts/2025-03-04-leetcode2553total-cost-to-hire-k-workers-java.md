@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_2553_Total Cost to Hire K Workers (Java)"
-description: "왼쪽K개중 최솟값, 오른쪽 K개중 최솟값을 O(1)에 찾으며 삽입시 log(N)으로 정렬하는 최소힙 2개를 사용했다. 그리고 서로의 구간을 침범하지 않게 left&lt;=right를 유지했다.}"
 date: 2025-03-04T05:23:24.718Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode2553Total-Cost-to-Hire-K-Workers-Java"
-thumbnail: "/assets/posts/6dd1df49b0e01e319a66efe38bee144b754becc08785f492594f3a90581c2d1c.png"
+thumbnail: "../assets/posts/6dd1df49b0e01e319a66efe38bee144b754becc08785f492594f3a90581c2d1c.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "BOJ_20033_Square, Not Rectangle (Java)"
-description: "문제 링크 메모리: 46272 KB, 시간: 396 ms이분 탐색, 자료 구조, 스택2025년 2월 23일 01:02:13A histogram is a polygon made by aligning $N$ adjacent rectangles that share a com"
 date: 2025-02-22T16:11:23.971Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ20033Square-Not-Rectangle-Java"
-thumbnail: "/assets/posts/146da5d3e90c247e76a09c03d59922c6441c9b83fb4cfe81e6ce4cbde40a0104.png"
+thumbnail: "../assets/posts/146da5d3e90c247e76a09c03d59922c6441c9b83fb4cfe81e6ce4cbde40a0104.png"
 categories: 알고리즘
 toc: true
 velogSync:

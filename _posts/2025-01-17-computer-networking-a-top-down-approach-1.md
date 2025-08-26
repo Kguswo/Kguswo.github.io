@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (1)"
-description: "우리들이 위치하는 곳라우터 : 데이터를 목적지까지 전달구성요소들을 이어주는 링크들컴퓨터, 노트북, 스마트 폰 등 사용자가 상호작용 하는 장치네트워크 엣지의 목적은 시스템 간 데이터를 주고 받는 것인데, 이 때 데이터를 순서대로, 전송을 보장하는 목적인 TCP를 사용한다"
 date: 2025-01-17T13:01:19.550Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-1"
-thumbnail: "/assets/posts/32177420052ad13a1c27852550b98d6196e5e3eaceb698863813e81e46cd97be.png"
+thumbnail: "../assets/posts/32177420052ad13a1c27852550b98d6196e5e3eaceb698863813e81e46cd97be.png"
 categories: 네트워크
 toc: true
 velogSync:

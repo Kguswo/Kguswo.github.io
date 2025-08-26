@@ -1,10 +1,9 @@
 ---
 title: "CODEFORCES CONTESTS - Round 965 (Div. 2) - Find K Distinct Points with Fixed Center"
-description: "A. Find K Distinct Points with Fixed Center time limit per test1 second memory limit per test256 megabytes  I couldn't think of a good title for this "
 date: 2024-08-10T15:19:58.353Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "CODEFORCES-CONTESTS-Round-965-Div.-2"
-thumbnail: "/assets/posts/368c166095e5ad914ca414ae4fc576ced2302d07f55998bd35b7b7cda41e5b70.png"
+thumbnail: "../assets/posts/368c166095e5ad914ca414ae4fc576ced2302d07f55998bd35b7b7cda41e5b70.png"
 categories: Code Contests
 toc: true
 velogSync:

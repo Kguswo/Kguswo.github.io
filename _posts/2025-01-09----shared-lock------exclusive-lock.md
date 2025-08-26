@@ -1,10 +1,9 @@
 ---
 title: "공유 락(Shared Lock) 과 배타 락(Exclusive Lock)"
-description: "공유 락과 배타 락은 비관적 락(Pessimistic Lock)의 데이터 일관성과 무결성을 위해 사용하는 락 유형이다.공유 락은 읽기 락(Read Lock)이라고 부르며, 공유 락이 걸린 데이터는 읽기(SELECT)연산만 가능하며, 쓰기(UPDATE, DELETE)는 "
 date: 2025-01-08T15:24:40.747Z
 tags: ["Java","Spring","백엔드"]
 slug: "공유-락Shared-Lock-과-배타-락Exclusive-Lock"
-thumbnail: "/assets/posts/bd5ce41497f3f911f87fda30b48cf1e9181859c8924f827a17f977e2f462b182.png"
+thumbnail: "../assets/posts/bd5ce41497f3f911f87fda30b48cf1e9181859c8924f827a17f977e2f462b182.png"
 categories: 공부
 toc: true
 velogSync:

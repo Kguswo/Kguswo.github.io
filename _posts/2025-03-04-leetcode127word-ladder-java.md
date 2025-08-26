@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_127_Word Ladder (Java)"
-description: "Wordlist에 있는 문자들로 탐색을 이어나가야하는데 하나씩 문자가 다른 것들을 찾는 bfs를 생각했다.}"
 date: 2025-03-04T04:37:11.063Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode127Word-Ladder-Java"
-thumbnail: "/assets/posts/42d770e831868cd9d53efe49149cc5e709241be36f6a2b8e2b407a8d03d1974e.png"
+thumbnail: "../assets/posts/42d770e831868cd9d53efe49149cc5e709241be36f6a2b8e2b407a8d03d1974e.png"
 categories: 알고리즘
 toc: true
 velogSync:

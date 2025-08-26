@@ -1,10 +1,9 @@
 ---
 title: "Windows에서 클론 시 'Filename too long' 오류 해결하기"
-description: "spring boot 프로젝트를 fork 한 레포지토리를 클론하는 중 예상치 못한 오류를 발견했다.클론은 성공했지만 체크아웃이 실패했다는 메시지가 보인다.이 오류는 Windows의 파일 경로 길이 제한 때문이다.찾아보니Windows는 기본적으로 260자의 파일 경로 제"
 date: 2025-07-18T14:42:44.449Z
 tags: ["git"]
 slug: "Windows에서-클론-시-Filename-too-long-오류-해결하기"
-thumbnail: "/assets/posts/8faa2aff8f48372c60ed36bc859d75d7f3826c7e6c8ab6028ce5ecbd309cf2d2.png"
+thumbnail: "../assets/posts/8faa2aff8f48372c60ed36bc859d75d7f3826c7e6c8ab6028ce5ecbd309cf2d2.png"
 categories: 오류 해결
 toc: true
 velogSync:

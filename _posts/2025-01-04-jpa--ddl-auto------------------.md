@@ -1,10 +1,9 @@
 ---
 title: "JPA의 ddl-auto 옵션은 각각 어떤 동작을 하고 어떤 상황에서 사용해야 할까?"
-description: "ddl-auto 옵션은 스프링 부트 애플리케이션에서 Hibernate와 같은 JPA 구현체를 사용할 때 데이터베이스 스키마 관리를 제어하는 설정이다. 이 옵션은 application.properties 또는 application.yml 파일에서 설정할 수 있으며, 다양"
 date: 2025-01-03T16:02:44.914Z
 tags: ["Java","Spring","백엔드"]
 slug: "JPA의-ddl-auto-옵션은-각각-어떤-동작을-하고-어떤-상황에서-사용해야-할까"
-thumbnail: "/assets/posts/4fdb6d089d91a96e8fa30453bea22957304b27250e4f8877e0155124d1cb6b69.png"
+thumbnail: "../assets/posts/4fdb6d089d91a96e8fa30453bea22957304b27250e4f8877e0155124d1cb6b69.png"
 categories: 공부
 toc: true
 velogSync:

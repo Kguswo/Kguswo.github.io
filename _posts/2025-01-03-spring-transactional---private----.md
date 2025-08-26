@@ -1,10 +1,9 @@
 ---
 title: "Spring @Transactional 어노테이션은 private 메서드에서 동작할까?"
-description: "Spring AOP 기반 런타임에 동작하는 어노테이션으로 @Transactional , @Cacheable , @Async 등이 있습니다. Spring AOP (어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는"
 date: 2025-01-02T18:23:13.901Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-Transactional-어노테이션은-private-메서드에서-동작할까"
-thumbnail: "/assets/posts/f970b130910615e557adbd615715717d49c8d4cefe6c2c4446f34147aa90987c.png"
+thumbnail: "../assets/posts/f970b130910615e557adbd615715717d49c8d4cefe6c2c4446f34147aa90987c.png"
 categories: 공부
 toc: true
 velogSync:

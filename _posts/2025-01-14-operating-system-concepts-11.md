@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (11)"
-description: '" A named collection of related information "일반적으로 비휘발성의 보조기억장치(e.g. hard disk) 에 저장운영체제는 다양한 저장장치를 file이라는 동일한 논리적 단위로 볼 수 있게 해줌.Operation : create, '
 date: 2025-01-13T17:14:39.117Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-11"
-thumbnail: "/assets/posts/63287f47fd47367e62b8c60dbbebf9686d92d0714ceaed364277f8063d1bc5b0.png"
+thumbnail: "../assets/posts/63287f47fd47367e62b8c60dbbebf9686d92d0714ceaed364277f8063d1bc5b0.png"
 categories: 운영체제
 toc: true
 velogSync:

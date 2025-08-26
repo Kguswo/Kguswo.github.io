@@ -1,10 +1,9 @@
 ---
 title: "BOJ_1701_Cubeditor(Java)"
-description: "문제 링크 메모리: 76480 KB, 시간: 256 msKMP, 문자열2024년 8월 28일 01:16:38"
 date: 2024-08-27T17:17:48.457Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ1701CubeditorJava"
-thumbnail: "/assets/posts/f4a88beb728c8af5781afdd93ab0c82b21273a5f3f194a3238d8bd2985a74671.png"
+thumbnail: "../assets/posts/f4a88beb728c8af5781afdd93ab0c82b21273a5f3f194a3238d8bd2985a74671.png"
 categories: 알고리즘
 toc: true
 velogSync:

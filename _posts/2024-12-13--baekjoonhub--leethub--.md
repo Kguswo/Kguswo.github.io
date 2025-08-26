@@ -1,10 +1,9 @@
 ---
 title: "백준허브(BaekjoonHub)와 LeetHub 커스텀하여 사용하기"
-description: "PS을 위해 여러 사이트에서 알고리즘 문제들을 푼 사람이라면 코드들을 정리해본 적이 있을것이다. 이에 백준 허브 or LeetHub를 사용하는 사람이 많다. 하지만 두 확장프로그램에는 차이점이 있어 좀 더 깔끔한 백준허브 스타일에 LeetHub를 커스텀해보고자 한다. "
 date: 2024-12-13T07:52:42.372Z
 tags: ["leetcode","백준"]
 slug: "백준허브BaekjoonHub와-LeetHub-사용하기"
-thumbnail: "/assets/posts/f6887d5dcb0da809656375ef62770a5aba7e4079f00b307dde8b0a04467b2106.png"
+thumbnail: "../assets/posts/f6887d5dcb0da809656375ef62770a5aba7e4079f00b307dde8b0a04467b2106.png"
 categories: 사이드 프로젝트
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "Pycharm and FastAPI"
-description: "fastapi를 pycharm을 통해 학습해봅시다실습환경 : Mac(M3), IDE : Pycharm먼저 python을 brew를 통해 다운받는다.만약 brew가 없다면brew로 다운로드pycharm 프로젝트 생성 후 requirements.txt를 생성 및 작성이제 "
 date: 2024-10-29T05:05:32.943Z
 tags: ["FastAPI","pycharm","python"]
 slug: "Pycharm-and-FastAPI"
-thumbnail: "/assets/posts/e0f4f9be73940c3b377c83654f6931328697e2e02ac418a8f9141766ef38c16c.png"
+thumbnail: "../assets/posts/e0f4f9be73940c3b377c83654f6931328697e2e02ac418a8f9141766ef38c16c.png"
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:05:48.041Z

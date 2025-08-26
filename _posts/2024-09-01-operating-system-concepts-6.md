@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (6)"
-description: "Memory Management  Logical vs Physical Address ✔ Logical Address (= virtual address, 가상 주소)   프로세스마다 독립적으로 가지는 주소 공간   각 프로세스마다 0번지부터 시작   CPU가 보는 주소는"
 date: 2024-09-01T12:43:07.145Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-6"
-thumbnail: "/assets/posts/d71169ee47d4be485a8bc4301f4a734562ab174197f5283fc131a7117dc5f9fe.png"
+thumbnail: "../assets/posts/d71169ee47d4be485a8bc4301f4a734562ab174197f5283fc131a7117dc5f9fe.png"
 categories: 운영체제
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "트랜잭션과 격리 수준 (+ InnoDB Transaction Model )"
-description: "💡 여러 작업들을 하나로 묶은 단위로, 이렇게 묶인 작업들은 모두 실행되거나 모두 실행되지 않는다(all-or-nothing). 읽기와 쓰기를 하나의 논리적 단위로 묶는 방법이라고 정의할 수 있다.하나의 트랜잭션 안에서 실패하면 트랜잭션 내부에서 했던 작업이 다시 진"
 date: 2025-05-07T10:47:20.030Z
 tags: ["Database","InnoDB","mysql"]
 slug: "트랜잭션과-격리-수준-InnoDB-Transaction-Model"
-thumbnail: "/assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png"
+thumbnail: "../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png"
 categories: 데이터베이스
 toc: true
 velogSync:

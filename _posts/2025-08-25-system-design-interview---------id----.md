@@ -1,10 +1,9 @@
 ---
 title: "System Design Interview - 분산 시스템을 위한 유일 ID 생성기 설계"
-description: "이번은 책 7장인 분산 시스템을 위한 유일 ID 생성기를 설계해보겠다.간단한 팀/개인 프로젝트에서 ID를 설계할 때는 auto_increment 속성으로 설정된 기본 키를 사용하곤 했었다.하지만 대규모 분산 환경에서는 auto_increment를 사용할 수 없다.데이터"
 date: 2025-08-25T02:28:49.804Z
 tags: ["System Design Interview"]
 slug: "System-Design-Interview-분산-시스템을-위한-유일-ID-생성기-설계"
-thumbnail: "/assets/posts/7fcc9b714a7c4e64d254cbf959f34012bb5f638db1c36e18aec2c85fe7320d0b.png"
+thumbnail: "../assets/posts/7fcc9b714a7c4e64d254cbf959f34012bb5f638db1c36e18aec2c85fe7320d0b.png"
 categories: 시스템 디자인
 toc: true
 velogSync:

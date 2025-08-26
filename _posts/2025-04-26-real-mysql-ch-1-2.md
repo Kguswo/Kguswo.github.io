@@ -1,10 +1,9 @@
 ---
 title: "Real MySQL - Ch 1 , 2"
-description: "Ch 01. 소개  1.1 MySQL 소개  > MySQL은 1979년 스웨덴의 TcX라는 회사의 터미널 인터페이스 라이브러리인 UNIREG로부터 시작된다. 이후 MySQL 버전 1.0이 완성된 후 사내에서만 사용되다가, 1996년에 일반인에게 공개됐다.  1.2 왜 "
 date: 2025-04-26T08:14:26.714Z
 tags: ["Database","RealMySQL 8.0"]
 slug: "Real-MySQL-Ch-1-2"
-thumbnail: "/assets/posts/88676672a92397567fb64965ab91aa5f2f1dc8a2fe4a3586600b0a42669b1a1b.png"
+thumbnail: "../assets/posts/88676672a92397567fb64965ab91aa5f2f1dc8a2fe4a3586600b0a42669b1a1b.png"
 categories: 데이터베이스
 toc: true
 velogSync:

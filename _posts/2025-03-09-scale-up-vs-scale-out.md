@@ -1,10 +1,9 @@
 ---
 title: "Scale-Up vs Scale-Out"
-description: "기존 개발하던 서비스의 서버가 한계에 다다랐을 때 Scale-Up (스케일 업) 혹은 Scale-Out (스케일 아웃) 을 고려한다.스케일 업은 기존의 서버를 더 높은 사양으로 업그레이드하는것이다. 예를들면 AWS EC2 t2.micro에서 t2.small로 업그레이드"
 date: 2025-03-08T20:21:11.630Z
 tags: ["Java","Spring","백엔드"]
 slug: "Scale-Up-vs-Scale-Out"
-thumbnail: "/assets/posts/5e5877c427fe0ca3040dd570d05f00b8c98015db8c60ac4318efde3c75ae0cfc.png"
+thumbnail: "../assets/posts/5e5877c427fe0ca3040dd570d05f00b8c98015db8c60ac4318efde3c75ae0cfc.png"
 categories: 공부
 toc: true
 velogSync:

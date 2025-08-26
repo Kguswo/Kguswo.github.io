@@ -1,10 +1,9 @@
 ---
 title: "BOJ_2225_합분해 (Java, Python)"
-description: "문제 링크 메모리: 34456 KB, 시간: 44 ms다이나믹 프로그래밍, 수학2025년 3월 8일 18:48:44import java.io.;import java.util.;public class Main {    static BufferedReader br;    "
 date: 2025-03-08T09:51:42.887Z
 tags: ["Java","python","백준","알고리즘"]
 slug: "BOJ2225합분해-Java-Python"
-thumbnail: "/assets/posts/1378ed55aa4aba901e8f6f6c0ae9656f039e5dacdfb0b4e9dd3a1ed71768f217.png"
+thumbnail: "../assets/posts/1378ed55aa4aba901e8f6f6c0ae9656f039e5dacdfb0b4e9dd3a1ed71768f217.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "BOJ_11835_Skyline (Java, C++)"
-description: "문제 링크 메모리: 14140 KB, 시간: 104 ms다이나믹 프로그래밍, 그리디 알고리즘2024년 12월 7일 16:06:07각 위치에서 어떤 연산을 먼저 수행하는 것이 최적인지를 판단해야 한다.각 위치 i에서 현재 수 arri를 0으로 만들어야 한다. ai+1과 "
 date: 2024-12-07T07:14:19.095Z
 tags: ["C++","Java","백준","알고리즘"]
 slug: "BOJ11835Skyline-Java-C"
-thumbnail: "/assets/posts/15f4907388d7854e352561963da7cf6be3d2194083bfed0fe0999ac2cc746ea6.png"
+thumbnail: "../assets/posts/15f4907388d7854e352561963da7cf6be3d2194083bfed0fe0999ac2cc746ea6.png"
 categories: 알고리즘
 toc: true
 velogSync:

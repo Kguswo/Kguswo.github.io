@@ -1,10 +1,9 @@
 ---
 title: "PGMS_2023 Kakao_표 병합 (Java)"
-description: "문제 링크 메모리: 78.3 MB, 시간: 21.13 ms코딩테스트 연습 > 2023 KAKAO BLIND RECRUITMENT정확성: 100.0합계: 100.0 / 100.02025년 03월 19일 04:54:15출처: 프로그래머스 코딩 테스트 연습, https&#x"
 date: 2025-03-18T19:55:35.331Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMS2023-Kakao표-병합-Java"
-thumbnail: "/assets/posts/d20cbb3d029f776e2ace52b2523677ceca879dc3053752732a1d756fd9233d27.png"
+thumbnail: "../assets/posts/d20cbb3d029f776e2ace52b2523677ceca879dc3053752732a1d756fd9233d27.png"
 categories: 알고리즘
 toc: true
 velogSync:

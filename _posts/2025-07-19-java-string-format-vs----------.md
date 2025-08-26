@@ -1,10 +1,9 @@
 ---
 title: "Java String.format vs 문자열 연결: 성능 차이를 알아보기"
-description: "Java 개발을 하다 보면 문자열을 조합해야 하는 상황이 자주 발생한다. 이때 두 가지 주요한 방법이 있는데이 두 가지를 사용한다.둘 다 같은 결과를 만들어내지만, 내부적으로는 어떤 차이가 있을까? 성능상 차이도 있지 않을까?이런 궁금증에서 시작해 실제 Spring B"
 date: 2025-07-18T17:03:05.466Z
 tags: ["Spring"]
 slug: "Java-String.format-vs-문자열-연결-성능-차이를-알아보기"
-thumbnail: "/assets/posts/cdcb7e20f8ed02fa661fae0a073970c8cadc40026f5328227ab2cb1022a0bb1f.png"
+thumbnail: "../assets/posts/cdcb7e20f8ed02fa661fae0a073970c8cadc40026f5328227ab2cb1022a0bb1f.png"
 categories: 공부
 toc: true
 velogSync:

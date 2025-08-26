@@ -1,10 +1,9 @@
 ---
 title: "갭락(Gap Lock)과 넥스트키 락(Next-Key Lock) 및 Phantom Read"
-description: "Phantom Read는 트랜잭션이 동일한 조건의 쿼리를 반복 실행할 때, 나중에 실행된 쿼리에서 처음에는 존재하지 않았던 새로운 행이 나타나는 현상을 말합니다. 이는 주로 읽기 일관성(Read Consistency) 을 유지하는 과정에서 발생할 수 있는 문제로, 데이"
 date: 2025-01-12T18:20:38.168Z
 tags: ["Java","Spring","백엔드"]
 slug: "갭락Gap-Lock과-넥스트키-락Next-Key-Lock-및-Phantom-Read"
-thumbnail: "/assets/posts/838e3c43bd512c330be6a9c5c690ded78ecde92c2a82b13f6bbd51633ea61e7f.png"
+thumbnail: "../assets/posts/838e3c43bd512c330be6a9c5c690ded78ecde92c2a82b13f6bbd51633ea61e7f.png"
 categories: 공부
 toc: true
 velogSync:

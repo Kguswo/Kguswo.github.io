@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (3)"
-description: "Parent Process (부모 프로세스) 가 Children Process (자식 프로세스) 생성( 복제 생성; 프로세스가 또 다른 프로세스를 만드는 구조)프로세스의 트리(계층 구조)가 형성됨프로세스는 자원을 필요로 하고 자원은 운영체제(OS)로부터 받거나 부모와 "
 date: 2024-07-21T14:24:01.960Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-3"
-thumbnail: "/assets/posts/a908ba9d8c857bdae94fbb9f4b1f500f1081f246c7b9d41b9c813a22c19dcef0.PNG"
+thumbnail: "../assets/posts/a908ba9d8c857bdae94fbb9f4b1f500f1081f246c7b9d41b9c813a22c19dcef0.PNG"
 categories: 운영체제
 toc: true
 velogSync:

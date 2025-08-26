@@ -1,10 +1,9 @@
 ---
 title: "타임 아웃 (Connection Timeout, Socket Timeout, Read Timeout)"
-description: "Connection Timeout은 클라이언트가 서버에 연결을 시도할 때, 일정 시간 내에 연결이 이루어지지 않으면 발생하는 타임아웃이다.TCP 소켓 통신에서 클라이언트와 서버가 연결될 때, 정확한 전송을 보장하기 위해 사전에 세션을 수립하는데, 이 과정을 3-way-"
 date: 2025-01-15T18:57:17.325Z
 tags: ["Java","Spring","백엔드"]
 slug: "타임-아웃-Connection-Timeout-Socket-Timeout-Read-Timeout"
-thumbnail: "/assets/posts/551c860192924e517e823fe519c607ec0b3dc00502afaade6a12463853205c1a.png"
+thumbnail: "../assets/posts/551c860192924e517e823fe519c607ec0b3dc00502afaade6a12463853205c1a.png"
 categories: 공부
 toc: true
 velogSync:

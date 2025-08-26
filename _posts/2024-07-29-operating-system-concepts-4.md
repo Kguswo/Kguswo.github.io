@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (4)"
-description: "데이터의 접근Race Condition중복 접근이 발생하는 경우 결과 값에 문제가 발생해 원치 않은 결과를 얻게 될 수 있다Kernel 수행 중 인터럽트 발생 (interrupt handler vs kernel)interrupt handler vs kernel중요한 변"
 date: 2024-07-28T18:10:52.152Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-4"
-thumbnail: "/assets/posts/74ce4194e3e0ae47653718a2e9742daa549926778c68ad846e3f04198be82d46.PNG"
+thumbnail: "../assets/posts/74ce4194e3e0ae47653718a2e9742daa549926778c68ad846e3f04198be82d46.PNG"
 categories: 운영체제
 toc: true
 velogSync:

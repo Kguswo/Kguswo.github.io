@@ -1,10 +1,9 @@
 ---
 title: "DB Replication이란?"
-description: "DB Replication은 데이터베이스의 고가용성과 데이터 안정성을 보장하기 위해 활용되는 핵심 기술이다. 특히, 대규모 애플리케이션 환경에서는 데이터의 지속적인 가용성과 신뢰성이 매우 중요하기 때문에, 원본(Source) 서버와 복제(Replica) 서버간의 데이터"
 date: 2025-01-24T15:50:09.995Z
 tags: ["Java","Spring","백엔드"]
 slug: "DB-Replication이란"
-thumbnail: "/assets/posts/40dd233e27ca52cede6428a71d093a023581c7fbe263c98c7f7c52b18c3530d4.png"
+thumbnail: "../assets/posts/40dd233e27ca52cede6428a71d093a023581c7fbe263c98c7f7c52b18c3530d4.png"
 categories: 공부
 toc: true
 velogSync:

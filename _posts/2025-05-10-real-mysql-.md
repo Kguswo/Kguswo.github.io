@@ -1,10 +1,9 @@
 ---
 title: "Real MySQL - Ch 4"
-description: "Ch 04. 아키텍처  > MySQL 서버는 MySQL엔진 + 스토리지 엔진으로 구성된다.  4.1 MySQL 엔진 아키텍처  MySQL 서버는 다른 DBMS에 비해 구조가 독특하다.  MySQL 서버 전체 구조  MySQL 엔진: 프론트, 기획자, 옵티마이제이션 및 "
 date: 2025-05-10T08:15:23.455Z
 tags: ["Database","RealMySQL 8.0"]
 slug: "Real-MySQL-"
-thumbnail: "/assets/posts/6dde00ee4cb6641ef0ff7e56e62e0948a18842af3dbea50df6330bb78a4a6776.png"
+thumbnail: "../assets/posts/6dde00ee4cb6641ef0ff7e56e62e0948a18842af3dbea50df6330bb78a4a6776.png"
 categories: 데이터베이스
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "C++ 시작하기 (VS Code + MinGW)"
-description: "C++ 개발 환경을 세팅해보자!Visual Studio Code 설치VS Code용 C/C++ 확장 프로그램 설치MSYS2 를 통해 최신 버전의 MinGW-w64를 설치하자. 여기에는 최신 네이티브 빌드의 GCC, MinGW-w64 및 기타 유용한 C++ 도구와 라이브"
 date: 2024-12-01T08:38:20.117Z
 tags: ["C++"]
 slug: "C-시작하기-VS-Code-MinGW"
-thumbnail: "/assets/posts/fc20872ad4d8392a7a641b521b244088c67af1c4fc26d71cbe5d8780e72963d5.png"
+thumbnail: "../assets/posts/fc20872ad4d8392a7a641b521b244088c67af1c4fc26d71cbe5d8780e72963d5.png"
 categories: 공부
 toc: true
 velogSync:

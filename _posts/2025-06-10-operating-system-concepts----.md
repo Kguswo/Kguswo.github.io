@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - 운영체제의 작동"
-description: "컴퓨터의 전원을 켜거나 재부팅 할 때와 같이 컴퓨터를 실행하려면 초기 프로그램을 실행해야 한다. 이 초기 프로그램(부트스트랩 프로그램)은 일반적으로 컴퓨터 하드웨어 내에 펌웨어로 저장된다.부트스트랩 프로그램은 운영체제를 적재하는 방법과 해당 시스템 실행을 시작하는 방법"
 date: 2025-06-10T10:39:52.910Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-운영체제의-작동"
-thumbnail: "/assets/posts/21c0555d1c643d794aa689585b5dfd4e8fdb04b8412c54573cd334ab9ae50e24.png"
+thumbnail: "../assets/posts/21c0555d1c643d794aa689585b5dfd4e8fdb04b8412c54573cd334ab9ae50e24.png"
 categories: 운영체제
 toc: true
 velogSync:

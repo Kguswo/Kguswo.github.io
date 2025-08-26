@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (6)"
-description: "한번에 여러개를 보낼것이다.Window Size 만큼 패킷을 덩어리로 보낸다. 이 사이즈만큼은 Feedback 받지 않고 그냥 보낼 수 있다.ACKs : cummulative한 방식 (쌓는다는 의미)ex : ACKs 11 : 0~11까지 잘 받았다는 의미Sender 부"
 date: 2025-01-24T20:15:30.316Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-6"
-thumbnail: "/assets/posts/c9e4d805aeb9a8388e5581fcaf640ad4d7358fffa21217d5a7bccd6f28d43604.png"
+thumbnail: "../assets/posts/c9e4d805aeb9a8388e5581fcaf640ad4d7358fffa21217d5a7bccd6f28d43604.png"
 categories: 네트워크
 toc: true
 velogSync:

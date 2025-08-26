@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (2)"
-description: "OS 컴퓨터 시스템 구조하드 디스크는 input device/output device 둘 다의 역할을 한다.cpu안에는 memory보다 빠른 저장 공간이 있음. 이를 register라고 함.Interrupt line은 항상 프로그램이 memory 영역만을 사용해서 작동"
 date: 2024-07-14T14:37:40.605Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-2"
-thumbnail: "/assets/posts/4c294851c32159891945b7e1f81361f1d13a45604e61114fc15b2c105d02398c.PNG"
+thumbnail: "../assets/posts/4c294851c32159891945b7e1f81361f1d13a45604e61114fc15b2c105d02398c.PNG"
 categories: 운영체제
 toc: true
 velogSync:

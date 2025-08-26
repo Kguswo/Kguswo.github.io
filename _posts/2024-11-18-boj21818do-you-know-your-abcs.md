@@ -1,10 +1,9 @@
 ---
 title: "BOJ_21818_Do You Know Your ABCs?"
-description: "문제 링크 메모리: 21520 KB, 시간: 204 ms브루트포스 알고리즘, 구현, 수학2024년 11월 18일 03:51:48For each test case, output the number of triples $(A,B,C)$ that are consistent "
 date: 2024-11-17T19:05:44.601Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ21818Do-You-Know-Your-ABCs"
-thumbnail: "/assets/posts/8aead21ea971058c77b7eb6383b09c908016bd92d95686a2f6f8bc71b56db414.png"
+thumbnail: "../assets/posts/8aead21ea971058c77b7eb6383b09c908016bd92d95686a2f6f8bc71b56db414.png"
 categories: 알고리즘
 toc: true
 velogSync:

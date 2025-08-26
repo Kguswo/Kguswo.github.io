@@ -1,10 +1,9 @@
 ---
 title: "PGMS_2022 KAKAO_주차 요금 계산 (Java)"
-description: "문제 링크 메모리: 76.7 MB, 시간: 8.39 ms코딩테스트 연습 > 2022 KAKAO BLIND RECRUITMENT정확성: 100.0합계: 100.0 / 100.02025년 01월 21일 00:05:21출처: 프로그래머스 코딩 테스트 연습, https&#x3"
 date: 2025-01-20T15:07:09.279Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMS2022-KAKAO주차-요금-계산-Java"
-thumbnail: "/assets/posts/567a1412eed25de9e5e39e7c0cac203ea45a49bd40696e9a95fd3c7faf5ed9f0.png"
+thumbnail: "../assets/posts/567a1412eed25de9e5e39e7c0cac203ea45a49bd40696e9a95fd3c7faf5ed9f0.png"
 categories: 알고리즘
 toc: true
 velogSync:

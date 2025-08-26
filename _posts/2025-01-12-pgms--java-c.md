@@ -1,10 +1,9 @@
 ---
 title: "PGMS_야근지수 (Java, C++)"
-description: "문제 링크 메모리: 3.82 MB, 시간: 28.26 ms코딩테스트 연습 > 연습문제정확성: 86.7효율성: 13.3합계: 100.0 / 100.02025년 01월 11일 23:58:47출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.prog"
 date: 2025-01-11T15:04:58.746Z
 tags: ["C++","Java","알고리즘","프로그래머스"]
 slug: "PGMS야근지수-Java-C"
-thumbnail: "/assets/posts/af44e7859592ffcb48b56501f93435190fa3bd200be63efa5eb10029564bd43d.png"
+thumbnail: "../assets/posts/af44e7859592ffcb48b56501f93435190fa3bd200be63efa5eb10029564bd43d.png"
 categories: 알고리즘
 toc: true
 velogSync:

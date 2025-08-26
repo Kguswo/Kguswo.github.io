@@ -1,10 +1,9 @@
 ---
 title: "vscode CPH Judge C++20 컴파일 오류"
-description: "vscode에서 Competitive Companion과 CPH Judge를 사용해 알고리즘을 푸는데 C++의 map 문법 중 C++20버전부터 사용 가능한 contains를 사용했는데 컴파일이 안되었다. 기존 C++17로 설정되어있었다. 이를 고치기 위한 여러 트러블"
 date: 2024-12-07T16:54:42.510Z
 tags: ["C++","CPH","vscode"]
 slug: "vscode-CPH-Judge-C20-컴파일-오류"
-thumbnail: "/assets/posts/1cdc9506b26ca580f450690f6942df08c255e0b2c00c43603cfc61961a7d010a.png"
+thumbnail: "../assets/posts/1cdc9506b26ca580f450690f6942df08c255e0b2c00c43603cfc61961a7d010a.png"
 categories: 오류 해결
 toc: true
 velogSync:

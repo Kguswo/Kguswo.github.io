@@ -1,10 +1,9 @@
 ---
 title: "Subquery vs Join"
-description: "개발을 하며 쿼리를 작성할 때 여러 테이블에서 데이터를 가져오기 위해 서브쿼리나 조인을 사용한 경험이 있을 것이다. 이때 어떤 방법을 선택하는것이 더 나은지에 대한 고찰을 해 보았다.쿼리 안에 또 다른 쿼리가 들어간 것상황에 따라 메인 쿼리의 WHERE, FROM, S"
 date: 2025-06-02T10:45:31.793Z
 tags: ["Database","mysql"]
 slug: "Subquery-vs-Join"
-thumbnail: "/assets/posts/87a4758aa4fce12865e0ee8a5391ee955be5089807d744f3676336ea64f6b37d.png"
+thumbnail: "../assets/posts/87a4758aa4fce12865e0ee8a5391ee955be5089807d744f3676336ea64f6b37d.png"
 categories: 데이터베이스
 toc: true
 velogSync:

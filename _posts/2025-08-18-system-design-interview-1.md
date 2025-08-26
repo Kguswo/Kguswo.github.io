@@ -1,10 +1,9 @@
 ---
 title: "System Design Interview - (1)"
-description: "웹 - 앱 - 데이터베이스 - 캐시 등이 한 서버에서 실행된다.DNS 서버의 Domain address 에 대한 Ip address 를 요청한다.DNS 에서 Ip address 를 반환 받는다.해당 Ip address 를 통해서 웹서버에 HTTP 요청 보낸다.웹 페이지"
 date: 2025-08-18T09:55:00.545Z
 tags: ["System Design Interview"]
 slug: "System-Design-Interview-1"
-thumbnail: "/assets/posts/a1bd9c7755e7f4c06ae910e81129b505a647f1f8e45a7313eef905a5454ed000.png"
+thumbnail: "../assets/posts/a1bd9c7755e7f4c06ae910e81129b505a647f1f8e45a7313eef905a5454ed000.png"
 categories: 시스템 디자인
 toc: true
 velogSync:

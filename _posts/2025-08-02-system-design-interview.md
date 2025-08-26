@@ -1,10 +1,9 @@
 ---
 title: "System Design Interview"
-description: "위치 기반 서비스는 Yelp나 Google Places와 같은 앱에서 주변의 식당이나 가장 가까운 주유소 등을 찾는 데 사용되는 백엔드 구성 요소이며, 사용자 위치와 검색 반경을 입력받아 해당 반경 내의 모든 비즈니스를 반환하고, 비즈니스 소유자가 비즈니스를 추가, 삭"
 date: 2025-08-01T16:50:19.702Z
 tags: ["system-design"]
 slug: "System-Design-Interview"
-thumbnail: "/assets/posts/6c991d492ac0ed9706089a7a9a13321ca92edfe10fe6eff059111e482d13d9d4.png"
+thumbnail: "../assets/posts/6c991d492ac0ed9706089a7a9a13321ca92edfe10fe6eff059111e482d13d9d4.png"
 categories: 시스템 디자인
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "BOJ_21815_Portals (Java)"
-description: "[Platinum III] Portals - 21815  문제 링크  성능 요약  메모리: 68080 KB, 시간: 756 ms  분류  그래프 이론, 최소 스패닝 트리  제출 일자  2024년 11월 20일 18:05:31  문제 설명 "
 date: 2024-11-20T09:12:24.910Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ21815Portals-Java"
-thumbnail: "/assets/posts/2a9b6e1d678509c9024284654b58b48ac9fd1e2d0697faa1e3054d55410d767d.png"
+thumbnail: "../assets/posts/2a9b6e1d678509c9024284654b58b48ac9fd1e2d0697faa1e3054d55410d767d.png"
 categories: 알고리즘
 toc: true
 velogSync:

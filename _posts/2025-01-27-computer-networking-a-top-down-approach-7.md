@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (7)"
-description: "Point-to-point한 프로세스와 한 프로세스(한 소켓 쌍) 간의 연결만 처리 (One Sender, One Receiver)Reliable, in-order byte stream : 신뢰 가능하게 유실되지 않으면서, 순서대로 처리pipelined : 한방에 덩어"
 date: 2025-01-26T19:08:27.070Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-7"
-thumbnail: "/assets/posts/3e63f9f67d3a2d8dd5100374cb7447cb6f092c709611eeb344b190c66f5f035e.png"
+thumbnail: "../assets/posts/3e63f9f67d3a2d8dd5100374cb7447cb6f092c709611eeb344b190c66f5f035e.png"
 categories: 네트워크
 toc: true
 velogSync:

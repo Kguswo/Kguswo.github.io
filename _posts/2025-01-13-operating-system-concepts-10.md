@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (10)"
-description: "Virtual Memory (2)  다양한 캐싱 환경 캐싱 기법   한정된 빠른 공간(캐시)에 요청된 데이터를 저장해 두었다가 또 똑같은 요청이 들어오면 느린 저장장치에 접근하지 않고 빠른 캐시로부터 직접 서비스하는 방식   가상 메모리 페이징 시스템에서는 한정된 빠른"
 date: 2025-01-12T18:09:05.997Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-10"
-thumbnail: "/assets/posts/5814a712af6fdc700b4095f5ed25406d30b6dd77ea4cd9b362336d93ae5dfc07.png"
+thumbnail: "../assets/posts/5814a712af6fdc700b4095f5ed25406d30b6dd77ea4cd9b362336d93ae5dfc07.png"
 categories: 운영체제
 toc: true
 velogSync:

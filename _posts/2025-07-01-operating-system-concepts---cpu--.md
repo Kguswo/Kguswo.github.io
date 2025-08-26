@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - 실시간 CPU 스케줄링"
-description: "Operating System 공룡책 5.6절의 실시간 CPU 스케줄링에 대해 정리해보았다실시간 CPU 스케줄링은 연성(soft) 실시간 시스템과 경성(hard) 실시간으로 구분연성 실시간 시스템중요한 실시간 프로세스가 스케줄 되는 시점에 관해 아무런 보장을 하지 않는"
 date: 2025-07-01T11:08:19.648Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-실시간-CPU-스케줄링"
-thumbnail: "/assets/posts/583f68aa73efbe954f8ffaf397090119683b101040c484088002f1c4c8b23f1f.png"
+thumbnail: "../assets/posts/583f68aa73efbe954f8ffaf397090119683b101040c484088002f1c4c8b23f1f.png"
 categories: 운영체제
 toc: true
 velogSync:

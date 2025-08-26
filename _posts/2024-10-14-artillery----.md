@@ -1,10 +1,9 @@
 ---
 title: "Artillery 부하 테스트"
-description: "Spring 백엔드 서버의 부하테스트를 진행하기 위헤 Artillery라는 라이브러리를 사용했습니다. VS Code로 간단하게 테스트 할 수 있기에 좋은 것 같습니다. Jmeter로 테스트 하실 분들은 패스해주세요  Artillery 테스트 실행 가이드 1. 백엔드 서"
 date: 2024-10-13T20:00:30.146Z
 tags: []
 slug: "Artillery-부하-테스트"
-thumbnail: "/assets/posts/0f4d3b6ca01bc03d89a840d6a35f0acfd789aa0e8d031bef0839c551fd0972cb.png"
+thumbnail: "../assets/posts/0f4d3b6ca01bc03d89a840d6a35f0acfd789aa0e8d031bef0839c551fd0972cb.png"
 categories: 프로젝트
 toc: true
 velogSync:

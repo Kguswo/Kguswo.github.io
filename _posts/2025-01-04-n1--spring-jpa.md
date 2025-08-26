@@ -1,10 +1,9 @@
 ---
 title: "N+1문제 (Spring JPA)"
-description: "JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한"
 date: 2025-01-03T16:35:43.526Z
 tags: ["Java","Spring","백엔드"]
 slug: "N1문제-Spring-JPA"
-thumbnail: "/assets/posts/4d6b1dd7d48f00239f56a8f4e77d35973018b4fd70a7b595f0d9dc0233c6aa51.png"
+thumbnail: "../assets/posts/4d6b1dd7d48f00239f56a8f4e77d35973018b4fd70a7b595f0d9dc0233c6aa51.png"
 categories: 공부
 toc: true
 velogSync:

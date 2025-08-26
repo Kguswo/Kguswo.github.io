@@ -1,10 +1,9 @@
 ---
 title: "Thread, Process, Core의 수는 다다익선일까?"
-description: "스레드, 프로세스, 코어의 수가 많을수록 시스템 성능이 향상된다고 생각할 수 있지만, 실제로 그렇지 않을 확률이 크다.쓰레드가 지나치게 많아지면 운영체제가 쓰레드 간 컨텍스트 스위칭을 자주 수행해야 하여 CPU 자원이 쓰레드 관리에 소모된다. 이로 인해 실제 작업 수행"
 date: 2025-01-08T16:51:02.769Z
 tags: ["Java","Spring","백엔드"]
 slug: "Thread-Process-Core의-수는-다다익선일까"
-thumbnail: "/assets/posts/57e62395babd516f577e55b9c02308d2d6f436983fb095e762ba80a1b7e8950c.png"
+thumbnail: "../assets/posts/57e62395babd516f577e55b9c02308d2d6f436983fb095e762ba80a1b7e8950c.png"
 categories: 공부
 toc: true
 velogSync:

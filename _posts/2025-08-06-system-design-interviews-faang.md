@@ -1,10 +1,9 @@
 ---
 title: "System Design Interviews @ FAANG"
-description: "FAANG 회사에 입사하는 것은 많은 기술 전문가들의 꿈입니다. 이러한 회사들은 시스템 설계를 포함하여 엔지니어링의 모든 측면에서 우수성을 요구합니다. FAANG 회사의 시스템 설계 면접은 대규모로 복잡한 문제를 해결하는 후보자의 능력을 평가합니다. 이들은 기술적 스킬"
 date: 2025-08-05T19:40:27.302Z
 tags: ["system-design"]
 slug: "System-Design-Interviews-FAANG"
-thumbnail: "/assets/posts/8fccc6ab9dc44a2138116f00761bfa275feb6ba0148291034261d1756afacd14.png"
+thumbnail: "../assets/posts/8fccc6ab9dc44a2138116f00761bfa275feb6ba0148291034261d1756afacd14.png"
 categories: 시스템 디자인
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "iCloud 동기화 해제 및 iCloud에서 폴더로 다운받기 오류 (Mac) (데스크탑, 문서 옮기기)"
-description: "맥북 사용 중 iCloud 용량때문에 동기화를 해제할 일이 생겼고, 이에 로컬에 있는 데스크톱 파일들과 로컬 파일들이 전부 사라지는 현상을 겪었다. 이를 많은 구글링을 해보아도 마땅한 해결책이 없어 나름 대안을 혼자 하루종일 시간을 갈아넣으며 찾았다.iCloud와 맥북"
 date: 2024-12-13T06:40:09.406Z
 tags: ["iCloud","mac"]
 slug: "iCloud-에서-폴더로-다운받기-오류-Mac"
-thumbnail: "/assets/posts/3f3156913bf97e8a02411a20af5ad80b11f018f5b80b2d50cc5f0953b98ae2e7.png"
+thumbnail: "../assets/posts/3f3156913bf97e8a02411a20af5ad80b11f018f5b80b2d50cc5f0953b98ae2e7.png"
 categories: 오류 해결
 toc: true
 velogSync:

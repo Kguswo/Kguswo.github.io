@@ -1,10 +1,9 @@
 ---
 title: "BOJ_15942_Thinkinh Heap (Java)"
-description: "문제 링크 메모리: 32644 KB, 시간: 288 ms해 구성하기, 그리디 알고리즘2025년 5월 5일 01:58:41minHeap의 작동원리상 특정 노드에 영향을 주려면 연결된 부모이거나 자식노드여야한다.그러므로 p와 연결된 브랜치 중 부모와 자식을 결정지으면 된다"
 date: 2025-05-04T17:16:24.332Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ15942Thinkinh-Heap-Java"
-thumbnail: "/assets/posts/ea40aefe14b7d4a40d71cd0ad4f7c9193da2c5ef55d1fc753beed3a14c6097ac.png"
+thumbnail: "../assets/posts/ea40aefe14b7d4a40d71cd0ad4f7c9193da2c5ef55d1fc753beed3a14c6097ac.png"
 categories: 알고리즘
 toc: true
 velogSync:

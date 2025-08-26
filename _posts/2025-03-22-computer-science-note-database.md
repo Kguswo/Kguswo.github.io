@@ -1,10 +1,9 @@
 ---
 title: "Computer Science Note - Database"
-description: "본 게시글의 그림들은 참고 레퍼런스들을 토대로 직접 그렸음을 미리 밝힙니다.사람, 장소, 물건 등 여러개의 속성을 지닌 명사를 의미ex) 회원이라는 엔티티 -> 속성 : 이름, 아이디, 주소, 전화번호를 속성으로 가짐서비스의 요구사항에 맞춰 속성이 정해짐A가 혼자서는 "
 date: 2025-03-21T15:30:43.189Z
 tags: ["CS","데이터베이스"]
 slug: "Computer-Science-Note-Database"
-thumbnail: "/assets/posts/5941d28e8e1486ae3052ed8afcd9d9e943787d9420923f30dd5453916dc435bd.png"
+thumbnail: "../assets/posts/5941d28e8e1486ae3052ed8afcd9d9e943787d9420923f30dd5453916dc435bd.png"
 categories: CS Note
 toc: true
 velogSync:

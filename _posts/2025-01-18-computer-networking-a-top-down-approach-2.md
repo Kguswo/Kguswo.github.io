@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (2)"
-description: "자동차10대(패킷)가 나가기 위해 12s X 10 = 120s 즉 2분만큼 걸림.toll booth를 쭉 따라 가는데 100km / 속력(100km/h) = 1hour 즉 1시간 걸림.패킷 스위칭에 걸리는 전체 시간 : 1시간 2분.앞에 bit가 link에 도달하는 시"
 date: 2025-01-17T17:59:56.240Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-2"
-thumbnail: "/assets/posts/44722ee829e78730b2b509445cf11fe43457e7dd738f66334f76a47f031025d3.png"
+thumbnail: "../assets/posts/44722ee829e78730b2b509445cf11fe43457e7dd738f66334f76a47f031025d3.png"
 categories: 네트워크
 toc: true
 velogSync:

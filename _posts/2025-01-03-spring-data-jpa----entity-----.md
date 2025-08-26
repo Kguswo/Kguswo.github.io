@@ -1,10 +1,9 @@
 ---
 title: "Spring Data JPA에서 새로운 Entity인지 판단하는 방법"
-description: "새로운 엔티티인지 여부는 JpaEntityInformation의 isNew(T entity) 에 의해 판단된다. 다른 설정이 없다면 JpaMetaModelEntityInformation 클래스가 동작한다. @Version 이 사용된 필드가 없거나 Version 이 사용"
 date: 2025-01-03T07:51:28.431Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-Data-JPA에서-새로운-Entity인지-판단하는-방법"
-thumbnail: "/assets/posts/2f7f4d03d210e443c2d08c7b7a1b2657a8649011113852efd316015c59aca8a1.png"
+thumbnail: "../assets/posts/2f7f4d03d210e443c2d08c7b7a1b2657a8649011113852efd316015c59aca8a1.png"
 categories: 공부
 toc: true
 velogSync:

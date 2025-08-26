@@ -1,10 +1,9 @@
 ---
 title: "개발하며 Kotlin 문법 공부하기 (vs Java)"
-description: "Kotlin 기본문법만 알고 있는 상태에서 Kotlin 프로젝트를 진행하며 공부하고 찾아본 문법들을 정리해봤다.실제 개발하면서 마주친 Kotlin 문법들을 Java와 비교하여 정리하기 위해 글을 작성했다. (계속 추가 예정)Kotlin에서 data class는 자동으로"
 date: 2025-08-24T17:22:42.252Z
 tags: ["kotlin"]
 slug: "개발하며-Kotlin-문법-공부하기-vs-Java"
-thumbnail: "/assets/posts/8a25912d8beddd51f07a1a3c33ab78997eb6635ea1a6044a0c74fe45524b9110.png"
+thumbnail: "../assets/posts/8a25912d8beddd51f07a1a3c33ab78997eb6635ea1a6044a0c74fe45524b9110.png"
 categories: 언어
 toc: true
 velogSync:

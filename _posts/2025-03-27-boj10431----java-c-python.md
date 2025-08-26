@@ -1,10 +1,9 @@
 ---
 title: "BOJ_10431_줄 세우기 (Java, C++, Python)"
-description: "문제 링크 메모리: 32412 KB, 시간: 116 ms구현, 시뮬레이션, 정렬2025년 3월 27일 20:06:08리스트 맨 뒤에서부터 제대로 찾아갈 때 까지 cnt를 늘려가고 이후 다시 정렬. import java.io.; import java.util.; publ"
 date: 2025-03-27T11:10:21.460Z
 tags: ["C++","Java","python","백준","알고리즘"]
 slug: "BOJ10431줄-세우기-Java-C-Python"
-thumbnail: "/assets/posts/8a0a47085b33435bfea8e790e8c2601c680bedf7bd3ddc32818390bc35ee33d8.png"
+thumbnail: "../assets/posts/8a0a47085b33435bfea8e790e8c2601c680bedf7bd3ddc32818390bc35ee33d8.png"
 categories: 알고리즘
 toc: true
 velogSync:

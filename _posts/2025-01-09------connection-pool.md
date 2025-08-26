@@ -1,10 +1,9 @@
 ---
 title: "데이터베이스 커넥션 풀(Connection Pool)"
-description: "애플리케이션과 데이터베이스가 통신을 하기 위해서는 데이터베이스 커넥션이 필요하다.데이터베이스 드라이버를 사용하여 데이터베이스에 연결데이터 읽기/쓰기를 위한 TCP 소켓 열기소켓을 통한 데이터 읽기/쓰기연결 종료소켓 닫기커넥션 풀이 없다면 애플리케이션에서 데이터베이스에 "
 date: 2025-01-08T17:32:38.480Z
 tags: ["Java","Spring","백엔드"]
 slug: "데이터베이스-커넥션-풀Connection-Pool"
-thumbnail: "/assets/posts/a40bbf6d645827f92cbd72bd2fe246fe748596e75d71b5c524e417c702a51458.png"
+thumbnail: "../assets/posts/a40bbf6d645827f92cbd72bd2fe246fe748596e75d71b5c524e417c702a51458.png"
 categories: 공부
 toc: true
 velogSync:

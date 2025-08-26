@@ -1,10 +1,9 @@
 ---
 title: "Singleton 에 대하여"
-description: "들어가며  프로그래밍을 하다 보면 특정 객체가 딱 1개 필요한 상황이 있다. 예를 들어 설정 파일 관리자, 로그 기록기 등이 있다. 이런 경우 사용하는 것이 싱글턴 패턴 이다.  싱글턴 패턴이란? > 클래스의 인스턴스가 오직 하나만 생성도도록 보장하고, 이 인스턴스에 "
 date: 2025-08-24T13:27:54.024Z
 tags: ["Design Pattern","Java"]
 slug: "Singleton-에-대하여"
-thumbnail: "/assets/posts/2f674601a7e6ced455f185d1056ef868d2dacac849a8919beaca3b6d9e4f04d2.png"
+thumbnail: "../assets/posts/2f674601a7e6ced455f185d1056ef868d2dacac849a8919beaca3b6d9e4f04d2.png"
 categories: 공부
 toc: true
 velogSync:

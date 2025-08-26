@@ -1,10 +1,9 @@
 ---
 title: "제9회 천하제일 코딩대회 본선 Open Contest 후기"
-description: "우연히 빈 시간에 PS 감각을 잃지 않을 겸 제9회 천하제일 코딩대회 본선 Open Contest 에 참여했다. 문제 링크 메모리: 15164 KB, 시간: 688 ms수학, 다이나믹 프로그래밍, 조합론2025년 7월 15일 15:22:10야구선수의 성적을 평가하는 기"
 date: 2025-07-18T08:20:05.818Z
 tags: ["cp","백준"]
 slug: "제9회-천하제일-코딩대회-본선-Open-Contest-후기"
-thumbnail: "/assets/posts/31254c8a22d17e07d64ffd9a0b734ec30b45a80f93fdf326f28f367906268463.png"
+thumbnail: "../assets/posts/31254c8a22d17e07d64ffd9a0b734ec30b45a80f93fdf326f28f367906268463.png"
 categories: Code Contests
 toc: true
 velogSync:

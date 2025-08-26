@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (12)"
-description: "Contiguous AllocationLinked AllocationIndexed Allocation하나의 파일이 디스크 상에서 연속해서 할당되는 방법단점External fragmentation 발생 가능파일 크기가 균일하지 않아 빈 조각들이 있을것이다. 새로운 파일을"
 date: 2025-01-14T08:51:31.758Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-12"
-thumbnail: "/assets/posts/2564097ed452e5beeeaa9253c7008ce1d0874826f8e5576dd8734854650473f8.png"
+thumbnail: "../assets/posts/2564097ed452e5beeeaa9253c7008ce1d0874826f8e5576dd8734854650473f8.png"
 categories: 운영체제
 toc: true
 velogSync:

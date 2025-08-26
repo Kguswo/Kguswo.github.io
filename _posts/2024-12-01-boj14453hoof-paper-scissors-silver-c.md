@@ -1,6 +1,5 @@
 ---
 title: "BOJ_14453_Hoof, Paper, Scissors (Silver) (C++)"
-description: "문제 링크 메모리: 3808 KB, 시간: 4 ms다이나믹 프로그래밍, 누적 합2024년 12월 1일 22:54:53"
 date: 2024-12-01T14:00:18.067Z
 tags: ["C++","백준","알고리즘"]
 slug: "BOJ14453Hoof-Paper-Scissors-Silver-C"

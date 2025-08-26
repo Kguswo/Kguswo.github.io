@@ -1,10 +1,9 @@
 ---
 title: "SQL vs NoSQL"
-description: "관계형 데이터베이스는 고정된 row와 column으로 구성된 테이블에 데이터를 저장한다. 그리고 SQL을 사용하여 여러 테이블에 존재하는 데이터와 관계에 따라서 조인하여 합칠 수 있다. 관계형 데이터베이스는 데이터를 중복 없이 한번만 저장하고, 데이터 무결성을 보장한다"
 date: 2025-03-09T18:21:34.788Z
 tags: ["백엔드"]
 slug: "SQL-vs-NoSQL"
-thumbnail: "/assets/posts/c62eadcc9c5cd668ef5700d6d923c9a5549c5842bfa83772e262057debe98afb.png"
+thumbnail: "../assets/posts/c62eadcc9c5cd668ef5700d6d923c9a5549c5842bfa83772e262057debe98afb.png"
 categories: 공부
 toc: true
 velogSync:

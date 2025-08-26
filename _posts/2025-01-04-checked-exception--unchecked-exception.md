@@ -1,10 +1,9 @@
 ---
 title: "Checked Exception과 Unchecked Exception"
-description: "Checked Exception 은 컴파일 시점에 확인되며, 반드시 처리해야하는 예외다. Java에서는 IOException , SQLException 등이 이에 속한다. Check Exception을 유발하는 메서드를 호출하는 경우, 메서드 시그니처에 throw 를 "
 date: 2025-01-03T17:06:08.918Z
 tags: ["Java","Spring","백엔드"]
 slug: "Checked-Exception과-Unchecked-Exception"
-thumbnail: "/assets/posts/df0725d1fed0ab135326070d6c256e0c63e8c39ca08b488fd5d523bdd9395694.png"
+thumbnail: "../assets/posts/df0725d1fed0ab135326070d6c256e0c63e8c39ca08b488fd5d523bdd9395694.png"
 categories: 공부
 toc: true
 velogSync:

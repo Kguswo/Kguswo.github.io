@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_71_Simplify Path (Java)"
-description: "/로 split 한 뒤 ..에 대한 경우의수를 나누었고 아무것도 없는 조건에서 바로 리턴하는 조건문도 추가했다.}"
 date: 2025-01-01T04:31:26.840Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode71Simplify-Path"
-thumbnail: "/assets/posts/c787f1cc0f315e748a80419e2105f02408356c6a1864b51c57fcc1c97e7cf0f7.png"
+thumbnail: "../assets/posts/c787f1cc0f315e748a80419e2105f02408356c6a1864b51c57fcc1c97e7cf0f7.png"
 categories: 알고리즘
 toc: true
 velogSync:

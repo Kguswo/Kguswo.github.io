@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_584. Find Customer Referee (SQL)"
-description: "584. Find Customer RefereeEasyTable: Customer  +-------------+---------+ | Column Name | Type    | +-------------+---------+ | id          | int     | | name        | varchar | | referee_id  | int    ..."
 date: 2025-02-24T17:43:00.664Z
 tags: ["leetcode","sql"]
 slug: "LeetCode584.-Find-Customer-Referee-SQL"
-thumbnail: "/assets/posts/aa5375e6190993b50b712917a3b9ada644fe2fb135c2aa38bf82fa246db536ba.png"
+thumbnail: "../assets/posts/aa5375e6190993b50b712917a3b9ada644fe2fb135c2aa38bf82fa246db536ba.png"
 categories: SQL
 toc: true
 velogSync:

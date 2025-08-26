@@ -1,10 +1,9 @@
 ---
 title: "Hashing, 해싱 (feat. codetree)"
-description: "Hashing 에 대한 학습 내용을 정리하고자 한다. 학습은 코드트리의 과정으로 진행되었다.배열에서 값을 찾을 때 인덱스와 같이 값이 있는 위치를 명시하여 그 값을 찾는다. 실제 데이터 관리/접근/조회 및 웹 사이트에서 다루는 경우 이는 최적의 방법은 아니다.예시로 홈"
 date: 2024-08-04T06:49:00.742Z
 tags: ["알고리즘","자료구조","코드트리"]
 slug: "Hashing-해싱-feat.-codetree"
-thumbnail: "/assets/posts/6162987866733ae2f4a863ec1131b23c67b76ae6404563beb77b054875862ad9.png"
+thumbnail: "../assets/posts/6162987866733ae2f4a863ec1131b23c67b76ae6404563beb77b054875862ad9.png"
 categories: 알고리즘
 toc: true
 velogSync:

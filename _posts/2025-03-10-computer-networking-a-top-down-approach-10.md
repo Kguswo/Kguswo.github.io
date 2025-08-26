@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (10)"
-description: "복습DNS는 신뢰성보다 속도가 더 중요하고, 많은 클라이언트를 수용하는 것을 필요로 한다. 따라서 속도가 빠르고, 연결 상태를 유지하지 않고 정보 기록을 최소화하여 많은 클라이언트 수용이 가능한 UDP를 사용한다.RDT에서 2가지 안좋은 현상 가능패킷 에러패킷 loss"
 date: 2025-03-09T20:13:10.423Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-10"
-thumbnail: "/assets/posts/120839ca25f3508b40551eb07e8e74afc4947c0448d5be8e4289560d1fd77e19.png"
+thumbnail: "../assets/posts/120839ca25f3508b40551eb07e8e74afc4947c0448d5be8e4289560d1fd77e19.png"
 categories: 네트워크
 toc: true
 velogSync:

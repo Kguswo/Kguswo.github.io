@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_Restore IP Addresses (Java)"
-description: "Leethub 으로 간단하게 Github에 문제와 코드를 업로드하세요!dfs와 백트래킹으로 간단하게 풀 수 있다. 답을 만들 때는 Stringbuilder을 사용했다. 다시 백트래킹시킬때 setLength로 이전상황으로 만들었다.class Solution {    st"
 date: 2025-04-15T14:49:32.119Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCodeRestore-IP-Addresses-Java"
-thumbnail: "/assets/posts/0476e07bc02ad45e60202d8e8e685e8ef4fd77ba166fd4451087368e2773c03b.png"
+thumbnail: "../assets/posts/0476e07bc02ad45e60202d8e8e685e8ef4fd77ba166fd4451087368e2773c03b.png"
 categories: 알고리즘
 toc: true
 velogSync:

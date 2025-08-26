@@ -1,10 +1,9 @@
 ---
 title: "PGMS_2022 Kakao_코딩 테스트 공부 (Java)"
-description: "문제 링크 메모리: 54.4 MB, 시간: 13.68 ms코딩테스트 연습 > 2022 KAKAO TECH INTERNSHIP정확성: 50.0효율성: 50.0합계: 100.0 / 100.02025년 02월 23일 13:45:07출처: 프로그래머스 코딩 테스트 연습, ht"
 date: 2025-02-23T04:49:02.145Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMS2022-Kakao코딩-테스트-공부-Java"
-thumbnail: "/assets/posts/781689cb80f3ce7f1640a123f36ae75d360b58aa2b680704b7dae99ec4a81726.png"
+thumbnail: "../assets/posts/781689cb80f3ce7f1640a123f36ae75d360b58aa2b680704b7dae99ec4a81726.png"
 categories: 알고리즘
 toc: true
 velogSync:

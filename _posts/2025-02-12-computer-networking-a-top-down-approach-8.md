@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (8)"
-description: "데이터를 보낼때 상대가 받을 수 있는 만큼 보내야한다. 받을 수 있는 공간이 얼마 없는데 많이 보내선 안된다. 이걸 어떻게 알 수 있는가? 상대의 Receive Buffer을 보면 된다. Receive Buffer의 상태를 보고 데이터를 받을 수 있는 공간이 N만큼 남"
 date: 2025-02-11T17:54:57.396Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-8"
-thumbnail: "/assets/posts/801ed33df0d4c4ed6872080071ccf5368f3750ca45fdccd752ff1df258f7d379.png"
+thumbnail: "../assets/posts/801ed33df0d4c4ed6872080071ccf5368f3750ca45fdccd752ff1df258f7d379.png"
 categories: 네트워크
 toc: true
 velogSync:

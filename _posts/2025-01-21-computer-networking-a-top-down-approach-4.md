@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (4)"
-description: "Multiplexing : 보내는 측의 Application Layer으로부터 여러 소켓에서 오는 메시지들이 아래로 Transport Layer으로 내려올 것이다. 이 메시지들이 어디서 오든지 간에 Transport Layer은 메시지들을 segment(Header +"
 date: 2025-01-21T07:11:58.969Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-4"
-thumbnail: "/assets/posts/f31234ce625d0c2d2437aff8890d25eebc4528d6f7ff21664c6c1241df2af9f7.png"
+thumbnail: "../assets/posts/f31234ce625d0c2d2437aff8890d25eebc4528d6f7ff21664c6c1241df2af9f7.png"
 categories: 네트워크
 toc: true
 velogSync:

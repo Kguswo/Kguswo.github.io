@@ -1,10 +1,9 @@
 ---
 title: "equals 와 hashCode를 함께 재정의하는 이유"
-description: "equals와 hashCode 메서드는 객체의 동등성 비교와 해시값 생성을 위해서 사용할 수 있다. 하지만, 함께 재정의하지 않는다면 예상치 못한 결과를 만들 수 있다. 가령, 해시값을 사용하는 자료구조(HashSet, HashMap, ...) 을 사용할 때 문제가 발"
 date: 2025-01-06T16:02:08.951Z
 tags: ["Java","Spring","백엔드"]
 slug: "equals-와-hashCode를-함께-재정의하는-이유"
-thumbnail: "/assets/posts/7124418503c67b2bd5d458e1a911531592efa848bee2f2b6c45bfc1b57ba76a2.png"
+thumbnail: "../assets/posts/7124418503c67b2bd5d458e1a911531592efa848bee2f2b6c45bfc1b57ba76a2.png"
 categories: 공부
 toc: true
 velogSync:

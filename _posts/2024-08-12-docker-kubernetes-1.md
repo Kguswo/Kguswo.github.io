@@ -1,10 +1,9 @@
 ---
 title: "Docker & Kubernetes - (1)"
-description: "쿠버네티스란? 컨테이너화의 의의와 쿠버네티스의 개요  쿠버네티스 Kubernetes :  컨테인화된 애플리케이션을 효율적으로 배포하고 운영하기 위해 설계된 오픈 소스 플랫폼.  왜 컨테이너를 사용할까? CI/CD* (지속적 통합, 지속적 배포) : 사용자에게 새로운 기"
 date: 2024-08-11T18:48:18.650Z
 tags: ["docker","kubernetes"]
 slug: "Docker-Kubernetes-1"
-thumbnail: "/assets/posts/88d31fed90e9187e23c11bfc392bf044044b7db2100f9464d08f3c64b962e72a.png"
+thumbnail: "../assets/posts/88d31fed90e9187e23c11bfc392bf044044b7db2100f9464d08f3c64b962e72a.png"
 categories: 공부
 toc: true
 velogSync:

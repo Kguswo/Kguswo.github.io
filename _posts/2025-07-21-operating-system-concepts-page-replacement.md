@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - Page Replacement"
-description: "전체 10 페이지 중 실제로는 5페이지만을 사용하는 프로세스가 있다면, 요구 페이징을 통해 사용되지 않는 나머지 5페이지를 로드하는 I/O를 피할 수 있다.ex) 40 프레임을 사용할 수 있는 시스템이 있다고 할 때, 10페이지를 모두 로드해야 하는 상황이였다면 4개의"
 date: 2025-07-21T11:27:31.411Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-Page-Replacement"
-thumbnail: "/assets/posts/aed5264a40c490fd0cf5d40b2fa1bf688216e7c266ef96017b42cc248096120b.png"
+thumbnail: "../assets/posts/aed5264a40c490fd0cf5d40b2fa1bf688216e7c266ef96017b42cc248096120b.png"
 categories: 운영체제
 toc: true
 velogSync:

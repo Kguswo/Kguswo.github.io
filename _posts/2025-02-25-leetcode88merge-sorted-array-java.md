@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_88_Merge Sorted Array (Java)"
-description: "88. Merge Sorted ArrayEasyYou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectivel..."
 date: 2025-02-24T17:40:07.996Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode88Merge-Sorted-Array-Java"
-thumbnail: "/assets/posts/ea4235369539a62a7a53c47564c140f4212a322a640bb550fd765282a5609b59.png"
+thumbnail: "../assets/posts/ea4235369539a62a7a53c47564c140f4212a322a640bb550fd765282a5609b59.png"
 categories: 알고리즘
 toc: true
 velogSync:

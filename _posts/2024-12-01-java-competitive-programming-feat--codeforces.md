@@ -1,6 +1,5 @@
 ---
 title: "Java-Competitive-Programming (feat. Codeforces)"
-description: "다음과 같은 알고리즘 대회/코딩 테스트 백준, 코드포스 등의 온라인 저지 대량의 데이터를 빠르게 처리해야 하는 상황 수학적 계산이 많이 필요한 문제 "
 date: 2024-12-01T11:35:48.144Z
 tags: ["codeforces","cp"]
 slug: "Java-Competitive-Programming-feat.-Codeforces"

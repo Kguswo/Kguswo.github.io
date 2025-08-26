@@ -1,10 +1,9 @@
 ---
 title: "Gitlab 작업을 Github으로 옮기기 ( 커밋 내역 포함 미러링)"
-description: "이번 프로젝트는 큰 파일이 없는 경우였기 때문에 간단한 미러링으로 옮길 수 있었다. 용량이 큰 파일은 다른 방법을 사용해야한다. 매우 귀찮고 복잡하기 때문에 최대한 git에 커밋할 땐 용량이 큰 파일은 지양하자.(경험담)ps. 파일을 지운다고 해서 다시 옮길 수 있는 "
 date: 2024-11-22T01:54:38.254Z
 tags: ["git","프로젝트"]
 slug: "Gitlab-작업을-Github으로-옮기기-커밋-내역-포함-미러링"
-thumbnail: "/assets/posts/ff2c6e5d0459a5fe65f8f05c55d1e0c7308c0987d06ecbc0d597e8be997726fe.png"
+thumbnail: "../assets/posts/ff2c6e5d0459a5fe65f8f05c55d1e0c7308c0987d06ecbc0d597e8be997726fe.png"
 categories: 프로젝트
 toc: true
 velogSync:

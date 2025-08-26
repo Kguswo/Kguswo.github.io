@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (5)"
-description: "Counting Semaphore도메인이 0 이상인 임의의 정수값주로 resource counting 에 사용Binary Semaphore (= mutex)0 또는 1 값만 가질 수 있는 semaphore주로 mutual exclusion (lock/unlock)에 사"
 date: 2024-08-25T18:18:23.426Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-5"
-thumbnail: "/assets/posts/39666a0a401115687f79f86c1b067274ff6a112fce2a31aeec3529aed6cfc24c.png"
+thumbnail: "../assets/posts/39666a0a401115687f79f86c1b067274ff6a112fce2a31aeec3529aed6cfc24c.png"
 categories: 운영체제
 toc: true
 velogSync:

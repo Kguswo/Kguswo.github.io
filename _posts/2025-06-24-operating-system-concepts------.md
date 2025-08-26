@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - 운영체제부터 프로그램이 실행되기까지"
-description: "컴퓨터에서 프로그램이 실행되기까지 과정을 정리해보고자 한다. 개발자 입장에서 직접 작성한 고급언어 코드 프로그램이 어떻게 작동하게 되는지 알아보자. 운영체제별 차이점까지 깊게 다루진 않았다.C/C++ 실행 과정Java 실행 과정개발자는 C, C++, Java, Pyth"
 date: 2025-06-24T11:19:43.189Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-운영체제부터-프로그램이-실행되기까지"
-thumbnail: "/assets/posts/5dddf6d1f87b58a6271fc19c2e08428ef6415800b286696bde5989c1f32512c3.png"
+thumbnail: "../assets/posts/5dddf6d1f87b58a6271fc19c2e08428ef6415800b286696bde5989c1f32512c3.png"
 categories: 운영체제
 toc: true
 velogSync:

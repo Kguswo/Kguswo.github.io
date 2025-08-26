@@ -1,10 +1,9 @@
 ---
 title: "PGMS_PCCP 3번_충돌위험 찾기 (Java)"
-description: "문제 링크 메모리: 183 MB, 시간: 195.24 ms코딩테스트 연습 > PCCP 기출문제정확성: 100.0합계: 100.0 / 100.02025년 01월 28일 06:38:38출처: 프로그래머스 코딩 테스트 연습, https&#x3A;//school.program"
 date: 2025-01-27T21:49:53.659Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMSPCCP-3번충돌위험-찾기-Java"
-thumbnail: "/assets/posts/06c2fdd69be7f85afa3dcaf17032a7fd58b0531df0cee091fa3a973390b8a536.png"
+thumbnail: "../assets/posts/06c2fdd69be7f85afa3dcaf17032a7fd58b0531df0cee091fa3a973390b8a536.png"
 categories: 알고리즘
 toc: true
 velogSync:

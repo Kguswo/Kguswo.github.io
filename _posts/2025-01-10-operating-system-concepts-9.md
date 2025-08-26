@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (9)"
-description: "가상 메모리는 운영체제가 관리한다.실제로 필요할 때 page를 메모리에 올리는 것. (요청이 있으면 페이지를 메모리에 올리겠다는 의미)실제로 대부분의 시스템들은 Paging 기법 사용 중요구 페이징의 장점I/O양의 감소 (프로그램 중에 빈번하게 사용되는 부분은 지극히 "
 date: 2025-01-10T00:27:53.426Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-9"
-thumbnail: "/assets/posts/f6cd1af4d9a8bea5c2c7f4b6011195aff86d6e02d339c74f5f699ddd9fb1993a.png"
+thumbnail: "../assets/posts/f6cd1af4d9a8bea5c2c7f4b6011195aff86d6e02d339c74f5f699ddd9fb1993a.png"
 categories: 운영체제
 toc: true
 velogSync:

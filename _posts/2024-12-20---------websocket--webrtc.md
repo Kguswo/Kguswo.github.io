@@ -1,6 +1,5 @@
 ---
 title: "클라이언트와 서버의 통신, 그리고 WebSocket과 WebRTC"
-description: "프로젝트를 진행하며 공부한 내용을 기록하고자 한다.  > # Client-to-server communication  Http 클라이언트와 서버는 통신을 할 때 여러 방식을 채택할 수 있다. 이때 가장 대표적인 것으로 Http / Https 통신을 생각할 수 있을것이다"
 date: 2024-12-20T08:16:37.373Z
 tags: ["JPA","Java","Spring","websocket","백엔드"]
 slug: "클라이언트와-서버의-통신-그리고-WebSocket과-WebRTC"

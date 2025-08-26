@@ -1,10 +1,9 @@
 ---
 title: "[Java] List.contains() 와 Set.contains() 비교"
-description: 'LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다.'
 date: 2024-12-16T07:06:34.858Z
 tags: ["Java"]
 slug: "Java-List.contains-와-Set.contains-비교"
-thumbnail: "/assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png"
+thumbnail: "../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png"
 categories: 공부
 toc: true
 velogSync:

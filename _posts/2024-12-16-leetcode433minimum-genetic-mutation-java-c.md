@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_433_Minimum Genetic Mutation (Java, C++)"
-description: "완전 탐색을 생각했다. 이후 어떻게 찾은 문자에 대해서만 진행하지를 생각했을 때 queue에 넣고 그 사이즈만큼 반복해서 돌리면 될 것 같았다. BFS알고리즘과 비슷한 것 같다.이후 어떻게 이 gene들을 비교할 지 생각 중 문자열이기 때문에 contains를 사용시 "
 date: 2024-12-16T06:43:59.345Z
 tags: ["C++","Java","leetcode","알고리즘"]
 slug: "LeetCode433Minimum-Genetic-Mutation-Java-C"
-thumbnail: "/assets/posts/d90aaf8bd5028b37ada2f2ff82c28632293407e75794bbf6a40df04811c86fdf.png"
+thumbnail: "../assets/posts/d90aaf8bd5028b37ada2f2ff82c28632293407e75794bbf6a40df04811c86fdf.png"
 categories: 알고리즘
 toc: true
 velogSync:

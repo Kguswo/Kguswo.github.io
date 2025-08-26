@@ -1,10 +1,9 @@
 ---
 title: "Spring 어노테이션들의 차이 @Component, @Controller, @Service, @Repository"
-description: "@Component, @Service, @Controller, @Repository는 각각의 클래스를 특정 역할을 수행하는 Spring Bean으로 등록할 때 사용된다.  각 어노테이션은 클래스가 어떤 역할을 하는지를 명시적으로 나타내며, Spring의 @Compone"
 date: 2025-01-06T18:14:54.533Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-어노테이션들의-차이-Component-Controller-Service-Repository"
-thumbnail: "/assets/posts/5a9ef9346f174a5e632fcb4880d9def0b60dac741524b7700c5ccfb1f1ad829a.png"
+thumbnail: "../assets/posts/5a9ef9346f174a5e632fcb4880d9def0b60dac741524b7700c5ccfb1f1ad829a.png"
 categories: 공부
 toc: true
 velogSync:

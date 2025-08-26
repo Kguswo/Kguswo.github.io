@@ -1,10 +1,9 @@
 ---
 title: "BOJ_1011_Fly me to the Alpha Centauri(Java)"
-description: "문제 링크 메모리: 15812 KB, 시간: 112 ms수학2024년 11월 5일 12:37:39규칙을 찾아내서 풀었다!"
 date: 2024-11-05T03:57:17.109Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ1011Fly-me-to-the-Alpha-Centauri"
-thumbnail: "/assets/posts/904e870707c2fd93e5e266b5044a6f99babb0a85dbee40757e068475b96c7f2f.png"
+thumbnail: "../assets/posts/904e870707c2fd93e5e266b5044a6f99babb0a85dbee40757e068475b96c7f2f.png"
 categories: 알고리즘
 toc: true
 velogSync:

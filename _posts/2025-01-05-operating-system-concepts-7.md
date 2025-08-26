@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (7)"
-description: "주소 변환을 페이징 별로 해야하기 때문에 바인딩이 어려워짐.Paging (페이징 기법)Process의 Virtual Memory를 동일한 사이즈의 Page 단위로 나눔Virtual Memory의 내용이 page 단위로 noncontiguous하게 저장됨.일부는 back"
 date: 2025-01-04T19:12:59.329Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-7"
-thumbnail: "/assets/posts/4c7e460f3f00527879753eafcddc4214a208cc453220003693f71179b54f1d6b.png"
+thumbnail: "../assets/posts/4c7e460f3f00527879753eafcddc4214a208cc453220003693f71179b54f1d6b.png"
 categories: 운영체제
 toc: true
 velogSync:

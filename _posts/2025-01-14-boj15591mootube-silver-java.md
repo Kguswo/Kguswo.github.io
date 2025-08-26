@@ -1,6 +1,5 @@
 ---
 title: "BOJ_15591_MooTube (Silver) (Java)"
-description: "문제 링크 메모리: 449696 KB, 시간: 2008 ms너비 우선 탐색, 깊이 우선 탐색, 그래프 이론, 그래프 탐색2025년 1월 13일 21:57:20bfs로 두 정점 사이의 점수를 구한다.//		for(int i=1; i&lt;N; i++) {//			for("
 date: 2025-01-13T17:14:21.595Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ15591MooTube-Silver-Java"

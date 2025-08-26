@@ -1,10 +1,9 @@
 ---
 title: "Leet_146_LRUCache (Java)"
-description: '자료구조를 완전구현하듯 진행했다. 노드클래스로 key, value, 이 노드들의 배열과 링크드리스트를 뜻하는 prev, next배열, 노드인덱스 해시맵과 용량이 꽉 찼는지 체크하는 bool까지 사용했다.}/\*\*Your LRUCache object will be in'
 date: 2025-01-01T04:34:41.848Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "Leet146LRUCache-Java"
-thumbnail: "/assets/posts/1540204914a5dde4d5c6508d1515668957a5c9631be5c727c52dd6a7bb38f475.png"
+thumbnail: "../assets/posts/1540204914a5dde4d5c6508d1515668957a5c9631be5c727c52dd6a7bb38f475.png"
 categories: 알고리즘
 toc: true
 velogSync:

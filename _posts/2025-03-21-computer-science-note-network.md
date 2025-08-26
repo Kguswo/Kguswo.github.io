@@ -1,10 +1,9 @@
 ---
 title: "Computer Science Note - Network"
-description: "좋은 네트워크많은 처리량을 처리 가능지연시간이 짧음장애 빈도가 적음좋은 보안많은 트래픽 처리 = 많은 처리량을 가진다처리량 단위 : BPS (Bits Per Second)처리량에 영향을 주는 것들사용자들이 많이 접속할때마다 커지는 트래픽네트워크 장치 간의 대역폭네트워크"
 date: 2025-03-20T21:01:41.357Z
 tags: ["CS","네트워크"]
 slug: "Computer-Science-Note-Network"
-thumbnail: "/assets/posts/c7273e004f2ab06539d252e03910c739849faa14008ea49ecceb00c6a95d85d5.png"
+thumbnail: "../assets/posts/c7273e004f2ab06539d252e03910c739849faa14008ea49ecceb00c6a95d85d5.png"
 categories: CS Note
 toc: true
 velogSync:

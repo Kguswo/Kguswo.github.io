@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (9)"
-description: "보내는 TCP에서 받는 양을 조절한다. 파이프마다 굵기가 다 다른데 가장 얇은 파이프에서 병목현상이 발생할 확률이 높기 때문에 그 부분이 critical point이다. 하지만 그 부분을 우리가 알 순 없다. 처음에 1방울, 2방울 이렇게 천천히 늘려가본다. 그러다가 "
 date: 2025-02-12T18:06:42.797Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-9"
-thumbnail: "/assets/posts/962aa857e4d3b32fed589caa3dcc75fde0d178c1d6f053658885c2e444518486.png"
+thumbnail: "../assets/posts/962aa857e4d3b32fed589caa3dcc75fde0d178c1d6f053658885c2e444518486.png"
 categories: 네트워크
 toc: true
 velogSync:

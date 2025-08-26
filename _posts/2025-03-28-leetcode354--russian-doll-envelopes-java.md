@@ -1,10 +1,9 @@
 ---
 title: "LeetCode_354. Russian Doll Envelopes (Java)"
-description: '처음에는 단순히 정렬을 통해서만 비교했다. 하지만 다음과 같은 반례가 생겼다.\[\[2,100], \[3,200], \[4,300], \[5,500], \[5,400], \[5,250], \[6,370], \[6,360], \[7,380]]이렇게 했을 때 단순히 너비 '
 date: 2025-03-28T09:23:59.161Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode354.-Russian-Doll-Envelopes-Java"
-thumbnail: "/assets/posts/f0bc60a5aaad83b946335bc4f61266fefe9c3dc1d01e837710ab9e6d4d108423.png"
+thumbnail: "../assets/posts/f0bc60a5aaad83b946335bc4f61266fefe9c3dc1d01e837710ab9e6d4d108423.png"
 categories: 알고리즘
 toc: true
 velogSync:

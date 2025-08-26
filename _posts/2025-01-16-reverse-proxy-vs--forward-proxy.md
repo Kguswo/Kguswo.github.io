@@ -1,10 +1,9 @@
 ---
 title: "Reverse Proxy vs. Forward Proxy"
-description: "포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는 "
 date: 2025-01-15T18:50:44.293Z
 tags: ["Java","Spring","백엔드"]
 slug: "Reverse-Proxy-vs.-Forward-Proxy"
-thumbnail: "/assets/posts/5d0c1e847489d17d4b868f3b99087dfd282aa47402d757e6f6dbc4ab7bb3f3ae.png"
+thumbnail: "../assets/posts/5d0c1e847489d17d4b868f3b99087dfd282aa47402d757e6f6dbc4ab7bb3f3ae.png"
 categories: 공부
 toc: true
 velogSync:

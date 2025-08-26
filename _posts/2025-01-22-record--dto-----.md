@@ -1,10 +1,9 @@
 ---
 title: "Record를 DTO로 사용하는 이유"
-description: "Record는 Java 16에서 정식 출시된 특별한 유형의 클래스로 불변성(Immutable)을 기본으로 한다.기존의 클래스와 달리 모든 필드가 final 키워드로 선언되며, 객체 생성 후 변경할 수 없다. 또한 필드 선언만으로 자동으로 생성자, getter , equ"
 date: 2025-01-21T15:50:04.163Z
 tags: ["Java","Spring","백엔드"]
 slug: "Record를-DTO로-사용하는-이유"
-thumbnail: "/assets/posts/8165bb199e2a3eabc27cd6777abde426421ea1948567839b132e86eb59a8b0fa.png"
+thumbnail: "../assets/posts/8165bb199e2a3eabc27cd6777abde426421ea1948567839b132e86eb59a8b0fa.png"
 categories: 공부
 toc: true
 velogSync:

@@ -1,10 +1,9 @@
 ---
 title: "Operating System Concepts - (13)"
-description: "Logical block디스크의 외부에서 보는 디스크의 단위 정보 저장 공간들주소를 가진 1차원 배열처럼 취급정보를 전송하는 최소 단위SectorLogical block이 물리적인 디스크에 매핑된 위치Sector 0은 최외곽 실린더의 첫 트랙에 있는 첫 번째 섹터이다."
 date: 2025-01-14T17:33:32.818Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-13"
-thumbnail: "/assets/posts/43a098d41236e9b63cc0e830e9f995e2ff6dae0cc1fb7807bb71d48949680310.png"
+thumbnail: "../assets/posts/43a098d41236e9b63cc0e830e9f995e2ff6dae0cc1fb7807bb71d48949680310.png"
 categories: 운영체제
 toc: true
 velogSync:

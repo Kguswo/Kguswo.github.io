@@ -1,10 +1,9 @@
 ---
 title: "Claude Code 사용기"
-description: "최근 화제가 된 Claude Code를 직접 써보기로 했다. 복잡한 작업보다는 간단한 노가다성 작업부터 시작해서 어떤 느낌인지 파악해보고 싶었다.Claude Code는 개발자가 터미널에서 바로 Claude AI에게 코딩 작업을 위임할 수 있는 도구입니다. 복잡한 웹 인"
 date: 2025-08-05T18:24:38.769Z
 tags: ["claude code"]
 slug: "Claude-Code-사용기"
-thumbnail: "/assets/posts/39287db02beed71a777099e5be93ee45095ced0dec92c573d94775f0b204b237.png"
+thumbnail: "../assets/posts/39287db02beed71a777099e5be93ee45095ced0dec92c573d94775f0b204b237.png"
 categories: 기술
 toc: true
 velogSync:

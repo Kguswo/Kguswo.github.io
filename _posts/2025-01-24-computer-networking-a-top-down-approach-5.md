@@ -1,10 +1,9 @@
 ---
 title: "Computer Networking: a Top Down Approach - (5)"
-description: "전송 계층은 Reliable 하다고 말할 수 있다. 이 뜻은 application 계층으로부터 내려온 데이터들이 application 계층까지 데이터 유실 없이 도달할 수 있다는 뜻. 네트워크 레이어를 보면, Transport layer를 통해 Reliable한 데이터"
 date: 2025-01-23T18:58:52.239Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-5"
-thumbnail: "/assets/posts/af53b29ca7c06ea834dbc4dd829a6b23d5b51fe75dd24bc8a2c7e231aa28981e.png"
+thumbnail: "../assets/posts/af53b29ca7c06ea834dbc4dd829a6b23d5b51fe75dd24bc8a2c7e231aa28981e.png"
 categories: 네트워크
 toc: true
 velogSync:

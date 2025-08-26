@@ -1,10 +1,9 @@
 ---
 title: "AWS RDS 설정 - 프리티어, MySQL"
-description: "먼저 아래 링크에서 루트 사용자로 로그인 하자AWS RDS좌측 데이터베이스를 클릭하자데이터베이스RDS 인스턴스를 생성하기 위해 데이터베이스 생성을 클릭하자필자는 범용적인 설정을 위해 표준생성 해주었다. 손쉬운 설정으로 기본에 커스텀하고싶으면 오른쪽을 선택하자다음으로 사"
 date: 2024-08-01T02:23:34.754Z
 tags: ["aws","ec2","rds"]
 slug: "AWS-RDS-설정-프리티어-MySQL"
-thumbnail: "/assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png"
+thumbnail: "../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png"
 categories: 프로젝트
 toc: true
 velogSync:

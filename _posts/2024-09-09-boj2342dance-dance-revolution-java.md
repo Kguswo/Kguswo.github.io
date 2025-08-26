@@ -1,6 +1,5 @@
 ---
 title: "BOJ_2342_Dance Dance Revolution (Java)"
-description: "문제 링크 메모리: 53108 KB, 시간: 408 ms다이나믹 프로그래밍2024년 9월 9일 00:50:40왼발과 오른발을 따로 계산해야된다. dp배열을 3차원으로 횟수, 왼발위치, 오른발위치 를 인자로 사용하고 이때의 최솟값을 dp에 저장한다.board는 2차원배열"
 date: 2024-09-08T15:52:40.828Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ2342Dance-Dance-Revolution-Java"

@@ -1,10 +1,9 @@
 ---
 title: "docker compose 로 Kafka + ELK stack 사용"
-description: "여러 채용 공고 및 회사별 기술 스택을 보며 대부분 MSA아키텍처를 채택하며 이를 분석하는데 ELK Stack을 사용하는것을 보고 파이프라인을 구현해보았습니다.  ELK 스택 파이프라인  먼저 전체적인 파이프라인 및 디렉토리 구조입니다. ( 터미널에서 tree 혹은 t"
 date: 2024-10-09T08:28:51.165Z
 tags: ["ELK","docker","kafka"]
 slug: "docker-compose-로-Kafka-ELK-stack-사용"
-thumbnail: "/assets/posts/7cbec649485ed6380432c70c6fe86b95a4d0cb940e6a5d21725654c3bd405503.png"
+thumbnail: "../assets/posts/7cbec649485ed6380432c70c6fe86b95a4d0cb940e6a5d21725654c3bd405503.png"
 categories: 프로젝트
 toc: true
 velogSync:
