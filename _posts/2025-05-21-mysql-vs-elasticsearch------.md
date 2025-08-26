@@ -1,6 +1,6 @@
 ---
 title: "MySQL vs Elasticsearch 검색 성능 비교 "
-description: "이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1\. 구분자(Stopword) 방식MySQL 5"
+description: '이 실험에서는 전통적인 관계형 데이터베이스인 MySQL의 전문 검색(Full-Text Search)과 전문 검색 엔진인 Elasticsearch의 성능을 비교 분석하고자 한다.문장이나 문서 내용에서 키워드를 검색하는 기능1\. 구분자(Stopword) 방식MySQL 5'
 date: 2025-05-21T11:17:38.271Z
 tags: ["mysql"]
 slug: "MySQL-vs-Elasticsearch-검색-성능-비교"

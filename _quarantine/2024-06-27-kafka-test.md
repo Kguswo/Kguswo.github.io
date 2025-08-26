@@ -1,6 +1,6 @@
 ---
 title: "Kafka 연습"
-description: "mac에서 혼자 kafka를 연습해보았다참고 링크 : https&#x3A;//ojava.tistory.com/205		  https&#x3A;//devocean.sk.com/experts/techBoardDetail.do?ID=163709          \+ 오류 구"
+description: 'mac에서 혼자 kafka를 연습해보았다참고 링크 : https&#x3A;//ojava.tistory.com/205		  https&#x3A;//devocean.sk.com/experts/techBoardDetail.do?ID=163709          \+ 오류 구글링'
 date: 2024-06-27T06:30:40.848Z
 tags: ["kafka"]
 slug: "Kafka-Test"

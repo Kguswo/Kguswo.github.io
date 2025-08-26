@@ -1,6 +1,6 @@
 ---
 title: "LeetCode_maximum-points-you-can-obtain-from-cards (Java)"
-description: "누적합으로 풀이했다. 한 쪽에서 연속으로 뽑을 수 있고 왼쪽과 오른쪽만 선택 가능하므로 양쪽에서 각각 연속으로 몇개를 뽑는가가 중요하다. 순서는 상관없고 개수가 중요하다.class Solution {    public int maxScore(int\[] cardPoin"
+description: '누적합으로 풀이했다. 한 쪽에서 연속으로 뽑을 수 있고 왼쪽과 오른쪽만 선택 가능하므로 양쪽에서 각각 연속으로 몇개를 뽑는가가 중요하다. 순서는 상관없고 개수가 중요하다.class Solution {    public int maxScore(int\[] cardPoin'
 date: 2025-04-26T06:13:02.009Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCodemaximum-points-you-can-obtain-from-cards-Java"

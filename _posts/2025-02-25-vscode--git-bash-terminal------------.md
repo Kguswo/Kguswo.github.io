@@ -1,6 +1,6 @@
 ---
 title: "VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기"
-description: "VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/\[User]/AppData/Local/Programs/Microsoft V"
+description: 'VS Code에서 Git Bash 터미널을 사용할 때 예상치 못한 문제가 발생했다. 터미널이 프로젝트 작업 공간(workspace folder)에서 시작되지 않고 엉뚱한 위치인 C:/Users/\[User]/AppData/Local/Programs/Microsoft V'
 date: 2025-02-24T18:43:23.965Z
 tags: ["vscode"]
 slug: "VSCode에서-Git-Bash-Terminal-사용-시-시작-경로-오류-해결하기"

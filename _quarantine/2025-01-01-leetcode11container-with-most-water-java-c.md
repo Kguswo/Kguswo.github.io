@@ -1,6 +1,6 @@
 ---
 title: "LeetCode_11_Container With Most Water (Java, C++)"
-description: "범위를 좁혀나가면서 최대 넓이 갱신, 투포인터 문제인 것 같다고 생각했다.class Solution {    public int maxArea(int\[] height) {        int n = height.length;        int left = 0;   "
+description: '범위를 좁혀나가면서 최대 넓이 갱신, 투포인터 문제인 것 같다고 생각했다.class Solution {    public int maxArea(int\[] height) {        int n = height.length;        int left = 0;   '
 date: 2025-01-01T04:42:15.750Z
 tags: ["C++","Java","leetcode","알고리즘"]
 slug: "LeetCode11Container-With-Most-Water-Java-C"

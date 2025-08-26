@@ -1,6 +1,6 @@
 ---
 title: "BOJ_11973_Angry Cows (Silver) (Java)"
-description: "문제 링크 메모리: 22528 KB, 시간: 248 ms이분 탐색, 매개 변수 탐색2025년 1월 14일 22:54:46Bessie the cow has designed what she thinks will be the next big hit video game: "A"
+description: '문제 링크 메모리: 22528 KB, 시간: 248 ms이분 탐색, 매개 변수 탐색2025년 1월 14일 22:54:46Bessie the cow has designed what she thinks will be the next big hit video game: "A'
 date: 2025-01-14T14:13:35.716Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ11973Angry-Cows-Silver-Java"
