@@ -1,0 +1,41 @@
+---
+title: "Reverse Proxy vs. Forward Proxy"
+description: "포워드 프록시는 주로 클라이언트 측에 위치하여, 사용자가 인터넷에 접근할 때 중개자 역할을 한다.예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 사용자의 실제 IP 주소는 "
+date: 2025-01-15T18:50:44.293Z
+tags: ["Java","Spring","백엔드"]
+slug: "Reverse-Proxy-vs.-Forward-Proxy"
+thumbnail: "/assets/posts/5d0c1e847489d17d4b868f3b99087dfd282aa47402d757e6f6dbc4ab7bb3f3ae.png"
+categories: 공부
+toc: true
+velogSync:
+  lastSyncedAt: 2025-08-26T02:04:18.602Z
+  hash: "3c4978792b224809acdde266eff61702fb2cb33e25f0a1d05f954e0f4ab7ff1e"
+---
+
+> ### 포워드 프록시(Forward Proxy)
+
+포워드 프록시는 주로 **클라이언트 측에 위치**하여, **사용자가 인터넷에 접근할 때 중개자 역할**을 한다.
+
+예를 들어, 회사 내부 네트워크에서 근무하는 직원이 외부 웹사이트에 접속하려고 할 때, 포워드 프록시 서버를 통해 요청이 전달된다. 이 과정에서 **사용자의 실제 IP 주소는 숨겨지고, 프록시 서버의 IP 주소가 대신 사용**된다.
+
+포워드 프록시의 핵심 기능 중 하나는 ***익명성 제공*** 이다. 사용자의 실제 IP를 숨김으로써 개인정보 보호와 보안 측면에서 큰 장점을 제공한다.
+
+또한 **캐싱**을 통해 ***네트워크 성능을 향상*** 시킨다. 자주 요청되는 웹 페이지나 파일을 프록시 서버에 저장해두면, 동일한 요청이 다시 들어올 때 빠르게 응답할 수 있어 네트워크 대역폭을 절약할 수 있다.
+
+이와 함께 **보안 강화 기능**도 포워드 프록시의 중요한 역할 중 하나다. 악성 웹사이트나 불법적인 콘텐츠에 대한 접근을 차단하여 네트워크 보안을 강화하고, 바이러스나 악성 코드의 유입을 예방할 수 있다.
+
+> ### 리버스 프록시(Reverse Proxy)
+
+리버스 프록시는 서버 측에 위치하여 외부에서 들어오는 클라이언트의 요청을 내부 서버로 전달하는 역할을 한다.
+
+리버스 프록시의 핵심 기능 중 하나는 ***로드 밸런싱*** 이다. 다수의 백엔드 서버로 트래픽을 분산시켜 서버 과부하를 방지하고, 서비스의 고가용성을 유지할 수 있다.
+
+또한 외부에서 직접 백엔드 서버에 접근하지 못하게 하여 DDoS 공격이나 해킹 시도로부터 서버를 보호할 수 있다.
+
+**SSL 종료**는 리버스 프록시의 또 다른 중요한 기능이다. SSL/TLS 암호화를 리버스 프록시에서 처리함으로써 백엔드 서버의 부담을 줄이고, 중앙에서 인증서를 관리할 수 있다.
+
+또한, 리버스 프록시는 캐싱 및 콘텐츠 최적화 기능을 통해 정적 콘텐츠를 캐싱하여 응답 속도를 향상시키고 서버 부하를 줄일 수 있다.
+
+### References
+- [Forward Proxy vs. Reverse Proxy: The Difference Explained](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy)
+- [Difference between Forward Proxy and Reverse Proxy in System design](https://dev.to/somadevtoo/difference-between-forward-proxy-and-reverse-proxy-in-system-design-54g5)
