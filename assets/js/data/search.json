@@ -1,96 +1,6 @@
 [
   
   {
-    "title": null,
-    "url": "/posts/2025-01-10-boj2698-java/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "[Gold IV] 인접한 비트의 개수 - 2698  문제 링크  성능 요약  메모리: 16600 KB, 시간: 116 ms  분류  다이나믹 프로그래밍  제출 일자  2025년 1월 10일 16:59:47  문제 설명  0과 1로 이루어진 수열 S가 있다. S의 첫 수는 s1이고, 마지막 수는 sn이다. S의 인접한 비트의 개수는 다음과 같이 구할 수 있다.  s1*s2 + s2*s3 + s3*s4 + ... + sn-1 * sn  위의 식을 이용하면 수열 S에서 인접한 1의 개수를 구할 수 있다. 예를들어, 011101101의 인접한 비트의 개수는 3이 되고, 111101101은 4, 010101010은 0이 된다.  수열 S의 크기 n과 k가 주어졌을 때, 인접한 비트의 개수가 k인 수열 S의 개수를 구하는 프로그램을 작성하시오.  예를 들어, n이 5이고, k가 2이면, 수열 S가 될 수 있는 수열은 다음과 같이 6가지가 있다.  11100, 01110, 00111, 10111, 11101, 11011  입력  첫째 줄에 테스트 케이스의 수 T(1 ≤ T ≤ 1,000)가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고, 수 2개가 공백으로 구분되어 이루어져 있다. 첫 번째 수는 n이고, 두 번째 수는 k이다. n과 k는 100을 넘지 않는 자연수이다.  출력  각 테스트 케이스에 대해 인접한 비트의 개수가 k인 수열 S의 개수를 한 줄에 하나씩 출력한다. 이 값은 2,147,483,647보다 작거나 같다.     문제 풀이        코드   package BOJ_2698_인접한비트의개수;  /**  * Author: nowalex322, Kim HyeonJae  */  import java.io.*; import java.util.*;  public class Main {     static BufferedReader br;     static BufferedWriter bw;     static StringTokenizer st;     static StringBuilder sb = new StringBuilder();     static int TC, N, K, dp[][][];      public static void main(String[] args) throws Exception {         new Main().solution();     }      public void solution() throws Exception { //        br = new BufferedReader(new InputStreamReader(System.in));         br = new BufferedReader(new InputStreamReader(new FileInputStream(\"src/main/java/BOJ_2698_인접한비트의개수/input.txt\")));         bw = new BufferedWriter(new OutputStreamWriter(System.out));          TC = Integer.parseInt(br.readLine());         dp = new int[101][101][2];         dp[1][0][0] = 1;         dp[1][0][1] = 1;          for (int i = 2; i &lt;= 100; i++) {             for (int j = 0; j &lt;= i - 1; j++) {                 for (int k = 0; k &lt; 2; k++) {                     dp[i][j][0] = dp[i - 1][j][0] + dp[i - 1][j][1];                      if (j == 0) { // 이거 없으면 -1 인덱스 접근가능 오류                         dp[i][j][1] = dp[i - 1][j][0];                     } else {                         dp[i][j][1] = dp[i - 1][j][0] + dp[i - 1][j - 1][1];                     }                 }             }         }         while (TC-- &gt; 0) {             st = new StringTokenizer(br.readLine());             N = Integer.parseInt(st.nextToken());             K = Integer.parseInt(st.nextToken());             sb.append(dp[N][K][0] + dp[N][K][1]).append('\\n');         }         bw.write(sb.toString());         bw.flush();         bw.close();         br.close();     } }   더 효율적인 코드 /**  * Author: nowalex322, Kim HyeonJae  */  import java.io.*; import java.util.*;  public class Main {     static BufferedReader br;     static BufferedWriter bw;     static StringTokenizer st;     static StringBuilder sb = new StringBuilder();     static int TC, N, K, dp[][];      public static void main(String[] args) throws Exception {         new Main().solution();     }      public void solution() throws Exception {         br = new BufferedReader(new InputStreamReader(System.in)); //        br = new BufferedReader(new InputStreamReader(new FileInputStream(\"src/main/java/BOJ_2698_인접한비트의개수/input.txt\")));         bw = new BufferedWriter(new OutputStreamWriter(System.out));          TC = Integer.parseInt(br.readLine());         dp = new int[101][101];         dp[0][0] = 1;         dp[1][0] = 2;         for(int i=2;i&lt;=100;i++){             for(int j=i-1;j&gt;0;j--){                 dp[i][j] = dp[i-1][j] + dp[i-2][j] + (dp[i-1][j-1] - dp[i-2][j-1]);             }             dp[i][0] = dp[i-1][0] + dp[i-2][0];         }                  while(TC--&gt;0){             st = new StringTokenizer(br.readLine());             N = Integer.parseInt(st.nextToken());             K = Integer.parseInt(st.nextToken());             sb.append(String.valueOf(dp[N][K])).append('\\n');         }         bw.write(sb.toString());         bw.flush();         bw.close();         br.close();     } }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2025-01-05-boj9251lcs-java-c/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "[Gold V] LCS - 9251  문제 링크  성능 요약  메모리: 6004 KB, 시간: 4 ms  분류  다이나믹 프로그래밍, 문자열  제출 일자  2025년 1월 5일 22:52:41  문제 설명  LCS(Longest Common Subsequence, 최장 공통 부분 수열)문제는 두 수열이 주어졌을 때, 모두의 부분 수열이 되는 수열 중 가장 긴 것을 찾는 문제이다.  예를 들어, ACAYKP와 CAPCAK의 LCS는 ACAK가 된다.  입력  첫째 줄과 둘째 줄에 두 문자열이 주어진다. 문자열은 알파벳 대문자로만 이루어져 있으며, 최대 1000글자로 이루어져 있다.  출력  첫째 줄에 입력으로 주어진 두 문자열의 LCS의 길이를 출력한다.     문제 풀이     상세 로직 설명     문자가 같은 경우 (str1[i-1] == str2[j-1])      현재 문자를 LCS에 포함   이전 상태(dp[i-1][j-1])에 1을 더함   예: “AB”와 “AC”에서 ‘A’ 매칭 시 dp[1][1] = dp[0][0] + 1      문자가 다른 경우      이전 상태들 중 최대값 선택   위쪽(dp[i-1][j])과 왼쪽(dp[i][j-1]) 중 큰 값   현재 문자를 포함하지 않는 최적해 유지   예시로 보는 알고리즘 진행 과정 str1 = \"ABCD\" str2 = \"AEBD\"  단계별 DP 테이블 변화     초기 상태     '' A  E  B  D '' 0  0  0  0  0 A  0  0  0  0  0 B  0  0  0  0  0 C  0  0  0  0  0 D  0  0  0  0  0           첫 번째 행 처리 (A)     '' A  E  B  D '' 0  0  0  0  0 A  0  1  1  1  1 B  0  0  0  0  0 C  0  0  0  0  0 D  0  0  0  0  0           최종 DP 테이블     '' A  E  B  D '' 0  0  0  0  0 A  0  1  1  1  1 B  0  1  1  2  2 C  0  1  1  2  2 D  0  1  1  2  3           시간 복잡도 분석          시간 복잡도: O(N × M)             N: 첫 번째 문자열의 길이       M: 두 번째 문자열의 길이                공간 복잡도: O(N × M)             2차원 DP 테이블 사용              코드   Java 코드   /**  * Author: nowalex322, Kim HyeonJae  */ import java.io.*; import java.util.*;  public class Main { \tstatic BufferedReader br; \tstatic BufferedWriter bw; \tstatic StringTokenizer st;  \tpublic static void main(String[] args) throws Exception { \t\tnew Main().solution(); \t}  \tpublic void solution() throws Exception { \t\tbr = new BufferedReader(new InputStreamReader(System.in)); //\t\tbr = new BufferedReader(new InputStreamReader(new FileInputStream(\"input.txt\"))); \t\tbw = new BufferedWriter(new OutputStreamWriter(System.out)); \t\tString str1 = br.readLine(); \t\tString str2 = br.readLine(); \t\t \t\tint[][] dp = new int[str1.length() + 1][str2.length() + 1]; \t\tfor(int i=1; i&lt;=str1.length(); i++) { \t\t\tfor(int j=1; j&lt;=str2.length(); j++) { \t\t\t\tif(str1.charAt(i-1)==str2.charAt(j-1)) dp[i][j] = Math.max(dp[i-1][j-1] + 1, dp[i][j]); \t\t\t\telse dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]); \t\t\t} \t\t} //\t\tfor(int i=0; i&lt;=str1.length(); i++) { //\t\t\tfor(int j=0; j&lt;=str2.length(); j++) { //\t\t\t\tSystem.out.print(dp[i][j] + \" \"); //\t\t\t} //\t\t\tSystem.out.println(); //\t\t} \t\tbw.write(String.valueOf(dp[str1.length()][str2.length()])); \t\tbw.flush(); \t\tbw.close(); \t\tbr.close(); \t} }   C++ 코드  /**  * Author: nowalex322, Kim HyeonJae  */ #include &lt;bits/stdc++.h&gt; using namespace std;  // #define int long long #define MOD 1000000007 #define INF LLONG_MAX #define ALL(v) v.begin(), v.end()  #ifdef LOCAL #include \"algo/debug.h\" #else #define debug(...) 42 #endif  void solve() {     string str1, str2;     cin &gt;&gt; str1 &gt;&gt; str2;      vector&lt;vector&lt;int&gt;&gt; dp(str1.length() + 1,                            vector&lt;int&gt;(str2.length() + 1, 0));      for (int i = 1; i &lt;= str1.length(); i++) {         for (int j = 1; j &lt;= str2.length(); j++) {             if (str1[i - 1] == str2[j - 1])                 dp[i][j] = dp[i - 1][j - 1] + 1;             else                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);         }     }     cout &lt;&lt; dp[str1.length()][str2.length()] &lt;&lt; \"\\n\"; }  int main() {     ios::sync_with_stdio(false);     cin.tie(nullptr);      int tt = 1;  // 기본적으로 1번의 테스트 케이스를 처리     // cin &gt;&gt; tt;    // 테스트 케이스 수 입력 (필요 시)      while (tt--) {         solve();     }     return 0; }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2025-01-01-leetcode11container-with-most-water-java-c/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "11. Container With Most Water Medium  You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).  Find two lines that together with the x-axis form a container, such that the container contains the most water.  Return the maximum amount of water a container can store.  Notice that you may not slant the container.  &nbsp; Example 1:   Input: height = [1,8,6,2,5,4,8,3,7] Output: 49 Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.   Example 2:   Input: height = [1,1] Output: 1   &nbsp; Constraints:   \tn == height.length \t2 &lt;= n &lt;= 105 \t0 &lt;= height[i] &lt;= 104      문제 풀이   범위를 좁혀나가면서 최대 넓이 갱신, 투포인터 문제인 것 같다고 생각했다.     코드   Java 코드 import java.util.*; import java.io.*;  class Solution {     public int maxArea(int[] height) {         int n = height.length;         int left = 0;         int right = n-1;         int width = right-left;         int res = 0;         while(left &lt; right){             int leftH = height[left];             int rightH = height[right];             int minH = Math.min(leftH, rightH);             int S = width * minH;             res = Math.max(res, S);              if(leftH &lt; rightH) left++;              else right--;             width--;         }         System.out.println(res);         return res;     } }      C++ 코드  class Solution { public:     int maxArea(vector&lt;int&gt;&amp; height) {         int n, left, right, width, res;         n = height.size();         left = 0;         right = n-1;         width = right-left;         res =0;         while(left&lt;right){             int leftH = height[left];             int rightH = height[right];             int minH = min(leftH, rightH);             int S = width * minH;             res = max(res, S);              if(leftH &lt; rightH) left++;              else right--;             width--;         }         return res;     } };   "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2025-01-01-leet146lrucache-java/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "146. LRU Cache Medium  Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.  Implement the LRUCache class:   \tLRUCache(int capacity) Initialize the LRU cache with positive size capacity. \tint get(int key) Return the value of the key if the key exists, otherwise return -1. \tvoid put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.   The functions get and put must each run in O(1) average time complexity.  &nbsp; Example 1:   Input [&quot;LRUCache&quot;, &quot;put&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;] [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]] Output [null, null, null, 1, null, -1, null, -1, 3, 4]  Explanation LRUCache lRUCache = new LRUCache(2); lRUCache.put(1, 1); // cache is {1=1} lRUCache.put(2, 2); // cache is {1=1, 2=2} lRUCache.get(1);    // return 1 lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3} lRUCache.get(2);    // returns -1 (not found) lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3} lRUCache.get(1);    // return -1 (not found) lRUCache.get(3);    // return 3 lRUCache.get(4);    // return 4   &nbsp; Constraints:   \t1 &lt;= capacity &lt;= 3000 \t0 &lt;= key &lt;= 104 \t0 &lt;= value &lt;= 105 \tAt most 2 * 105 calls will be made to get and put.      문제풀이   자료구조를 완전구현하듯 진행했다. 노드클래스로 key, value, 이 노드들의 배열과 링크드리스트를 뜻하는 prev, next배열, 노드인덱스 해시맵과 용량이 꽉 찼는지 체크하는 bool까지 사용했다.     코드   class LRUCache {     class Node{         int key;         int value;         Node(int key, int value){             this.key = key;             this.value = value;         }     }     int capacity;     Node[] node;     int[] prev; int[] next;     int head; int tail;     Map&lt;Integer, Integer&gt; nodeIdx;     boolean isFull;      public LRUCache(int c) {         this.capacity = c;         this.node = new Node[c];         this.prev = new int[c];         this.next = new int[c];         this.head = -1;         this.tail = -1;         this.nodeIdx = new HashMap&lt;&gt;();         this.isFull = false;     }          /*     * key 존재여부 따지기     * key 있으면 찾은 key를 head로 옮기기 (최신화) - 메서드화     * key에 해당하는 value를 node배열에서 찾아 리턴     */     public int get(int k) {         if(!nodeIdx.containsKey(k)) return -1;          int idx = nodeIdx.get(k);         setHead(idx);          return node[idx].value;     }          /*     * key 존재여부 따지기     * key **있으면** 찾은 key로 idx찾고 그 idx의 값을 node에서 찾기 - (a)     * 찾은 value를 변경후 head로 만들기 (최신화)     * key **없으면** 먼저 사용중인 개수가 capacity만큼 꽉 찼는지 확인, - (b)     * capacity가 꽉 차지 않았으면 새로운 node추가 후 isFull 갱신     * capacity가 꽉 찼으면 LRU키(tail) 찾아서 제거, 관계도 제거     * 이후 맨 앞에 추가, 관계 추가 - 메서드화     * key에 해당하는 value를 node배열에서 찾아 리턴     */     public void put(int k, int v) {         // (a)         if(nodeIdx.containsKey(k)){             int idx = nodeIdx.get(k);             node[idx].value = v;             setHead(idx);             return;         }          // (b)         if(!isFull){             putNewNode(k, v, nodeIdx.size()); // 이 부분 새로운 인덱스 써야함             if(nodeIdx.size() == capacity) isFull = true;         }         else{             int LRUkey = node[tail].key;             nodeIdx.remove(LRUkey);              int idxToPut = tail;             if(prev[tail]!=-1) {                 tail = prev[tail];                 next[tail] = -1;              }             else{ // 용량 1이면 head/tail 없으므로 초기화;                 head = -1;                 tail = head;             }              putNewNode(k, v, idxToPut);         }     }      /*     * 맨 앞으로 옮기는 메서드     * 원래 위치에서의 관계 끊고 맨 앞으로 옮기기     * 맨 앞의 관계는 prev가 없고 맨 앞(head)가 next.     */     private void setHead(int idx){         if(idx == head) return;                  if(idx != tail){             prev[next[idx]] = prev[idx];             next[prev[idx]] = next[idx];         }         else{             tail = prev[idx];             next[tail] = -1;         }          prev[head] = idx;         prev[idx] = -1;         next[idx] = head;                  head = idx;     }      /*     * 새로 추가할 노드를 배열에 추가 후     * 맨 앞에 관계도 추가, head설정     */     private void putNewNode(int k, int v, int idxToPut){         node[idxToPut] = new Node(k, v);         nodeIdx.put(k, idxToPut);          prev[idxToPut] = -1;         next[idxToPut] = head;         if(head!=-1) prev[head] = idxToPut; // 용량 1 고려한 조건문         head = idxToPut;          if(tail==-1) tail = idxToPut; // 첫원소넣는경우 고려      } }  /**  * Your LRUCache object will be instantiated and called as such:  * LRUCache obj = new LRUCache(capacity);  * int param_1 = obj.get(key);  * obj.put(key,value);  */   "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-12-31-boj23829/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "[Gold IV] 인문예술탐사주간 - 23829  문제 링크  성능 요약  메모리: 45380 KB, 시간: 684 ms  분류  이분 탐색, 누적 합  제출 일자  2024년 12월 31일 14:48:28  문제 설명  태영이는 SASA의 축제라고 불리는 “인문예술탐사주간”을 보내게 되었다. “인문예술탐사주간”을 맞이하여 세종호수공원에 가게 된 태영이는 아름다운 경치에 놀라움을 금치 못했다.  세종호수공원은 일직선으로 뻗어있는 모습이다. 이 공원에는 나무가 총 $N$ 그루 있으며, $i$ 번째 나무의 위치는 $P_i$이다.  태영이는 카메라를 들고 파노라마 사진을 $Q$ 번 찍어, 이 아름다운 풍경을 담으려고 한다. 태영이는 이 사진에 점수를 매기려고 하는데, 사진의 점수는 사진을 찍은 위치로부터 각 나무까지의 거리 합이다. 이 때, 두 위치의 거리는 두 위치의 차의 절댓값으로 정의된다.  태영이가 찍은 사진에 대해서, 각 사진의 점수를 매겨주자.  입력  첫째 줄에는 나무의 개수 $N$과 태영이가 찍은 사진의 개수 $Q$가 공백으로 구분되어 주어진다.  둘째 줄에는 나무의 위치 $P_1, P_2, \\cdots, P_N$이 주어진다.  셋째 줄부터 $Q$개의 줄의 $i$ 번째 줄에는 태영이가 $i$ 번째로 사진을 찍은 위치 $X_i$가 주어진다.  출력   $i$ 번째 줄에는 태영이가 $i$ 번째 찍은 사진의 점수를 한 줄에 하나씩 차례대로 출력한다.     문제 풀이     문제를 처음 풀 때 누적합을 사용해 특정 위치에서 모든 나무까지의 거리를 한번에 계산하고자 했다. 이렇게도 답은 나오지만 문제는 맨 왼쪽 나무보다 작은곳에서 찍으면 값이 제대로 계산되지 않았다. 이를 해결하려면 왼쪽 나무 오른쪽 나무를 나눠서 계산해야했다.  원래 아이디어 : 그림 바뀐 아이디어 : leftSum으로 왼쪽거리 합 + rightSum으로 오른쪽거리합, 왼쪽오른쪽개수는 파라매트릭서치로 찾고, 만약 첫 해결법과 같이 문제가 생기는 경우를 위해 맨 왼쪽보다 작으면 개수 0 반환하게 했다.     코드   /**  * Author: nowalex322, Kim HyeonJae  */ import java.io.*; import java.util.*;  public class Main { \tstatic BufferedReader br; \tstatic BufferedWriter bw; \tstatic StringTokenizer st; \tstatic StringBuilder sb = new StringBuilder(); \tstatic int N, Q, tree[]; \tstatic long prefixSum[]; \tstatic long sum; \tpublic static void main(String[] args) throws Exception { \t\tnew Main().solution(); \t}  \tpublic void solution() throws Exception { \t\tbr = new BufferedReader(new InputStreamReader(System.in)); //\t\tbr = new BufferedReader(new InputStreamReader(new FileInputStream(\"input.txt\"))); \t\tbw = new BufferedWriter(new OutputStreamWriter(System.out)); \t\tst = new StringTokenizer(br.readLine()); \t\t \t\tN = Integer.parseInt(st.nextToken()); \t\tQ = Integer.parseInt(st.nextToken()); \t\ttree = new int [N]; \t\t \t\tst = new StringTokenizer(br.readLine()); \t\tfor(int i=0; i&lt;N; i++) { \t\t\ttree[i] = Integer.parseInt(st.nextToken()); \t\t} \t\tArrays.sort(tree);\t\t \t\t \t\tprefixSum = new long[N+1]; \t\t/* \t\t * 처음아이디어 : 맨 왼쪽부터 진행해 나무 한그루씩 지나칠때마다 -2씩 되므로 이를 반영하여 누적합 -&gt; 첫 O(N) 이후 쿼리마다 O(1) \t\t * \t\t\t   -&gt; 절댓값 계산 문제 발생 \t\t * 다음아이디어 : 왼쪽 오른쪽을 따로 해서 절댓값 오류까지 해결 -&gt;  O(NlogN) \t\t */ \t\tfor(int i=1; i&lt;=N; i++) { \t\t\tprefixSum[i] = prefixSum[i-1] + tree[i-1]; \t\t} \t\t \t\tfor(int i=0; i&lt;Q; i++) { \t\t\tint pos = Integer.parseInt(br.readLine()); \t\t\tint left = findIdx(pos); \t\t\tlong leftSum = (long) left * pos - prefixSum[left]; \t\t\tlong rightSum = (long) (prefixSum[N] - prefixSum[left]) - (long) pos * (N-left); \t\t\t \t\t\tsb.append(leftSum + rightSum).append(\"\\n\"); \t\t} \t\t\t\t\t\t \t\tbw.write(sb.toString()); \t\tbw.flush(); \t\tbw.close(); \t\tbr.close(); \t}  \tprivate int findIdx(int pos) { \t\tint res = 0; \t\tint left = 0, right = tree.length-1;          if(pos &lt; tree[0]) return 0;  \t\twhile(left &lt;= right) { \t\t\tint mid = left + (right-left) / 2; \t\t\tif(tree[mid] &lt;= pos) { \t\t\t\tleft = mid + 1; \t\t\t\tres = mid; \t\t\t} \t\t\telse { \t\t\t\tright = mid-1; \t\t\t} \t\t} \t\treturn res+1; // 인덱스 0부턴데 개수반환해야하므로 \t} }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-12-26-boj2374-java/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "[Gold IV] 같은 수로 만들기 - 2374  문제 링크  성능 요약  메모리: 14348 KB, 시간: 108 ms  분류  자료 구조, 그리디 알고리즘, 스택  제출 일자  2024년 12월 26일 18:19:39  문제 설명  n(1 ≤ n ≤ 1,000)개의 자연수 A[1], A[2], A[3], …, A[n]이 있다. 이 자연수에 Add(i)라는 연산을 하면, A[i]가 1만큼 증가한다. 이때, A[i]만 증가하는 것이 아니고, A[i]의 좌우로 인접한 같은 수의 그룹이 한번에 1씩 증가한다. A[1]과 A[n]은 인접해 있지 않다.  예를 들어 수가 {1, 1, 1, 1, 3, 3, 1} 이었다고 해 보자. Add(2)를 하면 A[2]의 좌우로 인접한 같은 수가 1씩 증가하니까 {2, 2, 2, 2, 3, 3, 1}이 된다. 여기서 Add(4)를 하면 {3, 3, 3, 3, 3, 3, 1}이 되고, 여기서 Add(1)을 하면 {4, 4, 4, 4, 4, 4, 1}이 된다.  이와 같이 Add라는 연산을 사용하여 A[1] = A[2] = A[3] = … = A[n]이 되도록 하려 한다. 이때, 최소 회수로 Add연산을 사용하는 방법을 찾는 것이 문제이다.  입력  첫째 줄에 정수 n이 주어진다. 다음 n개의 줄에는 차례로 A[1], A[2], …, A[n]이 주어진다. 모든 입력은 1,000,000,000을 넘지 않는다.  출력  첫째 줄에 최소의 Add연산 사용 회수를 출력한다. 이 값은 1025을 넘지 않는다.     문제 풀이        코드   package BOJ_2374_같은수로만들기;  /**  * Author: nowalex322, Kim HyeonJae  */  import java.io.*; import java.util.*;  public class Main {     static BufferedReader br;     static BufferedWriter bw;     static StringTokenizer st;      public static void main(String[] args) throws Exception {         new Main().solution();     }      public void solution() throws Exception { //        br = new BufferedReader(new InputStreamReader(System.in));         br = new BufferedReader(new InputStreamReader(new FileInputStream(\"src/main/java/BOJ_2374_같은수로만들기/input.txt\")));         bw = new BufferedWriter(new OutputStreamWriter(System.out));          int N = Integer.parseInt(br.readLine());         Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();         long res = 0;         int max = 0;         for (int i = 0; i &lt; N; i++) {             int num = Integer.parseInt(br.readLine());             if (max &lt; num) max = num;             if (!stack.isEmpty()) {                 int p = stack.pop();                 if (p &lt;= num) res += num - p;             }             stack.push(num);         }          // 마지막에 1 5 2 이렇게 끝나면 2의 경우 최댓값까지 올려주는 계산이 추가로 필요         res += max - stack.pop();         bw.write(String.valueOf(res));          bw.flush();         bw.close();         br.close();     } }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-12-16-java-list-contains-set-contains/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "   LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다.   contains()의 시간복잡도  먼저 요약하자면 set에서 사용시 시간복잡도는 O(1)이고, list에서 사용시 O(N)의 시간복잡도를 가진다. 왜 이런 결과를 보이는지 알아보자.    직접 구현된 코드를 찾아가보니 Collection을 상속받고있고, 둘 다 Struct로 구현되어있다.    더 깊게 찾아가보니 hashSet은 hashMap을 기반으로 구현된다는 것도 알았다!  이에 반해  ArrayList에서는 indexOf()를 통해 결정하기에 모든 항목을 체크해야 하는 것이다.  Set set은 내부적으로 해시테이블로 구현이 되어있다고 한다. 해시테이블은 빠른 검색 속도를 자랑한다. key-value 구조로 이루어져있고 key를 해시 함수에 넣어 고유한 인덱스를 만들어 버킷의 해당 인덱스에 값을 넣는다.  이를 통해 key-value로 바로 O(1)만에 찾아낼 수 있는것임을 공부했다! "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-12-09-boj14369-small-java/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "[Gold V] 전화번호 수수께끼 (Small) - 14369  문제 링크  성능 요약  메모리: 14948 KB, 시간: 124 ms  분류  애드 혹, 브루트포스 알고리즘, 문자열  제출 일자  2024년 12월 9일 22:43:52  문제 설명  \"전화번호가 뭐에요?\"  \"제 전화번호의 각 자리를 영어단어로 바꾸고, 철자를 잘 섞으면 OZONE TOWER가 나와요.\"  \"예?\"  \"그리고 제 전화번호는 오름차순으로 정렬되어 있어요.\"  \"...\"  입력  첫 줄에 테스트케이스의 개수 T가 주어진다. 각 테스트케이스에는 상대방이 제시한 스트링 S가 주어진다. S는 영어 대문자로만 이루어져 있다.  1≤ T ≤ 100이고, S의 길이는 3 이상 20 이하이다. 모든 테스트케이스에는 유일한 해답이 있다.  출력  각 줄에 테스트케이스 번호 x와 전화번호 y를 Case #x: y의 형태로 출력한다.     문제 풀이   각 숫자를 어떤 순서로 처리해야 편한지 고민했다!  자세한 풀이는 코드 속 주석 참조     코드    /**  * Author: nowalex322, Kim HyeonJae  */ import java.io.*; import java.util.*;  public class Main { \tclass Number { \t\tString s; \t\tchar c; \t\tint n;  \t\tpublic Number(String s, char c, int n) { \t\t\tthis.s = s; \t\t\tthis.c = c; \t\t\tthis.n = n; \t\t} \t}  \tstatic BufferedReader br; \tstatic BufferedWriter bw; \tstatic StringTokenizer st; \tNumber[] number = { new Number(\"ZERO\", \t'Z', 0), \t\t\t\t\t\tnew Number(\"SIX\", \t'X', 6),  \t\t\t\t\t\tnew Number(\"EIGHT\", 'G', 8),  \t\t\t\t\t\tnew Number(\"TWO\", \t'W', 2), \t\t\t\t\t\tnew Number(\"THREE\", 'T', 3),  \t\t\t\t\t\tnew Number(\"SEVEN\", 'S', 7),  \t\t\t\t\t\tnew Number(\"FIVE\", \t'V', 5),  \t\t\t\t\t\tnew Number(\"FOUR\", \t'F', 4), \t\t\t\t\t\tnew Number(\"NINE\", \t'I', 9),  \t\t\t\t\t\tnew Number(\"ONE\", \t'N', 1) };  \tpublic static void main(String[] args) throws Exception { \t\tnew Main().solution(); \t}  \tpublic void solution() throws Exception { //\t\tbr = new BufferedReader(new InputStreamReader(System.in)); \t\tbr = new BufferedReader(new InputStreamReader(new FileInputStream(\"input.txt\"))); \t\tbw = new BufferedWriter(new OutputStreamWriter(System.out)); \t\tint T = Integer.parseInt(br.readLine());  \t\tfor (int tc = 1; tc &lt;=T; tc++) { \t\t\t/* \t\t\t * 1. 0 : Z 개수로 찾기 - 25 \t\t\t * 2, 6 : X 개수로 찾기 - 23 \t\t\t * 3. 8 : G 개수로 찾기 - 6 \t\t\t * 4. 2 : W개수로 찾기 - 22 \t\t\t * 5. 3 : TWO, EIGHT 찾은 후 T로 찾기 - 19 \t\t\t * 6. 7 : SIX 찾은 후 S로 찾기 - 18 \t\t\t * 7. 5 : SEVEN 다 찾은 후 V로 찾기 - 21 \t\t\t * 8. 4 : FIVE 다 찾은 후 F로 찾기 - 5 \t\t\t * 9. 9 : I 개수로 찾기 - 8 \t\t\t * 10 0 : 나머지 N개수로 찾기 - 13 \t\t\t */  \t\t\tint[] arr = new int[26]; // A~Z; \t\t\tString str = br.readLine(); \t\t\tfor (int i = 0; i &lt; str.length(); i++) { \t\t\t\tarr[str.charAt(i) - 'A']++; \t\t\t}  \t\t\tint[] numCnt = new int[10]; \t\t\tfor (int i = 0; i &lt; 10; i++) { \t\t\t\tint tmpCnt = 0; \t\t\t\tif (arr[number[i].c-'A'] &gt; 0) { \t\t\t\t\ttmpCnt = arr[number[i].c-'A']; \t\t\t\t\tnumCnt[number[i].n] += tmpCnt; \t\t\t\t\tfor (int j = 0; j &lt; number[i].s.length(); j++) { \t\t\t\t\t\tarr[number[i].s.charAt(j)-'A'] -= tmpCnt; \t\t\t\t\t} \t\t\t\t} \t\t\t} \t\t\tStringBuilder sb = new StringBuilder(); \t\t\tfor(int i=0; i&lt;10; i++) { \t\t\t\tfor(int j=0; j&lt;numCnt[i]; j++) { \t\t\t\t\tsb.append(i);\t\t\t\t\t \t\t\t\t} \t\t\t} \t\t\tbw.write(\"Case #\" + tc + \": \" + sb.toString() + \"\\n\"); \t\t}   \t\tbw.flush(); \t\tbw.close(); \t\tbr.close(); \t} }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-08-12-codeforces-contests-epic-institute-of-technology-round-august-2024-div-1-div-2-removals-game/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": " B. Removals Game  Problem Description  Alice has a permutation a1, a2, ..., an of [1, 2, ..., n], and Bob has another permutation b1, b2, ..., bn of [1, 2, ..., n]. They will play a game with these arrays.  In each turn, the following events happen in order:     Alice chooses either the first or the last element of her array and removes it from the array.   Bob chooses either the first or the last element of his array and removes it from the array.   The game continues for n-1 turns, after which both arrays will have exactly one remaining element: x in array a and y in array b.  If x = y, Bob wins; otherwise, Alice wins. Determine which player will win if both players play optimally.  Input  Each test case consists of multiple cases. The first line contains the number of test cases t (1 ≤ t ≤ 10^4). The description of each test case follows:     The first line of each test case contains an integer n (1 ≤ n ≤ 3 × 10^5).   The next line contains n integers a1, a2, ..., an, which is the permutation for Alice.   The next line contains n integers b1, b2, ..., bn, which is the permutation for Bob.   It is guaranteed that all ai and bi are distinct and the sum of all n does not exceed 3 × 10^5.  Output  For each test case, print a single line with the name of the winner, assuming both players play optimally. Print “Alice” if Alice wins; otherwise, print “Bob”.  Example  Input 2 2 1 2 1 2 3 1 2 3 2 3 1   Output Bob Alice  Note In the first test case, Bob can win the game by deleting the same element as Alice did.  In the second test case, Alice can delete 3  in the first turn, and then in the second turn, delete the element that is different from the one Bob deleted in the first turn to win the game.  Code  import java.io.*; import java.util.*;  public class MinimizeEqualSumSubarrays { \tstatic BufferedReader br; \tstatic StringTokenizer st;     public static void main(String[] args) throws IOException {         // 효율적인 입력을 위해 BufferedReader 사용    \t //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));         br = new BufferedReader(new InputStreamReader(new FileInputStream(\"input.txt\")));         st = new StringTokenizer(br.readLine());                  int tc = Integer.parseInt(st.nextToken());         for (int t = 0; t &lt; tc; t++) {             st = new StringTokenizer(br.readLine());             int n = Integer.parseInt(st.nextToken());             int[] alice = new int[n]; // Alice의 순열을 저장할 배열             int[] bob = new int[n]; // Bob의 순열을 저장할 배열              st = new StringTokenizer(br.readLine());             for (int i = 0; i &lt; n; i++) {             \talice[i] = Integer.parseInt(st.nextToken());             }              st = new StringTokenizer(br.readLine());             for (int i = 0; i &lt; n; i++) {                 bob[i] = Integer.parseInt(st.nextToken());             }             System.out.println(solve(n, alice, bob));         }         br.close();     }      /**      * 앨리스 배열 양 끝 포인터와 밥 배열 양 끝 포인터 설정      * 앨리스 배열의 양쪽 끝 숫자가 밥 배열 양 끝 숫자와 전부 다르면 앨리스 승리      * 전부 비교할때까지 진행하며 같은것이 계속 있으면 밥 승리      *       * @param n 숫자 개수      * @param alice 앨리스 배열      * @param bob 밥 배열      * @return 승리자      */     private static String solve(int n, int[] alice, int[] bob) {         int leftA = 0, rightA = n - 1; // Alice 배열의 양 끝 포인터         int leftB = 0, rightB = n - 1; // Bob 배열의 양 끝 포인터          while (leftA &lt;= rightA) {             if (alice[leftA] != bob[leftB] &amp;&amp; alice[leftA] != bob[rightB]) {                 return \"Alice\";             }             if (alice[rightA] != bob[leftB] &amp;&amp; alice[rightA] != bob[rightB]) {                 return \"Alice\";             }              if (alice[leftA] == bob[leftB]) {                 leftA++;                 leftB++;             } else if (alice[leftA] == bob[rightB]) {                 leftA++;                 rightB--;             } else if (alice[rightA] == bob[leftB]) {                 rightA--;                 leftB++;             } else {                 rightA--;                 rightB--;             }         }                  return \"Bob\";     } }  "
-  },
-  
-  {
-    "title": null,
-    "url": "/posts/2024-06-27-kafka-test/",
-    "categories": "",
-    "tags": "",
-    "date": "2025-08-26 11:20:27 +0800",
-    "content": "Kafka 연습  mac에서 혼자 kafka를 연습해보았다  참고 링크 : https://ojava.tistory.com/205 \t\t  https://devocean.sk.com/experts/techBoardDetail.do?ID=163709           + 오류 구글링  카프카 브로커 실행중인지 확인 ps -ef | grep kafka   카프카 브로커 실행 kafka_2.12-3.7.0/bin/kafka-server-start.sh kafka_2.12-3.7.0/config/server.properties   이후 토픽 만들고,  Kafka의 콘솔 컨슈머를 사용하여 로컬 호스트에서 실행 중인 Kafka 서버의 localhost:9092에 연결하고, kguswo-test01 토픽에서 메시지를 소비하도록 지정하는 명령어 kafka_2.12-3.7.0/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kguswo-test01   메시지 생산 kafka_2.12-3.7.0/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kguswo-test01   메시지 소비 kafka_2.12-3.7.0/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kguswo-test01 --from-beginning   토픽 목록 조회 ~/kafka_2.12-3.7.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list   kguswo-test01이라는 토픽 생성 ~/kafka_2.12-3.7.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --topic kguswo-test01 --partitions 1 --replication-factor 1 --create   토픽 삭제 ~/kafka_2.12-3.7.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic kguswo-test01   결과화면    "
-  },
-  
-  {
     "title": "System Design Interview - 분산 시스템을 위한 유일 ID 생성기 설계",
     "url": "/posts/System-Design-Interview-%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/",
     "categories": "시스템, 디자인",
@@ -2170,6 +2080,15 @@
   },
   
   {
+    "title": "BOJ_2698_인접한 비트의 수 (Java)",
+    "url": "/posts/BOJ2698%EC%9D%B8%EC%A0%91%ED%95%9C-%EB%B9%84%ED%8A%B8%EC%9D%98-%EC%88%98-Java/",
+    "categories": "알고리즘",
+    "tags": "Java, 백준, 알고리즘",
+    "date": "2025-01-10 17:21:06 +0800",
+    "content": "문제 링크 메모리: 16600 KB, 시간: 116 ms다이나믹 프로그래밍2025년 1월 10일 16:59:47/\\*\\*Author: nowalex322, Kim HyeonJae\\*/import java.io.;import java.util.;public class M"
+  },
+  
+  {
     "title": "브라우저는 어떻게 동작하는가?",
     "url": "/posts/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EA%B0%80/",
     "categories": "공부",
@@ -2503,6 +2422,24 @@
   },
   
   {
+    "title": "LeetCode_11_Container With Most Water (Java, C++)",
+    "url": "/posts/LeetCode11Container-With-Most-Water-Java-C/",
+    "categories": "알고리즘",
+    "tags": "C++, Java, leetcode, 알고리즘",
+    "date": "2025-01-01 12:42:15 +0800",
+    "content": "범위를 좁혀나가면서 최대 넓이 갱신, 투포인터 문제인 것 같다고 생각했다.class Solution {    public int maxArea(int\\[] height) {        int n = height.length;        int left = 0;   "
+  },
+  
+  {
+    "title": "Leet_146_LRUCache (Java)",
+    "url": "/posts/Leet146LRUCache-Java/",
+    "categories": "알고리즘",
+    "tags": "Java, leetcode, 알고리즘",
+    "date": "2025-01-01 12:34:41 +0800",
+    "content": "자료구조를 완전구현하듯 진행했다. 노드클래스로 key, value, 이 노드들의 배열과 링크드리스트를 뜻하는 prev, next배열, 노드인덱스 해시맵과 용량이 꽉 찼는지 체크하는 bool까지 사용했다.}/\\*\\*Your LRUCache object will be in"
+  },
+  
+  {
     "title": "LeetCode_71_Simplify Path (Java)",
     "url": "/posts/LeetCode71Simplify-Path/",
     "categories": "알고리즘",
@@ -2548,12 +2485,30 @@
   },
   
   {
+    "title": "BOJ_23829_인문예술탐사주간 (Java)",
+    "url": "/posts/BOJ23829%EC%9D%B8%EB%AC%B8%EC%98%88%EC%88%A0%ED%83%90%EC%82%AC%EC%A3%BC%EA%B0%84/",
+    "categories": "알고리즘",
+    "tags": "Java, 백준, 알고리즘",
+    "date": "2024-12-31 13:58:57 +0800",
+    "content": "문제 링크 메모리: 45380 KB, 시간: 684 ms이분 탐색, 누적 합2024년 12월 31일 14:48:28태영이는 SASA의 축제라고 불리는 \"인문예술탐사주간\"을 보내게 되었다. \"인문예술탐사주간\"을 맞이하여 세종호수공원에 가게 된 태영이는 아름다운 경치에 놀라움을 금치 못했다."
+  },
+  
+  {
     "title": "BOJ_10974_모든 순열 (Java, C++)",
     "url": "/posts/BOJ10974%EB%AA%A8%EB%93%A0-%EC%88%9C%EC%97%B4-Java-C/",
     "categories": "알고리즘",
     "tags": "C++, Java, 백준, 알고리즘",
     "date": "2024-12-29 18:04:21 +0800",
     "content": "문제 링크 메모리: 3896 KB, 시간: 16 ms백트래킹, 브루트포스 알고리즘2024년 12월 29일 18:55:08순열은 재귀로 방문처리와 함께 작성할 수 있었다. 메모리 사용을 좋게 하고자 길이 8 제한을 보고 비트마스킹으로 방문처리를 했다.C++에서 숫자를 문"
+  },
+  
+  {
+    "title": "BOJ_2374_같은 수로 만들기 (Java)",
+    "url": "/posts/BOJ2374%EA%B0%99%EC%9D%80-%EC%88%98%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-Java/",
+    "categories": "알고리즘",
+    "tags": "Java, 백준, 알고리즘",
+    "date": "2024-12-26 17:24:09 +0800",
+    "content": "문제 링크 메모리: 14348 KB, 시간: 108 ms자료 구조, 그리디 알고리즘, 스택2024년 12월 26일 18:19:39/\\*\\*Author: nowalex322, Kim HyeonJae\\*/import java.io.;import java.util.;publ"
   },
   
   {
@@ -2647,6 +2602,15 @@
   },
   
   {
+    "title": "[Java] List.contains() 와 Set.contains() 비교",
+    "url": "/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/",
+    "categories": "공부",
+    "tags": "Java",
+    "date": "2024-12-16 15:06:34 +0800",
+    "content": "LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다."
+  },
+  
+  {
     "title": "LeetCode_433_Minimum Genetic Mutation (Java, C++)",
     "url": "/posts/LeetCode433Minimum-Genetic-Mutation-Java-C/",
     "categories": "알고리즘",
@@ -2734,6 +2698,15 @@
     "tags": "Java, 백준, 알고리즘",
     "date": "2024-12-11 04:04:43 +0800",
     "content": "문제 링크 메모리: 107912 KB, 시간: 328 ms자료 구조, 정렬, 문자열, 트리, 트라이2024년 12월 11일 04:53:18두가지 방법으로 풀었다. 첫번째는 startsWith매서드, 두번째는 트라이다.startsWith() 사용 코드import java"
+  },
+  
+  {
+    "title": "BOJ_14369_전화번호 수수께끼(Small) (Java)",
+    "url": "/posts/BOJ14369%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8-%EC%88%98%EC%88%98%EA%BB%98%EB%81%BCSmall-Java/",
+    "categories": "알고리즘",
+    "tags": "Java, 백준, 알고리즘",
+    "date": "2024-12-09 21:47:09 +0800",
+    "content": "문제 링크 메모리: 14948 KB, 시간: 124 ms애드 혹, 브루트포스 알고리즘, 문자열2024년 12월 9일 22:43:52자세한 풀이는 코드 속 주석 참조/\\*\\*Author: nowalex322, Kim HyeonJae /import java.io.;impo"
   },
   
   {
@@ -3700,6 +3673,15 @@
   },
   
   {
+    "title": "CODEFORCES CONTESTS - EPIC Institute of Technology Round August 2024 (Div. 1 + Div. 2) - Removals Game",
+    "url": "/posts/CODEFORCES-CONTESTS-EPIC-Institute-of-Technology-Round-August-2024-Div.-1-Div.-2-Removals-Game/",
+    "categories": "Code, Contests",
+    "tags": "Java, codeforces, 알고리즘",
+    "date": "2024-08-12 01:37:16 +0800",
+    "content": "Alice has a permutation a1, a2, ..., an of \\[1, 2, ..., n], and Bob has another permutation b1, b2, ..., bn of \\[1, 2, ..., n]. They will play a game with these arrays."
+  },
+  
+  {
     "title": "CODEFORCES CONTESTS - EPIC Institute of Technology Round August 2024 (Div. 1 + Div. 2) - Distanced Coloring",
     "url": "/posts/CODEFORCES-CONTESTS-EPIC-Institute-of-Technology-Round-August-2024-Div.-1-Div.-2/",
     "categories": "Code, Contests",
@@ -3886,6 +3868,15 @@
     "tags": "Java, 백준, 알고리즘",
     "date": "2024-07-03 14:16:45 +0800",
     "content": "문제 링크  성능 요약 메모리: 102172 KB, 시간: 740 ms  분류 누적 합, 두 포인터  제출 일자 2024년 7월 3일 15:20:10  문제 설명 10,000 이하의 자연수로 이루어진 길이 N짜리 수열이 주어진다. 이 수열에서 연속된 수들의 부분합 중에"
+  },
+  
+  {
+    "title": "Kafka 연습",
+    "url": "/posts/Kafka-Test/",
+    "categories": "공부",
+    "tags": "kafka",
+    "date": "2024-06-27 14:30:40 +0800",
+    "content": "mac에서 혼자 kafka를 연습해보았다참고 링크 : https&#x3A;//ojava.tistory.com/205\t\t  https&#x3A;//devocean.sk.com/experts/techBoardDetail.do?ID=163709          \\+ 오류 구글링"
   },
   
   {
