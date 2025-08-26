@@ -36,18 +36,18 @@
 <meta property="og:description" content="서버 사이드 렌더링(SSR) 은 서버 측에서 렌더링하는 방식이다. 클라이언트가 서버에 컨텐츠를 요청하면, 서버는 페이지에 필요한 데이터를 즉시 얻어와 모두 삽입하고, CSS까지 모두 적용해 렌더링 준비를 마친 HTML과 JS 코드를 응답한다. 브라우저에서는 JS 코드를" />
 <link rel="canonical" href="/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/" />
 <meta property="og:url" content="/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta property="og:site_name" content="Now’s Log" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-17T03:12:06+08:00" />
+<meta property="article:published_time" content="2025-01-17T04:12:06+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="서버 사이드 렌더링 vs 클라이언트 사이드 렌더링 (SSR과 CSR)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-17T03:12:06+08:00","datePublished":"2025-01-17T03:12:06+08:00","description":"서버 사이드 렌더링(SSR) 은 서버 측에서 렌더링하는 방식이다. 클라이언트가 서버에 컨텐츠를 요청하면, 서버는 페이지에 필요한 데이터를 즉시 얻어와 모두 삽입하고, CSS까지 모두 적용해 렌더링 준비를 마친 HTML과 JS 코드를 응답한다. 브라우저에서는 JS 코드를","headline":"서버 사이드 렌더링 vs 클라이언트 사이드 렌더링 (SSR과 CSR)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/"},"url":"/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-17T04:12:06+09:00","datePublished":"2025-01-17T04:12:06+09:00","description":"서버 사이드 렌더링(SSR) 은 서버 측에서 렌더링하는 방식이다. 클라이언트가 서버에 컨텐츠를 요청하면, 서버는 페이지에 필요한 데이터를 즉시 얻어와 모두 삽입하고, CSS까지 모두 적용해 렌더링 준비를 마친 HTML과 JS 코드를 응답한다. 브라우저에서는 JS 코드를","headline":"서버 사이드 렌더링 vs 클라이언트 사이드 렌더링 (SSR과 CSR)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/"},"url":"/posts/%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-vs-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-SSR%EA%B3%BC-CSR/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>서버 사이드 렌더링 vs 클라이언트 사이드 렌더링 (SSR과 CSR) | Chirpy
+  <title>서버 사이드 렌더링 vs 클라이언트 사이드 렌더링 (SSR과 CSR) | Now's Log
   </title>
 
   <!--
@@ -64,8 +64,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="Now's Log">
+<meta name="application-name" content="Now's Log">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -256,8 +256,8 @@
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="https://chirpy-img.netlify.app/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">Chirpy</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <a class="site-title d-block" href="/">Now's Log</a>
+    <p class="site-subtitle fst-italic mb-0">Curiosity into Action</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -331,7 +331,7 @@
 
       
         <a
-          href="https://github.com/github_username"
+          href="https://github.com/Kguswo"
           aria-label="github"
           
 
@@ -354,8 +354,8 @@
 
       
         <a
-          href="https://twitter.com/twitter_username"
-          aria-label="twitter"
+          href="https://www.linkedin.com/in/your-linkedin-id"
+          aria-label="linkedin"
           
 
           
@@ -369,7 +369,7 @@
             rel="noopener noreferrer"
           
         >
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fab fa-linkedin"></i>
         </a>
       
     
@@ -377,7 +377,7 @@
 
       
         <a
-          href="javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')"
+          href="javascript:location.href = 'mailto:' + ['nowalex322','gmail.com'].join('@')"
           aria-label="email"
           
 
@@ -695,7 +695,7 @@
 
           <em>
             
-              <a href="https://twitter.com/username">your_full_name</a>
+              <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>
             
           </em>
         </span>
@@ -867,21 +867,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Chirpy&url=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Now's%20Log&url=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Chirpy&u=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Now's%20Log&u=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F&text=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fposts%2F%25EC%2584%259C%25EB%25B2%2584-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-vs-%25ED%2581%25B4%25EB%259D%25BC%25EC%259D%25B4%25EC%2596%25B8%25ED%258A%25B8-%25EC%2582%25AC%25EC%259D%25B4%25EB%2593%259C-%25EB%25A0%258C%25EB%258D%2594%25EB%25A7%2581-SSR%25EA%25B3%25BC-CSR%2F&text=%EC%84%9C%EB%B2%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20vs%20%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%A0%8C%EB%8D%94%EB%A7%81%20(SSR%EA%B3%BC%20CSR)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -7454,7 +7454,7 @@
     <time>2025</time>
 
     
-      <a href="https://twitter.com/username">your_full_name</a>.
+      <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>.
     
 
     

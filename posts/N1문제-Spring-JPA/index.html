@@ -36,18 +36,18 @@
 <meta property="og:description" content="JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한" />
 <link rel="canonical" href="/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/" />
 <meta property="og:url" content="/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta property="og:site_name" content="Now’s Log" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-04T00:35:43+08:00" />
+<meta property="article:published_time" content="2025-01-04T01:35:43+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="N+1문제 (Spring JPA)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-04T00:35:43+08:00","datePublished":"2025-01-04T00:35:43+08:00","description":"JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한","headline":"N+1문제 (Spring JPA)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"},"url":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-04T01:35:43+09:00","datePublished":"2025-01-04T01:35:43+09:00","description":"JPA N+1 문제는 연관 관계가 설정된 엔티티를 조회할 경우에, 조회된 데이터 개수 N개 만큼 연관관계의 조회 쿼리가 추가로 발생하느 ㄴ현상이다. 예를들어, 블로그 게시글과 댓글이 있는 경우, 게시글을 조회한 후 각 게시글마다 댓글을 조회하기 위해 추가 쿼리가 발생한","headline":"N+1문제 (Spring JPA)","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"},"url":"/posts/N1%EB%AC%B8%EC%A0%9C-Spring-JPA/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>N+1문제 (Spring JPA) | Chirpy
+  <title>N+1문제 (Spring JPA) | Now's Log
   </title>
 
   <!--
@@ -64,8 +64,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="Now's Log">
+<meta name="application-name" content="Now's Log">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -256,8 +256,8 @@
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="https://chirpy-img.netlify.app/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">Chirpy</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <a class="site-title d-block" href="/">Now's Log</a>
+    <p class="site-subtitle fst-italic mb-0">Curiosity into Action</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -331,7 +331,7 @@
 
       
         <a
-          href="https://github.com/github_username"
+          href="https://github.com/Kguswo"
           aria-label="github"
           
 
@@ -354,8 +354,8 @@
 
       
         <a
-          href="https://twitter.com/twitter_username"
-          aria-label="twitter"
+          href="https://www.linkedin.com/in/your-linkedin-id"
+          aria-label="linkedin"
           
 
           
@@ -369,7 +369,7 @@
             rel="noopener noreferrer"
           
         >
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fab fa-linkedin"></i>
         </a>
       
     
@@ -377,7 +377,7 @@
 
       
         <a
-          href="javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')"
+          href="javascript:location.href = 'mailto:' + ['nowalex322','gmail.com'].join('@')"
           aria-label="email"
           
 
@@ -642,7 +642,7 @@
 
           <em>
             
-              <a href="https://twitter.com/username">your_full_name</a>
+              <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>
             
           </em>
         </span>
@@ -812,21 +812,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Chirpy&url=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Now's%20Log&url=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Chirpy&u=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Now's%20Log&u=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F&text=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fposts%2FN1%25EB%25AC%25B8%25EC%25A0%259C-Spring-JPA%2F&text=N+1%EB%AC%B8%EC%A0%9C%20(Spring%20JPA)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -7399,7 +7399,7 @@
     <time>2025</time>
 
     
-      <a href="https://twitter.com/username">your_full_name</a>.
+      <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>.
     
 
     

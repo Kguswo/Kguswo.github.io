@@ -1,9 +1,9 @@
 
 
 {
-  "name": "Chirpy",
-  "short_name": "Chirpy",
-  "description": "A minimal, responsive and feature-rich Jekyll theme for technical writing.",
+  "name": "Now's Log",
+  "short_name": "Now's Log",
+  "description": "프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",

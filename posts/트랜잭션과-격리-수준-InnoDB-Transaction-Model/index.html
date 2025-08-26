@@ -36,18 +36,18 @@
 <meta property="og:description" content="💡 여러 작업들을 하나로 묶은 단위로, 이렇게 묶인 작업들은 모두 실행되거나 모두 실행되지 않는다(all-or-nothing). 읽기와 쓰기를 하나의 논리적 단위로 묶는 방법이라고 정의할 수 있다.하나의 트랜잭션 안에서 실패하면 트랜잭션 내부에서 했던 작업이 다시 진" />
 <link rel="canonical" href="/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
 <meta property="og:url" content="/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta property="og:site_name" content="Now’s Log" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-05-07T18:47:20+08:00" />
+<meta property="article:published_time" content="2025-05-07T19:47:20+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="트랜잭션과 격리 수준 (+ InnoDB Transaction Model )" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T18:47:20+08:00","datePublished":"2025-05-07T18:47:20+08:00","description":"💡 여러 작업들을 하나로 묶은 단위로, 이렇게 묶인 작업들은 모두 실행되거나 모두 실행되지 않는다(all-or-nothing). 읽기와 쓰기를 하나의 논리적 단위로 묶는 방법이라고 정의할 수 있다.하나의 트랜잭션 안에서 실패하면 트랜잭션 내부에서 했던 작업이 다시 진","headline":"트랜잭션과 격리 수준 (+ InnoDB Transaction Model )","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"},"url":"/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T19:47:20+09:00","datePublished":"2025-05-07T19:47:20+09:00","description":"💡 여러 작업들을 하나로 묶은 단위로, 이렇게 묶인 작업들은 모두 실행되거나 모두 실행되지 않는다(all-or-nothing). 읽기와 쓰기를 하나의 논리적 단위로 묶는 방법이라고 정의할 수 있다.하나의 트랜잭션 안에서 실패하면 트랜잭션 내부에서 했던 작업이 다시 진","headline":"트랜잭션과 격리 수준 (+ InnoDB Transaction Model )","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"},"url":"/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>트랜잭션과 격리 수준 (+ InnoDB Transaction Model ) | Chirpy
+  <title>트랜잭션과 격리 수준 (+ InnoDB Transaction Model ) | Now's Log
   </title>
 
   <!--
@@ -64,8 +64,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="Now's Log">
+<meta name="application-name" content="Now's Log">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -256,8 +256,8 @@
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="https://chirpy-img.netlify.app/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">Chirpy</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <a class="site-title d-block" href="/">Now's Log</a>
+    <p class="site-subtitle fst-italic mb-0">Curiosity into Action</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -331,7 +331,7 @@
 
       
         <a
-          href="https://github.com/github_username"
+          href="https://github.com/Kguswo"
           aria-label="github"
           
 
@@ -354,8 +354,8 @@
 
       
         <a
-          href="https://twitter.com/twitter_username"
-          aria-label="twitter"
+          href="https://www.linkedin.com/in/your-linkedin-id"
+          aria-label="linkedin"
           
 
           
@@ -369,7 +369,7 @@
             rel="noopener noreferrer"
           
         >
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fab fa-linkedin"></i>
         </a>
       
     
@@ -377,7 +377,7 @@
 
       
         <a
-          href="javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')"
+          href="javascript:location.href = 'mailto:' + ['nowalex322','gmail.com'].join('@')"
           aria-label="email"
           
 
@@ -1801,7 +1801,7 @@
 
           <em>
             
-              <a href="https://twitter.com/username">your_full_name</a>
+              <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>
             
           </em>
         </span>
@@ -2488,21 +2488,21 @@ Ex)
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Chirpy&url=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&url=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Chirpy&u=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&u=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F&text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F&text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -5367,7 +5367,7 @@ Ex)
     <time>2025</time>
 
     
-      <a href="https://twitter.com/username">your_full_name</a>.
+      <a href="https://github.com/Kguswo">Hyeon Jae Kim</a>.
     
 
     
