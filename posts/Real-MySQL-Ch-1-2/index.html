@@ -7319,7 +7319,7 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
     const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
     const initTheme = themeMapper[Theme.visualState];
 
-    let lang = 'site.lang';if (lang.length > 2 && !lang.startsWith('zh')) {
+    let lang = 'en';if (lang.length > 2 && !lang.startsWith('zh')) {
       lang = lang.slice(0, 2);
     }
 

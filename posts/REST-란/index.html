@@ -6527,7 +6527,7 @@ REST의 단점으로는 요청 및 응답 스타일의 통신만 지원한다는
     const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
     const initTheme = themeMapper[Theme.visualState];
 
-    let lang = 'site.lang';if (lang.length > 2 && !lang.startsWith('zh')) {
+    let lang = 'en';if (lang.length > 2 && !lang.startsWith('zh')) {
       lang = lang.slice(0, 2);
     }
 

@@ -8000,7 +8000,7 @@ ex) name이라는 필드만으로 쿼리 보낸다면 클러스터형 인덱스,
     const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
     const initTheme = themeMapper[Theme.visualState];
 
-    let lang = 'site.lang';if (lang.length > 2 && !lang.startsWith('zh')) {
+    let lang = 'en';if (lang.length > 2 && !lang.startsWith('zh')) {
       lang = lang.slice(0, 2);
     }
 
