@@ -1,6 +1,6 @@
 ---
 title: "CODEFORCES CONTESTS - EPIC Institute of Technology Round August 2024 (Div. 1 + Div. 2) - Removals Game"
-description: "Alice has a permutation a1, a2, ..., an of \[1, 2, ..., n], and Bob has another permutation b1, b2, ..., bn of \[1, 2, ..., n]. They will play a game "
+description: 'Alice has a permutation a1, a2, ..., an of \[1, 2, ..., n], and Bob has another permutation b1, b2, ..., bn of \[1, 2, ..., n]. They will play a game with these arrays.'
 date: 2024-08-11T17:37:16.070Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "CODEFORCES-CONTESTS-EPIC-Institute-of-Technology-Round-August-2024-Div.-1-Div.-2-Removals-Game"
@@ -8,7 +8,7 @@ thumbnail: "/assets/posts/8c560ef8f014a2436fcc3afd70cbbf866e8e784ec2b20ea17972c6
 categories: Code Contests
 toc: true
 velogSync:
-  lastSyncedAt: 2025-08-26T03:20:33.829Z
+  lastSyncedAt: 2025-08-26T02:06:09.290Z
   hash: "ef6e73902788f9b9967aeb62d24fa5c81319ddf6e6e55c38b44215d33f158b58"
 ---
 

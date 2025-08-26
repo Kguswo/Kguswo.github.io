@@ -7,7 +7,7 @@ slug: "BOJ2342Dance-Dance-Revolution-Java"
 categories: 알고리즘
 toc: true
 velogSync:
-  lastSyncedAt: 2025-08-26T03:25:46.256Z
+  lastSyncedAt: 2025-08-26T02:05:59.191Z
   hash: "283c135dc2487aad778bddcf90126b3c516855c8d161b793cd2420a50b982ef2"
 ---
 

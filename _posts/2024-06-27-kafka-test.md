@@ -1,6 +1,6 @@
 ---
 title: "Kafka 연습"
-description: "mac에서 혼자 kafka를 연습해보았다참고 링크 : https&#x3A;//ojava.tistory.com/205		  https&#x3A;//devocean.sk.com/experts/techBoardDetail.do?ID=163709          \+ 오류 구"
+description: 'mac에서 혼자 kafka를 연습해보았다참고 링크 : https&#x3A;//ojava.tistory.com/205		  https&#x3A;//devocean.sk.com/experts/techBoardDetail.do?ID=163709          \+ 오류 구글링'
 date: 2024-06-27T06:30:40.848Z
 tags: ["kafka"]
 slug: "Kafka-Test"
@@ -8,7 +8,7 @@ thumbnail: "/assets/posts/0623aef5f380f34fd61ffaa6d51bed061feff91f6b30372bc48dd4
 categories: 공부
 toc: true
 velogSync:
-  lastSyncedAt: 2025-08-26T03:20:40.504Z
+  lastSyncedAt: 2025-08-26T02:06:31.831Z
   hash: "db2712db7d66f84ed655a57d4dd4e2aa5f6bb71f76609c046f115a3514a5b1f9"
 ---
 
