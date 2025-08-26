@@ -25,6 +25,17 @@ jobs:
           gem install bundler # 번들 프로그램 설치
           bundle install # Gemfile에 명시된 모든 gem(의존성) 설치
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install npm dependencies
+        run: npm install    
+
+      - name: Build assets (CSS/JS)
+        run: npm run build
+
       # 빌드 실패 시 문제 파일(_posts/*.md)만 _quarantine/로 이동 후 재시도
       - name: Build Jekyll Site (auto-quarantine)
         run: |
