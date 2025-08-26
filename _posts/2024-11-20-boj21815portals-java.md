@@ -3,7 +3,7 @@ title: "BOJ_21815_Portals (Java)"
 date: 2024-11-20T09:12:24.910Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ21815Portals-Java"
-thumbnail: "../assets/posts/2a9b6e1d678509c9024284654b58b48ac9fd1e2d0697faa1e3054d55410d767d.png"
+image: "../assets/posts/2a9b6e1d678509c9024284654b58b48ac9fd1e2d0697faa1e3054d55410d767d.png"
 categories: 알고리즘
 toc: true
 velogSync:

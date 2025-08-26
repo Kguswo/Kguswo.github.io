@@ -3,7 +3,7 @@ title: "LeetCode_Restore IP Addresses (Java)"
 date: 2025-04-15T14:49:32.119Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCodeRestore-IP-Addresses-Java"
-thumbnail: "../assets/posts/0476e07bc02ad45e60202d8e8e685e8ef4fd77ba166fd4451087368e2773c03b.png"
+image: "../assets/posts/0476e07bc02ad45e60202d8e8e685e8ef4fd77ba166fd4451087368e2773c03b.png"
 categories: 알고리즘
 toc: true
 velogSync:

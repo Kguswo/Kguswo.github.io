@@ -3,7 +3,7 @@ title: "Docker Desktop Error"
 date: 2024-08-10T12:34:06.845Z
 tags: ["docker","error"]
 slug: "Docker-Desktop-Error"
-thumbnail: "../assets/posts/e8b58715c57b2b11f23f1d6f85f10adb3682f7e3ba5dfa29c3583a2fc6f39421.png"
+image: "../assets/posts/e8b58715c57b2b11f23f1d6f85f10adb3682f7e3ba5dfa29c3583a2fc6f39421.png"
 categories: 오류 해결
 toc: true
 velogSync:

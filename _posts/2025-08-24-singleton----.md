@@ -3,7 +3,7 @@ title: "Singleton 에 대하여"
 date: 2025-08-24T13:27:54.024Z
 tags: ["Design Pattern","Java"]
 slug: "Singleton-에-대하여"
-thumbnail: "../assets/posts/2f674601a7e6ced455f185d1056ef868d2dacac849a8919beaca3b6d9e4f04d2.png"
+image: "../assets/posts/2f674601a7e6ced455f185d1056ef868d2dacac849a8919beaca3b6d9e4f04d2.png"
 categories: 공부
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Computer Networking: a Top Down Approach - (7)"
 date: 2025-01-26T19:08:27.070Z
 tags: ["네트워크"]
 slug: "Computer-Networking-a-Top-Down-Approach-7"
-thumbnail: "../assets/posts/3e63f9f67d3a2d8dd5100374cb7447cb6f092c709611eeb344b190c66f5f035e.png"
+image: "../assets/posts/3e63f9f67d3a2d8dd5100374cb7447cb6f092c709611eeb344b190c66f5f035e.png"
 categories: 네트워크
 toc: true
 velogSync:

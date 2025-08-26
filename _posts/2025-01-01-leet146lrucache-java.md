@@ -3,7 +3,7 @@ title: "Leet_146_LRUCache (Java)"
 date: 2025-01-01T04:34:41.848Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "Leet146LRUCache-Java"
-thumbnail: "../assets/posts/1540204914a5dde4d5c6508d1515668957a5c9631be5c727c52dd6a7bb38f475.png"
+image: "../assets/posts/1540204914a5dde4d5c6508d1515668957a5c9631be5c727c52dd6a7bb38f475.png"
 categories: 알고리즘
 toc: true
 velogSync:

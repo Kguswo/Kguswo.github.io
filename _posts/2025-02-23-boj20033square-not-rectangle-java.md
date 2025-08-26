@@ -3,7 +3,7 @@ title: "BOJ_20033_Square, Not Rectangle (Java)"
 date: 2025-02-22T16:11:23.971Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ20033Square-Not-Rectangle-Java"
-thumbnail: "../assets/posts/146da5d3e90c247e76a09c03d59922c6441c9b83fb4cfe81e6ce4cbde40a0104.png"
+image: "../assets/posts/146da5d3e90c247e76a09c03d59922c6441c9b83fb4cfe81e6ce4cbde40a0104.png"
 categories: 알고리즘
 toc: true
 velogSync:

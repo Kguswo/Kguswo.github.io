@@ -3,7 +3,7 @@ title: "PGMS_Kakao 2023_이모티콘 할인행사 (Java)"
 date: 2025-03-27T12:30:13.332Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMSKakao-2023이모티콘-할인행사-Java"
-thumbnail: "../assets/posts/1c6872cef3d4d0dfce30311a7791589ed9b99bad231cd13af46ea7a453f47bb2.png"
+image: "../assets/posts/1c6872cef3d4d0dfce30311a7791589ed9b99bad231cd13af46ea7a453f47bb2.png"
 categories: 알고리즘
 toc: true
 velogSync:

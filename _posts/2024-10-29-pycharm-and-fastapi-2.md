@@ -3,7 +3,7 @@ title: "Pycharm and FastAPI - (2)"
 date: 2024-10-29T11:54:19.420Z
 tags: ["FastAPI","pycharm","python"]
 slug: "Pycharm-and-FastAPI-2"
-thumbnail: "../assets/posts/869fedea14d6a66694e5d6d745994096c9b56cc518eb763b6d6be16296d0752a.png"
+image: "../assets/posts/869fedea14d6a66694e5d6d745994096c9b56cc518eb763b6d6be16296d0752a.png"
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:05:46.646Z

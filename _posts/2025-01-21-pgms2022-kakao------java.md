@@ -3,7 +3,7 @@ title: "PGMS_2022 KAKAO_주차 요금 계산 (Java)"
 date: 2025-01-20T15:07:09.279Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMS2022-KAKAO주차-요금-계산-Java"
-thumbnail: "../assets/posts/567a1412eed25de9e5e39e7c0cac203ea45a49bd40696e9a95fd3c7faf5ed9f0.png"
+image: "../assets/posts/567a1412eed25de9e5e39e7c0cac203ea45a49bd40696e9a95fd3c7faf5ed9f0.png"
 categories: 알고리즘
 toc: true
 velogSync:

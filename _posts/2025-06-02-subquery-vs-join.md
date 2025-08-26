@@ -3,7 +3,7 @@ title: "Subquery vs Join"
 date: 2025-06-02T10:45:31.793Z
 tags: ["Database","mysql"]
 slug: "Subquery-vs-Join"
-thumbnail: "../assets/posts/87a4758aa4fce12865e0ee8a5391ee955be5089807d744f3676336ea64f6b37d.png"
+image: "../assets/posts/87a4758aa4fce12865e0ee8a5391ee955be5089807d744f3676336ea64f6b37d.png"
 categories: 데이터베이스
 toc: true
 velogSync:

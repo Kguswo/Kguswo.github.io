@@ -3,7 +3,7 @@ title: "Windows에서 클론 시 'Filename too long' 오류 해결하기"
 date: 2025-07-18T14:42:44.449Z
 tags: ["git"]
 slug: "Windows에서-클론-시-Filename-too-long-오류-해결하기"
-thumbnail: "../assets/posts/8faa2aff8f48372c60ed36bc859d75d7f3826c7e6c8ab6028ce5ecbd309cf2d2.png"
+image: "../assets/posts/8faa2aff8f48372c60ed36bc859d75d7f3826c7e6c8ab6028ce5ecbd309cf2d2.png"
 categories: 오류 해결
 toc: true
 velogSync:

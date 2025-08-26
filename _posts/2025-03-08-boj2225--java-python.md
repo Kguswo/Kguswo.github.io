@@ -3,7 +3,7 @@ title: "BOJ_2225_합분해 (Java, Python)"
 date: 2025-03-08T09:51:42.887Z
 tags: ["Java","python","백준","알고리즘"]
 slug: "BOJ2225합분해-Java-Python"
-thumbnail: "../assets/posts/1378ed55aa4aba901e8f6f6c0ae9656f039e5dacdfb0b4e9dd3a1ed71768f217.png"
+image: "../assets/posts/1378ed55aa4aba901e8f6f6c0ae9656f039e5dacdfb0b4e9dd3a1ed71768f217.png"
 categories: 알고리즘
 toc: true
 velogSync:

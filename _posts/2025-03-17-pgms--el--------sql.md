@@ -3,7 +3,7 @@ title: "PGMS_이름에 el이 들어가는 동물 찾기 (SQL)"
 date: 2025-03-17T12:55:11.122Z
 tags: ["sql","프로그래머스"]
 slug: "PGMS이름에-el이-들어가는-동물-찾기-SQL"
-thumbnail: "../assets/posts/499a4d9b6ba75b2996b9abb2dd4b16c364741410eaef5a62f61105935c15a1f4.png"
+image: "../assets/posts/499a4d9b6ba75b2996b9abb2dd4b16c364741410eaef5a62f61105935c15a1f4.png"
 categories: SQL
 toc: true
 velogSync:

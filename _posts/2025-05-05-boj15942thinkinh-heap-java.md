@@ -3,7 +3,7 @@ title: "BOJ_15942_Thinkinh Heap (Java)"
 date: 2025-05-04T17:16:24.332Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ15942Thinkinh-Heap-Java"
-thumbnail: "../assets/posts/ea40aefe14b7d4a40d71cd0ad4f7c9193da2c5ef55d1fc753beed3a14c6097ac.png"
+image: "../assets/posts/ea40aefe14b7d4a40d71cd0ad4f7c9193da2c5ef55d1fc753beed3a14c6097ac.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Artillery 부하 테스트"
 date: 2024-10-13T20:00:30.146Z
 tags: []
 slug: "Artillery-부하-테스트"
-thumbnail: "../assets/posts/0f4d3b6ca01bc03d89a840d6a35f0acfd789aa0e8d031bef0839c551fd0972cb.png"
+image: "../assets/posts/0f4d3b6ca01bc03d89a840d6a35f0acfd789aa0e8d031bef0839c551fd0972cb.png"
 categories: 프로젝트
 toc: true
 velogSync:
@@ -53,12 +53,14 @@ scenarios:
       - connect: "/omg"
       - send: 
           channel: "/pub/game-initialize"
+          {% raw %}
           data: '{"roomId": "ROOM_ID_{{ $randomNumber(1,1000) }}"}'
       - think: 1
       - loop:
           - send:
               channel: "/pub/player-move"
               data: '{"roomId": "ROOM_ID_{{ $randomNumber(1,1000) }}", "x": {{ $randomNumber(0,100) }}, "y": {{ $randomNumber(0,100) }}}'
+              {% endraw %}
           - think: 0.016
         count: 250
 ```

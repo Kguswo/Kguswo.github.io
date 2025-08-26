@@ -3,7 +3,7 @@ title: "Operating System Concepts - 운영체제부터 프로그램이 실행되
 date: 2025-06-24T11:19:43.189Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-운영체제부터-프로그램이-실행되기까지"
-thumbnail: "../assets/posts/5dddf6d1f87b58a6271fc19c2e08428ef6415800b286696bde5989c1f32512c3.png"
+image: "../assets/posts/5dddf6d1f87b58a6271fc19c2e08428ef6415800b286696bde5989c1f32512c3.png"
 categories: 운영체제
 toc: true
 velogSync:

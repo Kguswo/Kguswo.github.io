@@ -3,7 +3,7 @@ title: "LeetCode_354. Russian Doll Envelopes (Java)"
 date: 2025-03-28T09:23:59.161Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode354.-Russian-Doll-Envelopes-Java"
-thumbnail: "../assets/posts/f0bc60a5aaad83b946335bc4f61266fefe9c3dc1d01e837710ab9e6d4d108423.png"
+image: "../assets/posts/f0bc60a5aaad83b946335bc4f61266fefe9c3dc1d01e837710ab9e6d4d108423.png"
 categories: 알고리즘
 toc: true
 velogSync:

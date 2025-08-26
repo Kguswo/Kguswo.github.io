@@ -3,7 +3,7 @@ title: "vscode CPH Judge C++20 컴파일 오류"
 date: 2024-12-07T16:54:42.510Z
 tags: ["C++","CPH","vscode"]
 slug: "vscode-CPH-Judge-C20-컴파일-오류"
-thumbnail: "../assets/posts/1cdc9506b26ca580f450690f6942df08c255e0b2c00c43603cfc61961a7d010a.png"
+image: "../assets/posts/1cdc9506b26ca580f450690f6942df08c255e0b2c00c43603cfc61961a7d010a.png"
 categories: 오류 해결
 toc: true
 velogSync:

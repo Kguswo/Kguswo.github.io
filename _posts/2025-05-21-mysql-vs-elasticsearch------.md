@@ -3,7 +3,7 @@ title: "MySQL vs Elasticsearch 검색 성능 비교 "
 date: 2025-05-21T11:17:38.271Z
 tags: ["mysql"]
 slug: "MySQL-vs-Elasticsearch-검색-성능-비교"
-thumbnail: "../assets/posts/598944dc09f43f00fbf81026be4cc885ae3a37d071a664d33dbab3531a05a476.png"
+image: "../assets/posts/598944dc09f43f00fbf81026be4cc885ae3a37d071a664d33dbab3531a05a476.png"
 categories: 데이터베이스
 toc: true
 velogSync:

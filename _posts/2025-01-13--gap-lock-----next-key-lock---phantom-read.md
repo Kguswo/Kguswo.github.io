@@ -3,7 +3,7 @@ title: "갭락(Gap Lock)과 넥스트키 락(Next-Key Lock) 및 Phantom Read"
 date: 2025-01-12T18:20:38.168Z
 tags: ["Java","Spring","백엔드"]
 slug: "갭락Gap-Lock과-넥스트키-락Next-Key-Lock-및-Phantom-Read"
-thumbnail: "../assets/posts/838e3c43bd512c330be6a9c5c690ded78ecde92c2a82b13f6bbd51633ea61e7f.png"
+image: "../assets/posts/838e3c43bd512c330be6a9c5c690ded78ecde92c2a82b13f6bbd51633ea61e7f.png"
 categories: 공부
 toc: true
 velogSync:

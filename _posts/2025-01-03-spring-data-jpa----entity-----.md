@@ -3,7 +3,7 @@ title: "Spring Data JPA에서 새로운 Entity인지 판단하는 방법"
 date: 2025-01-03T07:51:28.431Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-Data-JPA에서-새로운-Entity인지-판단하는-방법"
-thumbnail: "../assets/posts/2f7f4d03d210e443c2d08c7b7a1b2657a8649011113852efd316015c59aca8a1.png"
+image: "../assets/posts/2f7f4d03d210e443c2d08c7b7a1b2657a8649011113852efd316015c59aca8a1.png"
 categories: 공부
 toc: true
 velogSync:

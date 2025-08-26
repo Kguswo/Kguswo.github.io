@@ -3,7 +3,7 @@ title: "BOJ_10431_줄 세우기 (Java, C++, Python)"
 date: 2025-03-27T11:10:21.460Z
 tags: ["C++","Java","python","백준","알고리즘"]
 slug: "BOJ10431줄-세우기-Java-C-Python"
-thumbnail: "../assets/posts/8a0a47085b33435bfea8e790e8c2601c680bedf7bd3ddc32818390bc35ee33d8.png"
+image: "../assets/posts/8a0a47085b33435bfea8e790e8c2601c680bedf7bd3ddc32818390bc35ee33d8.png"
 categories: 알고리즘
 toc: true
 velogSync:

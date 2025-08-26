@@ -3,7 +3,7 @@ title: "LeetCode_433_Minimum Genetic Mutation (Java, C++)"
 date: 2024-12-16T06:43:59.345Z
 tags: ["C++","Java","leetcode","알고리즘"]
 slug: "LeetCode433Minimum-Genetic-Mutation-Java-C"
-thumbnail: "../assets/posts/d90aaf8bd5028b37ada2f2ff82c28632293407e75794bbf6a40df04811c86fdf.png"
+image: "../assets/posts/d90aaf8bd5028b37ada2f2ff82c28632293407e75794bbf6a40df04811c86fdf.png"
 categories: 알고리즘
 toc: true
 velogSync:

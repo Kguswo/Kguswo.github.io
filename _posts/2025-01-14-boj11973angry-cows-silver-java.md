@@ -3,7 +3,7 @@ title: "BOJ_11973_Angry Cows (Silver) (Java)"
 date: 2025-01-14T14:13:35.716Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ11973Angry-Cows-Silver-Java"
-thumbnail: "../assets/posts/17b1d91729c8549f5d3f531a6e202e18828f29b5ef7ca5bba15b76be0b175eb3.png"
+image: "../assets/posts/17b1d91729c8549f5d3f531a6e202e18828f29b5ef7ca5bba15b76be0b175eb3.png"
 categories: 알고리즘
 toc: true
 velogSync:

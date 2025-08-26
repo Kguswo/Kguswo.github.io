@@ -3,7 +3,7 @@ title: "InnoDB 인덱스 잠금 실습해보기 (MySQL)"
 date: 2025-05-14T11:22:10.388Z
 tags: ["Database","mysql"]
 slug: "InnoDB-인덱스-잠금-실습해보기-MySQL"
-thumbnail: "../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png"
+image: "../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png"
 categories: 데이터베이스
 toc: true
 velogSync:

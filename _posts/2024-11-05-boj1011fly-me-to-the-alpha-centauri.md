@@ -3,7 +3,7 @@ title: "BOJ_1011_Fly me to the Alpha Centauri(Java)"
 date: 2024-11-05T03:57:17.109Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ1011Fly-me-to-the-Alpha-Centauri"
-thumbnail: "../assets/posts/904e870707c2fd93e5e266b5044a6f99babb0a85dbee40757e068475b96c7f2f.png"
+image: "../assets/posts/904e870707c2fd93e5e266b5044a6f99babb0a85dbee40757e068475b96c7f2f.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Kafka 연습"
 date: 2024-06-27T06:30:40.848Z
 tags: ["kafka"]
 slug: "Kafka-Test"
-thumbnail: "../assets/posts/0623aef5f380f34fd61ffaa6d51bed061feff91f6b30372bc48dd4d585fd6873.PNG"
+image: "../assets/posts/0623aef5f380f34fd61ffaa6d51bed061feff91f6b30372bc48dd4d585fd6873.PNG"
 categories: 공부
 toc: true
 velogSync:

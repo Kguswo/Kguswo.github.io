@@ -3,7 +3,7 @@ title: "BOJ_11835_Skyline (Java, C++)"
 date: 2024-12-07T07:14:19.095Z
 tags: ["C++","Java","백준","알고리즘"]
 slug: "BOJ11835Skyline-Java-C"
-thumbnail: "../assets/posts/15f4907388d7854e352561963da7cf6be3d2194083bfed0fe0999ac2cc746ea6.png"
+image: "../assets/posts/15f4907388d7854e352561963da7cf6be3d2194083bfed0fe0999ac2cc746ea6.png"
 categories: 알고리즘
 toc: true
 velogSync:

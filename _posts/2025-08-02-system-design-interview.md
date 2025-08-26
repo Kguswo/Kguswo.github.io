@@ -3,7 +3,7 @@ title: "System Design Interview"
 date: 2025-08-01T16:50:19.702Z
 tags: ["system-design"]
 slug: "System-Design-Interview"
-thumbnail: "../assets/posts/6c991d492ac0ed9706089a7a9a13321ca92edfe10fe6eff059111e482d13d9d4.png"
+image: "../assets/posts/6c991d492ac0ed9706089a7a9a13321ca92edfe10fe6eff059111e482d13d9d4.png"
 categories: 시스템 디자인
 toc: true
 velogSync:

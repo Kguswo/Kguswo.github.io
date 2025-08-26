@@ -3,7 +3,7 @@ title: "Reverse Proxy vs. Forward Proxy"
 date: 2025-01-15T18:50:44.293Z
 tags: ["Java","Spring","백엔드"]
 slug: "Reverse-Proxy-vs.-Forward-Proxy"
-thumbnail: "../assets/posts/5d0c1e847489d17d4b868f3b99087dfd282aa47402d757e6f6dbc4ab7bb3f3ae.png"
+image: "../assets/posts/5d0c1e847489d17d4b868f3b99087dfd282aa47402d757e6f6dbc4ab7bb3f3ae.png"
 categories: 공부
 toc: true
 velogSync:

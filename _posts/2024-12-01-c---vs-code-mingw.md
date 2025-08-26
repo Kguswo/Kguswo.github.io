@@ -3,7 +3,7 @@ title: "C++ 시작하기 (VS Code + MinGW)"
 date: 2024-12-01T08:38:20.117Z
 tags: ["C++"]
 slug: "C-시작하기-VS-Code-MinGW"
-thumbnail: "../assets/posts/fc20872ad4d8392a7a641b521b244088c67af1c4fc26d71cbe5d8780e72963d5.png"
+image: "../assets/posts/fc20872ad4d8392a7a641b521b244088c67af1c4fc26d71cbe5d8780e72963d5.png"
 categories: 공부
 toc: true
 velogSync:

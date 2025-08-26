@@ -3,7 +3,7 @@ title: "DB Replication이란?"
 date: 2025-01-24T15:50:09.995Z
 tags: ["Java","Spring","백엔드"]
 slug: "DB-Replication이란"
-thumbnail: "../assets/posts/40dd233e27ca52cede6428a71d093a023581c7fbe263c98c7f7c52b18c3530d4.png"
+image: "../assets/posts/40dd233e27ca52cede6428a71d093a023581c7fbe263c98c7f7c52b18c3530d4.png"
 categories: 공부
 toc: true
 velogSync:

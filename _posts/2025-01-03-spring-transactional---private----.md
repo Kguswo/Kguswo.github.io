@@ -3,7 +3,7 @@ title: "Spring @Transactional 어노테이션은 private 메서드에서 동작�
 date: 2025-01-02T18:23:13.901Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-Transactional-어노테이션은-private-메서드에서-동작할까"
-thumbnail: "../assets/posts/f970b130910615e557adbd615715717d49c8d4cefe6c2c4446f34147aa90987c.png"
+image: "../assets/posts/f970b130910615e557adbd615715717d49c8d4cefe6c2c4446f34147aa90987c.png"
 categories: 공부
 toc: true
 velogSync:

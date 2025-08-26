@@ -3,7 +3,7 @@ title: "Operating System Concepts - 운영체제의 작동"
 date: 2025-06-10T10:39:52.910Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-운영체제의-작동"
-thumbnail: "../assets/posts/21c0555d1c643d794aa689585b5dfd4e8fdb04b8412c54573cd334ab9ae50e24.png"
+image: "../assets/posts/21c0555d1c643d794aa689585b5dfd4e8fdb04b8412c54573cd334ab9ae50e24.png"
 categories: 운영체제
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "제9회 천하제일 코딩대회 본선 Open Contest 후기"
 date: 2025-07-18T08:20:05.818Z
 tags: ["cp","백준"]
 slug: "제9회-천하제일-코딩대회-본선-Open-Contest-후기"
-thumbnail: "../assets/posts/31254c8a22d17e07d64ffd9a0b734ec30b45a80f93fdf326f28f367906268463.png"
+image: "../assets/posts/31254c8a22d17e07d64ffd9a0b734ec30b45a80f93fdf326f28f367906268463.png"
 categories: Code Contests
 toc: true
 velogSync:

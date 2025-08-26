@@ -3,7 +3,7 @@ title: "PGMS_PCCP 3번_충돌위험 찾기 (Java)"
 date: 2025-01-27T21:49:53.659Z
 tags: ["Java","알고리즘","프로그래머스"]
 slug: "PGMSPCCP-3번충돌위험-찾기-Java"
-thumbnail: "../assets/posts/06c2fdd69be7f85afa3dcaf17032a7fd58b0531df0cee091fa3a973390b8a536.png"
+image: "../assets/posts/06c2fdd69be7f85afa3dcaf17032a7fd58b0531df0cee091fa3a973390b8a536.png"
 categories: 알고리즘
 toc: true
 velogSync:

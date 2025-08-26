@@ -3,7 +3,7 @@ title: "BOJ_21818_Do You Know Your ABCs?"
 date: 2024-11-17T19:05:44.601Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ21818Do-You-Know-Your-ABCs"
-thumbnail: "../assets/posts/8aead21ea971058c77b7eb6383b09c908016bd92d95686a2f6f8bc71b56db414.png"
+image: "../assets/posts/8aead21ea971058c77b7eb6383b09c908016bd92d95686a2f6f8bc71b56db414.png"
 categories: 알고리즘
 toc: true
 velogSync:

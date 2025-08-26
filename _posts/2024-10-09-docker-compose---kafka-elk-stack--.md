@@ -3,7 +3,7 @@ title: "docker compose 로 Kafka + ELK stack 사용"
 date: 2024-10-09T08:28:51.165Z
 tags: ["ELK","docker","kafka"]
 slug: "docker-compose-로-Kafka-ELK-stack-사용"
-thumbnail: "../assets/posts/7cbec649485ed6380432c70c6fe86b95a4d0cb940e6a5d21725654c3bd405503.png"
+image: "../assets/posts/7cbec649485ed6380432c70c6fe86b95a4d0cb940e6a5d21725654c3bd405503.png"
 categories: 프로젝트
 toc: true
 velogSync:

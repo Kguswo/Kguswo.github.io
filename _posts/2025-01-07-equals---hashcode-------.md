@@ -3,7 +3,7 @@ title: "equals 와 hashCode를 함께 재정의하는 이유"
 date: 2025-01-06T16:02:08.951Z
 tags: ["Java","Spring","백엔드"]
 slug: "equals-와-hashCode를-함께-재정의하는-이유"
-thumbnail: "../assets/posts/7124418503c67b2bd5d458e1a911531592efa848bee2f2b6c45bfc1b57ba76a2.png"
+image: "../assets/posts/7124418503c67b2bd5d458e1a911531592efa848bee2f2b6c45bfc1b57ba76a2.png"
 categories: 공부
 toc: true
 velogSync:

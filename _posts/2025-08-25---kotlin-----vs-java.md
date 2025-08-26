@@ -3,7 +3,7 @@ title: "개발하며 Kotlin 문법 공부하기 (vs Java)"
 date: 2025-08-24T17:22:42.252Z
 tags: ["kotlin"]
 slug: "개발하며-Kotlin-문법-공부하기-vs-Java"
-thumbnail: "../assets/posts/8a25912d8beddd51f07a1a3c33ab78997eb6635ea1a6044a0c74fe45524b9110.png"
+image: "../assets/posts/8a25912d8beddd51f07a1a3c33ab78997eb6635ea1a6044a0c74fe45524b9110.png"
 categories: 언어
 toc: true
 velogSync:

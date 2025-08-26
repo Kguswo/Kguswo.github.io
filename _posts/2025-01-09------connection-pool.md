@@ -3,7 +3,7 @@ title: "데이터베이스 커넥션 풀(Connection Pool)"
 date: 2025-01-08T17:32:38.480Z
 tags: ["Java","Spring","백엔드"]
 slug: "데이터베이스-커넥션-풀Connection-Pool"
-thumbnail: "../assets/posts/a40bbf6d645827f92cbd72bd2fe246fe748596e75d71b5c524e417c702a51458.png"
+image: "../assets/posts/a40bbf6d645827f92cbd72bd2fe246fe748596e75d71b5c524e417c702a51458.png"
 categories: 공부
 toc: true
 velogSync:

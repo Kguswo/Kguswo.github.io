@@ -3,8 +3,8 @@ title: "백준허브(BaekjoonHub)와 LeetHub 커스텀하여 사용하기"
 date: 2024-12-13T07:52:42.372Z
 tags: ["leetcode","백준"]
 slug: "백준허브BaekjoonHub와-LeetHub-사용하기"
-thumbnail: "../assets/posts/f6887d5dcb0da809656375ef62770a5aba7e4079f00b307dde8b0a04467b2106.png"
-categories: 사이드 프로젝트
+image: "../assets/posts/f6887d5dcb0da809656375ef62770a5aba7e4079f00b307dde8b0a04467b2106.png"
+categories: 사이드_프로젝트
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:05:22.379Z

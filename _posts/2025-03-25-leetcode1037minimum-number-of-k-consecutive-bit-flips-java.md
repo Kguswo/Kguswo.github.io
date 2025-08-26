@@ -3,7 +3,7 @@ title: "LeetCode_1037_Minimum Number of K Consecutive Bit Flips (Java)"
 date: 2025-03-25T14:48:30.497Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode1037Minimum-Number-of-K-Consecutive-Bit-Flips-Java"
-thumbnail: "../assets/posts/386d32e3aec73282f132a144adb8a10ec0171a21abd55005f4f4fdd4db4beb13.png"
+image: "../assets/posts/386d32e3aec73282f132a144adb8a10ec0171a21abd55005f4f4fdd4db4beb13.png"
 categories: 알고리즘
 toc: true
 velogSync:

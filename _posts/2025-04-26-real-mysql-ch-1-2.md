@@ -3,7 +3,7 @@ title: "Real MySQL - Ch 1 , 2"
 date: 2025-04-26T08:14:26.714Z
 tags: ["Database","RealMySQL 8.0"]
 slug: "Real-MySQL-Ch-1-2"
-thumbnail: "../assets/posts/88676672a92397567fb64965ab91aa5f2f1dc8a2fe4a3586600b0a42669b1a1b.png"
+image: "../assets/posts/88676672a92397567fb64965ab91aa5f2f1dc8a2fe4a3586600b0a42669b1a1b.png"
 categories: 데이터베이스
 toc: true
 velogSync:

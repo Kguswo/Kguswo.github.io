@@ -3,7 +3,7 @@ title: "Docker & Kubernetes - (1)"
 date: 2024-08-11T18:48:18.650Z
 tags: ["docker","kubernetes"]
 slug: "Docker-Kubernetes-1"
-thumbnail: "../assets/posts/88d31fed90e9187e23c11bfc392bf044044b7db2100f9464d08f3c64b962e72a.png"
+image: "../assets/posts/88d31fed90e9187e23c11bfc392bf044044b7db2100f9464d08f3c64b962e72a.png"
 categories: 공부
 toc: true
 velogSync:

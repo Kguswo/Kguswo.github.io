@@ -3,7 +3,7 @@ title: "LeetCode_2553_Total Cost to Hire K Workers (Java)"
 date: 2025-03-04T05:23:24.718Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode2553Total-Cost-to-Hire-K-Workers-Java"
-thumbnail: "../assets/posts/6dd1df49b0e01e319a66efe38bee144b754becc08785f492594f3a90581c2d1c.png"
+image: "../assets/posts/6dd1df49b0e01e319a66efe38bee144b754becc08785f492594f3a90581c2d1c.png"
 categories: 알고리즘
 toc: true
 velogSync:

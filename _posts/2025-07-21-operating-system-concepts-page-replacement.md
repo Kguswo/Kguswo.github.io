@@ -3,7 +3,7 @@ title: "Operating System Concepts - Page Replacement"
 date: 2025-07-21T11:27:31.411Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-Page-Replacement"
-thumbnail: "../assets/posts/aed5264a40c490fd0cf5d40b2fa1bf688216e7c266ef96017b42cc248096120b.png"
+image: "../assets/posts/aed5264a40c490fd0cf5d40b2fa1bf688216e7c266ef96017b42cc248096120b.png"
 categories: 운영체제
 toc: true
 velogSync:

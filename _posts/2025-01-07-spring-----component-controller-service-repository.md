@@ -3,7 +3,7 @@ title: "Spring 어노테이션들의 차이 @Component, @Controller, @Service, @
 date: 2025-01-06T18:14:54.533Z
 tags: ["Java","Spring","백엔드"]
 slug: "Spring-어노테이션들의-차이-Component-Controller-Service-Repository"
-thumbnail: "../assets/posts/5a9ef9346f174a5e632fcb4880d9def0b60dac741524b7700c5ccfb1f1ad829a.png"
+image: "../assets/posts/5a9ef9346f174a5e632fcb4880d9def0b60dac741524b7700c5ccfb1f1ad829a.png"
 categories: 공부
 toc: true
 velogSync:

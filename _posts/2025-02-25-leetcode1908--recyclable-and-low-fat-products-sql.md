@@ -3,7 +3,7 @@ title: "LeetCode_1908. Recyclable and Low Fat Products (SQL)"
 date: 2025-02-24T17:41:35.142Z
 tags: ["leetcode","sql"]
 slug: "LeetCode1908.-Recyclable-and-Low-Fat-Products-SQL"
-thumbnail: "../assets/posts/ef1a8082fe04446db4da004c4c665a7ec11e8d058cc6cda1f99dd80e095ab9f1.png"
+image: "../assets/posts/ef1a8082fe04446db4da004c4c665a7ec11e8d058cc6cda1f99dd80e095ab9f1.png"
 categories: SQL
 toc: true
 velogSync:

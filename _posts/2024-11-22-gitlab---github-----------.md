@@ -3,7 +3,7 @@ title: "Gitlab 작업을 Github으로 옮기기 ( 커밋 내역 포함 미러링
 date: 2024-11-22T01:54:38.254Z
 tags: ["git","프로젝트"]
 slug: "Gitlab-작업을-Github으로-옮기기-커밋-내역-포함-미러링"
-thumbnail: "../assets/posts/ff2c6e5d0459a5fe65f8f05c55d1e0c7308c0987d06ecbc0d597e8be997726fe.png"
+image: "../assets/posts/ff2c6e5d0459a5fe65f8f05c55d1e0c7308c0987d06ecbc0d597e8be997726fe.png"
 categories: 프로젝트
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Scale-Up vs Scale-Out"
 date: 2025-03-08T20:21:11.630Z
 tags: ["Java","Spring","백엔드"]
 slug: "Scale-Up-vs-Scale-Out"
-thumbnail: "../assets/posts/5e5877c427fe0ca3040dd570d05f00b8c98015db8c60ac4318efde3c75ae0cfc.png"
+image: "../assets/posts/5e5877c427fe0ca3040dd570d05f00b8c98015db8c60ac4318efde3c75ae0cfc.png"
 categories: 공부
 toc: true
 velogSync:

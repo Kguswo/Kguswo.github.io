@@ -3,7 +3,7 @@ title: "AWS RDS 설정 - 프리티어, MySQL"
 date: 2024-08-01T02:23:34.754Z
 tags: ["aws","ec2","rds"]
 slug: "AWS-RDS-설정-프리티어-MySQL"
-thumbnail: "../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png"
+image: "../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png"
 categories: 프로젝트
 toc: true
 velogSync:

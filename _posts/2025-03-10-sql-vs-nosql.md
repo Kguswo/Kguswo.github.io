@@ -3,7 +3,7 @@ title: "SQL vs NoSQL"
 date: 2025-03-09T18:21:34.788Z
 tags: ["백엔드"]
 slug: "SQL-vs-NoSQL"
-thumbnail: "../assets/posts/c62eadcc9c5cd668ef5700d6d923c9a5549c5842bfa83772e262057debe98afb.png"
+image: "../assets/posts/c62eadcc9c5cd668ef5700d6d923c9a5549c5842bfa83772e262057debe98afb.png"
 categories: 공부
 toc: true
 velogSync:

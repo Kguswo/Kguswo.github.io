@@ -3,7 +3,7 @@ title: "타임 아웃 (Connection Timeout, Socket Timeout, Read Timeout)"
 date: 2025-01-15T18:57:17.325Z
 tags: ["Java","Spring","백엔드"]
 slug: "타임-아웃-Connection-Timeout-Socket-Timeout-Read-Timeout"
-thumbnail: "../assets/posts/551c860192924e517e823fe519c607ec0b3dc00502afaade6a12463853205c1a.png"
+image: "../assets/posts/551c860192924e517e823fe519c607ec0b3dc00502afaade6a12463853205c1a.png"
 categories: 공부
 toc: true
 velogSync:

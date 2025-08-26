@@ -3,7 +3,7 @@ title: "LeetCode_88_Merge Sorted Array (Java)"
 date: 2025-02-24T17:40:07.996Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode88Merge-Sorted-Array-Java"
-thumbnail: "../assets/posts/ea4235369539a62a7a53c47564c140f4212a322a640bb550fd765282a5609b59.png"
+image: "../assets/posts/ea4235369539a62a7a53c47564c140f4212a322a640bb550fd765282a5609b59.png"
 categories: 알고리즘
 toc: true
 velogSync:

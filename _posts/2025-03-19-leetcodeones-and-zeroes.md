@@ -3,7 +3,7 @@ title: "LeetCode_Ones and Zeroes"
 date: 2025-03-18T15:20:53.855Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCodeOnes-and-Zeroes"
-thumbnail: "../assets/posts/2f302d66aa927a2e0be4400fb1ebb96e513eab425eac8029f3c3169ad2ee023c.png"
+image: "../assets/posts/2f302d66aa927a2e0be4400fb1ebb96e513eab425eac8029f3c3169ad2ee023c.png"
 categories: 알고리즘
 toc: true
 velogSync:

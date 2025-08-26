@@ -3,7 +3,7 @@ title: "[Java] List.contains() 와 Set.contains() 비교"
 date: 2024-12-16T07:06:34.858Z
 tags: ["Java"]
 slug: "Java-List.contains-와-Set.contains-비교"
-thumbnail: "../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png"
+image: "../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png"
 categories: 공부
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Real MySQL - Ch 4"
 date: 2025-05-10T08:15:23.455Z
 tags: ["Database","RealMySQL 8.0"]
 slug: "Real-MySQL-"
-thumbnail: "../assets/posts/6dde00ee4cb6641ef0ff7e56e62e0948a18842af3dbea50df6330bb78a4a6776.png"
+image: "../assets/posts/6dde00ee4cb6641ef0ff7e56e62e0948a18842af3dbea50df6330bb78a4a6776.png"
 categories: 데이터베이스
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "JPA의 ddl-auto 옵션은 각각 어떤 동작을 하고 어떤 상황�
 date: 2025-01-03T16:02:44.914Z
 tags: ["Java","Spring","백엔드"]
 slug: "JPA의-ddl-auto-옵션은-각각-어떤-동작을-하고-어떤-상황에서-사용해야-할까"
-thumbnail: "../assets/posts/4fdb6d089d91a96e8fa30453bea22957304b27250e4f8877e0155124d1cb6b69.png"
+image: "../assets/posts/4fdb6d089d91a96e8fa30453bea22957304b27250e4f8877e0155124d1cb6b69.png"
 categories: 공부
 toc: true
 velogSync:

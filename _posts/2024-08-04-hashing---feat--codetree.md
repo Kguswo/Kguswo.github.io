@@ -3,7 +3,7 @@ title: "Hashing, 해싱 (feat. codetree)"
 date: 2024-08-04T06:49:00.742Z
 tags: ["알고리즘","자료구조","코드트리"]
 slug: "Hashing-해싱-feat.-codetree"
-thumbnail: "../assets/posts/6162987866733ae2f4a863ec1131b23c67b76ae6404563beb77b054875862ad9.png"
+image: "../assets/posts/6162987866733ae2f4a863ec1131b23c67b76ae6404563beb77b054875862ad9.png"
 categories: 알고리즘
 toc: true
 velogSync:

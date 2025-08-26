@@ -3,7 +3,7 @@ title: "Java String.format vs 문자열 연결: 성능 차이를 알아보기"
 date: 2025-07-18T17:03:05.466Z
 tags: ["Spring"]
 slug: "Java-String.format-vs-문자열-연결-성능-차이를-알아보기"
-thumbnail: "../assets/posts/cdcb7e20f8ed02fa661fae0a073970c8cadc40026f5328227ab2cb1022a0bb1f.png"
+image: "../assets/posts/cdcb7e20f8ed02fa661fae0a073970c8cadc40026f5328227ab2cb1022a0bb1f.png"
 categories: 공부
 toc: true
 velogSync:

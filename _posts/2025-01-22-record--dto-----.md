@@ -3,7 +3,7 @@ title: "Record를 DTO로 사용하는 이유"
 date: 2025-01-21T15:50:04.163Z
 tags: ["Java","Spring","백엔드"]
 slug: "Record를-DTO로-사용하는-이유"
-thumbnail: "../assets/posts/8165bb199e2a3eabc27cd6777abde426421ea1948567839b132e86eb59a8b0fa.png"
+image: "../assets/posts/8165bb199e2a3eabc27cd6777abde426421ea1948567839b132e86eb59a8b0fa.png"
 categories: 공부
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Checked Exception과 Unchecked Exception"
 date: 2025-01-03T17:06:08.918Z
 tags: ["Java","Spring","백엔드"]
 slug: "Checked-Exception과-Unchecked-Exception"
-thumbnail: "../assets/posts/df0725d1fed0ab135326070d6c256e0c63e8c39ca08b488fd5d523bdd9395694.png"
+image: "../assets/posts/df0725d1fed0ab135326070d6c256e0c63e8c39ca08b488fd5d523bdd9395694.png"
 categories: 공부
 toc: true
 velogSync:

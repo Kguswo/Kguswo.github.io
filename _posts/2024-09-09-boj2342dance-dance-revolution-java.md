@@ -60,6 +60,7 @@ board는 2차원배열로 i->j 이동시 드는 힘을 저장할 것이다.
 충분히 점화식으로 해결 할 수 있는 문제였다.
 
 ### 코드
+{% raw %}
 ```java
 /**
  * Author : nowalex322, Kim Hyeonjae
@@ -130,3 +131,4 @@ public class Main {
 	}
 }
 ```
+{% endraw %}

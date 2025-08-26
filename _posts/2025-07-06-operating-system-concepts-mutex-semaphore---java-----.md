@@ -3,7 +3,7 @@ title: "Operating System Concepts - Mutex, Semaphore 그리고 Java의 동기화
 date: 2025-07-05T20:43:52.838Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-Mutex-Semaphore-그리고-Java의-동기화-기법"
-thumbnail: "../assets/posts/b42a0efb03a275bbdac54b3efbf63540b79917df67c1c0aa47444f966e494865.png"
+image: "../assets/posts/b42a0efb03a275bbdac54b3efbf63540b79917df67c1c0aa47444f966e494865.png"
 categories: 운영체제
 toc: true
 velogSync:

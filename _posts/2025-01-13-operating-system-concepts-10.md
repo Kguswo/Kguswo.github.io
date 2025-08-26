@@ -3,7 +3,7 @@ title: "Operating System Concepts - (10)"
 date: 2025-01-12T18:09:05.997Z
 tags: ["공룡책","운영체제"]
 slug: "Operating-System-Concepts-10"
-thumbnail: "../assets/posts/5814a712af6fdc700b4095f5ed25406d30b6dd77ea4cd9b362336d93ae5dfc07.png"
+image: "../assets/posts/5814a712af6fdc700b4095f5ed25406d30b6dd77ea4cd9b362336d93ae5dfc07.png"
 categories: 운영체제
 toc: true
 velogSync:

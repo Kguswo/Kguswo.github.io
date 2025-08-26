@@ -3,7 +3,7 @@ title: "Claude Code 사용기"
 date: 2025-08-05T18:24:38.769Z
 tags: ["claude code"]
 slug: "Claude-Code-사용기"
-thumbnail: "../assets/posts/39287db02beed71a777099e5be93ee45095ced0dec92c573d94775f0b204b237.png"
+image: "../assets/posts/39287db02beed71a777099e5be93ee45095ced0dec92c573d94775f0b204b237.png"
 categories: 기술
 toc: true
 velogSync:

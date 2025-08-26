@@ -3,7 +3,7 @@ title: "LeetCode_11_Container With Most Water (Java, C++)"
 date: 2025-01-01T04:42:15.750Z
 tags: ["C++","Java","leetcode","알고리즘"]
 slug: "LeetCode11Container-With-Most-Water-Java-C"
-thumbnail: "../assets/posts/93b9080e554fa22b462b45ca5cc5aaee53d98050ade5c2e7ba404e3fdaad1483.png"
+image: "../assets/posts/93b9080e554fa22b462b45ca5cc5aaee53d98050ade5c2e7ba404e3fdaad1483.png"
 categories: 알고리즘
 toc: true
 velogSync:

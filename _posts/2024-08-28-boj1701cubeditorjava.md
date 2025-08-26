@@ -3,7 +3,7 @@ title: "BOJ_1701_Cubeditor(Java)"
 date: 2024-08-27T17:17:48.457Z
 tags: ["Java","백준","알고리즘"]
 slug: "BOJ1701CubeditorJava"
-thumbnail: "../assets/posts/f4a88beb728c8af5781afdd93ab0c82b21273a5f3f194a3238d8bd2985a74671.png"
+image: "../assets/posts/f4a88beb728c8af5781afdd93ab0c82b21273a5f3f194a3238d8bd2985a74671.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "공유 락(Shared Lock) 과 배타 락(Exclusive Lock)"
 date: 2025-01-08T15:24:40.747Z
 tags: ["Java","Spring","백엔드"]
 slug: "공유-락Shared-Lock-과-배타-락Exclusive-Lock"
-thumbnail: "../assets/posts/bd5ce41497f3f911f87fda30b48cf1e9181859c8924f827a17f977e2f462b182.png"
+image: "../assets/posts/bd5ce41497f3f911f87fda30b48cf1e9181859c8924f827a17f977e2f462b182.png"
 categories: 공부
 toc: true
 velogSync:

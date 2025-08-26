@@ -3,7 +3,7 @@ title: "Thread, Process, Core의 수는 다다익선일까?"
 date: 2025-01-08T16:51:02.769Z
 tags: ["Java","Spring","백엔드"]
 slug: "Thread-Process-Core의-수는-다다익선일까"
-thumbnail: "../assets/posts/57e62395babd516f577e55b9c02308d2d6f436983fb095e762ba80a1b7e8950c.png"
+image: "../assets/posts/57e62395babd516f577e55b9c02308d2d6f436983fb095e762ba80a1b7e8950c.png"
 categories: 공부
 toc: true
 velogSync:

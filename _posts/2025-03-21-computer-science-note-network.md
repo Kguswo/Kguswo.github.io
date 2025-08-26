@@ -3,7 +3,7 @@ title: "Computer Science Note - Network"
 date: 2025-03-20T21:01:41.357Z
 tags: ["CS","네트워크"]
 slug: "Computer-Science-Note-Network"
-thumbnail: "../assets/posts/c7273e004f2ab06539d252e03910c739849faa14008ea49ecceb00c6a95d85d5.png"
+image: "../assets/posts/c7273e004f2ab06539d252e03910c739849faa14008ea49ecceb00c6a95d85d5.png"
 categories: CS Note
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "PGMS_야근지수 (Java, C++)"
 date: 2025-01-11T15:04:58.746Z
 tags: ["C++","Java","알고리즘","프로그래머스"]
 slug: "PGMS야근지수-Java-C"
-thumbnail: "../assets/posts/af44e7859592ffcb48b56501f93435190fa3bd200be63efa5eb10029564bd43d.png"
+image: "../assets/posts/af44e7859592ffcb48b56501f93435190fa3bd200be63efa5eb10029564bd43d.png"
 categories: 알고리즘
 toc: true
 velogSync:

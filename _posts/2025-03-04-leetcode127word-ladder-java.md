@@ -3,7 +3,7 @@ title: "LeetCode_127_Word Ladder (Java)"
 date: 2025-03-04T04:37:11.063Z
 tags: ["Java","leetcode","알고리즘"]
 slug: "LeetCode127Word-Ladder-Java"
-thumbnail: "../assets/posts/42d770e831868cd9d53efe49149cc5e709241be36f6a2b8e2b407a8d03d1974e.png"
+image: "../assets/posts/42d770e831868cd9d53efe49149cc5e709241be36f6a2b8e2b407a8d03d1974e.png"
 categories: 알고리즘
 toc: true
 velogSync:

@@ -3,7 +3,7 @@ title: "Computer Science Note - Database"
 date: 2025-03-21T15:30:43.189Z
 tags: ["CS","데이터베이스"]
 slug: "Computer-Science-Note-Database"
-thumbnail: "../assets/posts/5941d28e8e1486ae3052ed8afcd9d9e943787d9420923f30dd5453916dc435bd.png"
+image: "../assets/posts/5941d28e8e1486ae3052ed8afcd9d9e943787d9420923f30dd5453916dc435bd.png"
 categories: CS Note
 toc: true
 velogSync:

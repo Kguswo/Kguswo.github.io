@@ -3,7 +3,7 @@ title: "Operating System Concepts - 실시간 CPU 스케줄링"
 date: 2025-07-01T11:08:19.648Z
 tags: ["OS"]
 slug: "Operating-System-Concepts-실시간-CPU-스케줄링"
-thumbnail: "../assets/posts/583f68aa73efbe954f8ffaf397090119683b101040c484088002f1c4c8b23f1f.png"
+image: "../assets/posts/583f68aa73efbe954f8ffaf397090119683b101040c484088002f1c4c8b23f1f.png"
 categories: 운영체제
 toc: true
 velogSync:

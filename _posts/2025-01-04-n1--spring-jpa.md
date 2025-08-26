@@ -3,7 +3,7 @@ title: "N+1문제 (Spring JPA)"
 date: 2025-01-03T16:35:43.526Z
 tags: ["Java","Spring","백엔드"]
 slug: "N1문제-Spring-JPA"
-thumbnail: "../assets/posts/4d6b1dd7d48f00239f56a8f4e77d35973018b4fd70a7b595f0d9dc0233c6aa51.png"
+image: "../assets/posts/4d6b1dd7d48f00239f56a8f4e77d35973018b4fd70a7b595f0d9dc0233c6aa51.png"
 categories: 공부
 toc: true
 velogSync:

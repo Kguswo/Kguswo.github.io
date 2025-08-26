@@ -3,7 +3,7 @@ title: "트랜잭션과 격리 수준 (+ InnoDB Transaction Model )"
 date: 2025-05-07T10:47:20.030Z
 tags: ["Database","InnoDB","mysql"]
 slug: "트랜잭션과-격리-수준-InnoDB-Transaction-Model"
-thumbnail: "../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png"
+image: "../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png"
 categories: 데이터베이스
 toc: true
 velogSync:
