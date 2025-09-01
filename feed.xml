@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-08-31T10:45:15+09:00</updated>
+  <updated>2025-09-01T10:53:54+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>System Design Interview - 알림 시스템 설계</title>
+    <link href="https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/" rel="alternate" type="text/html" title="System Design Interview - 알림 시스템 설계" />
+    <published>2025-09-01T03:23:18+09:00</published>
+  
+    <updated>2025-09-01T03:23:18+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="시스템" />
+    
+    <category term="디자인" />
+    
+  
+
+  <summary>들어가며  알림 시스템은 최근 많은 프로그램에서 채택하는 인기 있는 기능이다. 최신 뉴스, 제품 업데이터, 이벤트, 선물 등 고객에게 중요할 만한 정보를 비동기적으로 제공한다.  이러한 알림 시스템을 순차적으로 확장하며 설계해보려 한다.    1단계. 문제 이해 및 설계 범위 확정  하루에 백만건 이상의 알림을 처리하는 확장성 높은 시스템을 구축하는게 쉬운 과제가 아니다. 알림 시스템이 어떻게 구현되는지에 대한 깊은 이해가 필요한 작업이다.  이에 관한 문제가 면접에 출제될 때는 보통 정해진 정답이 없고, 문제 자체가 모호하게 주어지는 것이 일반적이므로, 적절한 질문을 통해 요구사항이 무엇인지 우리가 스스로 알아내야 한다.       지원자 : 이 시스템은 어떤 종류의 알림을 지원해야 하나요?   면접...</summary>
+
+  </entry>
 
   
   <entry>
@@ -113,30 +139,6 @@
   
 
   <summary>들어가며  프로그래밍을 하다 보면 특정 객체가 딱 1개 필요한 상황이 있다. 예를 들어 설정 파일 관리자, 로그 기록기 등이 있다. 이런 경우 사용하는 것이 싱글턴 패턴 이다.    싱글턴 패턴이란?    클래스의 인스턴스가 오직 하나만 생성도도록 보장하고, 이 인스턴스에 전역적으로 접근할 수 있는 방법을 제공하는 생성 디자인 패턴이다.     왜 싱글턴이 필요할까? 예시를 통해 알아가보자. 서비스를 개발할 때 다음과 같은 상황은 피하고 싶을 것이다. DatabaseConnection db1 = new DatabaseConnection(); DatabaseConnection db2 = new DatabaseConnection(); DatabaseConnection db3 = new DatabaseCon...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>BOJ_1623_신년 파티 (Java)</title>
-    <link href="https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/" rel="alternate" type="text/html" title="BOJ_1623_신년 파티 (Java)" />
-    <published>2025-08-20T03:22:55+09:00</published>
-  
-    <updated>2025-08-20T03:22:55+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[Gold I] 신년 파티 - 1623  문제 링크  성능 요약  메모리: 147364 KB, 시간: 3040 ms  분류  다이나믹 프로그래밍, 트리, 트리에서의 다이나믹 프로그래밍  제출 일자  2025년 8월 20일 03:09:29  문제 설명  '주식회사 월드'의 조직도는 루트가 있는 트리 형태의 구조를 가지고 있다. 즉, 사장님을 트리의 루트로 하며, 직원들은 자신의 직속상관 바로 밑에 매달려 있는 형태가 된다. 김진영 부사장은 2008년 설을 맞아 '주식회사 월드'의 신년 파티를 계획 중에 있다. 단, 만일 부하직원이 자신의 직속상관과 파티에 함께 오게 되면 분위기가 경직될 수 있으므로, 파티의 분위기를 위해 부하직원과 그 직속상관은 같이 초대될 수 없도록 하려고 한다. 예를 들어 최백준 과...</summary>
 
   </entry>
 
