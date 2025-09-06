@@ -942,7 +942,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2119 words"
+  title="2157 words"
 >
   <em>11 min</em> read</span>
 
@@ -1032,30 +1032,11 @@
 <h4 id="java-코드"><span class="me-2">Java 코드</span><a href="#java-코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ol>
-  <li>단순 구현
-```java
-/**
-    <ul>
-      <li>Author: nowalex322, Kim HyeonJae
- */</li>
-    </ul>
-  </li>
+  <li>단순 구현</li>
 </ol>
 
-<p>import java.io.<em>;
-import java.util.</em>;</p>
-
-<p>public class Main {
-    static BufferedReader br;
-    static BufferedWriter bw;
-    static StringTokenizer st;
-    static int N, K, A, B, arr[], res;
-    public static void main(String[] args) throws Exception {
-        new Main().solution();
-    }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1111,91 +1092,105 @@ import java.util.</em>;</p>
 53
 54
 55
-</pre></td><td class="rouge-code"><pre>public void solution() throws Exception {
-    br = new BufferedReader(new InputStreamReader(System.in)); //        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_23351_물주기/input.txt")));
-    bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    st = new StringTokenizer(br.readLine());
-    N = Integer.parseInt(st.nextToken());
-    K = Integer.parseInt(st.nextToken());
-    A = Integer.parseInt(st.nextToken());
-    B = Integer.parseInt(st.nextToken());
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
 
-    arr = new int[N];
-    Arrays.fill(arr, K);
-    boolean flag = false;
-    while(!flag){
-        res++;
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-        int startIdx = findMinSet();
-        waterPlants(startIdx);
-        flag = checkEnd();
-    }
-    
-    bw.write(String.valueOf(res));
-    bw.flush();
-    bw.close();
-    br.close();
-}
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">,</span> <span class="no">K</span><span class="o">,</span> <span class="no">A</span><span class="o">,</span> <span class="no">B</span><span class="o">,</span> <span class="n">arr</span><span class="o">[],</span> <span class="n">res</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+    <span class="o">}</span>
 
-private int findMinSet() {
-    int idx = -1;
-    int sum = Integer.MAX_VALUE;
-    for (int i = 0; i &lt;= N-A; i++) {
-        int tmp = 0;
-        for (int j = i; j &lt; i+A; j++) {
-            tmp += arr[j];
-        }
-        if(tmp &lt; sum){
-            sum = tmp;
-            idx = i;
-        }
-    }
-    return idx;
-}
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_23351_물주기/input.txt")));</span>
+        <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">K</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">A</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">B</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
 
-private void waterPlants(int startIdx) {
-    for(int i = startIdx; i &lt; startIdx + A; i++){
-        arr[i] += B;
-    }
-}
+        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="no">K</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(!</span><span class="n">flag</span><span class="o">){</span>
+            <span class="n">res</span><span class="o">++;</span>
 
-private boolean checkEnd() {
-    for(int i = 0; i &lt; N; i++){
-        arr[i]--;
-        if(arr[i] &lt;= 0) return true;
-    }
-    return false;
-} } ```
+            <span class="kt">int</span> <span class="n">startIdx</span> <span class="o">=</span> <span class="n">findMinSet</span><span class="o">();</span>
+            <span class="n">waterPlants</span><span class="o">(</span><span class="n">startIdx</span><span class="o">);</span>
+            <span class="n">flag</span> <span class="o">=</span> <span class="n">checkEnd</span><span class="o">();</span>
+        <span class="o">}</span>
+        
+        <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">res</span><span class="o">));</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">findMinSet</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="no">N</span><span class="o">-</span><span class="no">A</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">+</span><span class="no">A</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">tmp</span> <span class="o">+=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+            <span class="o">}</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">tmp</span> <span class="o">&lt;</span> <span class="n">sum</span><span class="o">){</span>
+                <span class="n">sum</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">;</span>
+                <span class="n">idx</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">idx</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">waterPlants</span><span class="o">(</span><span class="kt">int</span> <span class="n">startIdx</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">startIdx</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">startIdx</span> <span class="o">+</span> <span class="no">A</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+=</span> <span class="no">B</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">checkEnd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]--;</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <ol>
-  <li>세그먼트 트리 + Lazy Propagation
-```java
-// 세그먼트트리 + lazy propagation 풀이</li>
+  <li>세그먼트 트리 + Lazy Propagation</li>
 </ol>
 
-<p>/**</p>
-<ul>
-  <li>Author: nowalex322, Kim HyeonJae
- */</li>
-</ul>
-
-<p>import java.io.<em>;
-import java.util.</em>;</p>
-
-<p>public class Main {
-    static BufferedReader br;
-    static BufferedWriter bw;
-    static StringTokenizer st;
-    static int N, K, A, B, arr[], res;
-    static int[] tree;
-    static long[] lazy;
-    public static void main(String[] args) throws Exception {
-        new Main().solution();
-    }</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1300,110 +1295,154 @@ import java.util.</em>;</p>
 102
 103
 104
-</pre></td><td class="rouge-code"><pre>public void solution() throws Exception {
-    br = new BufferedReader(new InputStreamReader(System.in)); //        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_23351_물주기/input.txt")));
-    bw = new BufferedWriter(new OutputStreamWriter(System.out));
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+</pre></td><td class="rouge-code"><pre><span class="c1">// 세그먼트트리 + lazy propagation 풀이</span>
 
-    st = new StringTokenizer(br.readLine());
-    N = Integer.parseInt(st.nextToken());
-    K = Integer.parseInt(st.nextToken());
-    A = Integer.parseInt(st.nextToken());
-    B = Integer.parseInt(st.nextToken());
+<span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
 
-    arr = new int[N];
-    Arrays.fill(arr, K);
-    boolean flag = false;
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-    int h = (int) Math.ceil(Math.log(N) / Math.log(2));
-    int size = (1 &lt;&lt; (h+1));
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">,</span> <span class="no">K</span><span class="o">,</span> <span class="no">A</span><span class="o">,</span> <span class="no">B</span><span class="o">,</span> <span class="n">arr</span><span class="o">[],</span> <span class="n">res</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">tree</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">long</span><span class="o">[]</span> <span class="n">lazy</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+    <span class="o">}</span>
 
-    tree = new int[size];
-    lazy = new long[size];
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_23351_물주기/input.txt")));</span>
+        <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
 
-    init(1, 0, N-1);
-    
-    while(!flag){
-        res++;
+        <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">K</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">A</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="no">B</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
 
-        // 최소구간찾기
-        int minSum = Integer.MAX_VALUE;
-        int minIdx = 0;
-        for(int i=0; i&lt;N-A+1; i++){
-            int sum = query(1, 0, N-1, i, i+A-1);
-            if(sum &lt; minSum){
-                minSum = sum;
-                minIdx = i;
-            }
-        }
-        update(1, 0, N-1, minIdx, minIdx+A-1, B);
+        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="no">K</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 
-        update(1, 0, N-1, 0, N-1, -1);
+        <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="nc">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="no">N</span><span class="o">)</span> <span class="o">/</span> <span class="nc">Math</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="o">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="o">(</span><span class="n">h</span><span class="o">+</span><span class="mi">1</span><span class="o">));</span>
 
-        int minValue = query(1, 0, N-1, 0, 0);
-        for(int i=1; i&lt;N; i++) {
-            minValue = Math.min(minValue, query(1, 0, N-1, i, i));
-        }
-        if(minValue &lt;= 0) flag = true;
-    }
+        <span class="n">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">size</span><span class="o">];</span>
+        <span class="n">lazy</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[</span><span class="n">size</span><span class="o">];</span>
 
-    bw.write(String.valueOf(res));
+        <span class="n">init</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        
+        <span class="k">while</span><span class="o">(!</span><span class="n">flag</span><span class="o">){</span>
+            <span class="n">res</span><span class="o">++;</span>
 
-    bw.flush();
-    bw.close();
-    br.close();
-}
+            <span class="c1">// 최소구간찾기</span>
+            <span class="kt">int</span> <span class="n">minSum</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+            <span class="kt">int</span> <span class="n">minIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">-</span><span class="no">A</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+                <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">i</span><span class="o">+</span><span class="no">A</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">sum</span> <span class="o">&lt;</span> <span class="n">minSum</span><span class="o">){</span>
+                    <span class="n">minSum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">;</span>
+                    <span class="n">minIdx</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="n">update</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="n">minIdx</span><span class="o">,</span> <span class="n">minIdx</span><span class="o">+</span><span class="no">A</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="no">B</span><span class="o">);</span>
 
-// segment tree 초기화
-private int init(int node, int start, int end){
-    if(start == end) return tree[node] = arr[start];
+            <span class="n">update</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
 
-    int mid = start + (end - start)/2;
-    return tree[node] = init(node * 2, start, mid) + init(node * 2 + 1, mid+1, end);
-}
+            <span class="kt">int</span> <span class="n">minValue</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">minValue</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">minValue</span><span class="o">,</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">i</span><span class="o">));</span>
+            <span class="o">}</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">minValue</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="n">flag</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
 
-// lazy propagation. 원리는 특정 지연값을 특정구간에 포함되는 노드에 전파해두고
-// 그 구간 조회/업데이트 쿼리 있으면 그때 구간길이만큼 곱해서 반영, 그 외에는 반영안함.
-private void propagate(int node, int start, int end){
-    if(lazy[node] != 0) { // 지연된 업데이트가 있다면
-        tree[node] += (end-start+1) * lazy[node]; // 현재 구간(end-start+1)에 지연된 값을 적용
+        <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">res</span><span class="o">));</span>
 
-        if(start != end) { // 리프노드 아니면 자식있으므로 자식에게 전파
-            lazy[node * 2] += lazy[node];
-            lazy[node * 2 + 1] += lazy[node];
-        }
-        lazy[node] = 0;
-    }
-}
+        <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
 
-// 구간합조회
-private int query(int node, int start, int end, int left, int right){
-    propagate(node, start, end);
-    if(start &gt; right || end &lt; left) return 0;
-    if(start &gt;= left &amp;&amp; end &lt;= right) return tree[node];
+    <span class="c1">// segment tree 초기화</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">init</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="o">)</span> <span class="k">return</span> <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">start</span><span class="o">];</span>
 
-    int mid = start + (end - start)/2;
-    return query(node*2, start, mid, left, right) + query(node*2 + 1, mid+1, end, left, right);
-}
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">init</span><span class="o">(</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">)</span> <span class="o">+</span> <span class="n">init</span><span class="o">(</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+    <span class="o">}</span>
 
-// 구간업데이트
-private void update(int node, int start, int end, int left, int right, int value){
-    propagate(node, start, end);
+    <span class="c1">// lazy propagation. 원리는 특정 지연값을 특정구간에 포함되는 노드에 전파해두고</span>
+    <span class="c1">// 그 구간 조회/업데이트 쿼리 있으면 그때 구간길이만큼 곱해서 반영, 그 외에는 반영안함.</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">propagate</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">lazy</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 지연된 업데이트가 있다면</span>
+            <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">+=</span> <span class="o">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="o">+</span><span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">lazy</span><span class="o">[</span><span class="n">node</span><span class="o">];</span> <span class="c1">// 현재 구간(end-start+1)에 지연된 값을 적용</span>
 
-    if(start &gt; right || end &lt; left) return;
-    if(start &gt;= left &amp;&amp; end &lt;= right) {
-        tree[node] += (end - start + 1) * value;
-        if(start != end) {
-            lazy[node * 2] += value;
-            lazy[node * 2 + 1] += value;
-        }
-        return;
-    }
+            <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">!=</span> <span class="n">end</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 리프노드 아니면 자식있으므로 자식에게 전파</span>
+                <span class="n">lazy</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">]</span> <span class="o">+=</span> <span class="n">lazy</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+                <span class="n">lazy</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">+=</span> <span class="n">lazy</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+            <span class="o">}</span>
+            <span class="n">lazy</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-    int mid = start + (end - start)/2;
-    update(node*2, start, mid, left, right, value);
-    update(node*2 + 1, mid+1, end, left, right, value);
-    tree[node] = tree[node*2] + tree[node*2 + 1];
-} } ```
+    <span class="c1">// 구간합조회</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">query</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">){</span>
+        <span class="n">propagate</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">&gt;</span> <span class="n">right</span> <span class="o">||</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="n">left</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">&gt;=</span> <span class="n">left</span> <span class="o">&amp;&amp;</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">)</span> <span class="k">return</span> <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
+        <span class="k">return</span> <span class="nf">query</span><span class="o">(</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span> <span class="o">+</span> <span class="n">query</span><span class="o">(</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 구간업데이트</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">,</span> <span class="kt">int</span> <span class="n">value</span><span class="o">){</span>
+        <span class="n">propagate</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+
+        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">&gt;</span> <span class="n">right</span> <span class="o">||</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="n">left</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">&gt;=</span> <span class="n">left</span> <span class="o">&amp;&amp;</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">+=</span> <span class="o">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">value</span><span class="o">;</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">!=</span> <span class="n">end</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">lazy</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">]</span> <span class="o">+=</span> <span class="n">value</span><span class="o">;</span>
+                <span class="n">lazy</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">+=</span> <span class="n">value</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
+        <span class="n">update</span><span class="o">(</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+        <span class="n">update</span><span class="o">(</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+        <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span><span class="o">]</span> <span class="o">+</span> <span class="n">tree</span><span class="o">[</span><span class="n">node</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <hr />

@@ -735,7 +735,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="960 words"
+  title="975 words"
 >
   <em>5 min</em> read</span>
 
@@ -820,29 +820,11 @@
 </blockquote>
 
 <ul>
-  <li>startsWith() 사용 코드
-```java
-/**</li>
-  <li>Author: nowalex322, Kim HyeonJae
- */</li>
+  <li>startsWith() 사용 코드</li>
 </ul>
 
-<p>import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.StringTokenizer;</p>
-
-<p>public class Main {
-    static BufferedReader br;
-    static BufferedWriter bw;
-    static StringTokenizer st;
-    static StringBuilder sb = new StringBuilder();</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -879,47 +861,92 @@ import java.util.StringTokenizer;</p>
 34
 35
 36
-</pre></td><td class="rouge-code"><pre>public static void main(String[] args) throws Exception {
-    new Main().solution();
-}
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
 
-public void solution() throws Exception {
-    br = new BufferedReader(new InputStreamReader(System.in)); //        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_5052_전화번호목록/input.txt")));
-    bw = new BufferedWriter(new OutputStreamWriter(System.out));
+<span class="kn">import</span> <span class="nn">java.io.BufferedReader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.BufferedWriter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileInputStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.InputStreamReader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.OutputStreamWriter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.StringTokenizer</span><span class="o">;</span>
 
-    int T = Integer.parseInt(br.readLine());
-    while (T-- &gt; 0) {
-        int n = Integer.parseInt(br.readLine());
-        String[] s = new String[n];
-        for (int i = 0; i &lt; n; i++) {
-            String num = br.readLine();
-            s[i] = num;
-        }
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
 
-        Arrays.sort(s);
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+    <span class="o">}</span>
 
-        boolean flag = true;
-        for (int i = 0; i &lt; s.length - 1; i++) {
-            if (s[i + 1].startsWith(s[i])) {
-                flag = false;
-                sb.append("NO").append("\n");
-                break;
-            }
-        }
-        if (flag) {
-            sb.append("YES").append("\n");
-        }
-    }
-    bw.write(sb.toString());
-    bw.flush();
-    bw.close();
-    br.close();
-}
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_5052_전화번호목록/input.txt")));</span>
+        <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+
+        <span class="kt">int</span> <span class="no">T</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="k">while</span> <span class="o">(</span><span class="no">T</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+            <span class="nc">String</span><span class="o">[]</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="nc">String</span> <span class="n">num</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+                <span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">num</span><span class="o">;</span>
+            <span class="o">}</span>
+
+            <span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+
+            <span class="kt">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">].</span><span class="na">startsWith</span><span class="o">(</span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]))</span> <span class="o">{</span>
+                    <span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+                    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"NO"</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">flag</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"YES"</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+        <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+    
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+<hr />
+<ul>
+  <li>Trie 구현 코드</li>
+</ul>
 
-<p>}</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1003,95 +1030,89 @@ public void solution() throws Exception {
 81
 82
 83
-84
-85
-86
-</pre></td><td class="rouge-code"><pre>---
-- Trie 구현 코드
-```java
-/**
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
  * Author: nowalex322, Kim HyeonJae
- */
-import java.io.*;
-import java.util.*;
+ */</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-public class Main {
-	class Trie{
-		Trie[] children = new Trie[10];
-		boolean isEnd;
-		Trie(){
-			for(int i=0; i&lt;10; i++) {
-				children[i] = null;
-			}
-			isEnd = false;
-		}
-	}
-	static BufferedReader br;
-	static BufferedWriter bw;
-	static StringTokenizer st;
-	static StringBuilder sb = new StringBuilder();
-	static Trie root;
-	static boolean flag;
-	public static void main(String[] args) throws Exception {
-		new Main().solution();
-	}
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">class</span> <span class="nc">Trie</span><span class="o">{</span>
+		<span class="nc">Trie</span><span class="o">[]</span> <span class="n">children</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Trie</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+		<span class="kt">boolean</span> <span class="n">isEnd</span><span class="o">;</span>
+		<span class="nc">Trie</span><span class="o">(){</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="n">children</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="n">isEnd</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="nc">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+	<span class="kd">static</span> <span class="nc">Trie</span> <span class="n">root</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kt">boolean</span> <span class="n">flag</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+	<span class="o">}</span>
 
-	public void solution() throws Exception {
-		br = new BufferedReader(new InputStreamReader(System.in));
-//		br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
-		bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//		br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));</span>
+		<span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
 
-		int T = Integer.parseInt(br.readLine());
-		while(T--&gt;0) {
-			root = new Trie();
-			int n = Integer.parseInt(br.readLine());
+		<span class="kt">int</span> <span class="no">T</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+		<span class="k">while</span><span class="o">(</span><span class="no">T</span><span class="o">--&gt;</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Trie</span><span class="o">();</span>
+			<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
 			
-			flag = true;
-			for(int i=0; i&lt;n; i++) {
-				String num = br.readLine();
-				insertNum(num);
-			}
+			<span class="n">flag</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">num</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+				<span class="n">insertNum</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+			<span class="o">}</span>
 			
-			sb.append(flag ? "YES" : "NO").append("\n");
-		}
+			<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">flag</span> <span class="o">?</span> <span class="s">"YES"</span> <span class="o">:</span> <span class="s">"NO"</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+		<span class="o">}</span>
 
-		bw.write(sb.toString());
-		bw.flush();
-		bw.close();
-		br.close();
-	}
-	private void insertNum(String num) {
-		Trie trie = root;
+		<span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+		<span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+		<span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+		<span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+	<span class="o">}</span>
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">insertNum</span><span class="o">(</span><span class="nc">String</span> <span class="n">num</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Trie</span> <span class="n">trie</span> <span class="o">=</span> <span class="n">root</span><span class="o">;</span>
 		
-		for(int i=0; i&lt;num.length(); i++) {
-			int number = num.charAt(i) - '0';
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">num</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="n">num</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">-</span> <span class="sc">'0'</span><span class="o">;</span>
 			
-			if(trie.isEnd) {
-				flag = false;
-				return;
-			}
+			<span class="k">if</span><span class="o">(</span><span class="n">trie</span><span class="o">.</span><span class="na">isEnd</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+				<span class="k">return</span><span class="o">;</span>
+			<span class="o">}</span>
 			
-			if(trie.children[number]==null) {
-				trie.children[number] = new Trie();
-			}
+			<span class="k">if</span><span class="o">(</span><span class="n">trie</span><span class="o">.</span><span class="na">children</span><span class="o">[</span><span class="n">number</span><span class="o">]==</span><span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">trie</span><span class="o">.</span><span class="na">children</span><span class="o">[</span><span class="n">number</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Trie</span><span class="o">();</span>
+			<span class="o">}</span>
 			
-			trie = trie.children[number];
-		}
+			<span class="n">trie</span> <span class="o">=</span> <span class="n">trie</span><span class="o">.</span><span class="na">children</span><span class="o">[</span><span class="n">number</span><span class="o">];</span>
+		<span class="o">}</span>
 		
-		if(trie.isEnd) {
-			flag = false;
-			return;
-		}
+		<span class="k">if</span><span class="o">(</span><span class="n">trie</span><span class="o">.</span><span class="na">isEnd</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+			<span class="k">return</span><span class="o">;</span>
+		<span class="o">}</span>
 		
-		for(int i=0; i&lt;10; i++) {
-			if(trie.children[i] != null) {
-				flag = false;
-				return;
-			}
-		}
-		trie.isEnd = true;
-	}
-}
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">trie</span><span class="o">.</span><span class="na">children</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+				<span class="k">return</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="n">trie</span><span class="o">.</span><span class="na">isEnd</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>

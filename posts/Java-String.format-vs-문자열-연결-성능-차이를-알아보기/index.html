@@ -788,6 +788,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -986,7 +997,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1576 words"
+  title="1570 words"
 >
   <em>8 min</em> read</span>
 
@@ -1124,17 +1135,33 @@
 <h4 id="2-concatenation-문자열-연결의-내부-동작"><span class="me-2">2. Concatenation 문자열 연결의 내부 동작</span><a href="#2-concatenation-문자열-연결의-내부-동작" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <ul>
   <li>컴파일러가 자동으로 <code class="language-plaintext highlighter-rouge">StringBuilder</code> 로 변환</li>
-  <li>직접적인 문자열 조합
-```java</li>
+  <li>직접적인 문자열 조합</li>
 </ul>
 
-<p>String str = “A” + var + “B”;</p>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>
+<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"A"</span> <span class="o">+</span> <span class="kt">var</span> <span class="o">+</span> <span class="s">"B"</span><span class="o">;</span>
 
-<p>// 이 코드는 컴파일러에의해 아래처럼 변환됨</p>
+<span class="c1">// 이 코드는 컴파일러에의해 아래처럼 변환됨</span>
 
-<p>String str = new StringBuilder(“A”).append(var).append(“B”).toString();</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">(</span><span class="s">"A"</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="kt">var</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">"B"</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><br /></p>
+
+<h3 id="jdk-소스코드-분석"><span class="me-2">JDK 소스코드 분석</span><a href="#jdk-소스코드-분석" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>String 클래스 내부 코드를 보자</p>
+
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1145,32 +1172,16 @@
 8
 9
 10
-11
-12
-13
-14
-15
-16
-17
-18
-</pre></td><td class="rouge-code"><pre>
-&lt;br/&gt;
-
-### JDK 소스코드 분석
-
-String 클래스 내부 코드를 보자
-
-```java
-public final class String implements Serializable, Comparable&lt;String&gt;, CharSequence {
-    @Stable
-    private final byte[] value;
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">String</span> <span class="kd">implements</span> <span class="nc">Serializable</span><span class="o">,</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;,</span> <span class="nc">CharSequence</span> <span class="o">{</span>
+    <span class="nd">@Stable</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">value</span><span class="o">;</span>
     
-    private final byte coder;  // LATIN1 또는 UTF16
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">byte</span> <span class="n">coder</span><span class="o">;</span>  <span class="c1">// LATIN1 또는 UTF16</span>
     
-    static final boolean COMPACT_STRINGS;
-    static final byte LATIN1 = 0;
-    static final byte UTF16 = 1;
-}
+    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="no">COMPACT_STRINGS</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">byte</span> <span class="no">LATIN1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">byte</span> <span class="no">UTF16</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Java 9부터 String은 더 이상 <code class="language-plaintext highlighter-rouge">char[]</code>가 아닌 <code class="language-plaintext highlighter-rouge">byte[]</code>로 문자를 저장합니다. 이는 메모리 효율성을 위한 것으로, Latin-1 문자들은 1바이트로, 그 외는 UTF-16으로 저장됩니다.</p>

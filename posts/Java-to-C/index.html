@@ -773,6 +773,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -910,7 +932,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4422 words"
+  title="4390 words"
 >
   <em>24 min</em> read</span>
 
@@ -1014,21 +1036,11 @@ const int 1년당일수 = 365;</p>
   <li>클래스 정의는 메서드 선언만 포함한다. 실제 구현은 별도로 나열된다.</li>
   <li>접근자 메서드는 키워드 const로 태그된다.</li>
   <li>클래스 끝에 세미콜론이 있다.
-메서드 구현은 클래스 정의를 따른다. 메서드는 클래스 외부에서 정의되므로 각 메서드 이름 앞에 클래스 이름이 접두사로 붙는다. <code class="language-plaintext highlighter-rouge">::</code> 연산자는 클래스와 메서드 이름을 구분한다. 암묵적 매개변수를 수정하지 않는 엑세서 메서드는 const로 태그가 지정된다.
-```c
-Point::Point() { x = 0, y = 0 }</li>
+메서드 구현은 클래스 정의를 따른다. 메서드는 클래스 외부에서 정의되므로 각 메서드 이름 앞에 클래스 이름이 접두사로 붙는다. <code class="language-plaintext highlighter-rouge">::</code> 연산자는 클래스와 메서드 이름을 구분한다. 암묵적 매개변수를 수정하지 않는 엑세서 메서드는 const로 태그가 지정된다.</li>
 </ol>
 
-<p>void Point::move(double dx, double dy) {
-	x = x + dx;
-    y = y + dy;
-}</p>
-
-<p>double Point::getX() const {
-	return x;
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1039,70 +1051,60 @@ Point::Point() { x = 0, y = 0 }</li>
 8
 9
 10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-</pre></td><td class="rouge-code"><pre>
-## 객체
-Java와 C++의 주요 차이점은 객체 변수의 동작이다. C++에서 객체 변수는 객체 참조가 아닌 값을 보유한다. **C++에서 객체를 생성할 때는 new 연산자를 사용하지 않는다.** 변수 이름 뒤에 생성 매개변수를 제공하기만 하면 된다.
-`Point p(1, 2);`
+</pre></td><td class="rouge-code"><pre><span class="n">Point</span><span class="o">::</span><span class="n">Point</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Point</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="kt">double</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dy</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="n">Point</span><span class="o">::</span><span class="n">getX</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="객체"><span class="me-2">객체</span><a href="#객체" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Java와 C++의 주요 차이점은 객체 변수의 동작이다. C++에서 객체 변수는 객체 참조가 아닌 값을 보유한다. <strong>C++에서 객체를 생성할 때는 new 연산자를 사용하지 않는다.</strong> 변수 이름 뒤에 생성 매개변수를 제공하기만 하면 된다.
+<code class="language-plaintext highlighter-rouge">Point p(1, 2);</code>
 생성매개변수를 제공하지 않으면 객체는 기본 생성자를 사용해 생성된다.
-`Time now;`
+<code class="language-plaintext highlighter-rouge">Time now;</code></p>
 
-이는 자바와 매우 다르다. Java에서 이 명령은 단지 초기화되지 않은 참조를 생성할 뿐이다. C++에서는 실제로 객체를 구성한다.
-한 객체가 다른 객체에 할당되면 실제 값의 사본이 만들어진다. Java에서 객체 변수를 복사하면 객체에 대한 두번째 참조가 설정될 뿐이다. C++객체를 복사하는 것은 Java에서 clone을 호출하는 것과 같다. 사본을 수정해도 원본이 변경되지는 않는다.
+<p>이는 자바와 매우 다르다. Java에서 이 명령은 단지 초기화되지 않은 참조를 생성할 뿐이다. C++에서는 실제로 객체를 구성한다.
+한 객체가 다른 객체에 할당되면 실제 값의 사본이 만들어진다. Java에서 객체 변수를 복사하면 객체에 대한 두번째 참조가 설정될 뿐이다. C++객체를 복사하는 것은 Java에서 clone을 호출하는 것과 같다. 사본을 수정해도 원본이 변경되지는 않는다.</p>
 
-`Point q = p;`
-`q.move(1, 1);`
+<p><code class="language-plaintext highlighter-rouge">Point q = p;</code>
+<code class="language-plaintext highlighter-rouge">q.move(1, 1);</code></p>
 
-대부분의 경우 객체가 값처럼 동작한다는 사실은 매우 편리하다. 그러나 이러한 동작이 바람직하지 않은 상황이 꽤 있다.
-1. 함수에서 객체를 수정할 때는 참조로 호출을 사용해야 한다는 점
-2. 두 객체 변수는 하나의 객체에 공동으로 접근할 수 없다. C++에서 이 효과가 필요한 경우 포인터를 사용해야한다.
-3. 객체 변수는 특정 유형의 값만 보관할 수 있다. 변수가 다른 하위 클래스의 객체를 보관하도록 하려면 포인터를 사용해야 한다.
-4. 변수가 null 또는 실제 객체를 가리키도록 하려면 C++에서 포인터를 사용해야한다.
+<p>대부분의 경우 객체가 값처럼 동작한다는 사실은 매우 편리하다. 그러나 이러한 동작이 바람직하지 않은 상황이 꽤 있다.</p>
+<ol>
+  <li>함수에서 객체를 수정할 때는 참조로 호출을 사용해야 한다는 점</li>
+  <li>두 객체 변수는 하나의 객체에 공동으로 접근할 수 없다. C++에서 이 효과가 필요한 경우 포인터를 사용해야한다.</li>
+  <li>객체 변수는 특정 유형의 값만 보관할 수 있다. 변수가 다른 하위 클래스의 객체를 보관하도록 하려면 포인터를 사용해야 한다.</li>
+  <li>변수가 null 또는 실제 객체를 가리키도록 하려면 C++에서 포인터를 사용해야한다.</li>
+</ol>
 
-## 기능
-Java에서 모든 함수는 클래스의 인스턴스 메서드 또는 정적 함수여야 한다. C++는 클래스의 인스턴스 메서드와 정적 함수를 지원하지만, 어떤 클래스에도 속하지 않는 함수도 허용한다. 이러한 함수를 전역 함수라고 한다.
+<h2 id="기능"><span class="me-2">기능</span><a href="#기능" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Java에서 모든 함수는 클래스의 인스턴스 메서드 또는 정적 함수여야 한다. C++는 클래스의 인스턴스 메서드와 정적 함수를 지원하지만, 어떤 클래스에도 속하지 않는 함수도 허용한다. 이러한 함수를 전역 함수라고 한다.
 특히, 모든 C++함수는 전역 함수 main으로 시작한다.
 `
 int main() {
-	...
+	…
 }
 `
-명령줄 인수를 캡처하는데 사용할 수 있는 두 번째 main이 있지만 이를 사용하려면 C 스타일 배열과 문자열에 대한 지식이 필요하며, 여기서는 다루지 않겠다.
+명령줄 인수를 캡처하는데 사용할 수 있는 두 번째 main이 있지만 이를 사용하려면 C 스타일 배열과 문자열에 대한 지식이 필요하며, 여기서는 다루지 않겠다.</p>
 
-프로그램이 성공적으로 완료되면 main의 반환값은 0이고, 그렇지 않으면 0이 아닌 정수이다.
+<p>프로그램이 성공적으로 완료되면 main의 반환값은 0이고, 그렇지 않으면 0이 아닌 정수이다.
 Java에서와 마찬가지로 함수 인수는 값으로 전달된다. Java에서 함수는 그럼에도 불구하고 객체를 수정할 수 있었다. 하지만 C++객체값은 실제 객체에 대한 참조가 아니기 때문에 함수는 실제 인수의 사본을 받고 따라서 원본을 수정할 수 없다.
-따라서 C++에는 두 가지 매개변수 전달 매커니즘이 있다. 값에 의한 호출(Java에서처럼)과 참조에 의한 호출이다. 매개변수가 참조에 의해 전달되면 함수는 원본을 수정할 수 있다. 참조에 의한 호출은 매개변수 유형 뒤에 `&amp;`로 표시된다.
+따라서 C++에는 두 가지 매개변수 전달 매커니즘이 있다. 값에 의한 호출(Java에서처럼)과 참조에 의한 호출이다. 매개변수가 참조에 의해 전달되면 함수는 원본을 수정할 수 있다. 참조에 의한 호출은 매개변수 유형 뒤에 <code class="language-plaintext highlighter-rouge">&amp;</code>로 표시된다.</p>
 
-```c
-void raiseSalary(Employee&amp; e, double by) {
-	...
-}
+<div class="language-c highlighter-rouge"><div class="code-header">
+        <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kt">void</span> <span class="nf">raiseSalary</span><span class="p">(</span><span class="n">Employee</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">,</span> <span class="kt">double</span> <span class="n">by</span><span class="p">)</span> <span class="p">{</span>
+	<span class="p">...</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>다음은 참조에 의한 호출을 활용하는 전형적인 함수다. Java에서 이러한 함수를 작성하는것은 불가능하다.</p>

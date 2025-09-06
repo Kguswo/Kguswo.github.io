@@ -1140,9 +1140,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4318 words"
+  title="4323 words"
 >
-  <em>23 min</em> read</span>
+  <em>24 min</em> read</span>
 
         </div>
       </div>
@@ -1535,8 +1535,7 @@
 
 <p><br /></p>
 
-<p><em>**이제 위 문제들을 하나씩 해결하는 구현 방법들을 알아보자.
-**</em></p>
+<p><em><strong>이제 위 문제들을 하나씩 해결하는 구현 방법들을 알아보자.</strong></em></p>
 
 <p><br /></p>
 
@@ -1741,24 +1740,11 @@
 <h4 id="아직-한계가-있다"><span class="me-2">아직 한계가 있다?</span><a href="#아직-한계가-있다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ol>
-  <li>원자성 보장 문제
-```java
-private static volatile int counter = 0;</li>
+  <li>원자성 보장 문제</li>
 </ol>
 
-<p>// 스레드 안전 X
-public static void increment() {
-    counter++;  // 실제로는 3단계: 읽기 → 증가 → 쓰기
-}</p>
-
-<p>// 올바른 방법
-public static synchronized void increment() {
-    counter++;
-}
-// 또는
-private static AtomicInteger counter = new AtomicInteger(0);</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1772,21 +1758,49 @@ private static AtomicInteger counter = new AtomicInteger(0);</p>
 11
 12
 13
-14
-</pre></td><td class="rouge-code"><pre>
-2. 복합연산도 부적합
-```java
-private static volatile boolean flag1 = false;
-private static volatile boolean flag2 = false;
+</pre></td><td class="rouge-code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="kd">volatile</span> <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 
-// 이것도 스레드 안전하지 않음
-public static void updateFlags() {
-    if (!flag1) {     // 읽기
-        flag1 = true; // 쓰기
-        flag2 = true; // 다른 쓰기
-    }
-    // flag1과 flag2의 일관성이 깨질 수 있음
-}
+<span class="c1">// 스레드 안전 X</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">counter</span><span class="o">++;</span>  <span class="c1">// 실제로는 3단계: 읽기 → 증가 → 쓰기</span>
+<span class="o">}</span>
+
+<span class="c1">// 올바른 방법</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">counter</span><span class="o">++;</span>
+<span class="o">}</span>
+<span class="c1">// 또는</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="nc">AtomicInteger</span> <span class="n">counter</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ol>
+  <li>복합연산도 부적합</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="kd">volatile</span> <span class="kt">boolean</span> <span class="n">flag1</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kd">volatile</span> <span class="kt">boolean</span> <span class="n">flag2</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="c1">// 이것도 스레드 안전하지 않음</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">updateFlags</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">flag1</span><span class="o">)</span> <span class="o">{</span>     <span class="c1">// 읽기</span>
+        <span class="n">flag1</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> <span class="c1">// 쓰기</span>
+        <span class="n">flag2</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> <span class="c1">// 다른 쓰기</span>
+    <span class="o">}</span>
+    <span class="c1">// flag1과 flag2의 일관성이 깨질 수 있음</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 <p><br /></p>
 
