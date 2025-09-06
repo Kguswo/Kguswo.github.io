@@ -933,7 +933,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1898 words"
+  title="1900 words"
 >
   <em>10 min</em> read</span>
 
@@ -1411,18 +1411,11 @@
 <p><br /></p>
 
 <ul>
-  <li>also - “이걸 하고 나서 원래 객체 그대로 줘”
-```kotlin
-// also - 객체 자체를 그대로 반환 (체이닝용)
-val numbers = mutableListOf(1, 2, 3).also { list -&gt;
-  println(“리스트 크기: ${list.size}”)  // 3
-  list.add(4)  // 리스트에 4 추가
-}</li>
+  <li>also - “이걸 하고 나서 원래 객체 그대로 줘”</li>
 </ul>
 
-<p>println(numbers)  // [1, 2, 3, 4] - 원래 리스트 객체 그대로</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-kotlin highlighter-rouge"><div class="code-header">
+        <span data-label-text="Kotlin"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1430,15 +1423,29 @@ val numbers = mutableListOf(1, 2, 3).also { list -&gt;
 5
 6
 7
-8
-</pre></td><td class="rouge-code"><pre>
-디버깅용으로 많이 씀
-```kotlin
+</pre></td><td class="rouge-code"><pre><span class="c1">// also - 객체 자체를 그대로 반환 (체이닝용)</span>
+<span class="kd">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="nf">mutableListOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nf">also</span> <span class="p">{</span> <span class="n">list</span> <span class="p">-&gt;</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"리스트 크기: ${list.size}"</span><span class="p">)</span>  <span class="c1">// 3</span>
+    <span class="n">list</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1">// 리스트에 4 추가</span>
+<span class="p">}</span>
 
-kotlinval result = calculateSomething()
-    .also { println("중간 결과: $it") }  // 디버깅 로그
-    .processMore()
-    .also { println("최종 결과: $it") }  // 디버깅 로그
+<span class="nf">println</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1">// [1, 2, 3, 4] - 원래 리스트 객체 그대로</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>디버깅용으로 많이 씀</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="code-header">
+        <span data-label-text="Kotlin"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="n">kotlinval</span> <span class="n">result</span> <span class="p">=</span> <span class="nf">calculateSomething</span><span class="p">()</span>
+    <span class="p">.</span><span class="nf">also</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"중간 결과: $it"</span><span class="p">)</span> <span class="p">}</span>  <span class="c1">// 디버깅 로그</span>
+    <span class="p">.</span><span class="nf">processMore</span><span class="p">()</span>
+    <span class="p">.</span><span class="nf">also</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"최종 결과: $it"</span><span class="p">)</span> <span class="p">}</span>  <span class="c1">// 디버깅 로그</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><br /></p>
