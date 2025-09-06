@@ -71,7 +71,7 @@ int length = categories.size(); // NPE 발생!
 <br/>
 
 ### 함수 선언
-- Kotlin은 `fun` 키워드로 함수 선언
+Kotlin은 `fun` 키워드로 함수 선언
 ```kotlin
 // Kotlin
 fun isValid(): Boolean {
