@@ -295,6 +295,7 @@ maxSpicy?.let { spicy ->
 <br/>
 
 - also - "이걸 하고 나서 원래 객체 그대로 줘"
+
 ```kotlin
 // also - 객체 자체를 그대로 반환 (체이닝용)
 val numbers = mutableListOf(1, 2, 3).also { list ->
@@ -306,6 +307,7 @@ println(numbers)  // [1, 2, 3, 4] - 원래 리스트 객체 그대로
 ```
 
 디버깅용으로 많이 씀
+
 ```kotlin
 
 kotlinval result = calculateSomething()
