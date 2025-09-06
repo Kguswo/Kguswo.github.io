@@ -767,7 +767,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1500 words"
+  title="1528 words"
 >
   <em>8 min</em> read</span>
 
@@ -845,22 +845,11 @@
 <ul>
   <li>
     <h4 id="시간초과-코드map-사용-x"><span class="me-2">시간초과 코드(Map 사용 X)</span><a href="#시간초과-코드map-사용-x" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-    <p>```java
-/**</p>
   </li>
-  <li>Author: nowalex322, Kim HyeonJae
- <em>/
-import java.io.</em>;
-import java.util.*;</li>
 </ul>
 
-<p>public class Main {
-	static BufferedReader br;
-	static BufferedWriter bw;
-	static StringTokenizer st;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -927,93 +916,108 @@ import java.util.*;</li>
 64
 65
 66
-</pre></td><td class="rouge-code"><pre>public static void main(String[] args) throws Exception {
-	new Main().solution();
-}
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-static PriorityQueue&lt;Integer&gt; ASC_PQ = new PriorityQueue&lt;Integer&gt;();
-static PriorityQueue&lt;Integer&gt; DESC_PQ = new PriorityQueue&lt;Integer&gt;(Collections.reverseOrder());
-static int T, N;
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
 
-public void solution() throws Exception { //		br = new BufferedReader(new InputStreamReader(System.in));
-	br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
-	bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+	<span class="o">}</span>
 
-	T = Integer.parseInt(br.readLine());
+	<span class="kd">static</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="no">ASC_PQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+	<span class="kd">static</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="no">DESC_PQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">reverseOrder</span><span class="o">());</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="no">T</span><span class="o">,</span> <span class="no">N</span><span class="o">;</span>
 
-	while (T-- &gt; 0) {
-		ASC_PQ.clear();
-		DESC_PQ.clear();
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+<span class="c1">//		br = new BufferedReader(new InputStreamReader(System.in));</span>
+		<span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"input.txt"</span><span class="o">)));</span>
+		<span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
 
-		N = Integer.parseInt(br.readLine());
-		for (int i = 0; i &lt; N; i++) {
-			st = new StringTokenizer(br.readLine());
-			String mode = st.nextToken();
-			int num = Integer.parseInt(st.nextToken());
+		<span class="no">T</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
 
-			switch (mode) {
-            case "I": {
-                ASC_PQ.add(num);
-                DESC_PQ.add(num);
-                break;
-            }
-            case "D": {
-                if (!ASC_PQ.isEmpty()) {
-                    int deletedNum = (num == 1) ? deleteMax() : deleteMin();
-                }
-                break;
-            }
-        }
-		}
-		if (ASC_PQ.size() &lt; 1)
-			System.out.println("EMPTY");
-		else if (ASC_PQ.size() == 1)
-			System.out.println(ASC_PQ.poll());
-		else {
-			System.out.print(DESC_PQ.poll() + " ");
-			System.out.print(ASC_PQ.poll() + " ");
-			System.out.println("시간초과");
-		}
-	}
+		<span class="k">while</span> <span class="o">(</span><span class="no">T</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+			<span class="no">ASC_PQ</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+			<span class="no">DESC_PQ</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
 
-	bw.close();
-	br.close();
-}
+			<span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+				<span class="nc">String</span> <span class="n">mode</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">();</span>
+				<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
 
-// num == 1
-private int deleteMax() {
-	int deletedNum = DESC_PQ.poll();
-	ASC_PQ.remove(deletedNum);
-	return deletedNum;
-}
+				<span class="k">switch</span> <span class="o">(</span><span class="n">mode</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">case</span> <span class="s">"I"</span><span class="o">:</span> <span class="o">{</span>
+                    <span class="no">ASC_PQ</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+                    <span class="no">DESC_PQ</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="o">}</span>
+                <span class="k">case</span> <span class="s">"D"</span><span class="o">:</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">(!</span><span class="no">ASC_PQ</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                        <span class="kt">int</span> <span class="n">deletedNum</span> <span class="o">=</span> <span class="o">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="n">deleteMax</span><span class="o">()</span> <span class="o">:</span> <span class="n">deleteMin</span><span class="o">();</span>
+                    <span class="o">}</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+			<span class="o">}</span>
+			<span class="k">if</span> <span class="o">(</span><span class="no">ASC_PQ</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"EMPTY"</span><span class="o">);</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="no">ASC_PQ</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="no">ASC_PQ</span><span class="o">.</span><span class="na">poll</span><span class="o">());</span>
+			<span class="k">else</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="no">DESC_PQ</span><span class="o">.</span><span class="na">poll</span><span class="o">()</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="no">ASC_PQ</span><span class="o">.</span><span class="na">poll</span><span class="o">()</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시간초과"</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
 
-// num == -1
-private int deleteMin() {
-	int deletedNum = ASC_PQ.poll();
-	DESC_PQ.remove(deletedNum);
-	return deletedNum;
-} } ```
+		<span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+		<span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="c1">// num == 1</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="nf">deleteMax</span><span class="o">()</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">deletedNum</span> <span class="o">=</span> <span class="no">DESC_PQ</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+		<span class="no">ASC_PQ</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">deletedNum</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">deletedNum</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="c1">// num == -1</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="nf">deleteMin</span><span class="o">()</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">deletedNum</span> <span class="o">=</span> <span class="no">ASC_PQ</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+		<span class="no">DESC_PQ</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">deletedNum</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">deletedNum</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <ul>
   <li>
     <h4 id="정답코드-map-사용-o"><span class="me-2">정답코드 (Map 사용 O)</span><a href="#정답코드-map-사용-o" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-    <p>```java
-/**</p>
   </li>
-  <li>Author: nowalex322, Kim HyeonJae
- <em>/
-import java.io.</em>;
-import java.util.*;</li>
 </ul>
 
-<p>public class Main {
-    static BufferedReader br;
-    static StringBuilder sb;
-    static StringTokenizer st;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1095,87 +1099,121 @@ import java.util.*;</li>
 79
 80
 81
-</pre></td><td class="rouge-code"><pre>public static void main(String[] args) throws Exception {
-    new Main().solution();
-}
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+</pre></td><td class="rouge-code"><pre><span class="cm">/**
+ * Author: nowalex322, Kim HyeonJae
+ */</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-static PriorityQueue&lt;Integer&gt; ASC_PQ = new PriorityQueue&lt;Integer&gt;();
-static PriorityQueue&lt;Integer&gt; DESC_PQ = new PriorityQueue&lt;Integer&gt;(Collections.reverseOrder());
-static Map&lt;Integer, Integer&gt; map; // 숫자 개수
-static int T, N;
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringBuilder</span> <span class="n">sb</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
 
-public void solution() throws Exception {
-    br = new BufferedReader(new InputStreamReader(System.in)); //        br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
-    sb = new StringBuilder();
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
+    <span class="o">}</span>
 
-    T = Integer.parseInt(br.readLine());
+    <span class="kd">static</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="no">ASC_PQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+    <span class="kd">static</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="no">DESC_PQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">reverseOrder</span><span class="o">());</span>
+    <span class="kd">static</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">map</span><span class="o">;</span> <span class="c1">// 숫자 개수</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="no">T</span><span class="o">,</span> <span class="no">N</span><span class="o">;</span>
 
-    while (T-- &gt; 0) {
-        ASC_PQ.clear();
-        DESC_PQ.clear();
-        map = new HashMap&lt;&gt;();
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));</span>
+        <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
 
-        N = Integer.parseInt(br.readLine());
-        for (int i = 0; i &lt; N; i++) {
-            st = new StringTokenizer(br.readLine());
-            String mode = st.nextToken();
-            int num = Integer.parseInt(st.nextToken());
+        <span class="no">T</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
 
-            switch (mode) {
-                case "I": {
-                    ASC_PQ.add(num);
-                    DESC_PQ.add(num);
-                    map.put(num, map.getOrDefault(num, 0) + 1); //                        System.out.println(map);
-                    break;
-                }
-                case "D": {
-                    if (!map.isEmpty()) {
-                        if (num == 1) {
-                            delete(DESC_PQ);
-                        } else {
-                            delete(ASC_PQ);
-                        }
-                    }
-                    break;
-                }
-            }
-        }
+        <span class="k">while</span> <span class="o">(</span><span class="no">T</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="no">ASC_PQ</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+            <span class="no">DESC_PQ</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+            <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
 
-        if (map.isEmpty()) {
-            sb.append("EMPTY\n");
-        } else {
-            int max = delete(DESC_PQ);
-            sb.append(max).append(" ");
+            <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+                <span class="nc">String</span> <span class="n">mode</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">();</span>
+                <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+
+                <span class="k">switch</span> <span class="o">(</span><span class="n">mode</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">case</span> <span class="s">"I"</span><span class="o">:</span> <span class="o">{</span>
+                        <span class="no">ASC_PQ</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+                        <span class="no">DESC_PQ</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+                        <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">num</span><span class="o">,</span> <span class="n">map</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">num</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+<span class="c1">//                        System.out.println(map);</span>
+                        <span class="k">break</span><span class="o">;</span>
+                    <span class="o">}</span>
+                    <span class="k">case</span> <span class="s">"D"</span><span class="o">:</span> <span class="o">{</span>
+                        <span class="k">if</span> <span class="o">(!</span><span class="n">map</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                            <span class="k">if</span> <span class="o">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+                                <span class="n">delete</span><span class="o">(</span><span class="no">DESC_PQ</span><span class="o">);</span>
+                            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                                <span class="n">delete</span><span class="o">(</span><span class="no">ASC_PQ</span><span class="o">);</span>
+                            <span class="o">}</span>
+                        <span class="o">}</span>
+                        <span class="k">break</span><span class="o">;</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+
+            <span class="k">if</span> <span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"EMPTY\n"</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">delete</span><span class="o">(</span><span class="no">DESC_PQ</span><span class="o">);</span>
+                <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">max</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+                
+                <span class="c1">// 하나뿐인지</span>
+                <span class="k">if</span> <span class="o">(!</span><span class="n">map</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                    <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="n">delete</span><span class="o">(</span><span class="no">ASC_PQ</span><span class="o">);</span>
+                    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">min</span><span class="o">);</span>
+<span class="c1">//                    System.out.println("min : " + min);</span>
+                <span class="o">}</span> 
+                <span class="k">else</span> <span class="o">{</span>
+                    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">max</span><span class="o">);</span>
+<span class="c1">//                    System..println("max : " + max);</span>
+                <span class="o">}</span>
+                <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">sb</span><span class="o">);</span>
+        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">delete</span><span class="o">(</span><span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">pq</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">deleteNum</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">deleteNum</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+            <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">deleteNum</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+<span class="c1">//            System.out.println("cnt : " + cnt);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">cnt</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">continue</span><span class="o">;</span>
             
-            // 하나뿐인지
-            if (!map.isEmpty()) {
-                int min = delete(ASC_PQ);
-                sb.append(min); //                    System.out.println("min : " + min);
-            } 
-            else {
-                sb.append(max); //                    System..println("max : " + max);
-            }
-            sb.append("\n");
-        }
-    }
-
-    System.out.print(sb);
-    br.close();
-}
-
-private int delete(Queue&lt;Integer&gt; pq) {
-    int deleteNum;
-    while (true) {
-        deleteNum = pq.poll();
-        int cnt = map.getOrDefault(deleteNum, 0); //            System.out.println("cnt : " + cnt);
-        if (cnt == 0) continue;
-        
-        if (cnt == 1) map.remove(deleteNum);
-        else map.put(deleteNum, cnt - 1);
-        break;
-    }
-    return deleteNum;
-} } ```
+            <span class="k">if</span> <span class="o">(</span><span class="n">cnt</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="n">map</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">deleteNum</span><span class="o">);</span>
+            <span class="k">else</span> <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">deleteNum</span><span class="o">,</span> <span class="n">cnt</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">deleteNum</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>

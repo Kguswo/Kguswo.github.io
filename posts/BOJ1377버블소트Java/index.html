@@ -714,7 +714,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="695 words"
+  title="708 words"
 >
   <em>3 min</em> read</span>
 
@@ -799,21 +799,11 @@ for (int i=1; i&lt;=N+1; i++) {
 <h3 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>풀이 1 : 메모리 <code class="language-plaintext highlighter-rouge">47920KB</code>, 시간 <code class="language-plaintext highlighter-rouge">300ms</code>
-```java
-import java.io.*;</li>
+  <li>풀이 1 : 메모리 <code class="language-plaintext highlighter-rouge">47920KB</code>, 시간 <code class="language-plaintext highlighter-rouge">300ms</code></li>
 </ul>
 
-<p>public class Main {
-	static int N, arr[], count[], sum;
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
-        arr = new int[N];
-        count = new int[1000001];</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -846,44 +836,67 @@ import java.io.*;</li>
 30
 31
 32
-</pre></td><td class="rouge-code"><pre>    /**
-     * 각 숫자 등장횟수 세기
-     * 인덱스값의 숫자가 몇번 등장했는지 저장
-     */
-    for (int i = 0; i &lt; N; i++) {
-        arr[i] = Integer.parseInt(br.readLine());
-        count[arr[i]]++;
-    }
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
 
-    /**
-     * 누적 합 계산
-     * count 순회하며 각 숫자보다 작거나 같은 숫자들의 총 개수 계산
-     * 이후 count[i]는 i보다 작거나 같은 숫자의 개수 - 1을 나타냄
-     */
-    sum = 0;
-    for (int i = 0; i &lt;= 1000000; i++) {
-    	sum += count[i];
-        count[i] = sum - 1;
-    }
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">,</span> <span class="n">arr</span><span class="o">[],</span> <span class="n">count</span><span class="o">[],</span> <span class="n">sum</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">1000001</span><span class="o">];</span>
 
-    /**
-     * 최대 이동 거리 계산
-     * 각 숫자의 현재 위치와 정렬 후 위치의 차이 중 최댓값 찾기
-     * i - count[arr[i]]: 현재 위치 - 정렬 후 위치
-     */
-    int ans = 0;
-    for (int i = 0; i &lt; N; i++) {
-    	ans = Math.max(ans, i - count[arr[i]]);
-    }
+        <span class="cm">/**
+         * 각 숫자 등장횟수 세기
+         * 인덱스값의 숫자가 몇번 등장했는지 저장
+         */</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+            <span class="n">count</span><span class="o">[</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]]++;</span>
+        <span class="o">}</span>
 
-    System.out.println(ans + 1);
-} } ``` - 풀이 2 : 메모리 `82748KB`, 시간 `1488ms` ```java import java.io.*; import java.util.*;
+        <span class="cm">/**
+         * 누적 합 계산
+         * count 순회하며 각 숫자보다 작거나 같은 숫자들의 총 개수 계산
+         * 이후 count[i]는 i보다 작거나 같은 숫자의 개수 - 1을 나타냄
+         */</span>
+        <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1000000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="n">sum</span> <span class="o">+=</span> <span class="n">count</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+            <span class="n">count</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="cm">/**
+         * 최대 이동 거리 계산
+         * 각 숫자의 현재 위치와 정렬 후 위치의 차이 중 최댓값 찾기
+         * i - count[arr[i]]: 현재 위치 - 정렬 후 위치
+         */</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="n">ans</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">ans</span><span class="o">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">count</span><span class="o">[</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]]);</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ans</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>풀이 2 : 메모리 <code class="language-plaintext highlighter-rouge">82748KB</code>, 시간 <code class="language-plaintext highlighter-rouge">1488ms</code></li>
+</ul>
 
-<p>public class Main {</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -916,41 +929,53 @@ import java.io.*;</li>
 30
 31
 32
-</pre></td><td class="rouge-code"><pre>public static class Data implements Comparable&lt;Data&gt;{
-	int value;
-	int idx;
-	
-	public Data(int value, int idx) {
-		this.value = value;
-		this.idx = idx;
-	}
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
 
-	@Override
-	public int compareTo(Data o) {
-		return this.value - o.value;
-	}
-}
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Data</span> <span class="kd">implements</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">Data</span><span class="o">&gt;{</span>
+		<span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">idx</span><span class="o">;</span>
+		
+		<span class="kd">public</span> <span class="nf">Data</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">idx</span> <span class="o">=</span> <span class="n">idx</span><span class="o">;</span>
+		<span class="o">}</span>
 
-static BufferedReader br;
-public static void main(String[] args) throws IOException {
-	br = new BufferedReader(new InputStreamReader(System.in));
-	int N = Integer.parseInt(br.readLine());
-	Data[] data = new Data[N];
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="nc">Data</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">-</span> <span class="n">o</span><span class="o">.</span><span class="na">value</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 	
-	for(int i=0; i&lt;N; i++) {
-		data[i]	 = new Data(Integer.parseInt(br.readLine()), i);
-	}
-	Arrays.sort(data);
-	
-	int max = 0;
-	for(int i=0; i&lt;N; i++) {
-		if(max &lt; data[i].idx-i) max = data[i].idx -i;
-	}
-	System.out.println(max+1);
-} }
+	<span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+		<span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+		<span class="nc">Data</span><span class="o">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Data</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>	 <span class="o">=</span> <span class="k">new</span> <span class="nc">Data</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">()),</span> <span class="n">i</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+		
+		<span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">max</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">idx</span><span class="o">-</span><span class="n">i</span><span class="o">)</span> <span class="n">max</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">idx</span> <span class="o">-</span><span class="n">i</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">max</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
 </pre></td></tr></tbody></table></code></div></div>
-
-<p>```</p>
 
   </div>
 
