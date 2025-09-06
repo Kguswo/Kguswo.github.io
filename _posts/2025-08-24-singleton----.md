@@ -549,8 +549,8 @@ EnumSingleton.INSTANCE.doSomething();
 
 <br/>
 
-**1. 리플렉션 공격 방어 : JVM이 enum의 리플렉션 기반 인스턴스 생성을 원천 차단
-**
+**1. 리플렉션 공격 방어 : JVM이 enum의 리플렉션 기반 인스턴스 생성을 원천 차단**
+
 ```java
 try {
     Constructor<EnumSingleton> constructor = EnumSingleton.class.getDeclaredConstructor();
