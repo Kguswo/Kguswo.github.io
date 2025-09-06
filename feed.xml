@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-06T15:42:37+09:00</updated>
+  <updated>2025-09-06T15:50:01+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,82 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>BOJ_1514_자물쇠 (Java)</title>
-    <link href="https://kguswo.github.io/posts/BOJ1514%EC%9E%90%EB%AC%BC%EC%87%A0-Java/" rel="alternate" type="text/html" title="BOJ_1514_자물쇠 (Java)" />
-    <published>2025-09-03T03:44:38+09:00</published>
-  
-    <updated>2025-09-03T03:44:38+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/BOJ1514%EC%9E%90%EB%AC%BC%EC%87%A0-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/BOJ1514%EC%9E%90%EB%AC%BC%EC%87%A0-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[Platinum III] 자물쇠 - 1514  문제 링크  성능 요약  메모리: 18068 KB, 시간: 144 ms  분류  다이나믹 프로그래밍, 그래프 이론, 최단 경로  제출 일자  2025년 9월 3일 03:35:58  문제 설명  세준이는 노트북을 누가 가져갈까봐 자물쇠로 잠가놓는다. 자물쇠는 동그란 디스크 N개로 구성되어 있다. 각 디스크에는 숫자가 0부터 9까지 숫자가 표시되어 있다. 디스크는 원형이기 때문에, 0과 9는 인접해 있다.  세준이는 한 번 자물쇠를 돌릴 때, 최대 세 칸을 시계 방향 또는 반시계 방향으로 돌릴 수 있다. 또, 최대 세 개의 인접한 디스크를 한 번에 돌릴 수 있다.  현재 자물쇠의 상태와 세준이의 비밀번호가 주어질 때, 자물쇠를 최소 몇 번 돌려야 풀 수 있는...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>무료로 구축하는 협업 자동화 : Trello + Github + Slack</title>
-    <link href="https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/" rel="alternate" type="text/html" title="무료로 구축하는 협업 자동화 : Trello + Github + Slack" />
-    <published>2025-09-02T01:36:47+09:00</published>
-  
-    <updated>2025-09-02T01:36:47+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="사이드" />
-    
-    <category term="프로젝트" />
-    
-  
-
-  <summary>들어가며  사이드 프로젝트를 진행할 때 개발 전, 협업 규칙과 컨벤션 등을 정한다. 이 기본 틀이 가장 중요하며 프로젝트 속도를 늦추지 않는 중요한 규칙이 된다.  이번 글은 어떻게 협업 자동화를 (무료로!) 구성했는지에 관한 이야기다.  레퍼런스가 없어 상당히 고생했기 때문에 비슷한 시도를 하는 모두에게 도움이 되었으면 좋겠다!    협업 툴  협업 툴로는 다양한 후보군들이 많다. 그 중에서 어떤 것을 선택할지 정하는 것도 쉽지 않았다.  선택한 협업 툴에 관한 짧은 설명과, 왜 선택하게 되었는지에 대해 정리하겠다.  Trello    칸반 보드 방식의 직관적인 작업 관리 도구      무료 플랜으로도 충분한 기능을 제공한다.   직관적인 UI로 작업 상태를 한눈에 파악 가능하다.   강력한 Auto...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>System Design Interview - 알림 시스템 설계</title>
-    <link href="https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/" rel="alternate" type="text/html" title="System Design Interview - 알림 시스템 설계" />
-    <published>2025-09-01T03:23:18+09:00</published>
-  
-    <updated>2025-09-01T03:23:18+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/System-Design-Interview-%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="시스템" />
-    
-    <category term="디자인" />
-    
-  
-
-  <summary>들어가며  알림 시스템은 최근 많은 프로그램에서 채택하는 인기 있는 기능이다. 최신 뉴스, 제품 업데이터, 이벤트, 선물 등 고객에게 중요할 만한 정보를 비동기적으로 제공한다.  이러한 알림 시스템을 순차적으로 확장하며 설계해보려 한다.    1단계. 문제 이해 및 설계 범위 확정  하루에 백만건 이상의 알림을 처리하는 확장성 높은 시스템을 구축하는게 쉬운 과제가 아니다. 알림 시스템이 어떻게 구현되는지에 대한 깊은 이해가 필요한 작업이다.  이에 관한 문제가 면접에 출제될 때는 보통 정해진 정답이 없고, 문제 자체가 모호하게 주어지는 것이 일반적이므로, 적절한 질문을 통해 요구사항이 무엇인지 우리가 스스로 알아내야 한다.       지원자 : 이 시스템은 어떤 종류의 알림을 지원해야 하나요?   면접...</summary>
-
-  </entry>
 
   
   <entry>
@@ -141,6 +65,78 @@
   
 
   <summary>들어가며  이번은 책 7장인 분산 시스템을 위한 유일 ID 생성기를 설계해보겠다.  간단한 팀/개인 프로젝트에서 ID를 설계할 때는 auto_increment 속성으로 설정된 기본 키를 사용하곤 했었다.  하지만 대규모 분산 환경에서는 auto_increment를 사용할 수 없다.  데이터베이스 서버 한 대로는 요구를 충족할 수 없고, 여러 서버가 동시에 auto_increment 값을 생성한다면 중복된 값이 발생할 수도 있기 때문이다.    여러 유일한 ID 를 생성하는 방법을 다음과 같이 정리해보자.     다중 마스터 복제 (multi-master replication)   UUID (Universally Unique Identifier)   티켓 서버 (Ticket Server)   트위터 스노...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>개발하며 Kotlin 문법 공부하기 (vs Java)</title>
+    <link href="https://kguswo.github.io/posts/%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-Kotlin-%EB%AC%B8%EB%B2%95-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0-vs-Java/" rel="alternate" type="text/html" title="개발하며 Kotlin 문법 공부하기 (vs Java)" />
+    <published>2025-08-25T02:22:42+09:00</published>
+  
+    <updated>2025-08-25T02:22:42+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-Kotlin-%EB%AC%B8%EB%B2%95-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0-vs-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-Kotlin-%EB%AC%B8%EB%B2%95-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0-vs-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="언어" />
+    
+  
+
+  <summary>Kotlin 기본문법만 알고 있는 상태에서 Kotlin 프로젝트를 진행하며 공부하고 찾아본 문법들을 정리해봤다. 실제 개발하면서 마주친 Kotlin 문법들을 Java와 비교하여 정리하기 위해 글을 작성했다. (계속 추가 예정)   1. 기본 문법 차이점  클래스 선언  Kotlin에서 data class는 자동으로 equals, hashCode, toString 생성 // Kotlin data class RecommendationRequestDto(...)  //   Java에서는 필드, 생성자, getter, setter, equals, hashCode, toString 모두 수동으로 작성 // Java equivalent public class RecommendationRequestDto {    ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Singleton 에 대하여</title>
+    <link href="https://kguswo.github.io/posts/Singleton-%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/" rel="alternate" type="text/html" title="Singleton 에 대하여" />
+    <published>2025-08-24T22:27:54+09:00</published>
+  
+    <updated>2025-08-24T22:27:54+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Singleton-%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Singleton-%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>들어가며  프로그래밍을 하다 보면 특정 객체가 딱 1개 필요한 상황이 있다. 예를 들어 설정 파일 관리자, 로그 기록기 등이 있다. 이런 경우 사용하는 것이 싱글턴 패턴 이다.    싱글턴 패턴이란?    클래스의 인스턴스가 오직 하나만 생성도도록 보장하고, 이 인스턴스에 전역적으로 접근할 수 있는 방법을 제공하는 생성 디자인 패턴이다.     왜 싱글턴이 필요할까? 예시를 통해 알아가보자. 서비스를 개발할 때 다음과 같은 상황은 피하고 싶을 것이다. DatabaseConnection db1 = new DatabaseConnection(); DatabaseConnection db2 = new DatabaseConnection(); DatabaseConnection db3 = new DatabaseCon...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>BOJ_1623_신년 파티 (Java)</title>
+    <link href="https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/" rel="alternate" type="text/html" title="BOJ_1623_신년 파티 (Java)" />
+    <published>2025-08-20T03:22:55+09:00</published>
+  
+    <updated>2025-08-20T03:22:55+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/BOJ1623%EC%8B%A0%EB%85%84-%ED%8C%8C%ED%8B%B0-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="알고리즘" />
+    
+  
+
+  <summary>[Gold I] 신년 파티 - 1623  문제 링크  성능 요약  메모리: 147364 KB, 시간: 3040 ms  분류  다이나믹 프로그래밍, 트리, 트리에서의 다이나믹 프로그래밍  제출 일자  2025년 8월 20일 03:09:29  문제 설명  '주식회사 월드'의 조직도는 루트가 있는 트리 형태의 구조를 가지고 있다. 즉, 사장님을 트리의 루트로 하며, 직원들은 자신의 직속상관 바로 밑에 매달려 있는 형태가 된다. 김진영 부사장은 2008년 설을 맞아 '주식회사 월드'의 신년 파티를 계획 중에 있다. 단, 만일 부하직원이 자신의 직속상관과 파티에 함께 오게 되면 분위기가 경직될 수 있으므로, 파티의 분위기를 위해 부하직원과 그 직속상관은 같이 초대될 수 없도록 하려고 한다. 예를 들어 최백준 과...</summary>
 
   </entry>
 
