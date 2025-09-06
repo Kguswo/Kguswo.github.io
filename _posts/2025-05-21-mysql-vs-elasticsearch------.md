@@ -92,7 +92,7 @@ Elasticsearch 5.0부터 BM25 알고리즘 사용(이전에는 TF/IDF)
 - TF(Term Frequency): 검색어가 문서에 많이 있을수록 점수 상승
 - IDF(Inverse Document Frequency): 전체 문서에서 흔한 단어일수록 점수 하락
 
-**3. 텍스트 분석(Text Analysis) 과정 **
+**3. 텍스트 분석(Text Analysis) 과정**
 
 - 애널라이저(Analyzer): 0~3개의 캐릭터 필터, 1개의 토크나이저, 0~n개의 토큰 필터로 구성
 - 토큰화: 텍스트를 분석해 검색에 용이한 단위로 분할
