@@ -933,7 +933,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1897 words"
+  title="1898 words"
 >
   <em>10 min</em> read</span>
 
@@ -1056,19 +1056,29 @@
 <p><br /></p>
 
 <h3 id="함수-선언"><span class="me-2">함수 선언</span><a href="#함수-선언" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<ul>
-  <li>Kotlin은 <code class="language-plaintext highlighter-rouge">fun</code> 키워드로 함수 선언
-```kotlin
-// Kotlin
-fun isValid(): Boolean {
-  return maxSpicy?.let { it in 0..5 } ?: true
-}</li>
-</ul>
+<p>Kotlin은 <code class="language-plaintext highlighter-rouge">fun</code> 키워드로 함수 선언</p>
+<div class="language-kotlin highlighter-rouge"><div class="code-header">
+        <span data-label-text="Kotlin"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1">// Kotlin</span>
+<span class="k">fun</span> <span class="nf">isValid</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">maxSpicy</span><span class="o">?.</span><span class="nf">let</span> <span class="p">{</span> <span class="n">it</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..</span><span class="mi">5</span> <span class="p">}</span> <span class="o">?:</span> <span class="k">true</span>
+<span class="p">}</span>
 
-<p>// 단일 표현식 함수
-fun add(a: Int, b: Int) = a + b</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<span class="c1">// 단일 표현식 함수</span>
+<span class="k">fun</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Java는 접근제한자와 반환타입 명시</p>
+
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1077,22 +1087,14 @@ fun add(a: Int, b: Int) = a + b</p>
 6
 7
 8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre>
-Java는 접근제한자와 반환타입 명시
+</pre></td><td class="rouge-code"><pre><span class="c1">// Java</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">maxSpicy</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="o">(</span><span class="n">maxSpicy</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">maxSpicy</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
 
-```java
-// Java
-public boolean isValid() {
-    return maxSpicy != null ? (maxSpicy &gt;= 0 &amp;&amp; maxSpicy &lt;= 5) : true;
-}
-
-public int add(int a, int b) {
-    return a + b;
-}
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><br />
