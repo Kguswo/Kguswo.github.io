@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-08T10:42:36+09:00</updated>
+  <updated>2025-09-12T00:30:54+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>PGMS_추석 트래픽 (Java)</title>
+    <link href="https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/" rel="alternate" type="text/html" title="PGMS_추석 트래픽 (Java)" />
+    <published>2025-09-10T11:49:39+09:00</published>
+  
+    <updated>2025-09-10T11:49:39+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="알고리즘" />
+    
+  
+
+  <summary>[level 3] [1차] 추석 트래픽 - 17676  문제 링크  성능 요약  메모리: 83.2 MB, 시간: 100.74 ms  구분  코딩테스트 연습 &amp;gt; 2018 KAKAO BLIND RECRUITMENT  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 10일 11:40:34  문제 설명  추석 트래픽  이번 추석에도 시스템 장애가 없는 명절을 보내고 싶은 어피치는 서버를 증설해야 할지 고민이다. 장애 대비용 서버 증설 여부를 결정하기 위해 작년 추석 기간인 9월 15일 로그 데이터를 분석한 후 초당 최대 처리량을 계산해보기로 했다. 초당 최대 처리량은 요청의 응답 완료 여부에 관계없이 임의 시간부터 1초(=1,000밀리초)간 처리하는 요청의 최...</summary>
+
+  </entry>
 
   
   <entry>
@@ -115,32 +139,6 @@
   
 
   <summary>[Platinum III] 자물쇠 - 1514  문제 링크  성능 요약  메모리: 18068 KB, 시간: 144 ms  분류  다이나믹 프로그래밍, 그래프 이론, 최단 경로  제출 일자  2025년 9월 3일 03:35:58  문제 설명  세준이는 노트북을 누가 가져갈까봐 자물쇠로 잠가놓는다. 자물쇠는 동그란 디스크 N개로 구성되어 있다. 각 디스크에는 숫자가 0부터 9까지 숫자가 표시되어 있다. 디스크는 원형이기 때문에, 0과 9는 인접해 있다.  세준이는 한 번 자물쇠를 돌릴 때, 최대 세 칸을 시계 방향 또는 반시계 방향으로 돌릴 수 있다. 또, 최대 세 개의 인접한 디스크를 한 번에 돌릴 수 있다.  현재 자물쇠의 상태와 세준이의 비밀번호가 주어질 때, 자물쇠를 최소 몇 번 돌려야 풀 수 있는...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>무료로 구축하는 협업 자동화 : Trello + Github + Slack</title>
-    <link href="https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/" rel="alternate" type="text/html" title="무료로 구축하는 협업 자동화 : Trello + Github + Slack" />
-    <published>2025-09-02T01:36:47+09:00</published>
-  
-    <updated>2025-09-02T01:36:47+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EC%9E%90%EB%8F%99%ED%99%94-Trello-Github-Slack/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="사이드" />
-    
-    <category term="프로젝트" />
-    
-  
-
-  <summary>들어가며  사이드 프로젝트를 진행할 때 개발 전, 협업 규칙과 컨벤션 등을 정한다. 이 기본 틀이 가장 중요하며 프로젝트 속도를 늦추지 않는 중요한 규칙이 된다.  이번 글은 어떻게 협업 자동화를 (무료로!) 구성했는지에 관한 이야기다.  레퍼런스가 없어 상당히 고생했기 때문에 비슷한 시도를 하는 모두에게 도움이 되었으면 좋겠다!    협업 툴  협업 툴로는 다양한 후보군들이 많다. 그 중에서 어떤 것을 선택할지 정하는 것도 쉽지 않았다.  선택한 협업 툴에 관한 짧은 설명과, 왜 선택하게 되었는지에 대해 정리하겠다.  Trello    칸반 보드 방식의 직관적인 작업 관리 도구      무료 플랜으로도 충분한 기능을 제공한다.   직관적인 UI로 작업 상태를 한눈에 파악 가능하다.   강력한 Auto...</summary>
 
   </entry>
 
