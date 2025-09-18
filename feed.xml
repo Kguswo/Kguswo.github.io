@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-12T01:27:11+09:00</updated>
+  <updated>2025-09-18T10:29:28+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>PGMS_스킬트리 (Java)</title>
+    <link href="https://kguswo.github.io/posts/PGMS%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC-Java/" rel="alternate" type="text/html" title="PGMS_스킬트리 (Java)" />
+    <published>2025-09-17T11:40:33+09:00</published>
+  
+    <updated>2025-09-17T11:40:33+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/PGMS%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="알고리즘" />
+    
+  
+
+  <summary>[level 2] 스킬트리 - 49993  문제 링크  성능 요약  메모리: 79.6 MB, 시간: 0.21 ms  구분  코딩테스트 연습 &amp;gt; Summer／Winter Coding（～2018）  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 17일 10:33:38  문제 설명  선행 스킬이란 어떤 스킬을 배우기 전에 먼저 배워야 하는 스킬을 뜻합니다.  예를 들어 선행 스킬 순서가 스파크 → 라이트닝 볼트 → 썬더일때, 썬더를 배우려면 먼저 라이트닝 볼트를 배워야 하고, 라이트닝 볼트를 배우려면 먼저 스파크를 배워야 합니다.  위 순서에 없는 다른 스킬(힐링 등)은 순서에 상관없이 배울 수 있습니다. 따라서 스파크 → 힐링 → 라이트닝 볼트 → 썬더와...</summary>
+
+  </entry>
 
   
   <entry>
@@ -115,30 +139,6 @@
   
 
   <summary>들어가며     서비스를 배포 비용을 최소화 하기위해 노력해본 사람들은 콜드 스타트에 대한 경험이 있을 것이다. 필자도 Hit Me Up 이라는 서비스를 운영하며 겪었던 콜드 스타트에서 벗어나기까지의 과정을 기록해 보고자 한다.     콜드 스타트란?  클라우드 환경에서 일정 시간 요청이 없으면 인스턴스가 자동 종료되고, 다시 요청이 들어올 때 서버가 재시작되면서 초기화 지연이 발생하는 현상을 콜드 스타트라고 한다.  이로 인해 사용자에게 서비스 응답 지연이 발생해 불편함을 줄 수 있다. 특히 Cloud Run 같은 서버리스 환경에서 빈번히 나타난다.    문제 상황  처음 Cloud Run에 Spring Boot 애플리케이션을 배포했을 때 콜드 스타트 문제는 간단히 해결될 줄 알았다. Google 문...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Effective Java - Ch.2 (Item 1) 생성자 대신 정적 팩터리 메서드를 고려하라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-Ch.2-Item-1-%EC%83%9D%EC%84%B1%EC%9E%90-%EB%8C%80%EC%8B%A0-%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="Effective Java - Ch.2 (Item 1) 생성자 대신 정적 팩터리 메서드를 고려하라" />
-    <published>2025-09-07T06:39:27+09:00</published>
-  
-    <updated>2025-09-07T06:39:27+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Effective-Java-Ch.2-Item-1-%EC%83%9D%EC%84%B1%EC%9E%90-%EB%8C%80%EC%8B%A0-%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-Ch.2-Item-1-%EC%83%9D%EC%84%B1%EC%9E%90-%EB%8C%80%EC%8B%A0-%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%84%B0%EB%A6%AC-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="개발서적" />
-    
-  
-
-  <summary>Ch 2. 객체 생성과 파괴  Item 1. 생성자 대신 정적 팩터리 메서드를 고려하라  들어가며  클라이언트가 클래스의 인스턴스를 얻는 전통적인 수단은 public 생성자다.  하지만 프로그래머가 꼭 알아야 할 한가지 기법이 더 있는데, 클래스는 생성자와 별도로 정적 팩터리 메서드(static factory methos)를 제공할 수 있다.  쉽게 말해 그 클래스의 인스턴스를 반환하는 단순한 정적 메서드다.  public static Boolean valueOf(boolean b) { 	return b ? Boolean.TRUE : Boolean.FALSE; }   위 예시 메서드는 기본타입인 boolean	값을 받아 Boolean 객체 참조로 변환해준다.    클래스는 클라이언트에 public 생성...</summary>
 
   </entry>
 
