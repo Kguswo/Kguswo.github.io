@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-18T10:29:28+09:00</updated>
+  <updated>2025-09-19T10:32:49+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>PGMS_2차원 동전 뒤집기 (Java)</title>
+    <link href="https://kguswo.github.io/posts/PGMS2%EC%B0%A8%EC%9B%90-%EB%8F%99%EC%A0%84-%EB%92%A4%EC%A7%91%EA%B8%B0-Java/" rel="alternate" type="text/html" title="PGMS_2차원 동전 뒤집기 (Java)" />
+    <published>2025-09-18T10:34:45+09:00</published>
+  
+    <updated>2025-09-18T10:34:45+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/PGMS2%EC%B0%A8%EC%9B%90-%EB%8F%99%EC%A0%84-%EB%92%A4%EC%A7%91%EA%B8%B0-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/PGMS2%EC%B0%A8%EC%9B%90-%EB%8F%99%EC%A0%84-%EB%92%A4%EC%A7%91%EA%B8%B0-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="알고리즘" />
+    
+  
+
+  <summary>[level 3] 2차원 동전 뒤집기 - 131703  문제 링크  성능 요약  메모리: 74 MB, 시간: 3.49 ms  구분  코딩테스트 연습 &amp;gt; 연습문제  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 17일 11:28:01  문제 설명  한수는 직사각형 모양의 공간에 놓인 동전들을 뒤집는 놀이를 하고 있습니다. 모든 동전들은 앞과 뒤가 구분되어 있으며, 동전을 뒤집기 위해서는 같은 줄에 있는 모든 동전을 뒤집어야 합니다. 동전들의 초기 상태와 목표 상태가 주어졌을 때, 초기 상태에서 최소 몇 번의 동전을 뒤집어야 목표 상태가 되는지 알아봅시다.    예를 들어, 위 그림에서 맨 왼쪽이 초기 상태, 맨 오른쪽이 목표 상태인 경우에 대해 알아봅시...</summary>
+
+  </entry>
 
   
   <entry>
@@ -113,32 +137,6 @@
   
 
   <summary>들어가며  많은 포털 사이트, 웹 사이트 검색창에는 단어를 입력하면 입력중인 글자에 맞는 추천 검색어들이 표시된다. 이러한 기능을 자동완성 이라고 한다.   이 글은 특정 입력에 대한 검색어 자동 완성 기능을 다룬다.    1. 문제 이해 및 설계 범위     자동완될 검색어는 첫 부분으로 한정한다.   5개의 자동완성 검색어가 표시되어야 한다.   인기 순위를 기준으로 5개의 검색어를 표시한다.   맞춤법 검사나 자동수정은 지원하지 않는다   질의어는 영어지만, 다국어 지원을 생각하면 좋다.   질의는 영어 소문자로 구성된다.   DAU는 천만명 기준이다.     요구사항 정리     빠른 응답 속도 : 사용자가 검색어를 입력할 때마다 자동완성 검색어도 표시되어야 한다. (100ms 이내)   연관성...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Cloud Run 콜드 스타트 삽질기</title>
-    <link href="https://kguswo.github.io/posts/15%EB%B6%84%EC%9D%B4%EB%A9%B4-%EC%B6%A9%EB%B6%84%ED%95%A0-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0/.-Cloud-Run-%EC%BD%9C%EB%93%9C-%EC%8A%A4%ED%83%80%ED%8A%B8-%EC%82%BD%EC%A7%88%EA%B8%B0/" rel="alternate" type="text/html" title="Cloud Run 콜드 스타트 삽질기" />
-    <published>2025-09-08T02:46:56+09:00</published>
-  
-    <updated>2025-09-08T02:46:56+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/15%EB%B6%84%EC%9D%B4%EB%A9%B4-%EC%B6%A9%EB%B6%84%ED%95%A0-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0/.-Cloud-Run-%EC%BD%9C%EB%93%9C-%EC%8A%A4%ED%83%80%ED%8A%B8-%EC%82%BD%EC%A7%88%EA%B8%B0/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/15%EB%B6%84%EC%9D%B4%EB%A9%B4-%EC%B6%A9%EB%B6%84%ED%95%A0-%EC%A4%84-%EC%95%8C%EC%95%98%EB%8A%94%EB%8D%B0/.-Cloud-Run-%EC%BD%9C%EB%93%9C-%EC%8A%A4%ED%83%80%ED%8A%B8-%EC%82%BD%EC%A7%88%EA%B8%B0/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="사이드" />
-    
-    <category term="프로젝트" />
-    
-  
-
-  <summary>들어가며     서비스를 배포 비용을 최소화 하기위해 노력해본 사람들은 콜드 스타트에 대한 경험이 있을 것이다. 필자도 Hit Me Up 이라는 서비스를 운영하며 겪었던 콜드 스타트에서 벗어나기까지의 과정을 기록해 보고자 한다.     콜드 스타트란?  클라우드 환경에서 일정 시간 요청이 없으면 인스턴스가 자동 종료되고, 다시 요청이 들어올 때 서버가 재시작되면서 초기화 지연이 발생하는 현상을 콜드 스타트라고 한다.  이로 인해 사용자에게 서비스 응답 지연이 발생해 불편함을 줄 수 있다. 특히 Cloud Run 같은 서버리스 환경에서 빈번히 나타난다.    문제 상황  처음 Cloud Run에 Spring Boot 애플리케이션을 배포했을 때 콜드 스타트 문제는 간단히 해결될 줄 알았다. Google 문...</summary>
 
   </entry>
 
