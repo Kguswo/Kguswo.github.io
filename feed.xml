@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-19T10:32:49+09:00</updated>
+  <updated>2025-09-21T10:46:19+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Spring AI에 대하여</title>
+    <link href="https://kguswo.github.io/posts/Spring-AI%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/" rel="alternate" type="text/html" title="Spring AI에 대하여" />
+    <published>2025-09-21T01:32:30+09:00</published>
+  
+    <updated>2025-09-21T01:32:30+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Spring-AI%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Spring-AI%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>들어가며   최근 AI와 LLM이 소프트웨어 개발의 새로운 패러다임으로 자리 잡으면서, 기존 Spring 생태계에서도 이러한 변화에 대응할 수 있는 프레임워크가 필요해졌다. Spring AI는 이런 요구에 응답하여 탄생한 프레임워크로, Spring 개발자들이 익숙한 방식으로 AI 기능을 통합할 수 있게 해준다.  AI에 큰 관심과 향후 커리어에 AI를 접목하고싶은 서버 개발자로서, 이 글을 통해 Spring AI의 핵심 개념들을 기술적으로 간단히 살펴보고 실제 구현에서 고려해야 할 세부사항들을 정리해보려 한다.  Spring AI란?   Spring AI는 AI 엔지니어링을 위한 애플리케이션 프레임워크다. 핵심 목표는 Spring 생태계의 설계 원칙인 이식성(Portability)과 모듈화 설계(Mod...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,32 +135,6 @@
   
 
   <summary>[level 3] [1차] 추석 트래픽 - 17676  문제 링크  성능 요약  메모리: 83.2 MB, 시간: 100.74 ms  구분  코딩테스트 연습 &amp;gt; 2018 KAKAO BLIND RECRUITMENT  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 10일 11:40:34  문제 설명  추석 트래픽  이번 추석에도 시스템 장애가 없는 명절을 보내고 싶은 어피치는 서버를 증설해야 할지 고민이다. 장애 대비용 서버 증설 여부를 결정하기 위해 작년 추석 기간인 9월 15일 로그 데이터를 분석한 후 초당 최대 처리량을 계산해보기로 했다. 초당 최대 처리량은 요청의 응답 완료 여부에 관계없이 임의 시간부터 1초(=1,000밀리초)간 처리하는 요청의 최...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>System Design Interview - 검색어 자동완성 시스템</title>
-    <link href="https://kguswo.github.io/posts/System-Design-Interview-%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C/" rel="alternate" type="text/html" title="System Design Interview - 검색어 자동완성 시스템" />
-    <published>2025-09-08T05:57:28+09:00</published>
-  
-    <updated>2025-09-08T05:57:28+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/System-Design-Interview-%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/System-Design-Interview-%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="시스템" />
-    
-    <category term="디자인" />
-    
-  
-
-  <summary>들어가며  많은 포털 사이트, 웹 사이트 검색창에는 단어를 입력하면 입력중인 글자에 맞는 추천 검색어들이 표시된다. 이러한 기능을 자동완성 이라고 한다.   이 글은 특정 입력에 대한 검색어 자동 완성 기능을 다룬다.    1. 문제 이해 및 설계 범위     자동완될 검색어는 첫 부분으로 한정한다.   5개의 자동완성 검색어가 표시되어야 한다.   인기 순위를 기준으로 5개의 검색어를 표시한다.   맞춤법 검사나 자동수정은 지원하지 않는다   질의어는 영어지만, 다국어 지원을 생각하면 좋다.   질의는 영어 소문자로 구성된다.   DAU는 천만명 기준이다.     요구사항 정리     빠른 응답 속도 : 사용자가 검색어를 입력할 때마다 자동완성 검색어도 표시되어야 한다. (100ms 이내)   연관성...</summary>
 
   </entry>
 
