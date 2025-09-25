@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-25T10:21:50+09:00</updated>
+  <updated>2025-09-25T10:31:39+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Effective Java] - 생성자에 매개변수가 많다면 빌더를 고려하라</title>
+    <link href="https://kguswo.github.io/posts/Effective-Java-%EC%83%9D%EC%84%B1%EC%9E%90%EC%97%90-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EA%B0%80-%EB%A7%8E%EB%8B%A4%EB%A9%B4-%EB%B9%8C%EB%8D%94%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 생성자에 매개변수가 많다면 빌더를 고려하라" />
+    <published>2025-09-25T09:38:48+09:00</published>
+  
+    <updated>2025-09-25T09:38:48+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Effective-Java-%EC%83%9D%EC%84%B1%EC%9E%90%EC%97%90-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EA%B0%80-%EB%A7%8E%EB%8B%A4%EB%A9%B4-%EB%B9%8C%EB%8D%94%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EC%83%9D%EC%84%B1%EC%9E%90%EC%97%90-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EA%B0%80-%EB%A7%8E%EB%8B%A4%EB%A9%B4-%EB%B9%8C%EB%8D%94%EB%A5%BC-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Item 2 생성자에 매개변수가 많다면 빌더를 고려하라  들어가며  생성자에 매개변수가 많으면 사용하기도 어렵고, 매개변수의 의미를 파악하기 힘들다는 문제가 있다.  예를 들어, 또 비슷한 타입의 매개변수가 여러 개일 때는 순서를 잘못 넣으면 컴파일 시점에서 오류가 발생하지 않아 실수를 유발하기도 한다. 이 경우 점층적 생성자 패턴과 자바빈즈 패턴이 전통적인 해결책으로 사용되었으나 각각 단점이 존재한다.  이번 글에서 빌더 패턴의 구체적인 구조와 사용법, 그리고 장점을 자세히 살펴보자.  점층적 생성자 패턴  생성자에 매개변수가 많은 객체를 만들 때 전통적인 점층적 생성자 패턴을 사용하면, 매번 모든 매개변수를 나열하는 생성자가 필요해져 생성자의 수가 급격하게 늘어난다.  점층적 생성자 패턴(teles...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>[level 2] 거리두기 확인하기 - 81302  문제 링크  성능 요약  메모리: 75.7 MB, 시간: 0.19 ms  구분  코딩테스트 연습 &amp;gt; 2021 카카오 채용연계형 인턴십  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 10일 10:44:45  문제 설명  개발자를 희망하는 죠르디가 카카오에 면접을 보러 왔습니다. 코로나 바이러스 감염 예방을 위해 응시자들은 거리를 둬서 대기를 해야하는데 개발 직군 면접인 만큼 아래와 같은 규칙으로 대기실에 거리를 두고 앉도록 안내하고 있습니다.    대기실은 5개이며, 각 대기실은 5x5 크기입니다. 거리두기를 위하여 응시자들 끼리는 맨해튼 거리1가 2 이하로 앉지 말아 주세요. 단 응시자가 앉아있는 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>PGMS_추석 트래픽 (Java)</title>
-    <link href="https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/" rel="alternate" type="text/html" title="PGMS_추석 트래픽 (Java)" />
-    <published>2025-09-10T11:49:39+09:00</published>
-  
-    <updated>2025-09-10T11:49:39+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EC%B6%94%EC%84%9D-%ED%8A%B8%EB%9E%98%ED%94%BD-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[level 3] [1차] 추석 트래픽 - 17676  문제 링크  성능 요약  메모리: 83.2 MB, 시간: 100.74 ms  구분  코딩테스트 연습 &amp;gt; 2018 KAKAO BLIND RECRUITMENT  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 10일 11:40:34  문제 설명  추석 트래픽  이번 추석에도 시스템 장애가 없는 명절을 보내고 싶은 어피치는 서버를 증설해야 할지 고민이다. 장애 대비용 서버 증설 여부를 결정하기 위해 작년 추석 기간인 9월 15일 로그 데이터를 분석한 후 초당 최대 처리량을 계산해보기로 했다. 초당 최대 처리량은 요청의 응답 완료 여부에 관계없이 임의 시간부터 1초(=1,000밀리초)간 처리하는 요청의 최...</summary>
 
   </entry>
 
