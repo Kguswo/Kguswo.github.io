@@ -970,7 +970,7 @@
 
 <p><br /></p>
 
-<p>클래스는 클라이언트에 public 생성자 대신 (혹은 생정자와 함께) 정적 팩터리 메서드를 제공할 수 있다.</p>
+<p>클래스는 클라이언트에 public 생성자 대신 (혹은 생성자와 함께) 정적 팩터리 메서드를 제공할 수 있다.</p>
 
 <p>지금부터 정적 팩터리 메서드를 생성자와 비교한 각 장점과 단점에 대해 알아보자.</p>
 
@@ -1204,7 +1204,7 @@
         <span class="kd">implements</span> <span class="nc">RandomAccess</span><span class="o">,</span> <span class="nc">Serializable</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>위 코드에서 <code class="language-plaintext highlighter-rouge">Collections.emptyList()</code> 메서드는 반환타입으로 <code class="language-plaintext highlighter-rouge">List</code> 인터페이스를 병시하고 있다. 하지만 실제 반환하는 객체는 <code class="language-plaintext highlighter-rouge">Collections</code> 클래스 내부에 정의된 private 클래스 <code class="language-plaintext highlighter-rouge">EmptyList</code> 의 인스턴스다.</p>
+<p>위 코드에서 <code class="language-plaintext highlighter-rouge">Collections.emptyList()</code> 메서드는 반환타입으로 <code class="language-plaintext highlighter-rouge">List</code> 인터페이스를 명시하고 있다. 하지만 실제 반환하는 객체는 <code class="language-plaintext highlighter-rouge">Collections</code> 클래스 내부에 정의된 private 클래스 <code class="language-plaintext highlighter-rouge">EmptyList</code> 의 인스턴스다.</p>
 
 <p>클라이언트는 <code class="language-plaintext highlighter-rouge">List</code> 인터페이스만 알면 되므로, 구현체인 <code class="language-plaintext highlighter-rouge">EmptyList</code> 의 존재를 몰라도 된다. 이러한 방식은 프로그래머가 API를 사용하기 위해 익혀야 할 개념의 수와 난이도를 낮췄다.</p>
 
@@ -1552,7 +1552,7 @@
 
 <ul>
   <li>생성자는 <code class="language-plaintext highlighter-rouge">private</code>이고 정적 팩터리 메서드만 제공한다</li>
-  <li><code class="language-plaintext highlighter-rouge">LocalDate.of()</code>, <code class="language-plaintext highlighter-rouge">LocalDate.now()</code>, <code class="language-plaintext highlighter-rouge">LocalDate.parse()</code> 등 여러 정적 팩터리 메서드가 존재하기 떄문에  처음 사용하는 개발자는 어떤 메서드를 써야 할지 혼란스러울 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">LocalDate.of()</code>, <code class="language-plaintext highlighter-rouge">LocalDate.now()</code>, <code class="language-plaintext highlighter-rouge">LocalDate.parse()</code> 등 여러 정적 팩터리 메서드가 존재하기 때문에  처음 사용하는 개발자는 어떤 메서드를 써야 할지 혼란스러울 수 있다.</li>
 </ul>
 
 <p>따라서 정적 팩터리 메서드를 제공할 때, <strong>API 문서를 잘 써놓고</strong> <strong>메서드 이름을 널리 알려진 규약에 따라 짓는 것</strong>이 중요하다.</p>

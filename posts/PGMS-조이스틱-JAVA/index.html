@@ -899,7 +899,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="759 words"
+  title="766 words"
 >
   <em>4 min</em> read</span>
 
@@ -1013,16 +1013,8 @@ ex) 완성해야 하는 이름이 세 글자면 AAA, 네 글자면 AAAA</p>
 
 <h3 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>```java
-class Solution {
-    public int solution(String name) {
-        int answer = 0;
-        int len = name.length();
-        int start = 0;
-        int move = len - 1; // 쭉 오른쪽 갈 때</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1042,25 +1034,41 @@ class Solution {
 17
 18
 19
-</pre></td><td class="rouge-code"><pre>    if(len == 1) return name.charAt(0) - 'A';
-    
-    // 알파벳만
-    for (int i = 0; i &lt; len; ++i) {
-        answer += Math.min(name.charAt(i)- 'A',  26-(name.charAt(i) - 'A'));
-    }
-    
-    // 위치만( AAAAA 같이 연속된 A있으면 역으로 하는게 이득)
-    while (start &lt; len) { 
-        int end = start + 1;
-        while (end &lt;= len - 1 &amp;&amp; name.charAt(end) == 'A') {
-            end++;
-        }
-        move = Math.min(move, Math.min(start, len - end) + start + len - end);
-        start++;
-    }
-    
-    return Math.min(answer + len - 1, answer + move);
-} }```
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">solution</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">move</span> <span class="o">=</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// 쭉 오른쪽 갈 때</span>
+        
+        <span class="k">if</span><span class="o">(</span><span class="n">len</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">name</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">-</span> <span class="sc">'A'</span><span class="o">;</span>
+        
+        <span class="c1">// 알파벳만</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">answer</span> <span class="o">+=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)-</span> <span class="sc">'A'</span><span class="o">,</span>  <span class="mi">26</span><span class="o">-(</span><span class="n">name</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">-</span> <span class="sc">'A'</span><span class="o">));</span>
+        <span class="o">}</span>
+        
+        <span class="c1">// 위치만( AAAAA 같이 연속된 A있으면 역으로 하는게 이득)</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">start</span> <span class="o">&lt;</span> <span class="n">len</span><span class="o">)</span> <span class="o">{</span> 
+            <span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">end</span> <span class="o">&lt;=</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">name</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">end</span><span class="o">)</span> <span class="o">==</span> <span class="sc">'A'</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">end</span><span class="o">++;</span>
+            <span class="o">}</span>
+            <span class="n">move</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">move</span><span class="o">,</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">start</span><span class="o">,</span> <span class="n">len</span> <span class="o">-</span> <span class="n">end</span><span class="o">)</span> <span class="o">+</span> <span class="n">start</span> <span class="o">+</span> <span class="n">len</span> <span class="o">-</span> <span class="n">end</span><span class="o">);</span>
+            <span class="n">start</span><span class="o">++;</span>
+        <span class="o">}</span>
+        
+        <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">answer</span> <span class="o">+</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="o">,</span> <span class="n">answer</span> <span class="o">+</span> <span class="n">move</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>

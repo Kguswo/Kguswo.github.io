@@ -736,71 +736,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -826,17 +761,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1105,7 +1029,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2410 words"
+  title="2418 words"
 >
   <em>13 min</em> read</span>
 
@@ -1473,34 +1397,24 @@
 
 <p>최종 LIS들:</p>
 <ul>
-  <li>{10, 20, 30, 50} (길이 4, 개수 1)
-```</li>
+  <li>{10, 20, 30, 50} (길이 4, 개수 1)</li>
 </ul>
 
-<ol>
-  <li>세그먼트 트리 최종
-각 위치는 해당 값을 마지막으로 하는 LIS의 정보를 저장:
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
-</pre></td><td class="rouge-code"><pre>위치 1 (값 10): length=1, count=1
+</pre></td><td class="rouge-code"><pre>
+3. 세그먼트 트리 최종
+각 위치는 해당 값을 마지막으로 하는 LIS의 정보를 저장:
+</pre></td></tr></tbody></table></code></div></div>
+<p>위치 1 (값 10): length=1, count=1
 위치 2 (값 20): length=2, count=1
 위치 3 (값 30): length=3, count=1
-위치 4 (값 50): length=4, count=1
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><a href="/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png" class="popup img-link shimmer"><img src="/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png" alt="" loading="lazy"></a></p>
-  </li>
-</ol>
-
-<blockquote>
-  <h2 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-</blockquote>
-
-<div class="language-java highlighter-rouge"><div class="code-header">
-        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+위치 4 (값 50): length=4, count=1</p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1636,141 +1550,151 @@
 133
 134
 135
-</pre></td><td class="rouge-code"><pre><span class="cm">/**
+136
+137
+138
+139
+140
+</pre></td><td class="rouge-code"><pre>![](/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png)
+
+&gt; ## 코드
+
+```java
+/**
  * Author: nowalex322, Kim HyeonJae
- */</span>
+ */
 
-<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+import java.io.*;
+import java.util.*;
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
-    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">MOD</span> <span class="o">=</span> <span class="mi">1000000007</span><span class="o">;</span>
+public class Main {
+    static final int MOD = 1000000007;
 
-    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Pair</span><span class="o">{</span>
-        <span class="kt">int</span> <span class="n">length</span><span class="o">;</span>
-        <span class="kt">long</span> <span class="n">count</span><span class="o">;</span>
-        <span class="kd">public</span> <span class="nf">Pair</span><span class="o">(</span><span class="kt">int</span> <span class="n">length</span><span class="o">,</span> <span class="kt">long</span> <span class="n">count</span><span class="o">){</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">length</span> <span class="o">=</span> <span class="n">length</span><span class="o">;</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">count</span> <span class="o">=</span> <span class="n">count</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+    static class Pair{
+        int length;
+        long count;
+        public Pair(int length, long count){
+            this.length = length;
+            this.count = count;
+        }
+    }
 
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">Pair</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Pair</span> <span class="n">b</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
-        <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
-        <span class="c1">// 같은 길이일때는 count를 더함</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">Pair</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">count</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">count</span><span class="o">)</span> <span class="o">%</span> <span class="no">MOD</span><span class="o">);</span>
-    <span class="o">}</span>
+    static Pair merge(Pair a, Pair b){
+        if(a.length &gt; b.length) return a;
+        else if (a.length &lt; b.length) return b;
+        // 같은 길이일때는 count를 더함
+        return new Pair(a.length, (a.count + b.count) % MOD);
+    }
 
-    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">,</span> <span class="n">arr</span><span class="o">[],</span> <span class="n">compressed</span><span class="o">[];</span>
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="n">segment</span><span class="o">[];</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
-    <span class="o">}</span>
+    static BufferedReader br;
+    static BufferedWriter bw;
+    static StringTokenizer st;
+    static int N, arr[], compressed[];
+    static Pair segment[];
+    public static void main(String[] args) throws Exception {
+        new Main().solution();
+    }
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
-<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_17411_가장긴증가하는부분수열6/input.txt")));</span>
-        <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+    public void solution() throws Exception {
+        br = new BufferedReader(new InputStreamReader(System.in));
+//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_17411_가장긴증가하는부분수열6/input.txt")));
+        bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        N = Integer.parseInt(br.readLine());
 
-        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
-        <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
-        <span class="o">}</span>
+        arr = new int[N];
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i &lt; N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
 
-        <span class="c1">// 좌표압축</span>
-        <span class="nc">TreeSet</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">uniqueSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TreeSet</span><span class="o">&lt;&gt;();</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">:</span> <span class="n">arr</span><span class="o">)</span> <span class="n">uniqueSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
-        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">unique</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">uniqueSet</span><span class="o">);</span> <span class="c1">// 중복제거</span>
-        <span class="n">compressed</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="o">(</span><span class="n">unique</span><span class="o">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-            <span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// 1-based</span>
-        <span class="o">}</span>
+        // 좌표압축
+        TreeSet&lt;Integer&gt; uniqueSet = new TreeSet&lt;&gt;();
+        for(int n : arr) uniqueSet.add(n);
+        ArrayList&lt;Integer&gt; unique = new ArrayList&lt;&gt;(uniqueSet); // 중복제거
+        compressed = new int[N];
+        for(int i = 0; i &lt; N; i++){
+            int pos = binarySearch(unique, arr[i]);
+            compressed[i] = pos + 1; // 1-based
+        }
 
-        <span class="kt">int</span> <span class="n">uniqueSize</span> <span class="o">=</span> <span class="n">unique</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
-        <span class="n">segment</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">[</span><span class="mi">4</span><span class="o">*</span><span class="n">uniqueSize</span><span class="o">];</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">*</span><span class="n">uniqueSize</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">segment</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-        <span class="o">}</span>
+        int uniqueSize = unique.size();
+        segment = new Pair[4*uniqueSize];
+        for (int i=0; i&lt;4*uniqueSize; i++) {
+            segment[i] = new Pair(0, 0);
+        }
 
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            <span class="c1">// 지금i위치보다 앞에있는 작은수들 중 LIS 찾기</span>
-            <span class="nc">Pair</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">]-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        for(int i=0; i&lt;N; i++){
+            // 지금i위치보다 앞에있는 작은수들 중 LIS 찾기
+            Pair curr = query(1, compressed[i]-1, 1, uniqueSize, 1);
 
-            <span class="cm">/*
+            /*
             지금위치i까지 포함해서 길이 1 증가
             count가 0일땐 새로운수열 시작 (1)
             count가 0아닐땐 이전까지 count 다 더함
-            */</span>
-            <span class="nc">Pair</span> <span class="n">newValue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="n">curr</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">curr</span><span class="o">.</span><span class="na">count</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+            */
+            Pair newValue = new Pair(curr.length + 1, Math.max(curr.count, 1));
 
-            <span class="n">update</span><span class="o">(</span><span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">newValue</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-        <span class="o">}</span>
+            update(compressed[i], newValue, 1, uniqueSize, 1);
+        }
 
-        <span class="nc">Pair</span> <span class="n">result</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        Pair result = query(1, uniqueSize, 1, uniqueSize, 1);
         
-        <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="na">count</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
-        <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-        <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
+        bw.write(result.length + " " + result.count + "\n");
+        bw.flush();
+        bw.close();
+        br.close();
+    }
 
-    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">binarySearch</span><span class="o">(</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">unique</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">unique</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    private int binarySearch(ArrayList&lt;Integer&gt; unique, int target) {
+        int left = 0, right = unique.size() - 1;
+        int res = 0;
 
-        <span class="k">while</span><span class="o">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">){</span>
-            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="o">(</span><span class="n">right</span><span class="o">-</span><span class="n">left</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">unique</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">mid</span><span class="o">)</span> <span class="o">&gt;=</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">res</span> <span class="o">=</span> <span class="n">mid</span><span class="o">;</span>
-                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-            <span class="o">}</span> 
-            <span class="k">else</span> <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
-    <span class="o">}</span>
+        while(left &lt;= right){
+            int mid = left + (right-left)/2;
+            if(unique.get(mid) &gt;= target) {
+                res = mid;
+                right = mid - 1;
+            } 
+            else left = mid + 1;
+        }
+        return res;
+    }
 
-    <span class="cm">/*
+    /*
     구간 [left, right]에서 최댓값 찾기
-     */</span>
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="nf">query</span><span class="o">(</span><span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">node</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">left</span> <span class="o">&gt;</span> <span class="n">end</span> <span class="o">||</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+     */
+    static Pair query(int left, int right, int start, int end, int node){
+        if(left &gt; end || right &lt; start) return new Pair(0, 0);
 
-        <span class="k">if</span><span class="o">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">start</span> <span class="o">&amp;&amp;</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">)</span> <span class="k">return</span> <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+        if(left &lt;= start &amp;&amp; end &lt;= right) return segment[node];
 
-        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-        <span class="nc">Pair</span> <span class="n">leftRes</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">node</span><span class="o">*</span><span class="mi">2</span><span class="o">);</span>
-        <span class="nc">Pair</span> <span class="n">rightRes</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">node</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        int mid = start + (end-start)/2;
+        Pair leftRes = query(left, right, start, mid, node*2);
+        Pair rightRes = query(left, right, mid+1, end, node*2 + 1);
         
-        <span class="k">return</span> <span class="nf">merge</span><span class="o">(</span><span class="n">leftRes</span><span class="o">,</span> <span class="n">rightRes</span><span class="o">);</span>
-    <span class="o">}</span>
+        return merge(leftRes, rightRes);
+    }
 
-    <span class="cm">/*
+    /*
     pos 위치를 value로 업데이트
-     */</span>
-    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="kt">int</span> <span class="n">pos</span><span class="o">,</span> <span class="nc">Pair</span> <span class="n">value</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">node</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="n">end</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+     */
+    static void update(int pos, Pair value, int start, int end, int node){
+        if(pos &gt; end || pos &lt; start) return;
 
-        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="o">){</span>
-            <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">],</span> <span class="n">value</span><span class="o">);</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
+        if(start == end){
+            segment[node] = merge(segment[node], value);
+            return;
+        }
 
-        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-        <span class="n">update</span><span class="o">(</span><span class="n">pos</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">);</span>
-        <span class="n">update</span><span class="o">(</span><span class="n">pos</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        int mid = start + (end-start)/2;
+        update(pos, value, start, mid, node * 2);
+        update(pos, value, mid+1, end, node * 2 + 1);
 
-        <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">segment</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">],</span> <span class="n">segment</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]);</span>
-    <span class="o">}</span>
+        segment[node] = merge(segment[node * 2], segment[node * 2 + 1]);
+    }
 
-<span class="o">}</span>
+}
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>
