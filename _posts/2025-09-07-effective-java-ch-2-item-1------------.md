@@ -4,7 +4,7 @@ date: 2025-09-06T21:39:27.247Z
 tags: ["Java"]
 slug: "Effective-Java-Ch.2-Item-1-생성자-대신-정적-팩터리-메서드를-고려하라"
 image: "../assets/posts/69505ea9849344aa40cd9d11fa0a67c38cb7a0fb5e9d5ddcf8e986f8596709f3.png"
-categories: 개발서적
+categories: 개발서적 이펙티브자바
 toc: true
 velogSync:
   lastSyncedAt: 2025-09-07T01:38:59.630Z

@@ -4,7 +4,7 @@ date: 2025-10-01T07:52:28.018Z
 tags: ["IntelliJ"]
 slug: "인텔리제이-테스트-실행-시-ClassNotFoundException-오류-해결"
 image: "../assets/posts/6cf1fbc72cceb788e32a8ebb870d86bd77f87d367699890de2e71b314f44b8a3.png"
-categories: 오류 해결
+categories: 오류_해결
 toc: true
 velogSync:
   lastSyncedAt: 2025-10-01T14:34:27.961Z

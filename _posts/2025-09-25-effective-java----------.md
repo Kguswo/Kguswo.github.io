@@ -4,7 +4,7 @@ date: 2025-09-25T00:38:48.253Z
 tags: ["Java"]
 slug: "Effective-Java-생성자에-매개변수가-많다면-빌더를-고려하라"
 image: "../assets/posts/1d34335aeec1e43ae3399b99e63b461775cc4882581b00076978d5d937668c92.png"
-categories: 이펙티브자바
+categories: 개발서적 이펙티브자바
 toc: true
 velogSync:
   lastSyncedAt: 2025-09-25T01:27:04.177Z

@@ -4,7 +4,7 @@ date: 2025-03-21T15:30:43.189Z
 tags: ["CS","데이터베이스"]
 slug: "Computer-Science-Note-Database"
 image: "../assets/posts/5941d28e8e1486ae3052ed8afcd9d9e943787d9420923f30dd5453916dc435bd.png"
-categories: CS Note
+categories: CS_Note
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:01:53.436Z

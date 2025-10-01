@@ -4,7 +4,7 @@ date: 2025-09-01T16:36:47.772Z
 tags: ["github","slack","trello"]
 slug: "무료로-구축하는-협업-자동화-Trello-Github-Slack"
 image: "../assets/posts/b9dcd4ef88a109a2ba00376bb8c264a4574c3f36ab56e931ae49af104a581a04.png"
-categories: 사이드 프로젝트
+categories: 사이드_프로젝트
 toc: true
 velogSync:
   lastSyncedAt: 2025-09-06T07:05:10.288Z

@@ -4,7 +4,7 @@ date: 2025-09-07T20:57:28.467Z
 tags: ["System Design Interview"]
 slug: "System-Design-Interview-검색어-자동완성-시스템"
 image: "../assets/posts/9a605fcf277cb6a90fc189cc0e3edcf8fbba6bb5057a4a7754865de3c7a0089e.png"
-categories: 시스템 디자인
+categories: 시스템_디자인
 toc: true
 velogSync:
   lastSyncedAt: 2025-09-08T01:38:57.638Z

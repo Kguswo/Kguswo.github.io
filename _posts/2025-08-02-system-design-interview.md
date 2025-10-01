@@ -4,7 +4,7 @@ date: 2025-08-01T16:50:19.702Z
 tags: ["system-design"]
 slug: "System-Design-Interview"
 image: "../assets/posts/6c991d492ac0ed9706089a7a9a13321ca92edfe10fe6eff059111e482d13d9d4.png"
-categories: 시스템 디자인
+categories: 시스템_디자인
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:00:46.464Z

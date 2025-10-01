@@ -4,7 +4,7 @@ date: 2025-02-24T18:43:23.965Z
 tags: ["vscode"]
 slug: "VSCode에서-Git-Bash-Terminal-사용-시-시작-경로-오류-해결하기"
 image: "../assets/posts/bd1fc9020a7044b5f4dbcb9875015aa88dc73a3c2380c3dbfb080b007894a0b0.png"
-categories: 오류 해결
+categories: 오류_해결
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:02:35.199Z
