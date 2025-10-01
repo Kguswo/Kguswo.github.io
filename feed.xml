@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-10-02T00:22:09+09:00</updated>
+  <updated>2025-10-02T00:23:07+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -20,19 +20,21 @@
 
   
   <entry>
-    <title></title>
-    <link href="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" rel="alternate" type="text/html" title="" />
-    <published>2025-10-02T00:22:09+09:00</published>
+    <title>인텔리제이 테스트 실행 시 ClassNotFoundException 오류 해결</title>
+    <link href="https://kguswo.github.io/posts/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%8B%9C-ClassNotFoundException-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0/" rel="alternate" type="text/html" title="인텔리제이 테스트 실행 시 ClassNotFoundException 오류 해결" />
+    <published>2025-10-01T16:52:28+09:00</published>
   
-    <updated>2025-10-02T00:22:09+09:00</updated>
+    <updated>2025-10-01T16:52:28+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" />
+    <id>https://kguswo.github.io/posts/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%8B%9C-ClassNotFoundException-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%8B%9C-ClassNotFoundException-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
 
   
+    
+    <category term="오류_해결" />
     
   
 
