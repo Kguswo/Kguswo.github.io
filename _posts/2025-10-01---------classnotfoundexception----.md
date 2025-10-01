@@ -1,5 +1,5 @@
 ---
-title: "인텔리제이 테스트 실행 시 "ClassNotFoundException" 오류 해결"
+title: "인텔리제이 테스트 실행 시 ClassNotFoundException 오류 해결"
 date: 2025-10-01T07:52:28.018Z
 tags: ["IntelliJ"]
 slug: "인텔리제이-테스트-실행-시-ClassNotFoundException-오류-해결"
