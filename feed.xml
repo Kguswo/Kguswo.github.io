@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-10-01T23:39:06+09:00</updated>
+  <updated>2025-10-02T00:22:09+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title></title>
     <link href="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" rel="alternate" type="text/html" title="" />
-    <published>2025-10-01T23:39:06+09:00</published>
+    <published>2025-10-02T00:22:09+09:00</published>
   
-    <updated>2025-10-01T23:39:06+09:00</updated>
+    <updated>2025-10-02T00:22:09+09:00</updated>
   
     <id>https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/</id>
     <content type="text/html" src="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" />
@@ -55,6 +55,8 @@
     </author>
 
   
+    
+    <category term="개발서적" />
     
     <category term="이펙티브자바" />
     
