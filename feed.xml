@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-09-25T10:31:39+09:00</updated>
+  <updated>2025-10-01T23:39:06+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,28 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title></title>
+    <link href="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" rel="alternate" type="text/html" title="" />
+    <published>2025-10-01T23:39:06+09:00</published>
+  
+    <updated>2025-10-01T23:39:06+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/2025-10-01-classnotfoundexception/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+  
+
+  <summary>들어가며     이번에 과제전형을 진행하는 중 인텔리제이 오류를 겪어 해결과정을 정리해두고자 한다. 어느 회사 과제, 과제 내용, 그리고 관련된 내용이나 코드는 전혀 없음을 미리 밝힌다.   오류 상황  macOS 에서 Intellij 로 Spring Boot 프로젝트를 작업했다. 빌드 및 실행, 테스트 모두 잘 되는 상황이었다.  이를 Windows 환경에서도 잘 되는지 검증하고자 .zip으로 압축하여 윈도우 환경에서 실행해보았다.  빌드 및 실행을 잘 된다…    애플리케이션 실행은 잘 되는 상황이다.  테스트 오류??      오류가 발생했다.  Windows에서는  start build\reports\tests\test\index.html   macOS에서는  open  build\reports...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +133,6 @@
   
 
   <summary>[level 2] 스킬트리 - 49993  문제 링크  성능 요약  메모리: 79.6 MB, 시간: 0.21 ms  구분  코딩테스트 연습 &amp;gt; Summer／Winter Coding（～2018）  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 17일 10:33:38  문제 설명  선행 스킬이란 어떤 스킬을 배우기 전에 먼저 배워야 하는 스킬을 뜻합니다.  예를 들어 선행 스킬 순서가 스파크 → 라이트닝 볼트 → 썬더일때, 썬더를 배우려면 먼저 라이트닝 볼트를 배워야 하고, 라이트닝 볼트를 배우려면 먼저 스파크를 배워야 합니다.  위 순서에 없는 다른 스킬(힐링 등)은 순서에 상관없이 배울 수 있습니다. 따라서 스파크 → 힐링 → 라이트닝 볼트 → 썬더와...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>PGMS_거리두기 확인하기 (Java)</title>
-    <link href="https://kguswo.github.io/posts/PGMS%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-Java-63sj1vsu/" rel="alternate" type="text/html" title="PGMS_거리두기 확인하기 (Java)" />
-    <published>2025-09-12T01:21:37+09:00</published>
-  
-    <updated>2025-09-12T01:21:37+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/PGMS%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-Java-63sj1vsu/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-Java-63sj1vsu/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[level 2] 거리두기 확인하기 - 81302  문제 링크  성능 요약  메모리: 75.7 MB, 시간: 0.19 ms  구분  코딩테스트 연습 &amp;gt; 2021 카카오 채용연계형 인턴십  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 09월 10일 10:44:45  문제 설명  개발자를 희망하는 죠르디가 카카오에 면접을 보러 왔습니다. 코로나 바이러스 감염 예방을 위해 응시자들은 거리를 둬서 대기를 해야하는데 개발 직군 면접인 만큼 아래와 같은 규칙으로 대기실에 거리를 두고 앉도록 안내하고 있습니다.    대기실은 5개이며, 각 대기실은 5x5 크기입니다. 거리두기를 위하여 응시자들 끼리는 맨해튼 거리1가 2 이하로 앉지 말아 주세요. 단 응시자가 앉아있는 ...</summary>
 
   </entry>
 
