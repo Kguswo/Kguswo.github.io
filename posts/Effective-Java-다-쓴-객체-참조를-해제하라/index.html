@@ -1142,7 +1142,7 @@
 
 <h3 id="1-직접-메모리를-관리하는-클래스"><span class="me-2">1. 직접 메모리를 관리하는 클래스</span><a href="#1-직접-메모리를-관리하는-클래스" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <blockquote>
-  <p>메무리 누수가 가장 쉽게 발생하는 곳은 <strong>클래스가 자체적으로 메모리는 관리하는 경우</strong> 다.
+  <p>메모리 누수가 가장 쉽게 발생하는 곳은 <strong>클래스가 자체적으로 메모리를 관리하는 경우</strong> 다.
 특히 배열을 사용해 원소를 저장하는 컬렉션 클래스 (ex. <code class="language-plaintext highlighter-rouge">Stack</code>, <code class="language-plaintext highlighter-rouge">Queue</code>, <code class="language-plaintext highlighter-rouge">Deque</code> …) 에서 이 문제가 자주 발생한다.</p>
 </blockquote>
 
@@ -1254,7 +1254,7 @@
 
 <h4 id="실제-jdk의-stack과-vector-구현"><span class="me-2">실제 JDK의 Stack과 Vector 구현</span><a href="#실제-jdk의-stack과-vector-구현" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>실제 자바 표준 라이브러리애서는 <code class="language-plaintext highlighter-rouge">java.util.Stack</code> 클래스는 내부적으로 <code class="language-plaintext highlighter-rouge">Vector</code> 를 상속받아 구현되어 있으며, <code class="language-plaintext highlighter-rouge">Vector</code> 는 배열 기반 컬렉션이다. <code class="language-plaintext highlighter-rouge">Stack</code>의 <code class="language-plaintext highlighter-rouge">pop()</code> 메서드는 내부적으로 <code class="language-plaintext highlighter-rouge">Vector</code>의 <code class="language-plaintext highlighter-rouge">removeElementAt()</code>을 호출하는데, 이 메서드에서 명시적으로 <code class="language-plaintext highlighter-rouge">null</code> 처리를 수행한다.</p>
+<p>실제 자바 표준 라이브러리에서는 <code class="language-plaintext highlighter-rouge">java.util.Stack</code> 클래스는 내부적으로 <code class="language-plaintext highlighter-rouge">Vector</code> 를 상속받아 구현되어 있으며, <code class="language-plaintext highlighter-rouge">Vector</code> 는 배열 기반 컬렉션이다. <code class="language-plaintext highlighter-rouge">Stack</code>의 <code class="language-plaintext highlighter-rouge">pop()</code> 메서드는 내부적으로 <code class="language-plaintext highlighter-rouge">Vector</code>의 <code class="language-plaintext highlighter-rouge">removeElementAt()</code>을 호출하는데, 이 메서드에서 명시적으로 <code class="language-plaintext highlighter-rouge">null</code> 처리를 수행한다.</p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -8336,7 +8336,7 @@
 
               <h4 class="pt-0 my-2">[Effective Java] - toString을 항상 재정의하라</h4>
               <div class="text-muted">
-                <p>## Item 12 : toString 을 항상 재정의하라  ### 들어가며 자바에서 클래스를 만들 때 `equals()`, `hashCode()` 재정의의 중요성은 잘 알고 있다. 하지만 `toString()` 메서드의 재정의는 종종 간과된다.   이펙티브 자바 아이템 12는 toString()을 항상 재정의하는 것이 얼마나 중요한지 강조한다.  #...</p>
+                <p>## Item 12 : toString을 항상 재정의하라  ### 들어가며 자바에서 클래스를 만들 때 `equals()`, `hashCode()` 재정의의 중요성은 잘 알고 있다. 하지만 `toString()` 메서드의 재정의는 종종 간과된다.   이펙티브 자바 아이템 12는 toString()을 항상 재정의하는 것이 얼마나 중요한지 강조한다.  ##...</p>
               </div>
             </div>
           </a>
