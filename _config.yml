@@ -16,7 +16,8 @@ timezone: Asia/Seoul
 
 title: Now's Log # the main title
 
-tagline: Curiosity into Action # it will display as the subtitle
+tagline: Curiosity into Action
+ # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.
@@ -88,7 +89,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: light # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
