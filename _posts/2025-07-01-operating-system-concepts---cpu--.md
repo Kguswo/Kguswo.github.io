@@ -199,7 +199,7 @@ rate-monotonic 스케줄링은 주기 프로세스들의 처리 시간은 각각
 
 <br/>
 
-### ** Case 1) Rate-Monotonic 스케줄링을 사용하지 않은 경우**
+### **Case 1) Rate-Monotonic 스케줄링을 사용하지 않은 경우**
 ![](/assets/posts/c8d67ab0a7c813c583d88b0acc62767b84044a10d04cba56d2943dc17579f706.png)
 
 (P2 > P1라 가정)

@@ -261,8 +261,8 @@ WHERE id NOT IN (SELECT id
 ### 상관관계가 있는 서브 쿼리 (Correlated Subquery)
 > 내부 쿼리가 외부 쿼리에서 얻은 정보에 의지해 실행됨
 
-**주로 `SELECT`, `WHERE`, `FROM` 문에 사용됨
-**
+**주로 `SELECT`, `WHERE`, `FROM` 문에 사용됨**
+
 <br/>
 
 ex) 각 미술관마다 보유하고 있는 페인팅의 개수를 계산
@@ -303,7 +303,7 @@ FROM galleries AS g;
 
 <br/>
 
-이전 예시들과는 달리 이번 예시의 ** 내부 쿼리는 외부 쿼리에 의존한다. **
+이전 예시들과는 달리 이번 예시의 **내부 쿼리는 외부 쿼리에 의존한다.**
 
 외부 쿼리의 테이블인 `galleries` 에 저장된 `gallery_id` 를 가져와서, 
 내부 쿼리인 `paintings` 테이블에 저장된 `id`와 연결해준다.

@@ -4,7 +4,7 @@ date: 2025-08-25T02:28:49.804Z
 tags: ["System Design Interview"]
 slug: "System-Design-Interview-분산-시스템을-위한-유일-ID-생성기-설계"
 image: "../assets/posts/7fcc9b714a7c4e64d254cbf959f34012bb5f638db1c36e18aec2c85fe7320d0b.png"
-categories: 시스템 디자인
+categories: 시스템_디자인
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:00:41.733Z

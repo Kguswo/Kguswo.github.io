@@ -4,7 +4,7 @@ date: 2025-08-05T18:24:38.769Z
 tags: ["claude code"]
 slug: "Claude-Code-사용기"
 image: "../assets/posts/39287db02beed71a777099e5be93ee45095ced0dec92c573d94775f0b204b237.png"
-categories: 기술
+categories: 기술 Claude
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:00:46.139Z

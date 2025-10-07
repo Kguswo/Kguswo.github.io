@@ -4,7 +4,7 @@ date: 2024-08-11T17:37:16.070Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "CODEFORCES-CONTESTS-EPIC-Institute-of-Technology-Round-August-2024-Div.-1-Div.-2-Removals-Game"
 image: "../assets/posts/8c560ef8f014a2436fcc3afd70cbbf866e8e784ec2b20ea17972c6ee757caa4f.png"
-categories: Code Contests
+categories: Code_Contests
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:06:09.290Z

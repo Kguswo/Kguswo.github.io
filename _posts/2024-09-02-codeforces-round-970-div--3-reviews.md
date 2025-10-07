@@ -4,7 +4,7 @@ date: 2024-09-01T19:03:02.729Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "Codeforces-Round-970-Div.-3-Reviews"
 image: "../assets/posts/cd12f5e52c3e7aeb05bdad42ca027d813f308ff6f0b942766902f94465563525.png"
-categories: Code Contests
+categories: Code_Contests
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:06:01.432Z

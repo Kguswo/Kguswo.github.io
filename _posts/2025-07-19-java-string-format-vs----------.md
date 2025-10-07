@@ -83,6 +83,7 @@ Format = 4141 millisecond
 #### 2. Concatenation 문자열 연결의 내부 동작
 - 컴파일러가 자동으로 `StringBuilder` 로 변환
 - 직접적인 문자열 조합
+
 ```java
 
 String str = "A" + var + "B";

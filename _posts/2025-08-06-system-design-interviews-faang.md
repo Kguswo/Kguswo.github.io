@@ -4,7 +4,7 @@ date: 2025-08-05T19:40:27.302Z
 tags: ["system-design"]
 slug: "System-Design-Interviews-FAANG"
 image: "../assets/posts/8fccc6ab9dc44a2138116f00761bfa275feb6ba0148291034261d1756afacd14.png"
-categories: 시스템 디자인
+categories: 시스템_디자인
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:00:44.562Z

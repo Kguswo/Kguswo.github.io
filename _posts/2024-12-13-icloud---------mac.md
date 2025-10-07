@@ -4,7 +4,7 @@ date: 2024-12-13T06:40:09.406Z
 tags: ["iCloud","mac"]
 slug: "iCloud-에서-폴더로-다운받기-오류-Mac"
 image: "../assets/posts/3f3156913bf97e8a02411a20af5ad80b11f018f5b80b2d50cc5f0953b98ae2e7.png"
-categories: 오류 해결
+categories: 오류_해결
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:05:23.454Z

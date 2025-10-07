@@ -235,8 +235,7 @@ public class UserService {
 
 <br/>
 
-_**이제 위 문제들을 하나씩 해결하는 구현 방법들을 알아보자.
-**_
+_**이제 위 문제들을 하나씩 해결하는 구현 방법들을 알아보자.**_
 
 <br/>
 
@@ -362,6 +361,7 @@ if (instance == null) {
 #### 아직 한계가 있다?
 
 1. 원자성 보장 문제
+
 ```java
 private static volatile int counter = 0;
 
@@ -379,6 +379,7 @@ private static AtomicInteger counter = new AtomicInteger(0);
 ```
 
 2. 복합연산도 부적합
+
 ```java
 private static volatile boolean flag1 = false;
 private static volatile boolean flag2 = false;
@@ -548,8 +549,8 @@ EnumSingleton.INSTANCE.doSomething();
 
 <br/>
 
-**1. 리플렉션 공격 방어 : JVM이 enum의 리플렉션 기반 인스턴스 생성을 원천 차단
-**
+**1. 리플렉션 공격 방어 : JVM이 enum의 리플렉션 기반 인스턴스 생성을 원천 차단**
+
 ```java
 try {
     Constructor<EnumSingleton> constructor = EnumSingleton.class.getDeclaredConstructor();

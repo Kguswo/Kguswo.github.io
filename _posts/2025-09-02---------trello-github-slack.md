@@ -4,7 +4,7 @@ date: 2025-09-01T16:36:47.772Z
 tags: ["github","slack","trello"]
 slug: "무료로-구축하는-협업-자동화-Trello-Github-Slack"
 image: "../assets/posts/b9dcd4ef88a109a2ba00376bb8c264a4574c3f36ab56e931ae49af104a581a04.png"
-categories: 사이드 프로젝트
+categories: 사이드_프로젝트
 toc: true
 velogSync:
   lastSyncedAt: 2025-09-06T07:05:10.288Z
@@ -457,10 +457,13 @@ Step 2: GitHub Repository Webhooks 설정
 이를 통해 팀원들이 개발 진행상황을 실시간으로 파악하고 빠르게 피드백을 주고받을 수 있게 되었다.
 
 이슈 생성
+
 ![](/assets/posts/692d62eeb6196bf998d1d3f425bc7dd067d9e6927f50b7b8cf09d7bcecc8c03a.png)
 
 PR 생성
+
 ![](/assets/posts/0e6899c376c7bb47e84562dcb9ce93eb88853fa6600980cf6ac8189b182900e6.png)
 
 Commit & PR 병합
+
 ![](/assets/posts/4a9644a584f83757ec27f11f02f13ff9ffb6b811eb19fd617145d8b1400e3216.png)
