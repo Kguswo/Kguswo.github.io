@@ -1271,7 +1271,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="8132 words"
+  title="8134 words"
 >
   <em>45 min</em> read</span>
 
@@ -1313,7 +1313,7 @@
 
 <h1 id="introduction-to-innodb-in-mysql-80">Introduction to InnoDB in MySQL 8.0</h1>
 <hr />
-<p>MySQL에서 사용하는 InnoDB는 높은 가용성과 성능을 보장하기 위해 사용되는 다목적 $^*$<strong>스토리지 엔진</strong>이다.</p>
+<p>MySQL에서 사용하는 InnoDB는 높은 가용성과 성능을 보장하기 위해 사용되는 다목적 * <strong>스토리지 엔진</strong>이다.</p>
 <h5 id="스토리지-엔진--데이터베이스-시스템에서-데이터를-저장-관리-검색하는-방법을-담당하는-소프트웨어-컴포넌트다-데이터베이스의-핵심-부분으로-데이터가-실제로-디스크에-어떻게-저장되고-메모리에서-어떻게-처리되는지-결정한다"><span class="me-2">스토리지 엔진 : 데이터베이스 시스템에서 데이터를 저장, 관리, 검색하는 방법을 담당하는 소프트웨어 컴포넌트다. 데이터베이스의 핵심 부분으로, 데이터가 실제로 디스크에 어떻게 저장되고 메모리에서 어떻게 처리되는지 결정한다.</span><a href="#스토리지-엔진--데이터베이스-시스템에서-데이터를-저장-관리-검색하는-방법을-담당하는-소프트웨어-컴포넌트다-데이터베이스의-핵심-부분으로-데이터가-실제로-디스크에-어떻게-저장되고-메모리에서-어떻게-처리되는지-결정한다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
 <p>MySQL 8.0에서 기본 스토리지 엔진으로 InnoDB를 사용하며, <code class="language-plaintext highlighter-rouge">CREATE TABLE</code> 구문에 <code class="language-plaintext highlighter-rouge">ENGINE=</code> 옵션을 추가하여 다른 엔진을 사용하도록 설정할 수 있다.</p>
 
@@ -1703,7 +1703,7 @@ MySQL 옵션 파일의 <code class="language-plaintext highlighter-rouge">[mysql
 <hr />
 
 <blockquote>
-  <p><em>InnoDB</em>는 데이터의 멀티 버전을 지원하는 스토리지 엔진 (<a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_mvcc">multi-versioned storage engine</a>)이다. 변경된 row들에 대한 이전 버전의 정보들을 가지고 있으며, 이를 통해서 동시성 제어와 <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_rollback">rollback</a>과 같은 트랜잭션 기능들을 제공한다. 이러한 정보들은 테이블 스페이스 내의 <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_rollback_segment">rollback segment</a>라고 불리는 자료구조에 저장된다. 트랜잭션 진행 도중 롤백이 필요할 경우 롤백 세그먼트의 데이터 정보를 이용하여 undo 작업을 수행한다. 또한, $^*$<a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_consistent_read">consistent read</a> 기능을 제공하기 위해 이전 버전의 데이터를 만드는 데에도 사용한다.</p>
+  <p><em>InnoDB</em>는 데이터의 멀티 버전을 지원하는 스토리지 엔진 (<a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_mvcc">multi-versioned storage engine</a>)이다. 변경된 row들에 대한 이전 버전의 정보들을 가지고 있으며, 이를 통해서 동시성 제어와 <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_rollback">rollback</a>과 같은 트랜잭션 기능들을 제공한다. 이러한 정보들은 테이블 스페이스 내의 <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_rollback_segment">rollback segment</a>라고 불리는 자료구조에 저장된다. 트랜잭션 진행 도중 롤백이 필요할 경우 롤백 세그먼트의 데이터 정보를 이용하여 undo 작업을 수행한다. 또한, * <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_consistent_read">consistent read</a> 기능을 제공하기 위해 이전 버전의 데이터를 만드는 데에도 사용한다.</p>
 </blockquote>
 
 <h5 id="consistent-read"><span class="me-2">consistent read</span><a href="#consistent-read" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
@@ -1831,7 +1831,7 @@ delete 마크가 표기된 이전 버전의 레코드는 향후에 purge 된다.
 
 <p>한 트랜잭션이 secondary index가 구성되어 있는 특정 컬럼에 대한 값을 얻어 오고자 할 때, 해당 트랜잭션 보다 이후에 시작된 트랜잭션에 의해 secondary 인덱스의 레코드가 delete 되거나 update 된 경우, 원래 자기 트랜잭션의 snapshot에 맞는 이전 버전의 레코드를 가져오기 위해서는 메인 클러스터드 인덱스를 거쳐야 한다.</p>
 
-<p>클러스터드 인덱스에서는 row 레코드들이 <code class="language-plaintext highlighter-rouge">DB_TRX_ID</code>를 가지고 있으므로 해당 아이디를 통해, 자신이 원하는 버전의 데이터를 undo 로그 레코드에서 획득하여 이전 버전의 레코드를 재생성 할 수 있다. $^*$<a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_covering_index">Covering index</a>에 대해서도 동일하게 동작한다.</p>
+<p>클러스터드 인덱스에서는 row 레코드들이 <code class="language-plaintext highlighter-rouge">DB_TRX_ID</code>를 가지고 있으므로 해당 아이디를 통해, 자신이 원하는 버전의 데이터를 undo 로그 레코드에서 획득하여 이전 버전의 레코드를 재생성 할 수 있다. * <a href="https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_covering_index">Covering index</a>에 대해서도 동일하게 동작한다.</p>
 <blockquote>
   <h5 id="covering-index"><span class="me-2">Covering Index</span><a href="#covering-index" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
   <p>커버링 인덱스(Covering Index)란 쿼리가 요청한 모든 데이터가 인덱스 자체에 포함되어 있어서 테이블 본문을 찾아볼 필요 없이 인덱스만으로 쿼리를 처리할 수 있는 인덱스</p>
