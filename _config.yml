@@ -217,6 +217,10 @@ exclude:
   - "*.config.js"
   - "package*.json"
 
+include:
+  - .nojekyll
+  - robots.txt
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
