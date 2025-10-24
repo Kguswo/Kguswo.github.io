@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-10-24T09:26:01+09:00</updated>
+  <updated>2025-10-24T18:42:53+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,58 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</title>
+    <link href="https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라" />
+    <published>2025-10-24T18:10:35+09:00</published>
+  
+    <updated>2025-10-24T18:10:35+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Item 36 : 비트 필드 대신 EnumSet을 사용하라  들어가며  열거 타입을 집합으로 사용해야 할 때가 있다. 예컨대 텍스트 스타일을 표현할 때 굵게, 기울임, 밑줄, 취소선 등 여러 스타일을 동시에 적용할 수 있어야 한다. 과거에는 이런 경우 각 상수에 서로 다른 2의 거듭제곱 값을 할당한 비트 필드(bit field) 방식을 사용했다.  그러나 자바에는 비트 필드보다 훨씬 나은 대안이 있다. 바로 EnumSet 이다. EnumSet은 열거 타입 상수의 값으로 구성된 집합을 효과적으로 표현하며, Set 인터페이스를 완벽히 구현하고, 타입 안전하며, 다른 Set 구현체와도 함께 사용할 수 있다.  이번 아이템에서는 비트 필드의 문제점을 살펴보고, EnumSet이 왜 더 나은 선택인지 깊이 있게 ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라</title>
+    <link href="https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라" />
+    <published>2025-10-24T11:59:03+09:00</published>
+  
+    <updated>2025-10-24T11:59:03+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Item 32 : 제네릭과 가변인수를 함께 쓸 때는 신중하라  들어가며  가변인수(varargs)는 메서드에 임의 개수의 인수를 전달할 수 있게 해주는 편리한 기능이다. 하지만 제네릭과 함께 사용하면 타입 안전성에 심각한 구멍이 생긴다. 이번 아이템에서는 제네릭 varargs의 위험성과 이를 안전하게 사용하는 방법을 알아본다.    가변인수와 제네릭의 근본적인 충돌  실체화 불가 타입(Non-Reifiable Type)  먼저 핵심 개념부터 이해하자. 실체화(Reification) 란 타입 정보가 런타임에도 완전히 유지되는 것을 의미한다. // 실체화 타입 - 런타임에 타입 정보 유지 String[] strings = new String[10]; Object[] objects = strings; obj...</summary>
+
+  </entry>
 
   
   <entry>
@@ -91,58 +143,6 @@
   
 
   <summary>Item 27 : 비검사 경고를 제거하라  들어가며  제네릭을 사용하기 시작하면 수많은 컴파일러 경고를 마주하게 된다. 비검사 형변환 경고, 비검사 메서드 호출 경고, 비검사 매개변수화 가변인수 타입 경고, 비검사 변환 경고 등이 그것이다. 제네릭에 익숙해질수록 마주치는 경고 수는 줄어들지만, 새로 작성한 코드가 한 번에 깨끗하게 컴파일되리라 기대하기는 어렵다.  많은 비검사 경고는 쉽게 제거할 수 있다. 코드를 조금만 수정하면 경고가 사라지는 경우가 대부분이다.  제거하기 어려운 경고도 있지만, 할 수 있는 한 모든 비검사 경고를 제거하자. 모두 제거한다면 그 코드는 타입 안전성이 보장된다. 즉, 런타임에 ClassCastException 이 발생할 일이 없고, 의도한 대로 잘 동작하리라 확신할 수 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>프리코스 1주차를 진행하며</title>
-    <link href="https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="프리코스 1주차를 진행하며" />
-    <published>2025-10-20T21:24:58+09:00</published>
-  
-    <updated>2025-10-20T21:24:58+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="우아한테크코스" />
-    
-    <category term="프리코스" />
-    
-  
-
-  <summary>들어가며     우아한테크코스 8기 프리코스 1주차 과제는 문자열 계산기 구현이었다. 간단해 보이는 과제였지만, 실제로 구현하면서 다양한 문제 상황을 마주했고 하나씩 해결해나가는 과정에서 많은 것을 배울 수 있었다. 이 글에서는 구현 중 만났던 여러 고민들과 해결 과정을 기록하고자 한다.       1. 커스텀 구분자 사용 시 기본 구분자도 함께 쓸까?  과제의 요구사항에는 아래와 같이 적혀있었다.     앞의 기본 구분자(쉼표, 콜론) 외에 커스텀 구분자를 지정할 수 있다.   이 문장에서 “외에”라는 표현이 애매하다고 생각했다. 예를 들어 //?\n1?2:3이라는 입력이 들어왔을 때 두 가지 상황을 생각해볼 수 있었다.     Case 1: 커스텀 구분자 ? 추가 → ?, ,, : 모두 구분자 → ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Effective Java] - 멤버 클래스는 되도록 static으로 만들라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-%EB%A9%A4%EB%B2%84-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8A%94-%EB%90%98%EB%8F%84%EB%A1%9D-static%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 멤버 클래스는 되도록 static으로 만들라" />
-    <published>2025-10-17T17:34:28+09:00</published>
-  
-    <updated>2025-10-17T17:34:28+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Effective-Java-%EB%A9%A4%EB%B2%84-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8A%94-%EB%90%98%EB%8F%84%EB%A1%9D-static%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EB%A9%A4%EB%B2%84-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%8A%94-%EB%90%98%EB%8F%84%EB%A1%9D-static%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4%EB%9D%BC/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="개발서적" />
-    
-    <category term="이펙티브자바" />
-    
-  
-
-  <summary>Item 24 : 멤버 클래스는 되도록 static으로 만들라  들어가며  중첩 클래스(nested class)는 다른 클래스 안에 정의된 클래스를 말한다. 중첩 클래스는 자신을 감싼 바깥 클래스에서만 쓰여야 하며, 그 외의 쓰임새가 있다면 톱레벨 클래스로 만들어야 한다. 중첩 클래스의 종류는 네 가지다.     정적 멤버 클래스   (비정적) 멤버 클래스   익명 클래스   지역 클래스   이 중 첫 번째를 제외한 나머지는 내부 클래스(inner class)에 해당한다. 이번 아이템에서는 각 중첩 클래스를 언제, 왜 사용해야 하는지 이야기한다.    정적 멤버 클래스  정적 멤버 클래스는 다른 클래스 안에 선언되고, 바깥 클래스의 private 멤버에도 접근할 수 있다는 점만 제외하고는 일반 클래스와...</summary>
 
   </entry>
 
