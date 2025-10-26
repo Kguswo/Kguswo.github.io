@@ -923,7 +923,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4175 words"
+  title="4176 words"
 >
   <em>23 min</em> read</span>
 
@@ -1341,21 +1341,21 @@
 </pre></td><td class="rouge-code"><pre>비정적 Entry 객체 (나쁜 예):
 메모리 주소: 0x2000
 ┌──────────────────────────────────┐
-│  객체 헤더        (12 byte)    │ ◀─── JVM이 자동 추가
-│                               │      (GC, 동기화 정보)
-│  key 참조         (8 byte)     │ ◀─── 0x3000 (String 객체 주소)
-│  value 참조       (8 byte)     │ ◀─── 0x4000 (Integer 객체 주소)
-│  this$0 참조      (8 byte)     │ ◀─── 0x1000 (MyMap 객체 주소)
-│                               │      ^^^^^^^^ 이 참조가 낭비되는 부분!
+│  객체 헤더        (12 byte)       │ ◀─── JVM이 자동 추가
+│                                  │      (GC, 동기화 정보)
+│  key 참조         (8 byte)        │ ◀─── 0x3000 (String 객체 주소)
+│  value 참조       (8 byte)        │ ◀─── 0x4000 (Integer 객체 주소)
+│  this$0 참조      (8 byte)        │ ◀─── 0x1000 (MyMap 객체 주소)
+│                                  │      ^^^^^^^^ 이 참조가 낭비되는 부분!
 └──────────────────────────────────┘
 총 36 byte
 
 정적 Entry 객체 (좋은 예):
 메모리 주소: 0x2000
 ┌──────────────────────────────────┐
-│  객체 헤더        (12 byte)     │
-│  key 참조         (8 byte)     │
-│  value 참조       (8 byte)     │
+│  객체 헤더        (12 byte)       │
+│  key 참조         (8 byte)        │
+│  value 참조       (8 byte)        │
 └──────────────────────────────────┘
 총 28 byte (this$0 필드가 없음!)
 
@@ -1392,16 +1392,16 @@ Entry 1,000개 기준:
 </pre></td><td class="rouge-code"><pre>힙 메모리 예시:
 
 0x1000: ┌────────────────┐
-        │ MyMap 인스턴스 │
+        │ MyMap 인스턴스  │
         └────────────────┘
             ▲
             │ this$0 = 0x1000
             │
 0x2000: ┌─────────────────┐
-        │ Entry 인스턴스  │
-        │ key = 0x3000   │
-        │ value = 0x4000 │
-        │ this$0 = 0x1000│ ◀─── 8바이트 낭비
+        │ Entry 인스턴스   │
+        │ key = 0x3000    │
+        │ value = 0x4000  │
+        │ this$0 = 0x1000 │ ◀─── 8바이트 낭비
         └─────────────────┘
 </pre></td></tr></tbody></table></code></div></div>
 

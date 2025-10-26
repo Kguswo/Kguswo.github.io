@@ -1519,13 +1519,13 @@ parameterized vararg type List&lt;String&gt;
 10
 </pre></td><td class="rouge-code"><pre>스택 영역:
 ┌──────────────────────┐
-│ List&lt;String&gt; list  │ ───┐
+│ List&lt;String&gt; list    │ ───┐
 └──────────────────────┘    │
-                          │
-힙 영역:                   │
+                            │
+힙 영역:                     │
 ┌──────────────────────┐    │
-│ ArrayList&lt;Integer&gt; │ ◄──┘  힙 오염!
-│ [42, 100, 200]     │       타입 불일치
+│ ArrayList&lt;Integer&gt;   │ ◄──┘  힙 오염!
+│ [42, 100, 200]       │       타입 불일치
 └──────────────────────┘
 </pre></td></tr></tbody></table></code></div></div>
 
