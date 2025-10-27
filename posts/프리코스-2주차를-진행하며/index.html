@@ -1308,7 +1308,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5471 words"
+  title="5477 words"
 >
   <em>30 min</em> read</span>
 
@@ -1414,9 +1414,7 @@
 
 <p>처음엔 “생성자로 충분한데 굳이 정적 팩터리 메서드가 필요할까?”라고 생각했다. 하지만 코드를 작성하다 보니 정적 팩터리 메서드의 장점들이 눈에 들어왔다.</p>
 
-<ol>
-  <li><strong>이름으로 의도를 명확하게 표현할 수 있다</strong></li>
-</ol>
+<p><strong>1. 이름으로 의도를 명확하게 표현할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1427,9 +1425,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p><code class="language-plaintext highlighter-rouge">createCar</code> 이라는 이름만 봐도 “아, 자동차를 만드는구나!”를 바로 알 수 있다.</p>
 
-<ol>
-  <li><strong>생성 과정을 완전히 제어할 수 있다</strong></li>
-</ol>
+<p><strong>2. 생성 과정을 완전히 제어할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1444,9 +1440,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p>생성자를 <code class="language-plaintext highlighter-rouge">private</code>으로 막아버리면 외부에서 <code class="language-plaintext highlighter-rouge">new Car()</code>를 못 쓴다. 무조건 <code class="language-plaintext highlighter-rouge">createCar()</code>를 거쳐야 하니까 검증을 빼먹을 일이 없다!</p>
 
-<ol>
-  <li><strong>확장하기 쉽다</strong></li>
-</ol>
+<p><strong>3. 확장하기 쉽다</strong></p>
 
 <p>나중에 다른 방식으로 자동차를 만들고 싶으면?</p>
 
@@ -1608,9 +1602,7 @@
 
 <h4 id="외부-검증-클래스의-문제점"><span class="me-2">외부 검증 클래스의 문제점</span><a href="#외부-검증-클래스의-문제점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<ol>
-  <li><strong>검증 규칙이 두 곳에 흩어진다</strong></li>
-</ol>
+<p><strong>1. 검증 규칙이 두 곳에 흩어진다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1627,9 +1619,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p>검증 규칙을 바꾸려면 두 곳을 다 수정해야 해서 귀찮다.</p>
 
-<ol>
-  <li><strong>검증을 깜빡할 수 있다</strong></li>
-</ol>
+<p><strong>2. 검증을 깜빡할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1643,9 +1633,7 @@
 
 <p>실제 서비스였다면? 중간에 API를 직접 호출해서 객체를 만들어버리면 오류 데이터가 들어간다. 상상만 해도 끔찍하다…</p>
 
-<ol>
-  <li><strong><code class="language-plaintext highlighter-rouge">Car</code> 이 스스로를 책임지지 못한다</strong></li>
-</ol>
+<p><strong><code class="language-plaintext highlighter-rouge">3. Car</code> 이 스스로를 책임지지 못한다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
