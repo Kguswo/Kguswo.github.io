@@ -1308,7 +1308,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5471 words"
+  title="5477 words"
 >
   <em>30 min</em> read</span>
 
@@ -1414,9 +1414,7 @@
 
 <p>처음엔 “생성자로 충분한데 굳이 정적 팩터리 메서드가 필요할까?”라고 생각했다. 하지만 코드를 작성하다 보니 정적 팩터리 메서드의 장점들이 눈에 들어왔다.</p>
 
-<ol>
-  <li><strong>이름으로 의도를 명확하게 표현할 수 있다</strong></li>
-</ol>
+<p><strong>1. 이름으로 의도를 명확하게 표현할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1427,9 +1425,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p><code class="language-plaintext highlighter-rouge">createCar</code> 이라는 이름만 봐도 “아, 자동차를 만드는구나!”를 바로 알 수 있다.</p>
 
-<ol>
-  <li><strong>생성 과정을 완전히 제어할 수 있다</strong></li>
-</ol>
+<p><strong>2. 생성 과정을 완전히 제어할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1444,9 +1440,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p>생성자를 <code class="language-plaintext highlighter-rouge">private</code>으로 막아버리면 외부에서 <code class="language-plaintext highlighter-rouge">new Car()</code>를 못 쓴다. 무조건 <code class="language-plaintext highlighter-rouge">createCar()</code>를 거쳐야 하니까 검증을 빼먹을 일이 없다!</p>
 
-<ol>
-  <li><strong>확장하기 쉽다</strong></li>
-</ol>
+<p><strong>3. 확장하기 쉽다</strong></p>
 
 <p>나중에 다른 방식으로 자동차를 만들고 싶으면?</p>
 
@@ -1608,9 +1602,7 @@
 
 <h4 id="외부-검증-클래스의-문제점"><span class="me-2">외부 검증 클래스의 문제점</span><a href="#외부-검증-클래스의-문제점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<ol>
-  <li><strong>검증 규칙이 두 곳에 흩어진다</strong></li>
-</ol>
+<p><strong>1. 검증 규칙이 두 곳에 흩어진다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1627,9 +1619,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 <p>검증 규칙을 바꾸려면 두 곳을 다 수정해야 해서 귀찮다.</p>
 
-<ol>
-  <li><strong>검증을 깜빡할 수 있다</strong></li>
-</ol>
+<p><strong>2. 검증을 깜빡할 수 있다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -1643,9 +1633,7 @@
 
 <p>실제 서비스였다면? 중간에 API를 직접 호출해서 객체를 만들어버리면 오류 데이터가 들어간다. 상상만 해도 끔찍하다…</p>
 
-<ol>
-  <li><strong><code class="language-plaintext highlighter-rouge">Car</code> 이 스스로를 책임지지 못한다</strong></li>
-</ol>
+<p><strong>3. <code class="language-plaintext highlighter-rouge">Car</code> 이 스스로를 책임지지 못한다</strong></p>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
@@ -2307,7 +2295,7 @@
 
 <p><br /></p>
 
-<blockquote>
+<blockquote class="prompt-tip">
   <p>예외: 꼭 필요한 getter는?</p>
 
   <p>모든 getter를 없앨 수는 없다. 예를 들어 우승자 이름을 출력할 때는 <code class="language-plaintext highlighter-rouge">getName()</code>이 필요하다.</p>
@@ -2322,7 +2310,7 @@
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div>  </div>
 
-  <p class="prompt-tip"><strong>하지만 이런 경우에도 최소한으로 제공하고, 가능하면 행동 메서드로 대체하는 것이 좋다.</strong></p>
+  <p><strong>하지만 이런 경우에도 최소한으로 제공하고, 가능하면 행동 메서드로 대체하는 것이 좋다.</strong></p>
 </blockquote>
 
 <p><code class="language-plaintext highlighter-rouge">getter</code>는 편리하지만 남용하면 객체가 <strong>데이터 덩어리</strong> 가 된다. 객체는 데이터를 제공하는 것이 아니라 <strong>스스로 책임을 수행</strong> 해야 한다는 것을 깨달았다.</p>
@@ -2708,20 +2696,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 익명 클래스보다는 람다를 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 명명 패턴보다 애너테이션을 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
         </li>
       
@@ -2729,7 +2703,21 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
+          <a href="/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/">[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Java-Basic-Questions-1%EB%B6%80/">Java Basic Questions (1부)</a>
         </li>
       
     </ul>
@@ -5374,22 +5362,6 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
     
 
 
@@ -5404,34 +5376,6 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1760963098"
-  data-df="ll"
-  
->
-  Oct 20, 2025
-</time>
-
-              <h4 class="pt-0 my-2">프리코스 1주차를 진행하며</h4>
-              <div class="text-muted">
-                <p>들어가며     우아한테크코스 8기 프리코스 1주차 과제는 문자열 계산기 구현이었다. 간단해 보이는 과제였지만, 실제로 구현하면서 다양한 문제 상황을 마주했고 하나씩 해결해나가는 과정에서 많은 것을 배울 수 있었다. 이 글에서는 구현 중 만났던 여러 고민들과 해결 과정을 기록하고자 한다.       1. 커스텀 구분자 사용 시 기본 구분자도 함께 쓸까...</p>
-              </div>
-            </div>
-          </a>
-        </article>
       
         <article class="col">
           <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-1%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" class="post-preview card h-100">
@@ -5476,21 +5420,21 @@
 
   
     <a
-      href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/"
+      href="/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>프리코스 2주차를 진행하며</p>
+      <p>[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</p>
     </a>
   
 
   
     <a
-      href="/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/"
+      href="/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>[Effective Java] - 명명 패턴보다 애너테이션을 사용하라</p>
+      <p>[Effective Java] - 익명 클래스보다는 람다를 사용하라</p>
     </a>
   
 </nav>

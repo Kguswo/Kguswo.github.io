@@ -738,71 +738,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -828,17 +763,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1107,9 +1031,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2311 words"
+  title="2418 words"
 >
-  <em>12 min</em> read</span>
+  <em>13 min</em> read</span>
 
         </div>
       </div>
@@ -1184,10 +1108,10 @@
 
 <p>세가지 전략으로 접근해보겠다.</p>
 
-<p>**1. 좌표 압축</p>
 <ol>
+  <li>좌표 압축</li>
   <li>세그먼트 트리</li>
-  <li>개수 세기를 위한 DP적 접근**</li>
+  <li>개수 세기를 위한 DP적 접근</li>
 </ol>
 
 <h4 id="1-좌표-압축"><span class="me-2">1. 좌표 압축</span><a href="#1-좌표-압축" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
@@ -1287,205 +1211,212 @@
 <hr />
 <h4 id="단계별-과정"><span class="me-2">단계별 과정</span><a href="#단계별-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <ul>
-  <li>Step 1: 첫 번째 숫자 (10)
-```
-현재 숫자: 10 (압축값: 1)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 0))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 0, count = 0 (아무것도 없음)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 1 (0 + 1)</li>
-      <li>count = 1 (새로운 수열 시작)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 1에 (length=1, count=1) 저장</li>
-    </ul>
-  </li>
+  <li>Step 1: 첫 번째 숫자 (10)</li>
 </ul>
 
-<p>현재까지 찾은 LIS들:</p>
-<ul>
-  <li>{10} (길이 1, 개수 1)
-```</li>
-  <li>Step 2: 두 번째 숫자 (20)
-```
-현재 숫자: 20 (압축값: 2)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 1))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 1, count = 1 (10으로 끝나는 수열)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 2 (1 + 1)</li>
-      <li>count = 1 (이전 수열에서 이어짐)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 2에 (length=2, count=1) 저장</li>
-    </ul>
-  </li>
-</ul>
-
-<p>현재까지 찾은 LIS들:</p>
-<ul>
-  <li>{10} (길이 1, 개수 1)</li>
-  <li>
-    <p>{10, 20} (길이 2, 개수 1)
-```</p>
-  </li>
-  <li>Step 3: 세 번째 숫자 (10)
-```
-현재 숫자: 10 (압축값: 1)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 0))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 0, count = 0 (더 작은 수 없음)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 1 (0 + 1)</li>
-      <li>count = 1 (새로운 수열 시작)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 1의 상태 유지 (merge 결과 변화 없음)</li>
-    </ul>
-  </li>
-</ul>
-
-<p>현재까지 찾은 LIS들:</p>
-<ul>
-  <li>{10} (길이 1, 개수 1)</li>
-  <li>{10, 20} (길이 2, 개수 1)</li>
-  <li>
-    <p>{10} (새로운 시작점)
-```</p>
-  </li>
-  <li>Step 4: 네 번째 숫자 (30)
-```
-현재 숫자: 30 (압축값: 3)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 2))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 2, count = 1 ({10, 20}으로 끝나는 수열)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 3 (2 + 1)</li>
-      <li>count = 1 (이전 수열에서 이어짐)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 3에 (length=3, count=1) 저장</li>
-    </ul>
-  </li>
-</ul>
-
-<p>현재까지 찾은 LIS들:</p>
-<ul>
-  <li>{10} (길이 1)</li>
-  <li>{10, 20} (길이 2)</li>
-  <li>{10, 20, 30} (길이 3, 개수 1)
-```</li>
-  <li>Step 5: 다섯 번째 숫자 (20)
-```
-현재 숫자: 20 (압축값: 2)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 1))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 1, count = 1 (10으로 끝나는 수열)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 2 (1 + 1)</li>
-      <li>count = 1 (이전 수열에서 이어짐)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 2의 상태 갱신 (merge로 count 합산)</li>
-    </ul>
-  </li>
-</ul>
-
-<p>현재까지 찾은 LIS들:</p>
-<ul>
-  <li>{10} (길이 1)</li>
-  <li>{10, 20} (길이 2)</li>
-  <li>{10, 20, 30} (길이 3)</li>
-  <li>{10, 20} (새로운 경로)
-```</li>
-  <li>Step 6: 마지막 숫자 (50)
-```현재 숫자: 50 (압축값: 4)
-    <ol>
-      <li>이전 작은 숫자들 조회 (query(1, 3))</li>
-    </ol>
-    <ul>
-      <li>결과: length = 3, count = 1 ({10, 20, 30}으로 끝나는 수열)
-        <ol>
-          <li>새로운 상태</li>
-        </ol>
-      </li>
-      <li>length = 4 (3 + 1)</li>
-      <li>count = 1 (이전 수열에서 이어짐)
-        <ol>
-          <li>세그먼트 트리 업데이트</li>
-        </ol>
-      </li>
-      <li>위치 4에 (length=4, count=1) 저장</li>
-    </ul>
-  </li>
-</ul>
-
-<p>최종 LIS들:</p>
-<ul>
-  <li>{10, 20, 30, 50} (길이 4, 개수 1)
-```</li>
-</ul>
-
-<ol>
-  <li>세그먼트 트리 최종
-각 위치는 해당 값을 마지막으로 하는 LIS의 정보를 저장:
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre>위치 1 (값 10): length=1, count=1
-위치 2 (값 20): length=2, count=1
-위치 3 (값 30): length=3, count=1
-위치 4 (값 50): length=4, count=1
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><a href="/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png" class="popup img-link shimmer"><img src="/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png" alt="" loading="lazy"></a></p>
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>현재 숫자: 10 (압축값: 1)
+1. 이전 작은 숫자들 조회 (query(1, 0))
+   - 결과: length = 0, count = 0 (아무것도 없음)
+2. 새로운 상태
+   - length = 1 (0 + 1)
+   - count = 1 (새로운 수열 시작)
+3. 세그먼트 트리 업데이트
+   - 위치 1에 (length=1, count=1) 저장
+
+현재까지 찾은 LIS들:
+- {10} (길이 1, 개수 1)
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>Step 2: 두 번째 숫자 (20)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>현재 숫자: 20 (압축값: 2)
+1. 이전 작은 숫자들 조회 (query(1, 1))
+   - 결과: length = 1, count = 1 (10으로 끝나는 수열)
+2. 새로운 상태
+   - length = 2 (1 + 1)
+   - count = 1 (이전 수열에서 이어짐)
+3. 세그먼트 트리 업데이트
+   - 위치 2에 (length=2, count=1) 저장
+
+현재까지 찾은 LIS들:
+- {10} (길이 1, 개수 1)
+- {10, 20} (길이 2, 개수 1)
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Step 3: 세 번째 숫자 (10)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>현재 숫자: 10 (압축값: 1)
+1. 이전 작은 숫자들 조회 (query(1, 0))
+   - 결과: length = 0, count = 0 (더 작은 수 없음)
+2. 새로운 상태
+   - length = 1 (0 + 1)
+   - count = 1 (새로운 수열 시작)
+3. 세그먼트 트리 업데이트
+   - 위치 1의 상태 유지 (merge 결과 변화 없음)
+
+현재까지 찾은 LIS들:
+- {10} (길이 1, 개수 1)
+- {10, 20} (길이 2, 개수 1)
+- {10} (새로운 시작점)
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Step 4: 네 번째 숫자 (30)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>현재 숫자: 30 (압축값: 3)
+1. 이전 작은 숫자들 조회 (query(1, 2))
+   - 결과: length = 2, count = 1 ({10, 20}으로 끝나는 수열)
+2. 새로운 상태
+   - length = 3 (2 + 1)
+   - count = 1 (이전 수열에서 이어짐)
+3. 세그먼트 트리 업데이트
+   - 위치 3에 (length=3, count=1) 저장
+
+현재까지 찾은 LIS들:
+- {10} (길이 1)
+- {10, 20} (길이 2)
+- {10, 20, 30} (길이 3, 개수 1)
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>Step 5: 다섯 번째 숫자 (20)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>현재 숫자: 20 (압축값: 2)
+1. 이전 작은 숫자들 조회 (query(1, 1))
+   - 결과: length = 1, count = 1 (10으로 끝나는 수열)
+2. 새로운 상태
+   - length = 2 (1 + 1)
+   - count = 1 (이전 수열에서 이어짐)
+3. 세그먼트 트리 업데이트
+   - 위치 2의 상태 갱신 (merge로 count 합산)
+
+현재까지 찾은 LIS들:
+- {10} (길이 1)
+- {10, 20} (길이 2)
+- {10, 20, 30} (길이 3)
+- {10, 20} (새로운 경로)
+</pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>Step 6: 마지막 숫자 (50)</li>
+</ul>
+
+<p>```현재 숫자: 50 (압축값: 4)</p>
+<ol>
+  <li>이전 작은 숫자들 조회 (query(1, 3))
+    <ul>
+      <li>결과: length = 3, count = 1 ({10, 20, 30}으로 끝나는 수열)</li>
+    </ul>
+  </li>
+  <li>새로운 상태
+    <ul>
+      <li>length = 4 (3 + 1)</li>
+      <li>count = 1 (이전 수열에서 이어짐)</li>
+    </ul>
+  </li>
+  <li>세그먼트 트리 업데이트
+    <ul>
+      <li>위치 4에 (length=4, count=1) 저장</li>
+    </ul>
   </li>
 </ol>
 
-<blockquote>
-  <h2 id="코드"><span class="me-2">코드</span><a href="#코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-</blockquote>
+<p>최종 LIS들:</p>
+<ul>
+  <li>{10, 20, 30, 50} (길이 4, 개수 1)</li>
+</ul>
 
-<div class="language-java highlighter-rouge"><div class="code-header">
-        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+3. 세그먼트 트리 최종
+각 위치는 해당 값을 마지막으로 하는 LIS의 정보를 저장:
+</pre></td></tr></tbody></table></code></div></div>
+<p>위치 1 (값 10): length=1, count=1
+위치 2 (값 20): length=2, count=1
+위치 3 (값 30): length=3, count=1
+위치 4 (값 50): length=4, count=1</p>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1621,141 +1552,151 @@
 133
 134
 135
-</pre></td><td class="rouge-code"><pre><span class="cm">/**
+136
+137
+138
+139
+140
+</pre></td><td class="rouge-code"><pre>![](/assets/posts/bdf8698d1474355c2df9cb5b5d2d73e26efa75ac758b7462b3e68276d0b075f7.png)
+
+&gt; ## 코드
+
+```java
+/**
  * Author: nowalex322, Kim HyeonJae
- */</span>
+ */
 
-<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+import java.io.*;
+import java.util.*;
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
-    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">MOD</span> <span class="o">=</span> <span class="mi">1000000007</span><span class="o">;</span>
+public class Main {
+    static final int MOD = 1000000007;
 
-    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Pair</span><span class="o">{</span>
-        <span class="kt">int</span> <span class="n">length</span><span class="o">;</span>
-        <span class="kt">long</span> <span class="n">count</span><span class="o">;</span>
-        <span class="kd">public</span> <span class="nf">Pair</span><span class="o">(</span><span class="kt">int</span> <span class="n">length</span><span class="o">,</span> <span class="kt">long</span> <span class="n">count</span><span class="o">){</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">length</span> <span class="o">=</span> <span class="n">length</span><span class="o">;</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">count</span> <span class="o">=</span> <span class="n">count</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+    static class Pair{
+        int length;
+        long count;
+        public Pair(int length, long count){
+            this.length = length;
+            this.count = count;
+        }
+    }
 
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">Pair</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Pair</span> <span class="n">b</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
-        <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
-        <span class="c1">// 같은 길이일때는 count를 더함</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">Pair</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">count</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">count</span><span class="o">)</span> <span class="o">%</span> <span class="no">MOD</span><span class="o">);</span>
-    <span class="o">}</span>
+    static Pair merge(Pair a, Pair b){
+        if(a.length &gt; b.length) return a;
+        else if (a.length &lt; b.length) return b;
+        // 같은 길이일때는 count를 더함
+        return new Pair(a.length, (a.count + b.count) % MOD);
+    }
 
-    <span class="kd">static</span> <span class="nc">BufferedReader</span> <span class="n">br</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="nc">BufferedWriter</span> <span class="n">bw</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="nc">StringTokenizer</span> <span class="n">st</span><span class="o">;</span>
-    <span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">,</span> <span class="n">arr</span><span class="o">[],</span> <span class="n">compressed</span><span class="o">[];</span>
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="n">segment</span><span class="o">[];</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="k">new</span> <span class="nf">Main</span><span class="o">().</span><span class="na">solution</span><span class="o">();</span>
-    <span class="o">}</span>
+    static BufferedReader br;
+    static BufferedWriter bw;
+    static StringTokenizer st;
+    static int N, arr[], compressed[];
+    static Pair segment[];
+    public static void main(String[] args) throws Exception {
+        new Main().solution();
+    }
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">solution</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
-<span class="c1">//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_17411_가장긴증가하는부분수열6/input.txt")));</span>
-        <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+    public void solution() throws Exception {
+        br = new BufferedReader(new InputStreamReader(System.in));
+//        br = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/java/BOJ_17411_가장긴증가하는부분수열6/input.txt")));
+        bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        N = Integer.parseInt(br.readLine());
 
-        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
-        <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
-        <span class="o">}</span>
+        arr = new int[N];
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i &lt; N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
 
-        <span class="c1">// 좌표압축</span>
-        <span class="nc">TreeSet</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">uniqueSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TreeSet</span><span class="o">&lt;&gt;();</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">:</span> <span class="n">arr</span><span class="o">)</span> <span class="n">uniqueSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
-        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">unique</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">uniqueSet</span><span class="o">);</span> <span class="c1">// 중복제거</span>
-        <span class="n">compressed</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="o">(</span><span class="n">unique</span><span class="o">,</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-            <span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// 1-based</span>
-        <span class="o">}</span>
+        // 좌표압축
+        TreeSet&lt;Integer&gt; uniqueSet = new TreeSet&lt;&gt;();
+        for(int n : arr) uniqueSet.add(n);
+        ArrayList&lt;Integer&gt; unique = new ArrayList&lt;&gt;(uniqueSet); // 중복제거
+        compressed = new int[N];
+        for(int i = 0; i &lt; N; i++){
+            int pos = binarySearch(unique, arr[i]);
+            compressed[i] = pos + 1; // 1-based
+        }
 
-        <span class="kt">int</span> <span class="n">uniqueSize</span> <span class="o">=</span> <span class="n">unique</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
-        <span class="n">segment</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">[</span><span class="mi">4</span><span class="o">*</span><span class="n">uniqueSize</span><span class="o">];</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">*</span><span class="n">uniqueSize</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">segment</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-        <span class="o">}</span>
+        int uniqueSize = unique.size();
+        segment = new Pair[4*uniqueSize];
+        for (int i=0; i&lt;4*uniqueSize; i++) {
+            segment[i] = new Pair(0, 0);
+        }
 
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            <span class="c1">// 지금i위치보다 앞에있는 작은수들 중 LIS 찾기</span>
-            <span class="nc">Pair</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">]-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        for(int i=0; i&lt;N; i++){
+            // 지금i위치보다 앞에있는 작은수들 중 LIS 찾기
+            Pair curr = query(1, compressed[i]-1, 1, uniqueSize, 1);
 
-            <span class="cm">/*
+            /*
             지금위치i까지 포함해서 길이 1 증가
             count가 0일땐 새로운수열 시작 (1)
             count가 0아닐땐 이전까지 count 다 더함
-            */</span>
-            <span class="nc">Pair</span> <span class="n">newValue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="n">curr</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">curr</span><span class="o">.</span><span class="na">count</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+            */
+            Pair newValue = new Pair(curr.length + 1, Math.max(curr.count, 1));
 
-            <span class="n">update</span><span class="o">(</span><span class="n">compressed</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">newValue</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-        <span class="o">}</span>
+            update(compressed[i], newValue, 1, uniqueSize, 1);
+        }
 
-        <span class="nc">Pair</span> <span class="n">result</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">uniqueSize</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        Pair result = query(1, uniqueSize, 1, uniqueSize, 1);
         
-        <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="na">count</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
-        <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-        <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-        <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
+        bw.write(result.length + " " + result.count + "\n");
+        bw.flush();
+        bw.close();
+        br.close();
+    }
 
-    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">binarySearch</span><span class="o">(</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">unique</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">unique</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    private int binarySearch(ArrayList&lt;Integer&gt; unique, int target) {
+        int left = 0, right = unique.size() - 1;
+        int res = 0;
 
-        <span class="k">while</span><span class="o">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">){</span>
-            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="o">(</span><span class="n">right</span><span class="o">-</span><span class="n">left</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">unique</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">mid</span><span class="o">)</span> <span class="o">&gt;=</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">res</span> <span class="o">=</span> <span class="n">mid</span><span class="o">;</span>
-                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-            <span class="o">}</span> 
-            <span class="k">else</span> <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
-    <span class="o">}</span>
+        while(left &lt;= right){
+            int mid = left + (right-left)/2;
+            if(unique.get(mid) &gt;= target) {
+                res = mid;
+                right = mid - 1;
+            } 
+            else left = mid + 1;
+        }
+        return res;
+    }
 
-    <span class="cm">/*
+    /*
     구간 [left, right]에서 최댓값 찾기
-     */</span>
-    <span class="kd">static</span> <span class="nc">Pair</span> <span class="nf">query</span><span class="o">(</span><span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">node</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">left</span> <span class="o">&gt;</span> <span class="n">end</span> <span class="o">||</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+     */
+    static Pair query(int left, int right, int start, int end, int node){
+        if(left &gt; end || right &lt; start) return new Pair(0, 0);
 
-        <span class="k">if</span><span class="o">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">start</span> <span class="o">&amp;&amp;</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">)</span> <span class="k">return</span> <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">];</span>
+        if(left &lt;= start &amp;&amp; end &lt;= right) return segment[node];
 
-        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-        <span class="nc">Pair</span> <span class="n">leftRes</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">node</span><span class="o">*</span><span class="mi">2</span><span class="o">);</span>
-        <span class="nc">Pair</span> <span class="n">rightRes</span> <span class="o">=</span> <span class="n">query</span><span class="o">(</span><span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">node</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        int mid = start + (end-start)/2;
+        Pair leftRes = query(left, right, start, mid, node*2);
+        Pair rightRes = query(left, right, mid+1, end, node*2 + 1);
         
-        <span class="k">return</span> <span class="nf">merge</span><span class="o">(</span><span class="n">leftRes</span><span class="o">,</span> <span class="n">rightRes</span><span class="o">);</span>
-    <span class="o">}</span>
+        return merge(leftRes, rightRes);
+    }
 
-    <span class="cm">/*
+    /*
     pos 위치를 value로 업데이트
-     */</span>
-    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="kt">int</span> <span class="n">pos</span><span class="o">,</span> <span class="nc">Pair</span> <span class="n">value</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">,</span> <span class="kt">int</span> <span class="n">node</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="n">end</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+     */
+    static void update(int pos, Pair value, int start, int end, int node){
+        if(pos &gt; end || pos &lt; start) return;
 
-        <span class="k">if</span><span class="o">(</span><span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="o">){</span>
-            <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">],</span> <span class="n">value</span><span class="o">);</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
+        if(start == end){
+            segment[node] = merge(segment[node], value);
+            return;
+        }
 
-        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-        <span class="n">update</span><span class="o">(</span><span class="n">pos</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">);</span>
-        <span class="n">update</span><span class="o">(</span><span class="n">pos</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">,</span> <span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        int mid = start + (end-start)/2;
+        update(pos, value, start, mid, node * 2);
+        update(pos, value, mid+1, end, node * 2 + 1);
 
-        <span class="n">segment</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="n">merge</span><span class="o">(</span><span class="n">segment</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span><span class="o">],</span> <span class="n">segment</span><span class="o">[</span><span class="n">node</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]);</span>
-    <span class="o">}</span>
+        segment[node] = merge(segment[node * 2], segment[node * 2 + 1]);
+    }
 
-<span class="o">}</span>
+}
 </pre></td></tr></tbody></table></code></div></div>
 
   </div>
@@ -1900,20 +1841,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 익명 클래스보다는 람다를 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 명명 패턴보다 애너테이션을 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
         </li>
       
@@ -1921,7 +1848,21 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
+          <a href="/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/">[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Java-Basic-Questions-1%EB%B6%80/">Java Basic Questions (1부)</a>
         </li>
       
     </ul>
@@ -7134,4199 +7075,7 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -12926,7 +8675,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/BOJ1514%EC%9E%90%EB%AC%BC%EC%87%A0-Java/" class="post-preview card h-100">
+          <a href="/posts/BOJ1799%EB%B9%84%EC%88%8D-Java/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -12938,23 +8687,23 @@
 
 <time
   
-  data-ts="1756838678"
+  data-ts="1725813369"
   data-df="ll"
   
 >
-  Sep  3, 2025
+  Sep  9, 2024
 </time>
 
-              <h4 class="pt-0 my-2">BOJ_1514_자물쇠 (Java)</h4>
+              <h4 class="pt-0 my-2">BOJ_1799_비숍 (Java)</h4>
               <div class="text-muted">
-                <p># [Platinum III] 자물쇠 - 1514   [문제 링크](https://www.acmicpc.net/problem/1514)   ### 성능 요약  메모리: 18068 KB, 시간: 144 ms  ### 분류  다이나믹 프로그래밍, 그래프 이론, 최단 경로  ### 제출 일자  2025년 9월 3일 03:35:58  ### 문제 설명  세준...</p>
+                <p>[Gold I] 비숍 - 1799  문제 링크  성능 요약  메모리: 18572 KB, 시간: 276 ms  분류  백트래킹  제출 일자  2024년 9월 9일 01:33:43  문제 설명  서양 장기인 체스에는 대각선 방향으로 움직일 수 있는 비숍(bishop)이 있다. &lt; 그림 1 &gt;과 같은 정사각형 체스판 위에 B라고 표시된 곳에 비숍...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/BOJ1514%EC%9E%90%EB%AC%BC%EC%87%A0-Java/" class="post-preview card h-100">
+          <a href="/posts/BOJ2342Dance-Dance-Revolution-Java/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -12966,23 +8715,23 @@
 
 <time
   
-  data-ts="1756838678"
+  data-ts="1725810760"
   data-df="ll"
   
 >
-  Sep  3, 2025
+  Sep  9, 2024
 </time>
 
-              <h4 class="pt-0 my-2">BOJ_1514_자물쇠 (Java)</h4>
+              <h4 class="pt-0 my-2">BOJ_2342_Dance Dance Revolution (Java)</h4>
               <div class="text-muted">
-                <p># [Platinum III] 자물쇠 - 1514   [문제 링크](https://www.acmicpc.net/problem/1514)   ### 성능 요약  메모리: 18068 KB, 시간: 144 ms  ### 분류  다이나믹 프로그래밍, 그래프 이론, 최단 경로  ### 제출 일자  2025년 9월 3일 03:35:58  ### 문제 설명  세준...</p>
+                <p>[Gold III] Dance Dance Revolution - 2342  문제 링크  성능 요약  메모리: 53108 KB, 시간: 408 ms  분류  다이나믹 프로그래밍  제출 일자  2024년 9월 9일 00:50:40  문제 설명  승환이는 요즘 "Dance Dance Revolution"이라는 게임에 빠져 살고 있다. 하지만 그의 춤 솜씨를...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/PGMS%EA%B7%A4-%EA%B3%A0%EB%A5%B4%EA%B8%B0-Java/" class="post-preview card h-100">
+          <a href="/posts/BOJ9252LCS-2-Java/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -12994,16 +8743,16 @@
 
 <time
   
-  data-ts="1756236589"
+  data-ts="1725807471"
   data-df="ll"
   
 >
-  Aug 27, 2025
+  Sep  8, 2024
 </time>
 
-              <h4 class="pt-0 my-2">PGMS_귤 고르기 (Java)</h4>
+              <h4 class="pt-0 my-2">BOJ_9252_LCS 2 (Java)</h4>
               <div class="text-muted">
-                <p># [level 2] 귤 고르기 - 138476   [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/138476)   ### 성능 요약  메모리: 108 MB, 시간: 59.84 ms  ### 구분  코딩테스트 연습 > 연습문제  ### 채점결과  정확성: 100.0합계: 100.0...</p>
+                <p>[Gold IV] LCS 2 - 9252  문제 링크  성능 요약  메모리: 23060 KB, 시간: 140 ms  분류  다이나믹 프로그래밍  제출 일자  2024년 9월 8일 23:49:15  문제 설명  LCS(Longest Common Subsequence, 최장 공통 부분 수열)문제는 두 수열이 주어졌을 때, 모두의 부분 수열이 되는 수열 중...</p>
               </div>
             </div>
           </a>
@@ -13024,11 +8773,11 @@
 
   
     <a
-      href="/posts/BOJ17411%EA%B0%80%EC%9E%A5-%EA%B8%B4-%EC%A6%9D%EA%B0%80%ED%95%98%EB%8A%94-%EB%B6%80%EB%B6%84-%EC%88%98%EC%97%B4-6-Java/"
+      href="/posts/%ED%83%80%EC%9E%84-%EC%95%84%EC%9B%83-Connection-Timeout-Socket-Timeout-Read-Timeout/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>BOJ_17411_가장 긴 증가하는 부분 수열 6 (Java)</p>
+      <p>타임 아웃 (Connection Timeout, Socket Timeout, Read Timeout)</p>
     </a>
   
 

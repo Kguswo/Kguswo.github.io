@@ -1063,6 +1063,136 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1269,7 +1399,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1230 words"
+  title="1183 words"
 >
   <em>6 min</em> read</span>
 
@@ -1366,42 +1496,35 @@
     <p>systemd 서비스 파일 생성
 <code class="language-plaintext highlighter-rouge">sudo nano /etc/systemd/system/meloD.service</code></p>
   </li>
-  <li>내용을 입력 (실제 경로와 사용자명으로 수정)
-```cmd
-[Unit]
-Description=Discord Bot Service
-After=network.target</li>
+  <li>내용을 입력 (실제 경로와 사용자명으로 수정)</li>
 </ol>
 
-<p>[Service]
+<pre><code class="language-cmd">[Unit]
+Description=Discord Bot Service
+After=network.target
+
+[Service]
 User=YOUR_USERNAME
 WorkingDirectory=/path/to/your/bot
 ExecStart=/usr/bin/python3 /path/to/your/bot/main.py
 Restart=always
 RestartSec=10
-Environment=”PATH=/path/to/your/venv/bin:$PATH”</p>
+Environment="PATH=/path/to/your/venv/bin:$PATH"
 
-<p>[Install]
-WantedBy=multi-user.target</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>![](/assets/posts/9523fd3c0ff9b7b2537cd5e88e8a57146994305c5b1a9d5bc1b4658e40ca51c1.png)
+[Install]
+WantedBy=multi-user.target
+</code></pre>
 
+<p><a href="/assets/posts/9523fd3c0ff9b7b2537cd5e88e8a57146994305c5b1a9d5bc1b4658e40ca51c1.png" class="popup img-link shimmer"><img src="/assets/posts/9523fd3c0ff9b7b2537cd5e88e8a57146994305c5b1a9d5bc1b4658e40ca51c1.png" alt="" loading="lazy"></a></p>
 
-5. 서비스 활성화 및 시작
-```cmd
-sudo systemctl daemon-reload       # systemd 설정 파일을 새로 읽어들인다. 서비스 파일을 새로 만들거나 수정한 후에 필요한 명령어
+<ol>
+  <li>서비스 활성화 및 시작</li>
+</ol>
+
+<pre><code class="language-cmd">sudo systemctl daemon-reload       # systemd 설정 파일을 새로 읽어들인다. 서비스 파일을 새로 만들거나 수정한 후에 필요한 명령어
 sudo systemctl enable meloD  # meloD 서비스를 시스템 부팅 시 자동으로 시작되도록 설정
 sudo systemctl start meloD   # meloD 서비스를 즉시 시작
-</pre></td></tr></tbody></table></code></div></div>
+</code></pre>
 
 <ol>
   <li>상태 확인
@@ -1413,8 +1536,10 @@ sudo systemctl start meloD   # meloD 서비스를 즉시 시작
 
 <h2 id="github-actions-cicd-설정"><span class="me-2">GitHub Actions CI/CD 설정</span><a href="#github-actions-cicd-설정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <ol>
-  <li>GCP 인스턴스에 SSH 키 설정
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+  <li>GCP 인스턴스에 SSH 키 설정</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1422,19 +1547,55 @@ sudo systemctl start meloD   # meloD 서비스를 즉시 시작
 </pre></td><td class="rouge-code"><pre># 로컬 컴퓨터에서 실행
 ssh-keygen -t rsa -b 4096 -C "github-actions"
 # (키 저장 위치와 비밀번호 입력)
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>공개 키를 GCP 인스턴스의 authorized_keys에 추가
-```
-    <h1 id="로컬에서-공개-키-확인">로컬에서 공개 키 확인</h1>
-    <p>cat ~/.ssh/id_rsa.pub</p>
-  </li>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ol>
+  <li>공개 키를 GCP 인스턴스의 authorized_keys에 추가</li>
 </ol>
 
-<h1 id="gcp-인스턴스에서-실행">GCP 인스턴스에서 실행</h1>
-<p>echo “복사한_공개키” » ~/.ssh/authorized_keys</p>
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre># 로컬에서 공개 키 확인
+cat ~/.ssh/id_rsa.pub
+
+# GCP 인스턴스에서 실행
+echo "복사한_공개키" &gt;&gt; ~/.ssh/authorized_keys
+</pre></td></tr></tbody></table></code></div></div>
+
+<ol>
+  <li>GitHub 저장소에 비밀 키 추가:</li>
+</ol>
+
+<ul>
+  <li>GitHub 저장소 → Settings → Secrets and variables→ New repository secret</li>
+  <li>이름: <code class="language-plaintext highlighter-rouge">SSH_PRIVATE_KEY</code>, 값: 비밀 키 내용(~/.ssh/id_rsa 파일의 내용) ; 주석과 줄바꿈까지 그대로 복사</li>
+  <li>이름: <code class="language-plaintext highlighter-rouge">HOST</code>, 값: GCP 인스턴스 IP
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">curl -s ifconfig.me</code> 로 확인</li>
+    </ul>
+  </li>
+  <li>이름: <code class="language-plaintext highlighter-rouge">USERNAME</code>, 값: GCP 사용자 이름</li>
+  <li>이름: <code class="language-plaintext highlighter-rouge">TARGET_DIR</code>, 값: 봇 코드 디렉토리 경로
+    <ul>
+      <li>ex) /home/nowalex322/MeloD</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="/assets/posts/18c01515b6ec58bc93591759875ccb01e4040bdb08f5fdd3f1f3dfd599b85d1b.png" class="popup img-link shimmer"><img src="/assets/posts/18c01515b6ec58bc93591759875ccb01e4040bdb08f5fdd3f1f3dfd599b85d1b.png" alt="" loading="lazy"></a></p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">.github/workflows/deploy.yml</code> 파일 생성:
+GitHub Actions Workflow (deploy.yml)</li>
+</ol>
+
+<div class="language-yml highlighter-rouge"><div class="code-header">
+        <span data-label-text="YAML"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1465,70 +1626,36 @@ ssh-keygen -t rsa -b 4096 -C "github-actions"
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-</pre></td><td class="rouge-code"><pre>
-3. GitHub 저장소에 비밀 키 추가:
+</pre></td><td class="rouge-code"><pre><span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GCP</span>
 
-- GitHub 저장소 → Settings → Secrets and variables→ New repository secret
-- 이름: `SSH_PRIVATE_KEY`, 값: 비밀 키 내용(~/.ssh/id_rsa 파일의 내용) ; 주석과 줄바꿈까지 그대로 복사
-- 이름: `HOST`, 값: GCP 인스턴스 IP
-  - `curl -s ifconfig.me` 로 확인
-- 이름: `USERNAME`, 값: GCP 사용자 이름
-- 이름: `TARGET_DIR`, 값: 봇 코드 디렉토리 경로
-  - ex) /home/nowalex322/MeloD
-  
-![](/assets/posts/18c01515b6ec58bc93591759875ccb01e4040bdb08f5fdd3f1f3dfd599b85d1b.png)
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">develop</span> <span class="pi">]</span>  <span class="c1"># 푸시될 브랜치를 지정, 필자는 develop 브랜치에 푸시될 때 실행</span>
 
-
-4. `.github/workflows/deploy.yml` 파일 생성:
-GitHub Actions Workflow (deploy.yml)
-```yml
-name: Deploy to GCP
-
-on:
-  push:
-    branches: [ develop ]  # 푸시될 브랜치를 지정, 필자는 develop 브랜치에 푸시될 때 실행
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout code</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
       
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup SSH</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">webfactory/ssh-agent@v0.5.4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">ssh-private-key</span><span class="pi">:</span> <span class="s">$</span>
         
-    - name: Add to known hosts
-      run: |
-        mkdir -p ~/.ssh
-        ssh-keyscan -H ${{ secrets.HOST }} &gt;&gt; ~/.ssh/known_hosts
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Add to known hosts</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">mkdir -p ~/.ssh</span>
+        <span class="s">ssh-keyscan -H $ &gt;&gt; ~/.ssh/known_hosts</span>
         
-    - name: Deploy to GCP
-      run: |
-        rsync -avz --delete ./ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET_DIR }}
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GCP</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">rsync -avz --delete ./ $@$:$</span>
         
-    - name: Restart meloD Service
-      run: |
-        ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'sudo systemctl restart meloD'
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Restart meloD Service</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">ssh $@$ 'sudo systemctl restart meloD'</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/posts/7eb388909b9c55560be863f3c64331d810b7534ea4ba9a23a7f4d6a35079275c.png" class="popup img-link shimmer"><img src="/assets/posts/7eb388909b9c55560be863f3c64331d810b7534ea4ba9a23a7f4d6a35079275c.png" alt="" loading="lazy"></a><a href="/assets/posts/ea3d9d0f146ef4844c2ff6014b19ce77da946a8a4f34102b27491a33e5ff0dbf.png" class="popup img-link shimmer"><img src="/assets/posts/ea3d9d0f146ef4844c2ff6014b19ce77da946a8a4f34102b27491a33e5ff0dbf.png" alt="" loading="lazy"></a><a href="/assets/posts/1e32ad985598aa940ee0475b97d832c69360dcafd4d012fb6d4e18b417fc2d31.png" class="popup img-link shimmer"><img src="/assets/posts/1e32ad985598aa940ee0475b97d832c69360dcafd4d012fb6d4e18b417fc2d31.png" alt="" loading="lazy"></a></p>
@@ -1759,20 +1886,6 @@ jobs:
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 익명 클래스보다는 람다를 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 명명 패턴보다 애너테이션을 사용하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
         </li>
       
@@ -1780,7 +1893,21 @@ jobs:
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/">프리코스 2주차를 진행하며</a>
+          <a href="/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/">[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/">[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Java-Basic-Questions-1%EB%B6%80/">Java Basic Questions (1부)</a>
         </li>
       
     </ul>
@@ -4449,95 +4576,7 @@ jobs:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4629,34 +4668,6 @@ jobs:
         </article>
       
         <article class="col">
-          <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-4/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1740516102"
-  data-df="ll"
-  
->
-  Feb 26, 2025
-</time>
-
-              <h4 class="pt-0 my-2">디스코드 뮤직 봇 개발 (4)</h4>
-              <div class="text-muted">
-                <p>> 오늘은 문제가 많았던 출석관련 기능을 수정했다. 기존에 사용하던 SQLite 데이터베이스의 한계와 불편함을 느꼈다. 그럼 이번 수정사항과 여러 시행착오를 아래에서 자세히 설명해보겠다.  ### SQLite에서 PostgreSQL로 마이그레이션 및 Docker Compose 배포기  기존에 사용하던 SQLite 데이터베이스를 PostgreSQL로 전...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-2/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4684,6 +4695,34 @@ jobs:
           </a>
         </article>
       
+        <article class="col">
+          <a href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-1/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1740190250"
+  data-df="ll"
+  
+>
+  Feb 22, 2025
+</time>
+
+              <h4 class="pt-0 my-2">디스코드 뮤직 봇 개발 (1)</h4>
+              <div class="text-muted">
+                <p>디스코드를 애용하는 1인으로서 다양한 봇들은  너무 유용하고 편한 기능이다. 그중에서도 뮤직봇은 대부분의 사용자들이 애용하는 봇이라고 생각한다. 음성채널에서 간단하게 원하는 음악을 스트리밍할 수 있기 때문이다. 그런데 요즘 youtube링크를 붙여넣어도 뮤직봇이 먹통인 경우가 많아 이상함을 느꼈고, 대부분의 봇들이 망가지는 현상을 겪어 직접 봇을 만들...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -4699,11 +4738,11 @@ jobs:
 
   
     <a
-      href="/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/"
+      href="/posts/VSCode%EC%97%90%EC%84%9C-Git-Bash-Terminal-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%8B%9C%EC%9E%91-%EA%B2%BD%EB%A1%9C-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>디스코드 뮤직 봇 개발 (3)</p>
+      <p>VSCode에서 Git Bash Terminal 사용 시 시작 경로 오류 해결하기</p>
     </a>
   
 
