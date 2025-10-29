@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-10-29T23:52:26+09:00</updated>
+  <updated>2025-10-30T00:43:11+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -46,6 +46,58 @@
 
   
   <entry>
+    <title>[Effective Java] - 익명 클래스보다는 람다를 사용하라</title>
+    <link href="https://kguswo.github.io/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 익명 클래스보다는 람다를 사용하라" />
+    <published>2025-10-28T15:50:53+09:00</published>
+  
+    <updated>2025-10-28T15:50:53+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EC%9D%B5%EB%AA%85-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%B3%B4%EB%8B%A4%EB%8A%94-%EB%9E%8C%EB%8B%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Item 42 : 익명 클래스보다는 람다를 사용하라  들어가며  예전 자바에서 함수 타입을 표현할 때는 추상 메서드를 하나만 담은 인터페이스(또는 추상 클래스)를 사용했다. 이런 인터페이스의 인스턴스를 함수 객체(function object) 라고 하여, 특정 함수나 동작을 나타내는 데 사용했다. JDK 1.1부터 함수 객체를 만드는 주요 수단은 익명 클래스 였다.  하지만 익명 클래스 방식은 코드가 너무 길기 때문에 자바는 함수형 프로그래밍에 적합하지 않았다. 자바 8에서 추상 메서드 하나짜리 인터페이스는 특별한 의미를 인정받아 함수형 인터페이스 라 불리게 되었고, 자바는 이런 함수형 인터페이스의 인스턴스를 람다식(lambda expression) 을 사용해 만들 수 있게 되었다. 람다는 함수나 익명...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[Effective Java] - 명명 패턴보다 애너테이션을 사용하라</title>
+    <link href="https://kguswo.github.io/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 명명 패턴보다 애너테이션을 사용하라" />
+    <published>2025-10-28T15:33:32+09:00</published>
+  
+    <updated>2025-10-28T15:33:32+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EB%AA%85%EB%AA%85-%ED%8C%A8%ED%84%B4%EB%B3%B4%EB%8B%A4-%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Item 39 : 명명 패턴보다 애너테이션을 사용하라  들어가며  전통적으로 Java에서는 특정 요소에 추가적인 정보나 처리 방식을 부여하기 위해 명명 패턴(naming pattern) 을 사용해왔다. 예를 들어, JUnit 3 버전까지는 테스트 메서드의 이름을 test로 시작하도록 강제했다. 하지만 명명 패턴은 여러 가지 단점을 가지고 있으며, Java 5부터 도입된 애너테이션(annotation) 이 이를 완벽하게 대체할 수 있는 해법을 제공한다.  이 글에서는 명명 패턴의 문제점을 구체적으로 살펴보고, 애너테이션이 어떻게 이를 해결하는지, 그리고 실제로 애너테이션을 어떻게 설계하고 사용해야 하는지 깊이 있게 다룬다.    명명 패턴의 문제점  명명 패턴은 단순해 보이지만, 다음과 같은 심각한 문제...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>프리코스 2주차를 진행하며</title>
     <link href="https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="프리코스 2주차를 진행하며" />
     <published>2025-10-27T02:40:12+09:00</published>
@@ -70,77 +122,25 @@
 
   
   <entry>
-    <title>[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 비트 필드 대신 EnumSet 을 사용하라" />
-    <published>2025-10-24T18:10:35+09:00</published>
+    <title>프리코스 2주차를 진행하며</title>
+    <link href="https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="프리코스 2주차를 진행하며" />
+    <published>2025-10-27T02:40:12+09:00</published>
   
-    <updated>2025-10-24T18:10:35+09:00</updated>
+    <updated>2025-10-27T02:40:12+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EB%B9%84%ED%8A%B8-%ED%95%84%EB%93%9C-%EB%8C%80%EC%8B%A0-EnumSet-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC/" />
+    <id>https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%ED%94%84%EB%A6%AC%EC%BD%94%EC%8A%A4-2%EC%A3%BC%EC%B0%A8%EB%A5%BC-%EC%A7%84%ED%96%89%ED%95%98%EB%A9%B0/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
 
   
     
-    <category term="개발서적" />
-    
-    <category term="이펙티브자바" />
+    <category term="우아한테크코스" />
     
   
 
-  <summary>Item 36 : 비트 필드 대신 EnumSet을 사용하라  들어가며  열거 타입을 집합으로 사용해야 할 때가 있다. 예컨대 텍스트 스타일을 표현할 때 굵게, 기울임, 밑줄, 취소선 등 여러 스타일을 동시에 적용할 수 있어야 한다. 과거에는 이런 경우 각 상수에 서로 다른 2의 거듭제곱 값을 할당한 비트 필드(bit field) 방식을 사용했다.  그러나 자바에는 비트 필드보다 훨씬 나은 대안이 있다. 바로 EnumSet 이다. EnumSet은 열거 타입 상수의 값으로 구성된 집합을 효과적으로 표현하며, Set 인터페이스를 완벽히 구현하고, 타입 안전하며, 다른 Set 구현체와도 함께 사용할 수 있다.  이번 아이템에서는 비트 필드의 문제점을 살펴보고, EnumSet이 왜 더 나은 선택인지 깊이 있게 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 제네릭과 가변인수를 함께 쓸 때는 신중하라" />
-    <published>2025-10-24T11:59:03+09:00</published>
-  
-    <updated>2025-10-24T11:59:03+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EC%A0%9C%EB%84%A4%EB%A6%AD%EA%B3%BC-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98%EB%A5%BC-%ED%95%A8%EA%BB%98-%EC%93%B8-%EB%95%8C%EB%8A%94-%EC%8B%A0%EC%A4%91%ED%95%98%EB%9D%BC/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="개발서적" />
-    
-    <category term="이펙티브자바" />
-    
-  
-
-  <summary>Item 32 : 제네릭과 가변인수를 함께 쓸 때는 신중하라  들어가며  가변인수(varargs)는 메서드에 임의 개수의 인수를 전달할 수 있게 해주는 편리한 기능이다. 하지만 제네릭과 함께 사용하면 타입 안전성에 심각한 구멍이 생긴다. 이번 아이템에서는 제네릭 varargs의 위험성과 이를 안전하게 사용하는 방법을 알아본다.    가변인수와 제네릭의 근본적인 충돌  실체화 불가 타입(Non-Reifiable Type)  먼저 핵심 개념부터 이해하자. 실체화(Reification) 란 타입 정보가 런타임에도 완전히 유지되는 것을 의미한다. // 실체화 타입 - 런타임에 타입 정보 유지 String[] strings = new String[10]; Object[] objects = strings; obj...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Java Basic Questions (1부)</title>
-    <link href="https://kguswo.github.io/posts/Java-Basic-Questions-1%EB%B6%80/" rel="alternate" type="text/html" title="Java Basic Questions (1부)" />
-    <published>2025-10-24T01:50:29+09:00</published>
-  
-    <updated>2025-10-24T01:50:29+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Java-Basic-Questions-1%EB%B6%80/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Java-Basic-Questions-1%EB%B6%80/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="JavaGuide" />
-    
-  
-
-  <summary>들어가며 Java의 기본 개념에 대한 공부를 하며 중국어 자료를 한국어로 다시 정리하고자 한다.  기본 개념과 상식  자바 언어의 특징은 무엇인가?     배우기 쉽다. (구문이 간단하고 배우기 쉬움)   객체 지향 (캡슐화, 상속, 다형성 등)   플랫폼 독립성 (Java 가상 머신; JVM은 플랫폼 독립성을 구현한다)   멀티스레드 지원 (C++ 언어는 내장된 멀티스레드 메커니즘이 없어서 운영체제의 멀티스레드 기능을 호출해야 하지만, Java 언어는 멀티스레드를 지원한다.) 2011년 C++ 11 부터 C++ 는 Windows, Linux, MacOS에서 스레드를 생성하는데 사용할 수 있는 멀티스레딩 라이브러리를 도입했다. - std::thread.std::async 참고자료 : std::threa...</summary>
+  <summary>들어가며     우아한테크코스 8기 프리코스 2주차 과제는 자동차 경주 게임 구현이었다. 1주차 문자열 계산기보다 훨씬 고민할 거리가 많았다. “생성자를 쓸까, 정적 팩터리 메서드를 쓸까?”, “검증은 어디서 해야 하지?”, “Cars 클래스를 굳이 만들어야 하나?”… 코딩하면서 수없이 고민했던 것들이다. 이 글에서는 그런 설계 고민들을 하나씩 정리해보려고 한다. 혹시 비슷한 고민을 하고 있다면 도움이 되길 바란다!       1. 생성자 vs 정적 팩터리 메서드  Car 객체를 어떻게 만들지 고민이 시작되었다.  “그냥 new Car("pobi") 하면 되는 거 아닌가?”  처음엔 이렇게 생각했다. 근데 코드를 작성하다 보니 뭔가 찝찝했다.    방법 1: public 생성자로 만들기  public ...</summary>
 
   </entry>
 
