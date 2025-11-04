@@ -1451,7 +1451,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5982 words"
+  title="5988 words"
 >
   <em>33 min</em> read</span>
 
@@ -3018,17 +3018,26 @@
 </blockquote>
 
 <div class="box-tip">
-<div class="title">Tell, Don't Ask</div>
-```java
-// Ask - 데이터 달라고 요청
-List lottos = lottos.getLottos();
-for (Lotto lotto : lottos) {
-    // 외부에서 처리
-}
+  <div class="title">Tell, Don't Ask</div>
+  <div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1">// Ask - 데이터 달라고 요청</span>
+<span class="nc">List</span> <span class="n">lottos</span> <span class="o">=</span> <span class="n">lottos</span><span class="o">.</span><span class="na">getLottos</span><span class="o">();</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Lotto</span> <span class="n">lotto</span> <span class="o">:</span> <span class="n">lottos</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// 외부에서 처리</span>
+<span class="o">}</span>
 
-// Tell - 객체에게 시킴
-LottoWinningStatistics stats = lottos.calculateWinningStatistics(winningNumbers);
-```
+<span class="c1">// Tell - 객체에게 시킴</span>
+<span class="nc">LottoWinningStatistics</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">lottos</span><span class="o">.</span><span class="na">calculateWinningStatistics</span><span class="o">(</span><span class="n">winningNumbers</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></div>  </div>
 
 </div>
 
