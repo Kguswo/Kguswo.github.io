@@ -1088,17 +1088,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1114,39 +1103,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1495,9 +1451,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5935 words"
+  title="5982 words"
 >
-  <em>32 min</em> read</span>
+  <em>33 min</em> read</span>
 
         </div>
       </div>
@@ -1850,7 +1806,7 @@
 <p><br /></p>
 
 <blockquote class="prompt-tip">
-  <h4 id="적절한-책임-분리가-중요하다"><span class="me-2">적절한 책임 분리가 중요하다!</span><a href="#적절한-책임-분리가-중요하다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+  <p><strong>적절한 책임 분리가 중요하다!</strong></p>
 
   <p>완전히 실패한 건 아니지만, <strong>“무조건 getter 제거”가 정답은 아니라는 걸</strong> 배웠다.</p>
 
@@ -2057,7 +2013,7 @@
 <p><br /></p>
 
 <blockquote class="prompt-info">
-  <h4 id="코드가-완전히-바뀌다"><span class="me-2">코드가 완전히 바뀌다</span><a href="#코드가-완전히-바뀌다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+  <p><strong>코드가 완전히 바뀌다</strong></p>
 
   <p>꽤 깔끔하게 잘 바꾸었다고 느꼈다. 재밌었던 점은 코드를 조금씩 고쳐나갈 땐 몰랐는데 <strong>다 바꾸고 보니 처음 작성한 코드가 사실 하나도 없었다.</strong></p>
 
@@ -2735,9 +2691,9 @@
 <p><br /></p>
 
 <blockquote class="prompt-warning">
-  <h4 id="service-계층은-없는데"><span class="me-2">Service 계층은 없는데?</span><a href="#service-계층은-없는데" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+  <p><strong>Service 계층은 없는데?</strong></p>
 
-  <p><strong>Service 계층은 만들지 않았다.</strong> 이유는</p>
+  <p>Service 계층은 만들지 않았다. 이유는</p>
 
   <ul>
     <li>미션 규모에 과도</li>
@@ -3039,7 +2995,7 @@
 <p><br /></p>
 
 <blockquote class="prompt-tip">
-  <h3 id="tell-dont-ask"><span class="me-2">Tell, Don’t Ask</span><a href="#tell-dont-ask" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+  <p><strong>Tell, Don’t Ask</strong></p>
   <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -3060,6 +3016,21 @@
 <span class="nc">LottoWinningStatistics</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">lottos</span><span class="o">.</span><span class="na">calculateWinningStatistics</span><span class="o">(</span><span class="n">winningNumbers</span><span class="o">);</span>
 </pre></td></tr></tbody></table></code></div>  </div>
 </blockquote>
+
+<div class="box-tip">
+<div class="title">Tell, Don't Ask</div>
+```java
+// Ask - 데이터 달라고 요청
+List lottos = lottos.getLottos();
+for (Lotto lotto : lottos) {
+    // 외부에서 처리
+}
+
+// Tell - 객체에게 시킴
+LottoWinningStatistics stats = lottos.calculateWinningStatistics(winningNumbers);
+```
+
+</div>
 
 <p>객체에게 물어보지 말고 시켜라!</p>
 
