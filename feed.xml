@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-11-16T10:48:20+09:00</updated>
+  <updated>2025-11-19T10:42:44+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>BOJ_1655_가운데를 말해요 (Java)</title>
+    <link href="https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/" rel="alternate" type="text/html" title="BOJ_1655_가운데를 말해요 (Java)" />
+    <published>2025-11-18T17:29:53+09:00</published>
+  
+    <updated>2025-11-18T17:29:53+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="알고리즘" />
+    
+  
+
+  <summary>[Gold II] 가운데를 말해요 - 1655  문제 링크  성능 요약  메모리: 34180 KB, 시간: 428 ms  분류  자료 구조, 우선순위 큐  제출 일자  2025년 11월 18일 17:21:19  문제 설명  백준이는 동생에게 "가운데를 말해요" 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.  예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -115,30 +139,6 @@
   
 
   <summary>[level 4] 저자 별 카테고리 별 매출액 집계하기 - 144856  문제 링크  성능 요약  메모리: 0.0 MB, 시간: 0.00 ms  구분  코딩테스트 연습 &amp;gt; GROUP BY  채점결과  Empty  제출 일자  2025년 11월 09일 16:48:06  문제 설명  다음은 어느 한 서점에서 판매중인 도서들의 도서 정보(BOOK), 저자 정보(AUTHOR) 테이블입니다.  BOOK 테이블은 각 도서의 정보를 담은 테이블로 아래와 같은 구조로 되어있습니다.           Column name Type Nullable Description            BOOK_ID INTEGER FALSE 도서 ID   CATEGORY VARCHAR(N) FALSE 카테고리 (경제, 인문, 소...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>PGMS_다리를 지나는 트럭 (Java)</title>
-    <link href="https://kguswo.github.io/posts/PGMS%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC%A7%80%EB%82%98%EB%8A%94-%ED%8A%B8%EB%9F%AD-Java/" rel="alternate" type="text/html" title="PGMS_다리를 지나는 트럭 (Java)" />
-    <published>2025-11-09T16:28:45+09:00</published>
-  
-    <updated>2025-11-09T16:28:45+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/PGMS%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC%A7%80%EB%82%98%EB%8A%94-%ED%8A%B8%EB%9F%AD-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC%A7%80%EB%82%98%EB%8A%94-%ED%8A%B8%EB%9F%AD-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[level 2] 다리를 지나는 트럭 - 42583  문제 링크  성능 요약  메모리: 76.2 MB, 시간: 19.20 ms  구분  코딩테스트 연습 &amp;gt; 스택／큐  채점결과  정확성: 100.0합계: 100.0 / 100.0  제출 일자  2025년 11월 09일 16:19:21  문제 설명  트럭 여러 대가 강을 가로지르는 일차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 다리에는 트럭이 최대 bridge_length대 올라갈 수 있으며, 다리는 weight 이하까지의 무게를 견딜 수 있습니다. 단, 다리에 완전히 오르지 않은 트럭의 무게는 무시합니다.  예를 들어, 트럭 2대가 올라갈 수 있고 무게를 10kg까지 견디는 다리가 ...</summary>
 
   </entry>
 
