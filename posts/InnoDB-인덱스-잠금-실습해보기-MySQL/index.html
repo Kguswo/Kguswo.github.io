@@ -1920,6 +1920,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94/">Real MySQL - Ch.11 쿼리 작성 및 최적화</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/">BOJ_1655_가운데를 말해요 (Java)</a>
         </li>
       
@@ -1942,13 +1949,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/Effective-Java-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EB%A5%BC-%EC%8B%A0%EC%A4%91%ED%9E%88-%EC%84%A4%EA%B3%84%ED%95%98%EB%9D%BC/">[Effective Java] - 메서드 시그니처를 신중히 설계하라</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/PGMS%EC%A0%80%EC%9E%90-%EB%B3%84-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC-%EB%B3%84-%EB%A7%A4%EC%B6%9C%EC%95%A1-%EC%A7%91%EA%B3%84%ED%95%98%EA%B8%B0-SQL/">PGMS_저자 별 카테고리 별 매출액 집계하기 (SQL)</a>
         </li>
       
     </ul>
@@ -4678,6 +4678,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -4691,6 +4703,34 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1765156069"
+  data-df="ll"
+  
+>
+  Dec  8, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Real MySQL - Ch.11 쿼리 작성 및 최적화</h4>
+              <div class="text-muted">
+                <p># Real MySQL 8.0 : 11장 쿼리 작성 및 최적화  ### 들어가며  MySQL에서 SQL을 작성할 때, 단순히 문법만 맞추면 되는 것이 아니다. MySQL 서버의 설정에 따라 대소문자 구분, 문자열 표기 방법, 날짜 형식 등이 달라지며, 이러한 시스템 변수들을 이해하지 못하면 예상치 못한 동작이나 오류를 마주하게 된다.    ## 11....</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/Subquery-vs-Join/" class="post-preview card h-100">
@@ -4743,34 +4783,6 @@
               <h4 class="pt-0 my-2">MySQL 옵티마이저 에러</h4>
               <div class="text-muted">
                 <p>## 옵티마이저 에러 & 힌트  옵티마이저는 제한된 정보를 이용해서 최적의 실행계획을 최대한 짧은 시간안에 수립해야한다. 따라서 빠르고 정확하게 실행되어야한다.  실제 실무에서 RDBMS사용할 때 옵티마이저 관련 오류가 많이 발생하고 이런 문제를 최대한 회피하고자 옵티마이저 힌트를 사용하고, 많은 힌트 기능들이 제공된다.   **SQL문장에서 옵티마이...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1746614840"
-  data-df="ll"
-  
->
-  May  7, 2025
-</time>
-
-              <h4 class="pt-0 my-2">트랜잭션과 격리 수준 (+ InnoDB Transaction Model )</h4>
-              <div class="text-muted">
-                <p>앞서, 그림들은 직접 제작했습니다. 사용할 때 출처 작성해주세요   트랜잭션      💡 여러 작업들을 하나로 묶은 단위로, 이렇게 묶인 작업들은 모두 실행되거나 모두 실행되지 않는다(all-or-nothing).   읽기와 쓰기를 하나의 논리적 단위로 묶는 방법이라고 정의할 수 있다.    하나의 트랜잭션 안에서 실패하면 트랜잭션 내부에서 했던 작업...</p>
               </div>
             </div>
           </a>
