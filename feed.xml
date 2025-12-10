@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-12-08T10:47:13+09:00</updated>
+  <updated>2025-12-10T10:48:42+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>레디스 기본 개념</title>
+    <link href="https://kguswo.github.io/posts/%EB%A0%88%EB%94%94%EC%8A%A4-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/" rel="alternate" type="text/html" title="레디스 기본 개념" />
+    <published>2025-12-10T02:47:02+09:00</published>
+  
+    <updated>2025-12-10T02:47:02+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/%EB%A0%88%EB%94%94%EC%8A%A4-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%EB%A0%88%EB%94%94%EC%8A%A4-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="Redis_For_Developers" />
+    
+  
+
+  <summary>3장 : 레디스 기본 개념  들어가며  레디스는 단순한 키-값 저장소가 아니다. 다양한 자료 구조를 지원하는 데이터 구조 서버 라고 표현하는 것이 더 정확하다. 기존의 키-값 저장소가 문자열 키와 문자열 값만을 연결했다면, 레디스는 String, List, Hash, Set, Sorted Set 등 복잡한 자료 구조를 지원한다.  이번 장에서는 레디스가 제공하는 자료 구조들의 특징과 사용법을 살펴보고, 키를 효율적으로 관리하는 방법까지 알아본다.    레디스의 자료 구조  String  String은 레디스에서 가장 기본적인 자료 구조 다. 키와 연결할 수 있는 가장 단순한 유형의 값이며, 레디스의 키가 문자열이므로 문자열을 다른 문자열에 매핑하는 구조라고 볼 수 있다.  String 타입에는 모든 종...</summary>
+
+  </entry>
 
   
   <entry>
@@ -113,32 +139,6 @@
   
 
   <summary>Item 54 : null이 아닌, 빈 컬렉션이나 배열을 반환하라    들어가며  메서드가 컬렉션이나 배열을 반환할 때, 결과가 없는 경우 어떻게 처리해야 할까? 많은 개발자들이 null을 반환하는 것이 자연스럽다고 생각한다. 하지만 이는 클라이언트 코드에 방어 로직을 강제하고, 방어 코드를 빼먹으면 NullPointerException이라는 지뢰를 심는 결과를 낳는다.  빈 컬렉션이나 빈 배열을 반환하는 것이 null을 반환하는 것보다 거의 항상 낫다. 이 아이템에서는 왜 그런지, 그리고 어떻게 효율적으로 구현하는지 살펴본다.    null 반환의 문제점  먼저 null을 반환하는 전형적인 코드를 보자.  // 나쁜 예: null 반환 public class Shop {     private fina...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Effective Java] - 메서드 시그니처를 신중히 설계하라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EB%A5%BC-%EC%8B%A0%EC%A4%91%ED%9E%88-%EC%84%A4%EA%B3%84%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - 메서드 시그니처를 신중히 설계하라" />
-    <published>2025-11-10T19:01:20+09:00</published>
-  
-    <updated>2025-11-10T19:01:20+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Effective-Java-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EB%A5%BC-%EC%8B%A0%EC%A4%91%ED%9E%88-%EC%84%A4%EA%B3%84%ED%95%98%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EB%A5%BC-%EC%8B%A0%EC%A4%91%ED%9E%88-%EC%84%A4%EA%B3%84%ED%95%98%EB%9D%BC/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="개발서적" />
-    
-    <category term="이펙티브자바" />
-    
-  
-
-  <summary>Item 51 : 메서드 시그니처를 신중히 설계하라  들어가며  API 설계에서 메서드 시그니처는 개발자가 매일 마주하는 인터페이스다. 잘 설계된 메서드 시그니처는 코드의 가독성을 높이고 오류 가능성을 줄이며, API의 사용성을 크게 향상시킨다. 반대로 부주의하게 설계된 시그니처는 혼란을 야기하고 버그의 온상이 되며, 한번 공개되면 영원히 지원해야 하는 부담이 된다.  이 아이템에서는 메서드 시그니처를 설계할 때 고려해야 할 핵심 원칙들을 살펴본다. 메서드 이름 짓기, 매개변수 개수 제한, 매개변수 타입 선택 등 실무에서 즉시 적용할 수 있는 구체적인 지침을 다룬다.    1. 메서드 이름을 신중히 지어라  메서드 이름은 해당 메서드가 무엇을 하는지 명확히 전달해야 한다. 이름만 보고도 메서드의 동작을...</summary>
 
   </entry>
 
