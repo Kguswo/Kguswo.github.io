@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-12-10T17:22:58+09:00</updated>
+  <updated>2025-12-14T10:54:31+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,56 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>지연된 조인 실행계획 테스트</title>
+    <link href="https://kguswo.github.io/posts/%EC%A7%80%EC%97%B0%EB%90%9C-%EC%A1%B0%EC%9D%B8-%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D-%ED%85%8C%EC%8A%A4%ED%8A%B8/" rel="alternate" type="text/html" title="지연된 조인 실행계획 테스트" />
+    <published>2025-12-13T14:03:15+09:00</published>
+  
+    <updated>2025-12-13T14:03:15+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/%EC%A7%80%EC%97%B0%EB%90%9C-%EC%A1%B0%EC%9D%B8-%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D-%ED%85%8C%EC%8A%A4%ED%8A%B8/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%EC%A7%80%EC%97%B0%EB%90%9C-%EC%A1%B0%EC%9D%B8-%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D-%ED%85%8C%EC%8A%A4%ED%8A%B8/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>지연된 조인     드라이빙 테이블만으로 필요한 데이터를 먼저 필터링한 후, 최소한의 레코드로만 조인을 수행하는 기법이다.   조인을 사용하는 쿼리에서 GROUP BY, ORDER BY, LIMIT 등이 함께 사용될 때 성능을 높이기 위해 조인을 최대한 늦추고 필요한 데이터만 먼저 필터링한다.  같은 결과를 반환하는 두 쿼리를 예시로 진행해보자.  SELECT e.* FROM salaries s, employees e WHERE e.emp_no = s.emp_no     AND s.emp_no BETWEEN 10001 AND 15000  -- 5,000명 대상 GROUP BY s.emp_no ORDER BY SUM(s.salary) DESC LIMIT 10;     0.031 sec / 0.000 se...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Real MySQL - SELECT</title>
+    <link href="https://kguswo.github.io/posts/Real-MySQL-SELECT/" rel="alternate" type="text/html" title="Real MySQL - SELECT" />
+    <published>2025-12-13T13:26:29+09:00</published>
+  
+    <updated>2025-12-13T13:26:29+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Real-MySQL-SELECT/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-SELECT/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>Real MySQL 8.0 : 11장 쿼리 작성 및 최적화 (2) - SELECT  들어가며  SELECT 문은 데이터베이스에서 가장 많이 사용되는 SQL 문이다. 단순히 데이터를 조회하는 것처럼 보이지만, 내부적으로는 여러 단계의 처리 과정을 거치며 인덱스 활용 여부에 따라 성능이 크게 달라진다. 이번 글에서는 Real MySQL 8.0 2권 11장의 SELECT 관련 내용 중 11.4.1 SELECT 절의 처리 순서 부터 11.4.9 ORDER BY 까지를 정리한다.    SELECT 절의 처리 순서  SELECT 문장을 작성할 때 각 절(FROM, WHERE, GROUP BY 등)은 특정 순서로 작성해야 하지만, 실제 처리 순서는 작성 순서와 다르다.  SELECT s.emp_no, COUNT(D...</summary>
+
+  </entry>
 
   
   <entry>
@@ -89,56 +139,6 @@
   
 
   <summary>[Gold II] 가운데를 말해요 - 1655  문제 링크  성능 요약  메모리: 34180 KB, 시간: 428 ms  분류  자료 구조, 우선순위 큐  제출 일자  2025년 11월 18일 17:21:19  문제 설명  백준이는 동생에게 "가운데를 말해요" 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.  예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>PGMS_주식가격 (Java)</title>
-    <link href="https://kguswo.github.io/posts/PGMS%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9-Java/" rel="alternate" type="text/html" title="PGMS_주식가격 (Java)" />
-    <published>2025-11-15T18:28:00+09:00</published>
-  
-    <updated>2025-11-15T18:28:00+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/PGMS%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/PGMS%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[level 2] 주식가격 - 42584  문제 링크  성능 요약  메모리: 72.4 MB, 시간: 42.60 ms  구분  코딩테스트 연습 &amp;gt; 스택／큐  채점결과  정확성: 66.7효율성: 33.3합계: 100.0 / 100.0  제출 일자  2025년 11월 15일 18:25:39  문제 설명  초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.  제한사항   prices의 각 가격은 1 이상 10,000 이하인 자연수입니다. prices의 길이는 2 이상 100,000 이하입니다.   입출력 예           prices return            [1, 2, 3...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Effective Java] - null이 아닌, 빈 컬렉션이나 배열을 반환하라</title>
-    <link href="https://kguswo.github.io/posts/Effective-Java-null%EC%9D%B4-%EC%95%84%EB%8B%8C-%EB%B9%88-%EC%BB%AC%EB%A0%89%EC%85%98%EC%9D%B4%EB%82%98-%EB%B0%B0%EC%97%B4%EC%9D%84-%EB%B0%98%ED%99%98%ED%95%98%EB%9D%BC/" rel="alternate" type="text/html" title="[Effective Java] - null이 아닌, 빈 컬렉션이나 배열을 반환하라" />
-    <published>2025-11-10T19:19:36+09:00</published>
-  
-    <updated>2025-11-10T19:19:36+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Effective-Java-null%EC%9D%B4-%EC%95%84%EB%8B%8C-%EB%B9%88-%EC%BB%AC%EB%A0%89%EC%85%98%EC%9D%B4%EB%82%98-%EB%B0%B0%EC%97%B4%EC%9D%84-%EB%B0%98%ED%99%98%ED%95%98%EB%9D%BC/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Effective-Java-null%EC%9D%B4-%EC%95%84%EB%8B%8C-%EB%B9%88-%EC%BB%AC%EB%A0%89%EC%85%98%EC%9D%B4%EB%82%98-%EB%B0%B0%EC%97%B4%EC%9D%84-%EB%B0%98%ED%99%98%ED%95%98%EB%9D%BC/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="개발서적" />
-    
-    <category term="이펙티브자바" />
-    
-  
-
-  <summary>Item 54 : null이 아닌, 빈 컬렉션이나 배열을 반환하라    들어가며  메서드가 컬렉션이나 배열을 반환할 때, 결과가 없는 경우 어떻게 처리해야 할까? 많은 개발자들이 null을 반환하는 것이 자연스럽다고 생각한다. 하지만 이는 클라이언트 코드에 방어 로직을 강제하고, 방어 코드를 빼먹으면 NullPointerException이라는 지뢰를 심는 결과를 낳는다.  빈 컬렉션이나 빈 배열을 반환하는 것이 null을 반환하는 것보다 거의 항상 낫다. 이 아이템에서는 왜 그런지, 그리고 어떻게 효율적으로 구현하는지 살펴본다.    null 반환의 문제점  먼저 null을 반환하는 전형적인 코드를 보자.  // 나쁜 예: null 반환 public class Shop {     private fina...</summary>
 
   </entry>
 
