@@ -4,7 +4,7 @@
   <id>https://kguswo.github.io/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-12-14T10:54:31+09:00</updated>
+  <updated>2025-12-15T20:02:20+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.github.io/</uri>
@@ -17,6 +17,56 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT</title>
+    <link href="https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" rel="alternate" type="text/html" title="Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT" />
+    <published>2025-12-15T19:54:47+09:00</published>
+  
+    <updated>2025-12-15T19:54:47+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="개발서적" />
+    
+    <category term="이펙티브자바" />
+    
+  
+
+  <summary>들어가며  Real MySQL 8.0 2권 11장에서는 쿼리 작성과 최적화에 대해 다룬다. 이 글에서는 그중 11.4.10 서브쿼리, 11.4.11 CTE(Common Table Expression), 11.4.13 잠금을 사용하는 SELECT를 정리한다.  서브쿼리는 MySQL 5.5 이하에서 성능이 좋지 않아 기피 대상이었지만, MySQL 8.0에서는 세미 조인 최적화 등 다양한 최적화 기법이 도입되어 상황이 크게 달라졌다. CTE는 MySQL 8.0에서 새롭게 도입된 기능으로, 복잡한 쿼리의 가독성을 높이고 재귀 쿼리를 가능하게 한다. 잠금을 사용하는 SELECT는 동시성 제어의 핵심으로, MySQL 8.0.1부터 NOWAIT과 SKIP LOCKED 옵션이 추가되어 더욱 유연한 잠금 제어가 가능해...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>선착순 쿠폰 발급과 동시성 문제</title>
+    <link href="https://kguswo.github.io/posts/%EC%84%A0%EC%B0%A9%EC%88%9C-%EC%BF%A0%ED%8F%B0-%EB%B0%9C%EA%B8%89%EA%B3%BC-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C/" rel="alternate" type="text/html" title="선착순 쿠폰 발급과 동시성 문제" />
+    <published>2025-12-15T19:28:40+09:00</published>
+  
+    <updated>2025-12-15T19:28:40+09:00</updated>
+  
+    <id>https://kguswo.github.io/posts/%EC%84%A0%EC%B0%A9%EC%88%9C-%EC%BF%A0%ED%8F%B0-%EB%B0%9C%EA%B8%89%EA%B3%BC-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C/</id>
+    <content type="text/html" src="https://kguswo.github.io/posts/%EC%84%A0%EC%B0%A9%EC%88%9C-%EC%BF%A0%ED%8F%B0-%EB%B0%9C%EA%B8%89%EA%B3%BC-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>들어가며  Real MySQL 8.0 11.4.13 "잠금을 사용하는 SELECT" 를 읽다 보면, 선착순 쿠폰 발급 시 동시에 1000개의 요청이 들어오는 상황을 예로 들며 NOWAIT과 SKIP LOCKED를 설명한다. 책에서는 간단히 언급하고 넘어가지만, 실제로 이 문제를 해결하려면 상당히 깊은 이해가 필요하다.  특히 배달, 커머스 기업 등에서는 선착순 쿠폰 발급 요청이 동시에 수백, 수천만개가 들어온다고 한다.  이 글에서는 선착순 쿠폰 발급의 동시성 문제가 왜 발생하는지, 그리고 MySQL의 잠금 기능부터 Redis, Kafka를 활용한 대규모 처리까지 단계별로 살펴본다. 필자는 Java 코드로 진행하고자 한다.    Race Condition  선착순 100명에게 쿠폰을 발급하는 요구사항을...</summary>
+
+  </entry>
 
   
   <entry>
@@ -91,54 +141,6 @@
   
 
   <summary>3장 : 레디스 기본 개념  들어가며  레디스는 단순한 키-값 저장소가 아니다. 다양한 자료 구조를 지원하는 데이터 구조 서버 라고 표현하는 것이 더 정확하다. 기존의 키-값 저장소가 문자열 키와 문자열 값만을 연결했다면, 레디스는 String, List, Hash, Set, Sorted Set 등 복잡한 자료 구조를 지원한다.  이번 장에서는 레디스가 제공하는 자료 구조들의 특징과 사용법을 살펴보고, 키를 효율적으로 관리하는 방법까지 알아본다.    레디스의 자료 구조  String  String은 레디스에서 가장 기본적인 자료 구조 다. 키와 연결할 수 있는 가장 단순한 유형의 값이며, 레디스의 키가 문자열이므로 문자열을 다른 문자열에 매핑하는 구조라고 볼 수 있다.  String 타입에는 모든 종...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Real MySQL - Ch.11 쿼리 작성 및 최적화</title>
-    <link href="https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94/" rel="alternate" type="text/html" title="Real MySQL - Ch.11 쿼리 작성 및 최적화" />
-    <published>2025-12-08T10:07:49+09:00</published>
-  
-    <updated>2025-12-08T10:07:49+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>Real MySQL 8.0 : 11장 쿼리 작성 및 최적화  들어가며  MySQL에서 SQL을 작성할 때, 단순히 문법만 맞추면 되는 것이 아니다. MySQL 서버의 설정에 따라 대소문자 구분, 문자열 표기 방법, 날짜 형식 등이 달라지며, 이러한 시스템 변수들을 이해하지 못하면 예상치 못한 동작이나 오류를 마주하게 된다.    11.1 쿼리 작성과 연관된 시스템 변수  대소문자 구분, 문자열 표기 방법 등과 같은 SQL 작성 규칙은 MySQL 서버의 시스템 설정에 따라 달라진다.  11.1.1 SQL 모드  MySQL 서버의 sql_mode 시스템 변수는 SQL 문장 작성 규칙과 데이터 타입 변환 및 기본값 제어 등에 영향을 미친다. sql_mode는 여러 개의 값을 동시에 설정할 수 있으며, 구분자...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>BOJ_1655_가운데를 말해요 (Java)</title>
-    <link href="https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/" rel="alternate" type="text/html" title="BOJ_1655_가운데를 말해요 (Java)" />
-    <published>2025-11-18T17:29:53+09:00</published>
-  
-    <updated>2025-11-18T17:29:53+09:00</updated>
-  
-    <id>https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/BOJ1655%EA%B0%80%EC%9A%B4%EB%8D%B0%EB%A5%BC-%EB%A7%90%ED%95%B4%EC%9A%94-Java/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="알고리즘" />
-    
-  
-
-  <summary>[Gold II] 가운데를 말해요 - 1655  문제 링크  성능 요약  메모리: 34180 KB, 시간: 428 ms  분류  자료 구조, 우선순위 큐  제출 일자  2025년 11월 18일 17:21:19  문제 설명  백준이는 동생에게 "가운데를 말해요" 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.  예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 ...</summary>
 
   </entry>
 
