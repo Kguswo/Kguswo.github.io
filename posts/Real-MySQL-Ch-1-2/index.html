@@ -2227,6 +2227,20 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/">GROUP BY가 포함된 JOIN UPDATE</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Real-MySQL-INSERT-UPDATE-DELETE/">Real MySQL - INSERT, UPDATE, DELETE</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/">Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT</a>
         </li>
       
@@ -2242,20 +2256,6 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
         
         <li class="text-truncate lh-lg">
           <a href="/posts/%EC%A7%80%EC%97%B0%EB%90%9C-%EC%A1%B0%EC%9D%B8-%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D-%ED%85%8C%EC%8A%A4%ED%8A%B8/">지연된 조인 실행계획 테스트</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Real-MySQL-SELECT/">Real MySQL - SELECT</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/%EB%A0%88%EB%94%94%EC%8A%A4-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/">레디스 기본 개념</a>
         </li>
       
     </ul>
@@ -4391,76 +4391,10 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4512,9 +4446,77 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4600,10 +4602,10 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/leetcode/">leetcode</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/database/">Database</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/database/">Database</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/leetcode/">leetcode</a>
       
     </div>
   </section>
@@ -4687,7 +4689,31 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4863,6 +4889,34 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
         </article>
       
         <article class="col">
+          <a href="/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1766054921"
+  data-df="ll"
+  
+>
+  Dec 18, 2025
+</time>
+
+              <h4 class="pt-0 my-2">GROUP BY가 포함된 JOIN UPDATE</h4>
+              <div class="text-muted">
+                <p>### 들어가며  MySQL에서 JOIN UPDATE는 다른 테이블의 데이터를 참조하여 특정 테이블을 업데이트할 때 사용하는 강력한 기능이다. 그런데 여기에 GROUP BY를 사용하려 하면 갑자기 문법 오류가 발생한다. 왜 그럴까? 이번 글에서는 JOIN UPDATE에서 GROUP BY가 왜 안 되는지, 그리고 이 문제를 해결하기 위한 **파생 테이블...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/%EC%84%A0%EC%B0%A9%EC%88%9C-%EC%BF%A0%ED%8F%B0-%EB%B0%9C%EA%B8%89%EA%B3%BC-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4885,34 +4939,6 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
               <h4 class="pt-0 my-2">선착순 쿠폰 발급과 동시성 문제</h4>
               <div class="text-muted">
                 <p>### 들어가며  `Real MySQL 8.0 11.4.13 "잠금을 사용하는 SELECT"` 를 읽다 보면, 선착순 쿠폰 발급 시 동시에 1000개의 요청이 들어오는 상황을 예로 들며 `NOWAIT`과 `SKIP LOCKED`를 설명한다. 책에서는 간단히 언급하고 넘어가지만, 실제로 이 문제를 해결하려면 상당히 깊은 이해가 필요하다.  특히 배달, ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%EC%A7%80%EC%97%B0%EB%90%9C-%EC%A1%B0%EC%9D%B8-%EC%8B%A4%ED%96%89%EA%B3%84%ED%9A%8D-%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1765602195"
-  data-df="ll"
-  
->
-  Dec 13, 2025
-</time>
-
-              <h4 class="pt-0 my-2">지연된 조인 실행계획 테스트</h4>
-              <div class="text-muted">
-                <p>### 지연된 조인  > 드라이빙 테이블만으로 필요한 데이터를 먼저 필터링한 후, 최소한의 레코드로만 조인을 수행하는 기법이다.  조인을 사용하는 쿼리에서 GROUP BY, ORDER BY, LIMIT 등이 함께 사용될 때 성능을 높이기 위해 조인을 최대한 늦추고 필요한 데이터만 먼저 필터링한다.  같은 결과를 반환하는 두 쿼리를 예시로 진행해보자. ...</p>
               </div>
             </div>
           </a>
@@ -7126,76 +7152,10 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -7247,9 +7207,77 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -7335,10 +7363,10 @@ mysqld-auto.cnf 에만 수정해서 저장하고 재시작시 반영된다.</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/leetcode/">leetcode</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/database/">Database</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/database/">Database</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/leetcode/">leetcode</a>
       
     </div>
   </section>
