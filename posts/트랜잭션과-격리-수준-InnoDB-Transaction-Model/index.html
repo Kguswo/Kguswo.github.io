@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="앞서, 그림들은 직접 제작했습니다. 사용할 때 출처 작성해주세요" />
 <meta property="og:description" content="앞서, 그림들은 직접 제작했습니다. 사용할 때 출처 작성해주세요" />
-<link rel="canonical" href="https://kguswo.github.io/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
+<link rel="canonical" href="https://kguswo.dev/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
+<meta property="og:url" content="https://kguswo.dev/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-05-07T19:47:20+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png" />
 <meta property="twitter:title" content="트랜잭션과 격리 수준 (+ InnoDB Transaction Model )" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T19:47:20+09:00","datePublished":"2025-05-07T19:47:20+09:00","description":"앞서, 그림들은 직접 제작했습니다. 사용할 때 출처 작성해주세요","headline":"트랜잭션과 격리 수준 (+ InnoDB Transaction Model )","image":"https://kguswo.github.io/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"},"url":"https://kguswo.github.io/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T19:47:20+09:00","datePublished":"2025-05-07T19:47:20+09:00","description":"앞서, 그림들은 직접 제작했습니다. 사용할 때 출처 작성해주세요","headline":"트랜잭션과 격리 수준 (+ InnoDB Transaction Model )","image":"https://kguswo.dev/../assets/posts/17498eec563db62cfea9ae23ded9da85385c9272742710454dd15827c819eced.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"},"url":"https://kguswo.dev/posts/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-InnoDB-Transaction-Model/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -2588,21 +2588,21 @@ Ex)
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F&text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25ED%258A%25B8%25EB%259E%259C%25EC%259E%25AD%25EC%2585%2598%25EA%25B3%25BC-%25EA%25B2%25A9%25EB%25A6%25AC-%25EC%2588%2598%25EC%25A4%2580-InnoDB-Transaction-Model%2F&text=%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EA%B3%BC%20%EA%B2%A9%EB%A6%AC%20%EC%88%98%EC%A4%80%20(+%20InnoDB%20Transaction%20Model%20)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

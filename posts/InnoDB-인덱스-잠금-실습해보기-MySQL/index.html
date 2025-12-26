@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="MySQL InnoDB의 인덱스 잠금 메커니즘 테스트 및 분석" />
 <meta property="og:description" content="MySQL InnoDB의 인덱스 잠금 메커니즘 테스트 및 분석" />
-<link rel="canonical" href="https://kguswo.github.io/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/" />
+<link rel="canonical" href="https://kguswo.dev/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/" />
+<meta property="og:url" content="https://kguswo.dev/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-05-14T20:22:10+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png" />
 <meta property="twitter:title" content="InnoDB 인덱스 잠금 실습해보기 (MySQL)" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-14T20:22:10+09:00","datePublished":"2025-05-14T20:22:10+09:00","description":"MySQL InnoDB의 인덱스 잠금 메커니즘 테스트 및 분석","headline":"InnoDB 인덱스 잠금 실습해보기 (MySQL)","image":"https://kguswo.github.io/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/"},"url":"https://kguswo.github.io/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-14T20:22:10+09:00","datePublished":"2025-05-14T20:22:10+09:00","description":"MySQL InnoDB의 인덱스 잠금 메커니즘 테스트 및 분석","headline":"InnoDB 인덱스 잠금 실습해보기 (MySQL)","image":"https://kguswo.dev/../assets/posts/839b461fe718c8492b378931063147d0ba947ab79d427ab32c814aae1ca3fa46.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/"},"url":"https://kguswo.dev/posts/InnoDB-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EC%9E%A0%EA%B8%88-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0-MySQL/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1851,21 +1851,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F&text=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FInnoDB-%25EC%259D%25B8%25EB%258D%25B1%25EC%258A%25A4-%25EC%259E%25A0%25EA%25B8%2588-%25EC%258B%25A4%25EC%258A%25B5%25ED%2595%25B4%25EB%25B3%25B4%25EA%25B8%25B0-MySQL%2F&text=InnoDB%20%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%9E%A0%EA%B8%88%20%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0%20(MySQL)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

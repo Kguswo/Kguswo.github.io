@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다." />
 <meta property="og:description" content="LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다." />
-<link rel="canonical" href="https://kguswo.github.io/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/" />
+<link rel="canonical" href="https://kguswo.dev/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/" />
+<meta property="og:url" content="https://kguswo.dev/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-12-16T16:06:34+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png" />
 <meta property="twitter:title" content="[Java] List.contains() 와 Set.contains() 비교" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-16T16:06:34+09:00","datePublished":"2024-12-16T16:06:34+09:00","description":"LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다.","headline":"[Java] List.contains() 와 Set.contains() 비교","image":"https://kguswo.github.io/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/"},"url":"https://kguswo.github.io/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-16T16:06:34+09:00","datePublished":"2024-12-16T16:06:34+09:00","description":"LeetCode에서 PS를 진행 도중 Submit완료 한 뒤 코드 성능 개선을 위해 여러 시도를 하던 중 List의 contains() 와 set의 contains()메서드 시간복잡도가 다르다는것을 알게 되었다. 이를 여러 자료 및 블로그를 참고해 간단히 정리하고자 남기게되었다.","headline":"[Java] List.contains() 와 Set.contains() 비교","image":"https://kguswo.dev/../assets/posts/e4b48744c5a3a0c4f34a16928ed6154527aa08454630357294757c3f37c9a8d7.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/"},"url":"https://kguswo.dev/posts/Java-List.contains-%EC%99%80-Set.contains-%EB%B9%84%EA%B5%90/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1156,21 +1156,21 @@ ArrayList에서는 indexOf()를 통해 결정하기에 모든 항목을 체크�
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F&text=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FJava-List.contains-%25EC%2599%2580-Set.contains-%25EB%25B9%2584%25EA%25B5%2590%2F&text=[Java]%20List.contains()%20%EC%99%80%20Set.contains()%20%EB%B9%84%EA%B5%90%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

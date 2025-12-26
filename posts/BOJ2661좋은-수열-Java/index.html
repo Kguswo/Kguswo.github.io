@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="[Gold IV] 좋은수열 - 2661 문제 링크 ### 성능 요약 메모리: 14460 KB, 시간: 132 ms ### 분류 백트래킹 ### 제출 일자 2025년 3월 25일 23:22:57 ### 문제 설명 숫자 1, 2, 3으로만 이루어지는 수열이 있다. 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것이 있으면, 그 수열을 나쁜 수열이라고 부른다. 그렇지 않은 수열은 좋은 수열이다. 다음은 나쁜 수열의 예이다. 33 32121323 123123213 다음은 좋은 수열의 예이다. 2 32 32123 1232123 길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램을 작성하라. 예를 들면, 1213121과 2123212는 모두 좋은 수열이지만 그 중에서 작은 수를 나타내는 수열은 1213121이다." />
 <meta property="og:description" content="[Gold IV] 좋은수열 - 2661 문제 링크 ### 성능 요약 메모리: 14460 KB, 시간: 132 ms ### 분류 백트래킹 ### 제출 일자 2025년 3월 25일 23:22:57 ### 문제 설명 숫자 1, 2, 3으로만 이루어지는 수열이 있다. 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것이 있으면, 그 수열을 나쁜 수열이라고 부른다. 그렇지 않은 수열은 좋은 수열이다. 다음은 나쁜 수열의 예이다. 33 32121323 123123213 다음은 좋은 수열의 예이다. 2 32 32123 1232123 길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램을 작성하라. 예를 들면, 1213121과 2123212는 모두 좋은 수열이지만 그 중에서 작은 수를 나타내는 수열은 1213121이다." />
-<link rel="canonical" href="https://kguswo.github.io/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/" />
+<link rel="canonical" href="https://kguswo.dev/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/" />
+<meta property="og:url" content="https://kguswo.dev/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-03-25T23:54:24+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png" />
 <meta property="twitter:title" content="BOJ_2661_좋은 수열 (Java)" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-25T23:54:24+09:00","datePublished":"2025-03-25T23:54:24+09:00","description":"[Gold IV] 좋은수열 - 2661 문제 링크 ### 성능 요약 메모리: 14460 KB, 시간: 132 ms ### 분류 백트래킹 ### 제출 일자 2025년 3월 25일 23:22:57 ### 문제 설명 숫자 1, 2, 3으로만 이루어지는 수열이 있다. 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것이 있으면, 그 수열을 나쁜 수열이라고 부른다. 그렇지 않은 수열은 좋은 수열이다. 다음은 나쁜 수열의 예이다. 33 32121323 123123213 다음은 좋은 수열의 예이다. 2 32 32123 1232123 길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램을 작성하라. 예를 들면, 1213121과 2123212는 모두 좋은 수열이지만 그 중에서 작은 수를 나타내는 수열은 1213121이다.","headline":"BOJ_2661_좋은 수열 (Java)","image":"https://kguswo.github.io/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/"},"url":"https://kguswo.github.io/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-25T23:54:24+09:00","datePublished":"2025-03-25T23:54:24+09:00","description":"[Gold IV] 좋은수열 - 2661 문제 링크 ### 성능 요약 메모리: 14460 KB, 시간: 132 ms ### 분류 백트래킹 ### 제출 일자 2025년 3월 25일 23:22:57 ### 문제 설명 숫자 1, 2, 3으로만 이루어지는 수열이 있다. 임의의 길이의 인접한 두 개의 부분 수열이 동일한 것이 있으면, 그 수열을 나쁜 수열이라고 부른다. 그렇지 않은 수열은 좋은 수열이다. 다음은 나쁜 수열의 예이다. 33 32121323 123123213 다음은 좋은 수열의 예이다. 2 32 32123 1232123 길이가 N인 좋은 수열들을 N자리의 정수로 보아 그중 가장 작은 수를 나타내는 수열을 구하는 프로그램을 작성하라. 예를 들면, 1213121과 2123212는 모두 좋은 수열이지만 그 중에서 작은 수를 나타내는 수열은 1213121이다.","headline":"BOJ_2661_좋은 수열 (Java)","image":"https://kguswo.dev/../assets/posts/4211fbcedd246fbfcc2a70c5c5c2f406ad82016519579605bb7b0f6b6a62f621.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/"},"url":"https://kguswo.dev/posts/BOJ2661%EC%A2%8B%EC%9D%80-%EC%88%98%EC%97%B4-Java/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1129,21 +1129,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F&text=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FBOJ2661%25EC%25A2%258B%25EC%259D%2580-%25EC%2588%2598%25EC%2597%25B4-Java%2F&text=BOJ_2661_%EC%A2%8B%EC%9D%80%20%EC%88%98%EC%97%B4%20(Java)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

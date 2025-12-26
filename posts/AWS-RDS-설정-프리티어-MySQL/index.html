@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="프로젝트를 EC2 서버를 사용해 배포하며 DB정보도 RDS를 통해 분산형 관계형 데이터베이스 서비스를 사용하는 김에 정리하게 되었다." />
 <meta property="og:description" content="프로젝트를 EC2 서버를 사용해 배포하며 DB정보도 RDS를 통해 분산형 관계형 데이터베이스 서비스를 사용하는 김에 정리하게 되었다." />
-<link rel="canonical" href="https://kguswo.github.io/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/" />
+<link rel="canonical" href="https://kguswo.dev/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/" />
+<meta property="og:url" content="https://kguswo.dev/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-08-01T11:23:34+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png" />
 <meta property="twitter:title" content="AWS RDS 설정 - 프리티어, MySQL" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-01T11:23:34+09:00","datePublished":"2024-08-01T11:23:34+09:00","description":"프로젝트를 EC2 서버를 사용해 배포하며 DB정보도 RDS를 통해 분산형 관계형 데이터베이스 서비스를 사용하는 김에 정리하게 되었다.","headline":"AWS RDS 설정 - 프리티어, MySQL","image":"https://kguswo.github.io/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/"},"url":"https://kguswo.github.io/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-01T11:23:34+09:00","datePublished":"2024-08-01T11:23:34+09:00","description":"프로젝트를 EC2 서버를 사용해 배포하며 DB정보도 RDS를 통해 분산형 관계형 데이터베이스 서비스를 사용하는 김에 정리하게 되었다.","headline":"AWS RDS 설정 - 프리티어, MySQL","image":"https://kguswo.dev/../assets/posts/e8824add4df28fc455150b0b7415f4face17bf6ddda8964e7ba4e5990802c49e.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/"},"url":"https://kguswo.dev/posts/AWS-RDS-%EC%84%A4%EC%A0%95-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-MySQL/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -3401,21 +3401,21 @@ MySQL 8.0: 기본값은 151
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F&text=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-RDS-%25EC%2584%25A4%25EC%25A0%2595-%25ED%2594%2584%25EB%25A6%25AC%25ED%258B%25B0%25EC%2596%25B4-MySQL%2F&text=AWS%20RDS%20%EC%84%A4%EC%A0%95%20-%20%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4,%20MySQL%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

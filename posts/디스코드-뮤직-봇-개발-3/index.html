@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="출석체크 기능을 사용하다 보니 자정인데도 출석했다고 인식하는 것을 보고 직감적으로 한국 표준 시간대가 설정되지 않았다고 생각했다. 이를 적용하고자 코드를 변경하려고 했고, 그 전에 CI/CD 및 임시배포방법인 tmux 대신 systemd 로 바꾸고자 생각했다." />
 <meta property="og:description" content="출석체크 기능을 사용하다 보니 자정인데도 출석했다고 인식하는 것을 보고 직감적으로 한국 표준 시간대가 설정되지 않았다고 생각했다. 이를 적용하고자 코드를 변경하려고 했고, 그 전에 CI/CD 및 임시배포방법인 tmux 대신 systemd 로 바꾸고자 생각했다." />
-<link rel="canonical" href="https://kguswo.github.io/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/" />
+<link rel="canonical" href="https://kguswo.dev/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/" />
+<meta property="og:url" content="https://kguswo.dev/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-02-25T05:36:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png" />
 <meta property="twitter:title" content="디스코드 뮤직 봇 개발 (3)" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-25T05:36:00+09:00","datePublished":"2025-02-25T05:36:00+09:00","description":"출석체크 기능을 사용하다 보니 자정인데도 출석했다고 인식하는 것을 보고 직감적으로 한국 표준 시간대가 설정되지 않았다고 생각했다. 이를 적용하고자 코드를 변경하려고 했고, 그 전에 CI/CD 및 임시배포방법인 tmux 대신 systemd 로 바꾸고자 생각했다.","headline":"디스코드 뮤직 봇 개발 (3)","image":"https://kguswo.github.io/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/"},"url":"https://kguswo.github.io/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-25T05:36:00+09:00","datePublished":"2025-02-25T05:36:00+09:00","description":"출석체크 기능을 사용하다 보니 자정인데도 출석했다고 인식하는 것을 보고 직감적으로 한국 표준 시간대가 설정되지 않았다고 생각했다. 이를 적용하고자 코드를 변경하려고 했고, 그 전에 CI/CD 및 임시배포방법인 tmux 대신 systemd 로 바꾸고자 생각했다.","headline":"디스코드 뮤직 봇 개발 (3)","image":"https://kguswo.dev/../assets/posts/65b0b71ecafe4783dda9a22640d1686d7ef1d732614b34a2c910257cbf6a38d9.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/"},"url":"https://kguswo.dev/posts/%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%AE%A4%EC%A7%81-%EB%B4%87-%EA%B0%9C%EB%B0%9C-3/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1810,21 +1810,21 @@ GitHub Actions Workflow (deploy.yml)</li>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F&text=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2F%25EB%2594%2594%25EC%258A%25A4%25EC%25BD%2594%25EB%2593%259C-%25EB%25AE%25A4%25EC%25A7%2581-%25EB%25B4%2587-%25EA%25B0%259C%25EB%25B0%259C-3%2F&text=%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C%20%EB%AE%A4%EC%A7%81%20%EB%B4%87%20%EA%B0%9C%EB%B0%9C%20(3)%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

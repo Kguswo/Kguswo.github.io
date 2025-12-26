@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="이전 프로젝트에서 이미지 저장을 S3 버킷으로 진행하였고 이번에도 사용하게 되어 이 김에 정리하게 되었다." />
 <meta property="og:description" content="이전 프로젝트에서 이미지 저장을 S3 버킷으로 진행하였고 이번에도 사용하게 되어 이 김에 정리하게 되었다." />
-<link rel="canonical" href="https://kguswo.github.io/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/" />
+<link rel="canonical" href="https://kguswo.dev/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/" />
+<meta property="og:url" content="https://kguswo.dev/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-23T13:04:20+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png" />
 <meta property="twitter:title" content="AWS S3 버킷 설정 및 파일 관리" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-23T13:04:20+09:00","datePublished":"2024-07-23T13:04:20+09:00","description":"이전 프로젝트에서 이미지 저장을 S3 버킷으로 진행하였고 이번에도 사용하게 되어 이 김에 정리하게 되었다.","headline":"AWS S3 버킷 설정 및 파일 관리","image":"https://kguswo.github.io/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/"},"url":"https://kguswo.github.io/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-23T13:04:20+09:00","datePublished":"2024-07-23T13:04:20+09:00","description":"이전 프로젝트에서 이미지 저장을 S3 버킷으로 진행하였고 이번에도 사용하게 되어 이 김에 정리하게 되었다.","headline":"AWS S3 버킷 설정 및 파일 관리","image":"https://kguswo.dev/../assets/posts/167cd99f65e63a24515833a4cfce431bd8f69e9fd04413462fce7020f752479c.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/"},"url":"https://kguswo.dev/posts/AWS-S3-%EB%B2%84%ED%82%B7-%EC%84%A4%EC%A0%95-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EA%B4%80%EB%A6%AC/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -3007,21 +3007,21 @@ Add Statement 클릭</li>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F&text=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FAWS-S3-%25EB%25B2%2584%25ED%2582%25B7-%25EC%2584%25A4%25EC%25A0%2595-%25EB%25B0%258F-%25ED%258C%258C%25EC%259D%25BC-%25EA%25B4%2580%25EB%25A6%25AC%2F&text=AWS%20S3%20%EB%B2%84%ED%82%B7%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%ED%8C%8C%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

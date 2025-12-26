@@ -34,19 +34,19 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Item 12 : toString을 항상 재정의하라" />
 <meta property="og:description" content="Item 12 : toString을 항상 재정의하라" />
-<link rel="canonical" href="https://kguswo.github.io/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/" />
-<meta property="og:url" content="https://kguswo.github.io/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/" />
+<link rel="canonical" href="https://kguswo.dev/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/" />
+<meta property="og:url" content="https://kguswo.dev/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/" />
 <meta property="og:site_name" content="Now’s Log" />
-<meta property="og:image" content="https://kguswo.github.io/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png" />
+<meta property="og:image" content="https://kguswo.dev/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-10-02T06:42:48+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kguswo.github.io/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png" />
+<meta property="twitter:image" content="https://kguswo.dev/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png" />
 <meta property="twitter:title" content="[Effective Java] - toString을 항상 재정의하라" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="google-site-verification" content="AQ2pk5Wmoq7YGQpPKFrF8XIbK5PiFpBezZ3XXeQirOk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-02T06:42:48+09:00","datePublished":"2025-10-02T06:42:48+09:00","description":"Item 12 : toString을 항상 재정의하라","headline":"[Effective Java] - toString을 항상 재정의하라","image":"https://kguswo.github.io/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.github.io/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/"},"url":"https://kguswo.github.io/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-02T06:42:48+09:00","datePublished":"2025-10-02T06:42:48+09:00","description":"Item 12 : toString을 항상 재정의하라","headline":"[Effective Java] - toString을 항상 재정의하라","image":"https://kguswo.dev/../assets/posts/49e96e4f3d2b59287e064b6a75999f22d040291b3866e4c83ab31ed4f1ffa015.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kguswo.dev/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/"},"url":"https://kguswo.dev/posts/Effective-Java-toString%EC%9D%84-%ED%95%AD%EC%83%81-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1377,21 +1377,21 @@ ex) <code class="language-plaintext highlighter-rouge">PhoneNumber@adbbd</code><
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log&url=https%3A%2F%2Fkguswo.dev%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.github.io%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log&u=https%3A%2F%2Fkguswo.dev%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.github.io%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F&text=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fkguswo.dev%2Fposts%2FEffective-Java-toString%25EC%259D%2584-%25ED%2595%25AD%25EC%2583%2581-%25EC%259E%25AC%25EC%25A0%2595%25EC%259D%2598%25ED%2595%2598%25EB%259D%25BC%2F&text=[Effective%20Java]%20-%20toString%EC%9D%84%20%ED%95%AD%EC%83%81%20%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%98%EB%9D%BC%20-%20Now's%20Log" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://kguswo.github.io/</id>
+  <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-12-27T04:12:19+09:00</updated>
+  <updated>2025-12-27T04:17:05+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
-    <uri>https://kguswo.github.io/</uri>
+    <uri>https://kguswo.dev/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://kguswo.github.io/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://kguswo.dev/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="https://kguswo.github.io/"/>
+    href="https://kguswo.dev/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 Hyeon Jae Kim </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>공간 DB - PostGIS &amp; Redis Geo </title>
-    <link href="https://kguswo.github.io/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" rel="alternate" type="text/html" title="공간 DB - PostGIS &amp;amp; Redis Geo " />
+    <link href="https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" rel="alternate" type="text/html" title="공간 DB - PostGIS &amp;amp; Redis Geo " />
     <published>2025-12-22T19:52:26+09:00</published>
   
     <updated>2025-12-22T19:52:26+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" />
+    <id>https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
@@ -45,13 +45,13 @@
   
   <entry>
     <title>Real MySQL - 쿼리 성능 테스트와 확장 검색</title>
-    <link href="https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/" rel="alternate" type="text/html" title="Real MySQL - 쿼리 성능 테스트와 확장 검색" />
+    <link href="https://kguswo.dev/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/" rel="alternate" type="text/html" title="Real MySQL - 쿼리 성능 테스트와 확장 검색" />
     <published>2025-12-22T19:15:29+09:00</published>
   
     <updated>2025-12-22T19:15:29+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/" />
+    <id>https://kguswo.dev/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-%EC%BF%BC%EB%A6%AC-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%99%80-%ED%99%95%EC%9E%A5-%EA%B2%80%EC%83%89/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
@@ -69,13 +69,13 @@
   
   <entry>
     <title>GROUP BY가 포함된 JOIN UPDATE</title>
-    <link href="https://kguswo.github.io/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/" rel="alternate" type="text/html" title="GROUP BY가 포함된 JOIN UPDATE" />
+    <link href="https://kguswo.dev/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/" rel="alternate" type="text/html" title="GROUP BY가 포함된 JOIN UPDATE" />
     <published>2025-12-18T19:48:41+09:00</published>
   
     <updated>2025-12-18T19:48:41+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/" />
+    <id>https://kguswo.dev/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/GROUP-BY%EA%B0%80-%ED%8F%AC%ED%95%A8%EB%90%9C-JOIN-UPDATE/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
@@ -93,13 +93,13 @@
   
   <entry>
     <title>Real MySQL - INSERT, UPDATE, DELETE</title>
-    <link href="https://kguswo.github.io/posts/Real-MySQL-INSERT-UPDATE-DELETE/" rel="alternate" type="text/html" title="Real MySQL - INSERT, UPDATE, DELETE" />
+    <link href="https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/" rel="alternate" type="text/html" title="Real MySQL - INSERT, UPDATE, DELETE" />
     <published>2025-12-18T18:56:36+09:00</published>
   
     <updated>2025-12-18T18:56:36+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/Real-MySQL-INSERT-UPDATE-DELETE/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-INSERT-UPDATE-DELETE/" />
+    <id>https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
@@ -117,13 +117,13 @@
   
   <entry>
     <title>Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT</title>
-    <link href="https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" rel="alternate" type="text/html" title="Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT" />
+    <link href="https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" rel="alternate" type="text/html" title="Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT" />
     <published>2025-12-15T19:54:47+09:00</published>
   
     <updated>2025-12-15T19:54:47+09:00</updated>
   
-    <id>https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/</id>
-    <content type="text/html" src="https://kguswo.github.io/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" />
+    <id>https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" />
     <author>
       <name>Hyeon Jae Kim</name>
     </author>
