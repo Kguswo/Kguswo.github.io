@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2025-12-27T04:33:51+09:00</updated>
+  <updated>2025-12-27T10:47:09+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,54 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Real MySQL - 파티션</title>
+    <link href="https://kguswo.dev/posts/Real-MySQL-%ED%8C%8C%ED%8B%B0%EC%85%98/" rel="alternate" type="text/html" title="Real MySQL - 파티션" />
+    <published>2025-12-26T19:52:02+09:00</published>
+  
+    <updated>2025-12-26T19:52:02+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/Real-MySQL-%ED%8C%8C%ED%8B%B0%EC%85%98/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-%ED%8C%8C%ED%8B%B0%EC%85%98/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="데이터베이스" />
+    
+  
+
+  <summary>들어가며  이 글은 Real MySQL 8.0의 13장 파티션을 읽고 정리한 내용이다. 파티션의 개념, 내부 동작 원리, 주의사항, 그리고 각 파티션 종류별 특징을 다룬다.         파티션은 하나의 테이블을 물리적으로 여러 개로 분리하여 저장하는 기법 이다.   논리적으로는 하나의 테이블이지만, 내부적으로는 파티션 키를 기준으로 데이터가 나뉘어 저장된다. 사용자는 하나의 테이블처럼 쿼리하면 되고, MySQL이 적절한 파티션을 찾아 처리한다.  파티션을 사용하는 이유  단일 INSERT와 단일 또는 범위 SELECT의 빠른 처리  테이블의 데이터가 많아지면 인덱스의 크기도 커진다. 인덱스가 메모리에 다 올라가지 못하면 디스크 I/O가 발생하고, 이는 성능 저하로 이어진다.  파티셔닝을 하면 데이터와...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>MySQL Partitioning</title>
+    <link href="https://kguswo.dev/posts/MySQL-Partitioning/" rel="alternate" type="text/html" title="MySQL Partitioning" />
+    <published>2025-12-26T19:40:20+09:00</published>
+  
+    <updated>2025-12-26T19:40:20+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/MySQL-Partitioning/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/MySQL-Partitioning/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="데이터베이스" />
+    
+  
+
+  <summary>들어가며  서비스를 운영하다 보면 테이블에 데이터가 수천만, 수억 건씩 쌓이게 된다. 이렇게 테이블이 커지면 쿼리 성능이 떨어지고, 오래된 데이터를 정리하는 것도 쉽지 않다. 이런 상황에서 고려해볼 수 있는 것이 파티셔닝 이다.    파티셔닝이란  파티셔닝은 하나의 큰 테이블을 작은 단위로 나누어 관리하는 기법 이다. 논리적으로는 하나의 테이블이지만, 물리적으로는 여러 개의 파티션으로 분리되어 저장된다. 사용자 입장에서는 여전히 하나의 테이블처럼 쿼리하면 되고, MySQL이 내부적으로 적절한 파티션을 찾아서 처리해준다.  예를 들어 주문 테이블에 5년치 데이터가 쌓여있다고 하면, 대부분의 쿼리는 최근 1년 데이터만 조회하는데, 매번 5년치 전체를 스캔해야 한다면 비효율적이다. 이때 연도별로 파티셔닝을 ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -87,54 +135,6 @@
   
 
   <summary>들어가며  MySQL에서 JOIN UPDATE는 다른 테이블의 데이터를 참조하여 특정 테이블을 업데이트할 때 사용하는 강력한 기능이다. 그런데 여기에 GROUP BY를 사용하려 하면 갑자기 문법 오류가 발생한다. 왜 그럴까? 이번 글에서는 JOIN UPDATE에서 GROUP BY가 왜 안 되는지, 그리고 이 문제를 해결하기 위한 파생 테이블 , STRAIGHT_JOIN , JOIN_ORDER 힌트 , LATERAL 조인 까지 깊이 있게 다뤄본다. 각 방식의 실행 계획을 직접 비교하여 어떤 차이가 있는지도 확인해보자.    문제 상황: GROUP BY가 포함된 JOIN UPDATE  부서별 직원 수를 departments 테이블에 저장하고 싶다고 가정하자.  -- 먼저 emp_count 칼럼 추가 ALT...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Real MySQL - INSERT, UPDATE, DELETE</title>
-    <link href="https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/" rel="alternate" type="text/html" title="Real MySQL - INSERT, UPDATE, DELETE" />
-    <published>2025-12-18T18:56:36+09:00</published>
-  
-    <updated>2025-12-18T18:56:36+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-INSERT-UPDATE-DELETE/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  SELECT 문은 데이터를 조회하는 데 사용되지만, 실제 서비스에서는 데이터의 생성, 수정, 삭제가 빈번하게 발생한다. INSERT, UPDATE, DELETE는 데이터를 변경하는 DML(Data Manipulation Language)로, 잘못 사용하면 성능 저하는 물론 데이터 무결성에도 심각한 영향을 줄 수 있다. 이번 글에서는 Real MySQL 8.0 2권 11장의 INSERT 고급 옵션, LOAD DATA 명령, 성능을 위한 테이블 구조, 그리고 UPDATE와 DELETE의 다양한 활용법에 대해 다룬다.    INSERT  INSERT 문은 단순해 보이지만, MySQL에서는 다양한 고급 옵션을 제공한다. 이 옵션들을 적절히 활용하면 중복 처리, 대량 데이터 적재, 성능 최적화 등 다...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT</title>
-    <link href="https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" rel="alternate" type="text/html" title="Real MySQL 8.0 : 서브쿼리, CTE, 잠금을 사용하는 SELECT" />
-    <published>2025-12-15T19:54:47+09:00</published>
-  
-    <updated>2025-12-15T19:54:47+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/Real-MySQL-8.0-%EC%84%9C%EB%B8%8C%EC%BF%BC%EB%A6%AC-CTE-%EC%9E%A0%EA%B8%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-SELECT/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  Real MySQL 8.0 2권 11장에서는 쿼리 작성과 최적화에 대해 다룬다. 이 글에서는 그중 11.4.10 서브쿼리, 11.4.11 CTE(Common Table Expression), 11.4.13 잠금을 사용하는 SELECT를 정리한다.  서브쿼리는 MySQL 5.5 이하에서 성능이 좋지 않아 기피 대상이었지만, MySQL 8.0에서는 세미 조인 최적화 등 다양한 최적화 기법이 도입되어 상황이 크게 달라졌다. CTE는 MySQL 8.0에서 새롭게 도입된 기능으로, 복잡한 쿼리의 가독성을 높이고 재귀 쿼리를 가능하게 한다. 잠금을 사용하는 SELECT는 동시성 제어의 핵심으로, MySQL 8.0.1부터 NOWAIT과 SKIP LOCKED 옵션이 추가되어 더욱 유연한 잠금 제어가 가능해...</summary>
 
   </entry>
 
