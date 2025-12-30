@@ -4,7 +4,7 @@ date: 2024-08-11T16:53:17.739Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "CODEFORCES-CONTESTS-EPIC-Institute-of-Technology-Round-August-2024-Div.-1-Div.-2"
 image: "../assets/posts/a1a42f696d16ffa28d43fb8509fa7860a212660c42c65798fe106b5faa24bee0.png"
-categories: Code_Contests
+categories: PS_Contests
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:06:09.909Z

@@ -4,7 +4,7 @@ date: 2024-08-10T15:19:58.353Z
 tags: ["Java","codeforces","알고리즘"]
 slug: "CODEFORCES-CONTESTS-Round-965-Div.-2"
 image: "../assets/posts/368c166095e5ad914ca414ae4fc576ced2302d07f55998bd35b7b7cda41e5b70.png"
-categories: Code_Contests
+categories: PS_Contests
 toc: true
 velogSync:
   lastSyncedAt: 2025-08-26T02:06:09.959Z
