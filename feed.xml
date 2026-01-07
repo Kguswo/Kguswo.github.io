@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-01-05T11:01:16+09:00</updated>
+  <updated>2026-01-07T10:51:48+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>.NET Core MVC + Dapper</title>
+    <link href="https://kguswo.dev/posts/.NET-Core-MVC-Dapper/" rel="alternate" type="text/html" title=".NET Core MVC + Dapper" />
+    <published>2026-01-07T03:46:36+09:00</published>
+  
+    <updated>2026-01-07T03:46:36+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/.NET-Core-MVC-Dapper/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/.NET-Core-MVC-Dapper/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="dotnet" />
+    
+  
+
+  <summary>들어가며  Dapper는 Stack Overflow 팀이 만든 Micro ORM 이다. Entity Framework처럼 무거운 ORM 대신, SQL을 직접 작성하면서도 객체 매핑은 자동으로 해주는 가벼운 도구다.  Java 개발자 관점에서 보면, Spring JDBC Template 또는 MyBatis 와 비슷한 위치에 있다. JPA처럼 SQL을 추상화하지 않고, 개발자가 직접 쿼리를 작성한다.  이 글에서는 .NET Core MVC 프로젝트에서 Dapper를 사용해 기본적인 CRUD를 구현하는 과정을 정리한다. Java 경험이 있는 개발자가 C#으로 넘어올 때 참고할 수 있도록, 두 언어의 개념을 비교하며 설명한다.    프로젝트 구조  최종적으로 완성되는 프로젝트 구조는 다음과 같다.  Dappe...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>들어가며  서비스를 운영하다 보면 테이블에 데이터가 수천만, 수억 건씩 쌓이게 된다. 이렇게 테이블이 커지면 쿼리 성능이 떨어지고, 오래된 데이터를 정리하는 것도 쉽지 않다. 이런 상황에서 고려해볼 수 있는 것이 파티셔닝 이다.    파티셔닝이란  파티셔닝은 하나의 큰 테이블을 작은 단위로 나누어 관리하는 기법 이다. 논리적으로는 하나의 테이블이지만, 물리적으로는 여러 개의 파티션으로 분리되어 저장된다. 사용자 입장에서는 여전히 하나의 테이블처럼 쿼리하면 되고, MySQL이 내부적으로 적절한 파티션을 찾아서 처리해준다.  예를 들어 주문 테이블에 5년치 데이터가 쌓여있다고 하면, 대부분의 쿼리는 최근 1년 데이터만 조회하는데, 매번 5년치 전체를 스캔해야 한다면 비효율적이다. 이때 연도별로 파티셔닝을 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>공간 DB - PostGIS &amp; Redis Geo </title>
-    <link href="https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" rel="alternate" type="text/html" title="공간 DB - PostGIS &amp;amp; Redis Geo " />
-    <published>2025-12-22T19:52:26+09:00</published>
-  
-    <updated>2025-12-22T19:52:26+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/%EA%B3%B5%EA%B0%84-%EA%B2%80%EC%83%89-PostGIS-Redis-Geo/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  Real MySQL 8.0을 공부하면서 MySQL의 공간 검색 기능을 살펴봤다. ST_Distance_Sphere, ST_Contains, 공간 인덱스 등 MySQL도 나름 위치 기반 검색을 지원하지만, 찾아보니 위치 기반 서비스에 특화된 도구들 이 따로 있었다. 바로 Redis Geo 와 PostGIS 다.  여러 블로그와 벤치마크를 찾아본 결과, 공간 검색 성능 면에서 PostGIS가 MySQL보다 빠르다는 글들이 많았고, 실시간 위치 추적에는 Redis Geo가 압도적이라는 이야기도 있었다. MySQL이 공간 검색 전문 도구는 아니다 보니, 위치 기반 서비스를 본격적으로 구현한다면 이 두 가지를 알아둘 필요가 있겠다 싶어 정리해본다.    왜 MySQL 말고 다른 걸 쓸까?  MySQL...</summary>
 
   </entry>
 
