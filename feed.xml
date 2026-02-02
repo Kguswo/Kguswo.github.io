@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-02-01T11:34:35+09:00</updated>
+  <updated>2026-02-02T11:25:51+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,78 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>ISNULL vs COALESCE</title>
+    <link href="https://kguswo.dev/posts/ISNULL-vs-COALESCE/" rel="alternate" type="text/html" title="ISNULL vs COALESCE" />
+    <published>2026-02-02T00:12:53+09:00</published>
+  
+    <updated>2026-02-02T00:12:53+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/ISNULL-vs-COALESCE/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/ISNULL-vs-COALESCE/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="데이터베이스" />
+    
+  
+
+  <summary>들어가며  SQL Server에서 NULL 값을 대체할 때 ISNULL과 COALESCE 두 가지 선택지가 있다. 둘 다 “NULL이면 다른 값으로 바꿔줘”라는 같은 목적을 가지고 있지만, 내부 동작 방식과 세부 특성이 다르다.  단순히 “ISNULL이 빠르니까 ISNULL 쓰자”로 끝나는 게 아니다. 반환 타입 차이 때문에 예상치 못한 버그가 발생할 수 있어서, 정확한 차이를 알고 상황에 맞게 선택해야 한다.    1. 기본 문법과 차이  ISNULL  ISNULL(check_expression, replacement_value)      SQL Server 전용 함수   2개 인자만 받음   첫 번째 값이 NULL이면 두 번째 값 반환   DECLARE @nickname NVARCHAR(50) = ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>페이지네이션</title>
+    <link href="https://kguswo.dev/posts/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%EC%85%98/" rel="alternate" type="text/html" title="페이지네이션" />
+    <published>2026-02-02T00:03:05+09:00</published>
+  
+    <updated>2026-02-02T00:03:05+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%EC%85%98/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%EC%85%98/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>들어가며  대량의 데이터를 한 번에 보여주는 건 사용자 경험에도, 서버 성능에도 좋지 않다. 237개의 게시물이 있다면 한 페이지에 10개씩 나눠서 24페이지로 보여주는 게 훨씬 낫다. 이것이 페이지네이션(Pagination) 의 핵심이다.  이 글에서는 기본적인 오프셋 페이지네이션부터 시작해서, 그 한계를 극복하는 커서 기반 방식, 그리고 유튜브나 인스타그램에서 볼 수 있는 계층형 댓글 페이지네이션까지 알아보고자 한다.    1. 오프셋 페이지네이션 (Offset Pagination)  가장 전통적이고 직관적인 방식이다. SQL Server 기준으로 OFFSET ... FETCH NEXT 구문을 사용한다.  기본 구조  SELECT *  	FROM TblPost 	ORDER BY _registerDa...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>클러스터 vs 논클러스터 인덱스</title>
+    <link href="https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/" rel="alternate" type="text/html" title="클러스터 vs 논클러스터 인덱스" />
+    <published>2026-02-01T14:24:19+09:00</published>
+  
+    <updated>2026-02-01T14:24:19+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="데이터베이스" />
+    
+  
+
+  <summary>들어가며  인덱스는 SQL Server 성능 튜닝의 가장 핵심적인 요소 이다. 인덱스를 잘못 설계하면 아무리 좋은 하드웨어를 써도 쿼리가 느리고, 잘 설계하면 적은 리소스로도 빠른 응답을 얻을 수 있다.  이 글에서는 인덱스의 기본 개념부터 내부 구조(B-Tree), 실행 계획 읽는 법, 복합 인덱스 설계, 커버링 인덱스 등을 간단히 다룬다.    1. 인덱스란 무엇인가?  책의 색인과 같은 원리  인덱스는 책의 색인(Index) 과 같다. 책에서 “트랜잭션”이라는 단어를 찾고 싶을 때:     색인 없이 : 1페이지부터 끝까지 모든 페이지를 넘기며 찾음   색인 있으면 : 색인에서 “트랜잭션 → 234페이지” 확인 후 바로 이동   데이터베이스에서도 마찬가지다:     인덱스 없이 : 테이블의 모든 ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -63,78 +135,6 @@
   
 
   <summary>들어가며  .NET 개발을 시작하면 반드시 마주치는 것이 바로 IIS(Internet Information Services) 이다. 처음에는 visual studio에서 “그냥 F5 누르면 실행되는데 이게 왜 필요하지?”라는 생각이 들 수 있다. 하지만 실제 서비스를 배포하려면 IIS에 대한 이해가 필수다.  이 글에서는 IIS가 무엇인지, 왜 필요한지, 그리고 실제로 어떻게 사용하는지를 정리하고자 한다.    IIS란?  IIS(Internet Information Services) 는 Microsoft에서 만든 웹 서버 소프트웨어 이다. 쉽게 말해 “내가 만든 웹 애플리케이션을 인터넷에 공개해주는 프로그램” 이라고 생각하면 된다.  쉽게 식당으로 비유하자면…  내가 만든 .NET 웹 애플리케이션 =...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>.NET Core MVC + Dapper</title>
-    <link href="https://kguswo.dev/posts/.NET-Core-MVC-Dapper/" rel="alternate" type="text/html" title=".NET Core MVC + Dapper" />
-    <published>2026-01-07T03:46:36+09:00</published>
-  
-    <updated>2026-01-07T03:46:36+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/.NET-Core-MVC-Dapper/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/.NET-Core-MVC-Dapper/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="dotnet" />
-    
-  
-
-  <summary>들어가며  Dapper는 Stack Overflow 팀이 만든 Micro ORM 이다. Entity Framework처럼 무거운 ORM 대신, SQL을 직접 작성하면서도 객체 매핑은 자동으로 해주는 가벼운 도구다.  Java 개발자 관점에서 보면, Spring JDBC Template 또는 MyBatis 와 비슷한 위치에 있다. JPA처럼 SQL을 추상화하지 않고, 개발자가 직접 쿼리를 작성한다.  이 글에서는 .NET Core MVC 프로젝트에서 Dapper를 사용해 기본적인 CRUD를 구현하는 과정을 정리한다. Java 경험이 있는 개발자가 C#으로 넘어올 때 참고할 수 있도록, 두 언어의 개념을 비교하며 설명한다.    프로젝트 구조  최종적으로 완성되는 프로젝트 구조는 다음과 같다.  Dappe...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>MySQL GTID Replication</title>
-    <link href="https://kguswo.dev/posts/MySQL-GTID-%EB%B3%B5%EC%A0%9C-%EA%B5%AC%EC%B6%95/" rel="alternate" type="text/html" title="MySQL GTID Replication" />
-    <published>2026-01-04T11:14:50+09:00</published>
-  
-    <updated>2026-01-04T11:14:50+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/MySQL-GTID-%EB%B3%B5%EC%A0%9C-%EA%B5%AC%EC%B6%95/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/MySQL-GTID-%EB%B3%B5%EC%A0%9C-%EA%B5%AC%EC%B6%95/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  데이터베이스를 운영하다 보면 복제(Replication)라는 단어를 자주 접하게 된다. 단순히 “백업용 아닌가?”라고 생각할 수 있지만, 실제로 복제는 다양한 목적으로 사용된다.  복제를 사용하는 이유:     고가용성(High Availability) : Source 서버 장애 시 Replica로 페일오버   읽기 부하 분산 : 쓰기는 Source, 읽기는 Replica로 분산   백업 분리 : Replica에서 백업 수행 → Source 서버 성능 영향 없음   용도별 분리 : 서비스용, 통계/분석용, 배치 작업용 Replica 분리   실제로 GitHub는 semi-synchronous replication으로 lossless failover를 구현하고, Shopify는 ProxySQL...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>MySQL TINYINT</title>
-    <link href="https://kguswo.dev/posts/MySQL-TINYINT/" rel="alternate" type="text/html" title="MySQL TINYINT" />
-    <published>2025-12-29T14:54:06+09:00</published>
-  
-    <updated>2025-12-29T14:54:06+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/MySQL-TINYINT/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/MySQL-TINYINT/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  MySQL에서 BOOLEAN 타입을 사용해본 적이 있는가? 아마 대부분의 개발자가 “있다”라고 답할 것이다. 하지만 MySQL에는 진짜 BOOLEAN 타입이 존재하지 않는다.  CREATE TABLE test (     is_active BOOLEAN );  SHOW CREATE TABLE test;  -- 결과: CREATE TABLE `bool_test` (\n  `flag` tinyint(1) DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci   BOOLEAN으로 선언했지만, 실제로는 TINYINT(1)로 저장된다. 이 글에서는 MySQL 공식 문서를 근거로 TINYINT의 정체, BOOLEA...</summary>
 
   </entry>
 
