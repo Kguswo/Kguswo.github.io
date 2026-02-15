@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-02-02T11:25:51+09:00</updated>
+  <updated>2026-02-15T11:28:31+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,78 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CSRF, XSS, SQL Injection</title>
+    <link href="https://kguswo.dev/posts/CSRF-XSS-SQL-Injection/" rel="alternate" type="text/html" title="CSRF, XSS, SQL Injection" />
+    <published>2026-02-14T22:14:23+09:00</published>
+  
+    <updated>2026-02-14T22:14:23+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/CSRF-XSS-SQL-Injection/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/CSRF-XSS-SQL-Injection/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="공부" />
+    
+  
+
+  <summary>들어가며  앞선 글에서 수백 개의 권한 데이터를 관리하는 고민을 다룬 글을 작성했다. 클라이언트 저장(쿠키, JWT, LocalStorage)의 크기와 보안 문제를 확인했고, 결국 세션 이 답이라는 결론에 도달했다. 서버에 데이터를 보관하고 클라이언트에는 20 bytes의 세션 ID만 쿠키로 전달하면 모든 문제가 해결되는 것처럼 보였다.  하지만 구현하려고 코드를 찾아보니 쿠키 설정에 HttpOnly, Secure, SameSite 같은 낯선 옵션들이 있었다.  Response.Cookies.Append("sessionId", sessionId, new CookieOptions {     HttpOnly = true,     Secure = true,     SameSite = SameSiteMode....</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>웹 인증, 세션과 쿠키</title>
+    <link href="https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/" rel="alternate" type="text/html" title="웹 인증, 세션과 쿠키" />
+    <published>2026-02-14T21:36:50+09:00</published>
+  
+    <updated>2026-02-14T21:36:50+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="dotnet" />
+    
+  
+
+  <summary>들어가며  프로젝트 진행 중 별도 Web API 프로젝트에서 관리자 권한을 체크한 뒤, 다른 Web 프로젝트에서 관리자 요청들을 필터링해서 수행하고 이 권한에 따라 클라이언트 측에서도 화면 구분이 필요한 상황에 마주했다.  권한 데이터를 어떻게 저장하고 관리할지 고민하던 중, /{Area}/{Controller}/{Action} 같은 URL 형태로 수백 개의 권한을 관리해야했다.  이걸 어디에 저장해야 하지? 라는 고민부터 어떻게 관리할지 고민이 됐다.  처음에는 단순하게 생각했다. 사용자가 로그인하면 권한 목록을 Claim에 넣어서 관리하면 되지 않을까? 하지만 곧 문제를 발견했다. 권한 URL 하나가 약 4~50 bytes, 300개면 12~15KB다. 일반적인 브라주어 쿠키 제한인 4KB를 생각하...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>.NET 비동기 작업과 CancellationToken</title>
+    <link href="https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/" rel="alternate" type="text/html" title=".NET 비동기 작업과 CancellationToken" />
+    <published>2026-02-14T20:02:27+09:00</published>
+  
+    <updated>2026-02-14T20:02:27+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="dotnet" />
+    
+  
+
+  <summary>들어가며  업무를 하며 코드 작성중 컨벤션에 맞게 프로젝트의 Application 디렉토리에 InitializeHostedService 라는 파일이 있기에 찾아보며 만들어보고자 했다. 이 파일에서 일반적으로 StartAsync 와 StopAsync 메서드를 정의한다고 했고 여기서 CancellationToken 이라는걸 처음 보았다.  찾아보니 .NET은 애플리케이션에서 백그라운드 작업을 구현할 때 앱 종료 시 안전하게 작업을 중단할 수 있도록 CancellationToken 메커니즘을 제공한고 한다. 예를 들어 데이터베이스 쓰기 작업 중에 앱이 갑자기 종료되면 데이터 손상, 불완전한 트랜잭션, 리소스 누수가 발생할 수 있기 때문이다.  이번 글에서는 간단하게 CancellationToken의 동작 원...</summary>
+
+  </entry>
 
   
   <entry>
@@ -63,78 +135,6 @@
   
 
   <summary>들어가며  대량의 데이터를 한 번에 보여주는 건 사용자 경험에도, 서버 성능에도 좋지 않다. 237개의 게시물이 있다면 한 페이지에 10개씩 나눠서 24페이지로 보여주는 게 훨씬 낫다. 이것이 페이지네이션(Pagination) 의 핵심이다.  이 글에서는 기본적인 오프셋 페이지네이션부터 시작해서, 그 한계를 극복하는 커서 기반 방식, 그리고 유튜브나 인스타그램에서 볼 수 있는 계층형 댓글 페이지네이션까지 알아보고자 한다.    1. 오프셋 페이지네이션 (Offset Pagination)  가장 전통적이고 직관적인 방식이다. SQL Server 기준으로 OFFSET ... FETCH NEXT 구문을 사용한다.  기본 구조  SELECT *  	FROM TblPost 	ORDER BY _registerDa...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>클러스터 vs 논클러스터 인덱스</title>
-    <link href="https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/" rel="alternate" type="text/html" title="클러스터 vs 논클러스터 인덱스" />
-    <published>2026-02-01T14:24:19+09:00</published>
-  
-    <updated>2026-02-01T14:24:19+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  인덱스는 SQL Server 성능 튜닝의 가장 핵심적인 요소 이다. 인덱스를 잘못 설계하면 아무리 좋은 하드웨어를 써도 쿼리가 느리고, 잘 설계하면 적은 리소스로도 빠른 응답을 얻을 수 있다.  이 글에서는 인덱스의 기본 개념부터 내부 구조(B-Tree), 실행 계획 읽는 법, 복합 인덱스 설계, 커버링 인덱스 등을 간단히 다룬다.    1. 인덱스란 무엇인가?  책의 색인과 같은 원리  인덱스는 책의 색인(Index) 과 같다. 책에서 “트랜잭션”이라는 단어를 찾고 싶을 때:     색인 없이 : 1페이지부터 끝까지 모든 페이지를 넘기며 찾음   색인 있으면 : 색인에서 “트랜잭션 → 234페이지” 확인 후 바로 이동   데이터베이스에서도 마찬가지다:     인덱스 없이 : 테이블의 모든 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>SP, Function, Exception Log</title>
-    <link href="https://kguswo.dev/posts/SP-Function-Exception-Log/" rel="alternate" type="text/html" title="SP, Function, Exception Log" />
-    <published>2026-02-01T03:41:04+09:00</published>
-  
-    <updated>2026-02-01T03:41:04+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/SP-Function-Exception-Log/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/SP-Function-Exception-Log/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="dotnet" />
-    
-  
-
-  <summary>들어가며  SQL Server를 사용하는 실무 환경에서 Stored Procedure(SP), Function, Exception Log 는 거의 필수적으로 사용된다. 단순히 SELECT 쿼리만 날리는 것과 이 세 가지를 제대로 활용하는 것은 완전히 다른 차원의 개발이다.  이 글에서는 실무에서 배운 각각의 개념부터 사용하는 방식까지 깊게 정리해보려 한다.    1. Stored Procedure (저장 프로시저)  SP란 무엇인가?  Stored Procedure(SP) 는 데이터베이스에 저장된 미리 컴파일된 SQL 문의 집합 이다. 쉽게 말해 자주 사용하는 SQL 작업을 함수처럼 묶어서 저장해둔 것 이다.  일반 쿼리 실행: [애플리케이션] → SQL 문자열 전송 → [DB] → 파싱 → 컴파일 →...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>What is Internet Information Services?</title>
-    <link href="https://kguswo.dev/posts/What-is-Internet-Information-Services/" rel="alternate" type="text/html" title="What is Internet Information Services?" />
-    <published>2026-02-01T01:52:27+09:00</published>
-  
-    <updated>2026-02-01T01:52:27+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/What-is-Internet-Information-Services/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/What-is-Internet-Information-Services/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="dotnet" />
-    
-  
-
-  <summary>들어가며  .NET 개발을 시작하면 반드시 마주치는 것이 바로 IIS(Internet Information Services) 이다. 처음에는 visual studio에서 “그냥 F5 누르면 실행되는데 이게 왜 필요하지?”라는 생각이 들 수 있다. 하지만 실제 서비스를 배포하려면 IIS에 대한 이해가 필수다.  이 글에서는 IIS가 무엇인지, 왜 필요한지, 그리고 실제로 어떻게 사용하는지를 정리하고자 한다.    IIS란?  IIS(Internet Information Services) 는 Microsoft에서 만든 웹 서버 소프트웨어 이다. 쉽게 말해 “내가 만든 웹 애플리케이션을 인터넷에 공개해주는 프로그램” 이라고 생각하면 된다.  쉽게 식당으로 비유하자면…  내가 만든 .NET 웹 애플리케이션 =...</summary>
 
   </entry>
 

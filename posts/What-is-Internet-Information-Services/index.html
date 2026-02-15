@@ -1959,6 +1959,27 @@ IIS가 Host name이 myapp.local인 사이트 찾음
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/CSRF-XSS-SQL-Injection/">CSRF, XSS, SQL Injection</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/">웹 인증, 세션과 쿠키</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/">.NET 비동기 작업과 CancellationToken</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/ISNULL-vs-COALESCE/">ISNULL vs COALESCE</a>
         </li>
       
@@ -1967,27 +1988,6 @@ IIS가 Host name이 myapp.local인 사이트 찾음
         
         <li class="text-truncate lh-lg">
           <a href="/posts/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%84%A4%EC%9D%B4%EC%85%98/">페이지네이션</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-vs-%EB%85%BC%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4/">클러스터 vs 논클러스터 인덱스</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/SP-Function-Exception-Log/">SP, Function, Exception Log</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/What-is-Internet-Information-Services/">What is Internet Information Services?</a>
         </li>
       
     </ul>
@@ -4555,6 +4555,30 @@ IIS가 Host name이 myapp.local인 사이트 찾음
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -4568,6 +4592,62 @@ IIS가 Host name이 myapp.local인 사이트 찾음
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1771072610"
+  data-df="ll"
+  
+>
+  Feb 14, 2026
+</time>
+
+              <h4 class="pt-0 my-2">웹 인증, 세션과 쿠키</h4>
+              <div class="text-muted">
+                <p>### 들어가며  프로젝트 진행 중 별도 Web API 프로젝트에서 관리자 권한을 체크한 뒤, 다른 Web 프로젝트에서 관리자 요청들을 필터링해서 수행하고 이 권한에 따라 클라이언트 측에서도 화면 구분이 필요한 상황에 마주했다.   권한 데이터를 어떻게 저장하고 관리할지 고민하던 중, `/{Area}/{Controller}/{Action}` 같은 UR...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1771066947"
+  data-df="ll"
+  
+>
+  Feb 14, 2026
+</time>
+
+              <h4 class="pt-0 my-2">.NET 비동기 작업과 CancellationToken</h4>
+              <div class="text-muted">
+                <p>### 들어가며  업무를 하며 코드 작성중 컨벤션에 맞게 프로젝트의 Application 디렉토리에 `InitializeHostedService` 라는 파일이 있기에 찾아보며 만들어보고자 했다. 이 파일에서 일반적으로 `StartAsync` 와 `StopAsync` 메서드를 정의한다고 했고 여기서 `CancellationToken` 이라는걸 처음 보았...</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/SP-Function-Exception-Log/" class="post-preview card h-100">
@@ -4592,34 +4672,6 @@ IIS가 Host name이 myapp.local인 사이트 찾음
               <h4 class="pt-0 my-2">SP, Function, Exception Log</h4>
               <div class="text-muted">
                 <p>### 들어가며  SQL Server를 사용하는 실무 환경에서 **Stored Procedure(SP)**, **Function**, **Exception Log** 는 거의 필수적으로 사용된다. 단순히 SELECT 쿼리만 날리는 것과 이 세 가지를 제대로 활용하는 것은 완전히 다른 차원의 개발이다.  이 글에서는 실무에서 배운 각각의 개념부터 사용하...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/.NET-Core-MVC-Dapper/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1767725196"
-  data-df="ll"
-  
->
-  Jan  7, 2026
-</time>
-
-              <h4 class="pt-0 my-2">.NET Core MVC + Dapper</h4>
-              <div class="text-muted">
-                <p>들어가며  Dapper는 Stack Overflow 팀이 만든 Micro ORM 이다. Entity Framework처럼 무거운 ORM 대신, SQL을 직접 작성하면서도 객체 매핑은 자동으로 해주는 가벼운 도구다.  Java 개발자 관점에서 보면, Spring JDBC Template 또는 MyBatis 와 비슷한 위치에 있다. JPA처럼 SQL을 추...</p>
               </div>
             </div>
           </a>
