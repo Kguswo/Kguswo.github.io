@@ -1931,8 +1931,8 @@
 
 <p>SP 상단에 자주 등장하는 SET 옵션들의 의미를 정리한다.</p>
 
-<div class="language-sql highlighter-rouge"><div class="code-header">
-        <span data-label-text="Sql"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1964,37 +1964,37 @@
 29
 30
 31
-</pre></td><td class="rouge-code"><pre><span class="k">SET</span> <span class="n">NOCOUNT</span> <span class="k">ON</span>
-<span class="c1">-- INSERT, UPDATE, DELETE 후 "(N개 행이 영향을 받음)" 메시지를 억제한다</span>
-<span class="o">-</span> <span class="err">기능</span><span class="p">:</span> <span class="err">쿼리</span> <span class="err">실행</span> <span class="err">후</span> <span class="nv">"n개 행이 영향을 받음"</span><span class="err">이라는</span> <span class="err">메시지가</span> <span class="err">클라이언트로</span> <span class="err">전송되는</span> <span class="err">것을</span> <span class="err">차단</span>
-<span class="o">-</span> <span class="err">사용</span> <span class="err">이유</span><span class="p">:</span> 
-  <span class="o">*</span> <span class="err">네트워크</span> <span class="err">부하</span> <span class="err">감소</span><span class="p">:</span> <span class="err">수천</span> <span class="err">번</span> <span class="err">반복되는</span> <span class="err">루프나</span> <span class="err">복잡한</span> <span class="err">로직에서</span> <span class="err">매번</span> <span class="nv">"1 row affected"</span> <span class="err">메시지를</span> <span class="err">보내는</span> <span class="err">건</span> <span class="err">자원</span> <span class="err">낭비</span>
-  <span class="o">*</span> <span class="err">애플리케이션</span> <span class="err">오류</span> <span class="err">방지</span><span class="p">:</span> <span class="err">일부</span> <span class="err">오래된</span> <span class="n">ADO</span><span class="p">.</span><span class="n">NET</span><span class="err">이나</span> <span class="err">라이브러리는</span> <span class="err">이</span> <span class="err">메시지를</span> <span class="err">실제</span> <span class="err">데이터</span> <span class="err">결과셋으로</span> <span class="err">오해하여</span> <span class="err">에러를</span> <span class="err">일으키기도</span> <span class="err">함</span>
+</pre></td><td class="rouge-code"><pre>SET NOCOUNT ON
+-- INSERT, UPDATE, DELETE 후 "(N개 행이 영향을 받음)" 메시지를 억제한다
+- 기능: 쿼리 실행 후 "n개 행이 영향을 받음"이라는 메시지가 클라이언트로 전송되는 것을 차단
+- 사용 이유: 
+  * 네트워크 부하 감소: 수천 번 반복되는 루프나 복잡한 로직에서 매번 "1 row affected" 메시지를 보내는 건 자원 낭비
+  * 애플리케이션 오류 방지: 일부 오래된 ADO.NET이나 라이브러리는 이 메시지를 실제 데이터 결과셋으로 오해하여 에러를 일으키기도 함
 
 
-<span class="k">SET</span> <span class="n">XACT_ABORT</span> <span class="k">ON</span>
-<span class="nv">"에러 나면 뒤도 돌아보지 말고 전부 취소해."</span>
-<span class="o">-</span> <span class="err">기능</span><span class="p">:</span> <span class="err">런타임</span> <span class="err">에러가</span> <span class="err">발생하면</span> <span class="err">즉시</span> <span class="err">현재</span> <span class="err">트랜잭션을</span> <span class="err">롤백</span><span class="p">(</span><span class="k">Rollback</span><span class="p">)</span><span class="err">하고</span> <span class="err">실행을</span> <span class="err">중단합니다</span><span class="p">.</span>
-<span class="o">-</span> <span class="err">사용</span> <span class="err">이유</span><span class="p">:</span>
-  <span class="o">*</span> <span class="err">데이터</span> <span class="err">무결성</span><span class="p">:</span> <span class="err">여러</span> <span class="err">테이블을</span> <span class="err">건드리는</span> <span class="err">작업</span> <span class="err">중</span> <span class="err">중간에</span> <span class="err">에러가</span> <span class="err">났는데</span><span class="p">,</span> <span class="err">앞부분만</span> <span class="err">저장되고</span> <span class="err">뒷부분은</span> <span class="err">안</span> <span class="err">되는</span> <span class="s1">'반쪽짜리 저장'</span><span class="err">을</span> <span class="err">완벽히</span> <span class="err">방지</span><span class="p">.</span>
-  <span class="o">*</span> <span class="err">분산</span> <span class="err">트랜잭션</span> <span class="err">필수</span><span class="p">:</span> <span class="err">연결된</span> <span class="err">서버</span><span class="p">(</span><span class="n">Linked</span> <span class="n">Server</span><span class="p">)</span><span class="err">를</span> <span class="err">사용할</span> <span class="err">때는</span> <span class="err">이</span> <span class="err">옵션이</span> <span class="err">없으면</span> <span class="err">에러가</span> <span class="err">발생할</span> <span class="err">수</span> <span class="err">있다</span><span class="p">.</span>
+SET XACT_ABORT ON
+"에러 나면 뒤도 돌아보지 말고 전부 취소해."
+- 기능: 런타임 에러가 발생하면 즉시 현재 트랜잭션을 롤백(Rollback)하고 실행을 중단합니다.
+- 사용 이유:
+  * 데이터 무결성: 여러 테이블을 건드리는 작업 중 중간에 에러가 났는데, 앞부분만 저장되고 뒷부분은 안 되는 '반쪽짜리 저장'을 완벽히 방지.
+  * 분산 트랜잭션 필수: 연결된 서버(Linked Server)를 사용할 때는 이 옵션이 없으면 에러가 발생할 수 있다.
 
 
-<span class="k">SET</span> <span class="n">TRANSACTION</span> <span class="k">ISOLATION</span> <span class="k">LEVEL</span> <span class="k">READ</span> <span class="k">UNCOMMITTED</span>
-<span class="nv">"데이터가 정확하지 않아도 좋으니, 일단 멈추지 말고 읽어라."</span> <span class="p">(</span><span class="n">NOLOCK</span><span class="p">)</span>
-<span class="o">-</span> <span class="err">기능</span><span class="p">:</span> <span class="err">다른</span> <span class="err">트랜잭션이</span> <span class="err">수정</span> <span class="err">중이지만</span> <span class="err">아직</span> <span class="err">커밋</span><span class="p">(</span><span class="k">Commit</span><span class="p">)</span><span class="err">되지</span> <span class="err">않은</span> <span class="err">데이터도</span> <span class="err">읽을</span> <span class="err">수</span> <span class="err">있게</span> <span class="err">함</span> <span class="p">(</span><span class="n">Dirty</span> <span class="k">Read</span> <span class="err">허용</span><span class="p">)</span>
-<span class="o">-</span> <span class="err">사용</span> <span class="err">이유</span><span class="p">:</span>
-  <span class="o">*</span> <span class="err">차단</span><span class="p">(</span><span class="n">Blocking</span><span class="p">)</span> <span class="err">방지</span><span class="p">:</span> <span class="err">조회</span><span class="p">(</span><span class="k">Select</span><span class="p">)</span> <span class="err">쿼리가</span> <span class="err">수정</span><span class="p">(</span><span class="k">Update</span><span class="o">/</span><span class="k">Insert</span><span class="p">)</span> <span class="err">작업과</span> <span class="err">충돌해서</span> <span class="err">대기하는</span> <span class="err">상황을</span> <span class="err">막음</span><span class="p">.</span> <span class="err">시스템</span> <span class="err">전체의</span> <span class="err">처리량</span><span class="p">(</span><span class="n">Throughput</span><span class="p">)</span><span class="err">이</span> <span class="err">비약적으로</span> <span class="err">상승</span>
-<span class="o">-</span> <span class="err">주의사항</span><span class="p">:</span> <span class="err">금융권</span> <span class="err">잔액</span> <span class="err">조회처럼</span> <span class="mi">1</span><span class="err">원의</span> <span class="err">오차도</span> <span class="err">허용</span> <span class="err">안</span> <span class="err">되는</span> <span class="err">곳에는</span> <span class="err">위험할</span> <span class="err">수</span> <span class="err">있다</span><span class="p">.</span>
-            <span class="err">하지만</span> <span class="err">대규모</span> <span class="err">조회</span> <span class="err">시스템에서는</span> <span class="err">서비스</span> <span class="err">가용성을</span> <span class="err">위해</span> <span class="err">필수</span><span class="p">.</span>
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+"데이터가 정확하지 않아도 좋으니, 일단 멈추지 말고 읽어라." (NOLOCK)
+- 기능: 다른 트랜잭션이 수정 중이지만 아직 커밋(Commit)되지 않은 데이터도 읽을 수 있게 함 (Dirty Read 허용)
+- 사용 이유:
+  * 차단(Blocking) 방지: 조회(Select) 쿼리가 수정(Update/Insert) 작업과 충돌해서 대기하는 상황을 막음. 시스템 전체의 처리량(Throughput)이 비약적으로 상승
+- 주의사항: 금융권 잔액 조회처럼 1원의 오차도 허용 안 되는 곳에는 위험할 수 있다.
+            하지만 대규모 조회 시스템에서는 서비스 가용성을 위해 필수.
 
 
-<span class="k">SET</span> <span class="n">LOCK_TIMEOUT</span> <span class="mi">3000</span>
-<span class="nv">"기다림에도 한계를 둡니다 (3초만 기다림)."</span>
-<span class="o">-</span> <span class="err">기능</span><span class="p">:</span> <span class="err">락</span><span class="p">(</span><span class="k">Lock</span><span class="p">)</span><span class="err">이</span> <span class="err">걸린</span> <span class="err">자원을</span> <span class="err">기다리는</span> <span class="err">시간을</span> <span class="err">밀리초</span><span class="p">(</span><span class="n">ms</span><span class="p">)</span> <span class="err">단위로</span> <span class="err">설정</span><span class="p">.</span> <span class="mi">3000</span><span class="err">은</span> <span class="mi">3</span><span class="err">초를</span> <span class="err">의미</span><span class="p">.</span>
-<span class="o">-</span> <span class="err">사용</span> <span class="err">이유</span><span class="p">:</span>
-  <span class="o">*</span> <span class="err">무한</span> <span class="err">대기</span> <span class="err">방지</span><span class="p">:</span> <span class="err">기본값은</span> <span class="o">-</span><span class="mi">1</span><span class="p">(</span><span class="err">무한</span> <span class="err">대기</span><span class="p">).</span> <span class="err">특정</span> <span class="err">쿼리가</span> <span class="err">자원을</span> <span class="err">꽉</span> <span class="err">잡고</span> <span class="err">있으면</span> <span class="err">뒤에</span> <span class="err">오는</span> <span class="err">모든</span> <span class="err">사용자가</span> <span class="err">무한정</span> <span class="err">모래시계만</span> <span class="err">보게</span> <span class="err">됨</span><span class="p">.</span>
-  <span class="o">*</span> <span class="err">시스템</span> <span class="err">가용성</span><span class="p">:</span> <span class="mi">3</span><span class="err">초</span> <span class="err">뒤에</span> <span class="err">에러를</span> <span class="err">뱉고</span> <span class="err">종료하게</span> <span class="err">함으로써</span><span class="p">,</span> <span class="err">시스템</span> <span class="err">전체가</span> <span class="err">마비되는</span> <span class="s1">'연쇄 장애'</span><span class="err">를</span> <span class="err">끊어주는</span> <span class="err">안전장치</span> <span class="err">역할</span><span class="p">.</span>
+SET LOCK_TIMEOUT 3000
+"기다림에도 한계를 둡니다 (3초만 기다림)."
+- 기능: 락(Lock)이 걸린 자원을 기다리는 시간을 밀리초(ms) 단위로 설정. 3000은 3초를 의미.
+- 사용 이유:
+  * 무한 대기 방지: 기본값은 -1(무한 대기). 특정 쿼리가 자원을 꽉 잡고 있으면 뒤에 오는 모든 사용자가 무한정 모래시계만 보게 됨.
+  * 시스템 가용성: 3초 뒤에 에러를 뱉고 종료하게 함으로써, 시스템 전체가 마비되는 '연쇄 장애'를 끊어주는 안전장치 역할.
 </pre></td></tr></tbody></table></code></div></div>
 
 <blockquote class="prompt-danger">
