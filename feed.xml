@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-03-30T01:08:38+09:00</updated>
+  <updated>2026-04-01T01:28:47+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Claude Code 의 코드 (1)</title>
+    <link href="https://kguswo.dev/posts/Claude-Code-%EC%9D%98-%EC%BD%94%EB%93%9C-1/" rel="alternate" type="text/html" title="Claude Code 의 코드 (1)" />
+    <published>2026-04-01T01:25:54+09:00</published>
+  
+    <updated>2026-04-01T01:25:54+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/Claude-Code-%EC%9D%98-%EC%BD%94%EB%93%9C-1/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Claude-Code-%EC%9D%98-%EC%BD%94%EB%93%9C-1/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="기술" />
+    
+  
+
+  <summary>에이전트 하네스 : Claude Code는 어떻게 동작하는가  들어가며  2026년 3월 31일 새벽 4시, Claude Code의 소스코드가 유출되었다. Anthropic의 AI 코딩 에이전트의 내부가 그대로 드러났다.  이를 누군가 Python으로 클린룸 재작성해서 GitHub에 올렸고, 그 레포가 몇 시간 만에 3만 스타를 넘겼다. 유출된 원본 코드 자체는 법적, 윤리적 문제가 있지만, 그 구조를 분석해서 재작성한 코드는 공개되어 있다.  이 글은 그 재작성된 코드를 보고 Claude Code가 내부적으로 어떤 구조를 가지고 있는지 뜯어보는 글이다. 원본 TypeScript 1902개 파일의 아키텍처를 분석하고, “AI 에이전트가 실제로 어떻게 동작하는가”에 대한 감을 잡는 것이 목표다.    에...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>들어가며  업무를 하며 코드 작성중 컨벤션에 맞게 프로젝트의 Application 디렉토리에 InitializeHostedService 라는 파일이 있기에 찾아보며 만들어보고자 했다. 이 파일에서 일반적으로 StartAsync 와 StopAsync 메서드를 정의한다고 했고 여기서 CancellationToken 이라는걸 처음 보았다.  찾아보니 .NET은 애플리케이션에서 백그라운드 작업을 구현할 때 앱 종료 시 안전하게 작업을 중단할 수 있도록 CancellationToken 메커니즘을 제공한고 한다. 예를 들어 데이터베이스 쓰기 작업 중에 앱이 갑자기 종료되면 데이터 손상, 불완전한 트랜잭션, 리소스 누수가 발생할 수 있기 때문이다.  이번 글에서는 간단하게 CancellationToken의 동작 원...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>ISNULL vs COALESCE</title>
-    <link href="https://kguswo.dev/posts/ISNULL-vs-COALESCE/" rel="alternate" type="text/html" title="ISNULL vs COALESCE" />
-    <published>2026-02-02T00:12:53+09:00</published>
-  
-    <updated>2026-02-02T00:12:53+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/ISNULL-vs-COALESCE/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/ISNULL-vs-COALESCE/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="데이터베이스" />
-    
-  
-
-  <summary>들어가며  SQL Server에서 NULL 값을 대체할 때 ISNULL과 COALESCE 두 가지 선택지가 있다. 둘 다 “NULL이면 다른 값으로 바꿔줘”라는 같은 목적을 가지고 있지만, 내부 동작 방식과 세부 특성이 다르다.  단순히 “ISNULL이 빠르니까 ISNULL 쓰자”로 끝나는 게 아니다. 반환 타입 차이 때문에 예상치 못한 버그가 발생할 수 있어서, 정확한 차이를 알고 상황에 맞게 선택해야 한다.    1. 기본 문법과 차이  ISNULL  ISNULL(check_expression, replacement_value)      SQL Server 전용 함수   2개 인자만 받음   첫 번째 값이 NULL이면 두 번째 값 반환   DECLARE @nickname NVARCHAR(50) = ...</summary>
 
   </entry>
 
