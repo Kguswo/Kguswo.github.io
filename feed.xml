@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-05-09T21:47:09+09:00</updated>
+  <updated>2026-06-10T12:53:36+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Quant Agent Lab - (1)</title>
+    <link href="https://kguswo.dev/posts/Quant-Agent-Lab-1/" rel="alternate" type="text/html" title="Quant Agent Lab - (1)" />
+    <published>2026-06-10T01:46:29+09:00</published>
+  
+    <updated>2026-06-10T01:46:29+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/Quant-Agent-Lab-1/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/Quant-Agent-Lab-1/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="Quant" />
+    
+  
+
+  <summary>들어가며  ML 시그널과 LLM의 판단을 결합한 퀀트 트레이딩 에이전트를 직접 만들어보기로 했다. 거창한 자동매매 시스템이 목표는 아니다. 퀀트라는 분야를 코드로 부딪쳐가며 배우는 게 목적인 학습용 프로젝트다.  전체 로드맵은 이렇게 잡았다. 성과지표 같은 뼈대부터 시작해서, 데이터 수집과 백테스트, ML 시그널, 마지막으로 LLM 판단 계층까지 단계적으로 쌓는다. 이 글은 그 첫 단계, 아이디어를 잡고 개발 환경을 만들어 첫 코드를 올리기까지 의 기록이다. 같은 곳에서 또 헤매지 않기 위해 그 과정을 최대한 그대로 남기고자 한다.    왜 Python인가  필자는 평소 업무로 C#과 .NET을 쓰는 백엔드 개발자며, PS 와 CP는 Java를 사용한다.하지만 퀀트 개발은 사정이 달랐다.  스펙 결정 ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>들어가며  프로젝트 진행 중 별도 Web API 프로젝트에서 관리자 권한을 체크한 뒤, 다른 Web 프로젝트에서 관리자 요청들을 필터링해서 수행하고 이 권한에 따라 클라이언트 측에서도 화면 구분이 필요한 상황에 마주했다.  권한 데이터를 어떻게 저장하고 관리할지 고민하던 중, /{Area}/{Controller}/{Action} 같은 URL 형태로 수백 개의 권한을 관리해야했다.  이걸 어디에 저장해야 하지? 라는 고민부터 어떻게 관리할지 고민이 됐다.  처음에는 단순하게 생각했다. 사용자가 로그인하면 권한 목록을 Claim에 넣어서 관리하면 되지 않을까? 하지만 곧 문제를 발견했다. 권한 URL 하나가 약 4~50 bytes, 300개면 12~15KB다. 일반적인 브라주어 쿠키 제한인 4KB를 생각하...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>.NET 비동기 작업과 CancellationToken</title>
-    <link href="https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/" rel="alternate" type="text/html" title=".NET 비동기 작업과 CancellationToken" />
-    <published>2026-02-14T20:02:27+09:00</published>
-  
-    <updated>2026-02-14T20:02:27+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/.NET-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-CancellationToken/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="dotnet" />
-    
-  
-
-  <summary>들어가며  업무를 하며 코드 작성중 컨벤션에 맞게 프로젝트의 Application 디렉토리에 InitializeHostedService 라는 파일이 있기에 찾아보며 만들어보고자 했다. 이 파일에서 일반적으로 StartAsync 와 StopAsync 메서드를 정의한다고 했고 여기서 CancellationToken 이라는걸 처음 보았다.  찾아보니 .NET은 애플리케이션에서 백그라운드 작업을 구현할 때 앱 종료 시 안전하게 작업을 중단할 수 있도록 CancellationToken 메커니즘을 제공한고 한다. 예를 들어 데이터베이스 쓰기 작업 중에 앱이 갑자기 종료되면 데이터 손상, 불완전한 트랜잭션, 리소스 누수가 발생할 수 있기 때문이다.  이번 글에서는 간단하게 CancellationToken의 동작 원...</summary>
 
   </entry>
 
