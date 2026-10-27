@@ -4,7 +4,7 @@
   <id>https://kguswo.dev/</id>
   <title>Now's Log</title>
   <subtitle>프로그래밍, 개발 팁과 프로젝트를 공유하는 기술 블로그입니다.</subtitle>
-  <updated>2026-10-27T18:42:29+09:00</updated>
+  <updated>2026-10-27T18:46:52+09:00</updated>
   <author>
     <name>Hyeon Jae Kim</name>
     <uri>https://kguswo.dev/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>REA</title>
+    <link href="https://kguswo.dev/posts/REA/" rel="alternate" type="text/html" title="REA" />
+    <published>2026-10-27T00:55:49+09:00</published>
+  
+    <updated>2026-10-27T00:55:49+09:00</updated>
+  
+    <id>https://kguswo.dev/posts/REA/</id>
+    <content type="text/html" src="https://kguswo.dev/posts/REA/" />
+    <author>
+      <name>Hyeon Jae Kim</name>
+    </author>
+
+  
+    
+    <category term="기술" />
+    
+  
+
+  <summary>REA 딥다이브 : AI 에이전트는 바이너리를 어떻게 읽는가  들어가며  REA(Reverse Engineer Anything)는 코딩 에이전트에게 역엔지니어링 도구를 쥐여주는 오픈소스 MCP 서버다. “Notes 앱의 검색 기능이 어떻게 동작하는지 증거와 함께 보여줘”라고 말하면, 에이전트가 REA를 통해 Ghidra나 Hopper를 직접 돌려 답을 찾는다.  글의 목표는 세 가지다.     에이전트의 요청 하나가 Ghidra 디컴파일러까지 내려갔다가 돌아오는 전체 경로 따라가보기   REA의 핵심인 Evidence 모델 을 스키마 수준에서 알아보기   이 글은 morluto/rea의 fork(package.json 기준 6.5.0) 의 소스 코드와 공식 문서를 읽고 정리한 것이다. 코드 인용은 설명...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>들어가며  앞선 글에서 수백 개의 권한 데이터를 관리하는 고민을 다룬 글을 작성했다. 클라이언트 저장(쿠키, JWT, LocalStorage)의 크기와 보안 문제를 확인했고, 결국 세션 이 답이라는 결론에 도달했다. 서버에 데이터를 보관하고 클라이언트에는 20 bytes의 세션 ID만 쿠키로 전달하면 모든 문제가 해결되는 것처럼 보였다.  하지만 구현하려고 코드를 찾아보니 쿠키 설정에 HttpOnly, Secure, SameSite 같은 낯선 옵션들이 있었다.  Response.Cookies.Append("sessionId", sessionId, new CookieOptions {     HttpOnly = true,     Secure = true,     SameSite = SameSiteMode....</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>웹 인증, 세션과 쿠키</title>
-    <link href="https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/" rel="alternate" type="text/html" title="웹 인증, 세션과 쿠키" />
-    <published>2026-02-14T21:36:50+09:00</published>
-  
-    <updated>2026-02-14T21:36:50+09:00</updated>
-  
-    <id>https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/</id>
-    <content type="text/html" src="https://kguswo.dev/posts/%EC%9B%B9-%EC%9D%B8%EC%A6%9D-%EC%84%B8%EC%85%98%EA%B3%BC-%EC%BF%A0%ED%82%A4/" />
-    <author>
-      <name>Hyeon Jae Kim</name>
-    </author>
-
-  
-    
-    <category term="dotnet" />
-    
-  
-
-  <summary>들어가며  프로젝트 진행 중 별도 Web API 프로젝트에서 관리자 권한을 체크한 뒤, 다른 Web 프로젝트에서 관리자 요청들을 필터링해서 수행하고 이 권한에 따라 클라이언트 측에서도 화면 구분이 필요한 상황에 마주했다.  권한 데이터를 어떻게 저장하고 관리할지 고민하던 중, /{Area}/{Controller}/{Action} 같은 URL 형태로 수백 개의 권한을 관리해야했다.  이걸 어디에 저장해야 하지? 라는 고민부터 어떻게 관리할지 고민이 됐다.  처음에는 단순하게 생각했다. 사용자가 로그인하면 권한 목록을 Claim에 넣어서 관리하면 되지 않을까? 하지만 곧 문제를 발견했다. 권한 URL 하나가 약 4~50 bytes, 300개면 12~15KB다. 일반적인 브라주어 쿠키 제한인 4KB를 생각하...</summary>
 
   </entry>
 
